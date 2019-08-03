@@ -1,0 +1,318 @@
+Simulator report for liushuideng
+Sat Jan 03 23:12:59 2009
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 66 nodes     ;
+; Simulation Coverage         ;      16.09 % ;
+; Total Number of Transitions ; 6060         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX II       ;
+; Device                      ; EPM240T100C5 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Glitch Filtering                                                                           ; Off        ; Off           ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      16.09 % ;
+; Total nodes checked                                 ; 66           ;
+; Total output ports checked                          ; 87           ;
+; Total output ports with complete 1/0-value coverage ; 14           ;
+; Total output ports with no 1/0-value coverage       ; 73           ;
+; Total output ports with no 1-value coverage         ; 73           ;
+; Total output ports with no 0-value coverage         ; 73           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                         ;
++---------------------------+--------------------------------------+------------------+
+; Node Name                 ; Output Port Name                     ; Output Port Type ;
++---------------------------+--------------------------------------+------------------+
+; |liushuideng|\P1:count[5] ; |liushuideng|\P1:count[5]~9COUT1_11  ; cout1            ;
+; |liushuideng|\P1:count[6] ; |liushuideng|\P1:count[6]~14COUT1_16 ; cout1            ;
+; |liushuideng|clk1~428     ; |liushuideng|clk1~428                ; combout          ;
+; |liushuideng|count~341    ; |liushuideng|count~341               ; combout          ;
+; |liushuideng|\P1:count[4] ; |liushuideng|\P1:count[4]~11         ; cout             ;
+; |liushuideng|\P1:count[3] ; |liushuideng|\P1:count[3]~11         ; cout0            ;
+; |liushuideng|\P1:count[3] ; |liushuideng|\P1:count[3]~11COUT1_13 ; cout1            ;
+; |liushuideng|\P1:count[2] ; |liushuideng|\P1:count[2]~11         ; cout0            ;
+; |liushuideng|\P1:count[2] ; |liushuideng|\P1:count[2]~11COUT1_13 ; cout1            ;
+; |liushuideng|\P1:count[1] ; |liushuideng|\P1:count[1]~11         ; cout0            ;
+; |liushuideng|\P1:count[1] ; |liushuideng|\P1:count[1]~11COUT1_13 ; cout1            ;
+; |liushuideng|\P1:count[0] ; |liushuideng|\P1:count[0]~11         ; cout0            ;
+; |liushuideng|\P1:count[0] ; |liushuideng|\P1:count[0]~11COUT1_13 ; cout1            ;
+; |liushuideng|clk          ; |liushuideng|clk                     ; combout          ;
++---------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                              ;
++----------------------------+---------------------------------------+------------------+
+; Node Name                  ; Output Port Name                      ; Output Port Type ;
++----------------------------+---------------------------------------+------------------+
+; |liushuideng|led1[0]~reg0  ; |liushuideng|led1[0]~reg0             ; regout           ;
+; |liushuideng|led1[1]~reg0  ; |liushuideng|led1[1]~reg0             ; regout           ;
+; |liushuideng|led1[2]~reg0  ; |liushuideng|led1[2]~reg0             ; regout           ;
+; |liushuideng|led1[3]~reg0  ; |liushuideng|led1[3]~reg0             ; regout           ;
+; |liushuideng|led1[4]~reg0  ; |liushuideng|led1[4]~reg0             ; regout           ;
+; |liushuideng|led1[5]~reg0  ; |liushuideng|led1[5]~reg0             ; regout           ;
+; |liushuideng|led1[6]~reg0  ; |liushuideng|led1[6]~reg0             ; regout           ;
+; |liushuideng|led1[7]~reg0  ; |liushuideng|led1[7]~reg0             ; regout           ;
+; |liushuideng|\P2:count1[4] ; |liushuideng|\P2:count1[4]            ; regout           ;
+; |liushuideng|\P2:count1[3] ; |liushuideng|\P2:count1[3]            ; regout           ;
+; |liushuideng|\P2:count1[3] ; |liushuideng|\P2:count1[3]~12         ; cout0            ;
+; |liushuideng|\P2:count1[3] ; |liushuideng|\P2:count1[3]~12COUT1_14 ; cout1            ;
+; |liushuideng|\P2:count1[2] ; |liushuideng|\P2:count1[2]            ; regout           ;
+; |liushuideng|\P2:count1[2] ; |liushuideng|\P2:count1[2]~12         ; cout0            ;
+; |liushuideng|\P2:count1[2] ; |liushuideng|\P2:count1[2]~12COUT1    ; cout1            ;
+; |liushuideng|\P2:count1[1] ; |liushuideng|\P2:count1[1]            ; regout           ;
+; |liushuideng|\P2:count1[1] ; |liushuideng|\P2:count1[1]~12         ; cout0            ;
+; |liushuideng|\P2:count1[1] ; |liushuideng|\P2:count1[1]~12COUT1_14 ; cout1            ;
+; |liushuideng|Equal0~48     ; |liushuideng|Equal0~48                ; combout          ;
+; |liushuideng|CLK2          ; |liushuideng|CLK2                     ; regout           ;
+; |liushuideng|LessThan3~77  ; |liushuideng|LessThan3~77             ; combout          ;
+; |liushuideng|LessThan3~78  ; |liushuideng|LessThan3~78             ; combout          ;
+; |liushuideng|count1~122    ; |liushuideng|count1~122               ; combout          ;
+; |liushuideng|count1~123    ; |liushuideng|count1~123               ; combout          ;
+; |liushuideng|Equal0~49     ; |liushuideng|Equal0~49                ; combout          ;
+; |liushuideng|clk1          ; |liushuideng|clk1                     ; regout           ;
+; |liushuideng|\P1:count[15] ; |liushuideng|\P1:count[15]~16         ; cout0            ;
+; |liushuideng|\P1:count[15] ; |liushuideng|\P1:count[15]~16COUT1_18 ; cout1            ;
+; |liushuideng|\P1:count[18] ; |liushuideng|\P1:count[18]~16         ; cout0            ;
+; |liushuideng|\P1:count[18] ; |liushuideng|\P1:count[18]~16COUT1_18 ; cout1            ;
+; |liushuideng|\P1:count[16] ; |liushuideng|\P1:count[16]~18         ; cout0            ;
+; |liushuideng|\P1:count[16] ; |liushuideng|\P1:count[16]~18COUT1_20 ; cout1            ;
+; |liushuideng|\P1:count[17] ; |liushuideng|\P1:count[17]~18         ; cout0            ;
+; |liushuideng|\P1:count[17] ; |liushuideng|\P1:count[17]~18COUT1_20 ; cout1            ;
+; |liushuideng|count~340     ; |liushuideng|count~340                ; combout          ;
+; |liushuideng|\P1:count[19] ; |liushuideng|\P1:count[19]            ; regout           ;
+; |liushuideng|clk1~427      ; |liushuideng|clk1~427                 ; combout          ;
+; |liushuideng|\P1:count[14] ; |liushuideng|\P1:count[14]~11         ; cout             ;
+; |liushuideng|\P1:count[13] ; |liushuideng|\P1:count[13]~10         ; cout0            ;
+; |liushuideng|\P1:count[13] ; |liushuideng|\P1:count[13]~10COUT1_12 ; cout1            ;
+; |liushuideng|\P1:count[9]  ; |liushuideng|\P1:count[9]~8           ; cout             ;
+; |liushuideng|\P1:count[8]  ; |liushuideng|\P1:count[8]~11          ; cout0            ;
+; |liushuideng|\P1:count[8]  ; |liushuideng|\P1:count[8]~11COUT1_13  ; cout1            ;
+; |liushuideng|\P1:count[5]  ; |liushuideng|\P1:count[5]~9           ; cout0            ;
+; |liushuideng|\P1:count[6]  ; |liushuideng|\P1:count[6]~14          ; cout0            ;
+; |liushuideng|\P1:count[7]  ; |liushuideng|\P1:count[7]~14          ; cout0            ;
+; |liushuideng|\P1:count[7]  ; |liushuideng|\P1:count[7]~14COUT1_16  ; cout1            ;
+; |liushuideng|\P1:count[10] ; |liushuideng|\P1:count[10]~12         ; cout0            ;
+; |liushuideng|\P1:count[10] ; |liushuideng|\P1:count[10]~12COUT1_14 ; cout1            ;
+; |liushuideng|\P1:count[11] ; |liushuideng|\P1:count[11]~12         ; cout0            ;
+; |liushuideng|\P1:count[11] ; |liushuideng|\P1:count[11]~12COUT1_14 ; cout1            ;
+; |liushuideng|\P1:count[12] ; |liushuideng|\P1:count[12]~12         ; cout0            ;
+; |liushuideng|\P1:count[12] ; |liushuideng|\P1:count[12]~12COUT1_14 ; cout1            ;
+; |liushuideng|LessThan2~300 ; |liushuideng|LessThan2~300            ; combout          ;
+; |liushuideng|clk1~429      ; |liushuideng|clk1~429                 ; combout          ;
+; |liushuideng|clk1~430      ; |liushuideng|clk1~430                 ; combout          ;
+; |liushuideng|count~342     ; |liushuideng|count~342                ; combout          ;
+; |liushuideng|count~343     ; |liushuideng|count~343                ; combout          ;
+; |liushuideng|count~344     ; |liushuideng|count~344                ; combout          ;
+; |liushuideng|Mux6~65       ; |liushuideng|Mux6~65                  ; combout          ;
+; |liushuideng|Mux5~65       ; |liushuideng|Mux5~65                  ; combout          ;
+; |liushuideng|Mux4~65       ; |liushuideng|Mux4~65                  ; combout          ;
+; |liushuideng|Mux3~66       ; |liushuideng|Mux3~66                  ; combout          ;
+; |liushuideng|Mux2~65       ; |liushuideng|Mux2~65                  ; combout          ;
+; |liushuideng|Mux1~65       ; |liushuideng|Mux1~65                  ; combout          ;
+; |liushuideng|led1[0]       ; |liushuideng|led1[0]                  ; padio            ;
+; |liushuideng|led1[1]       ; |liushuideng|led1[1]                  ; padio            ;
+; |liushuideng|led1[2]       ; |liushuideng|led1[2]                  ; padio            ;
+; |liushuideng|led1[3]       ; |liushuideng|led1[3]                  ; padio            ;
+; |liushuideng|led1[4]       ; |liushuideng|led1[4]                  ; padio            ;
+; |liushuideng|led1[5]       ; |liushuideng|led1[5]                  ; padio            ;
+; |liushuideng|led1[6]       ; |liushuideng|led1[6]                  ; padio            ;
+; |liushuideng|led1[7]       ; |liushuideng|led1[7]                  ; padio            ;
++----------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                              ;
++----------------------------+---------------------------------------+------------------+
+; Node Name                  ; Output Port Name                      ; Output Port Type ;
++----------------------------+---------------------------------------+------------------+
+; |liushuideng|led1[0]~reg0  ; |liushuideng|led1[0]~reg0             ; regout           ;
+; |liushuideng|led1[1]~reg0  ; |liushuideng|led1[1]~reg0             ; regout           ;
+; |liushuideng|led1[2]~reg0  ; |liushuideng|led1[2]~reg0             ; regout           ;
+; |liushuideng|led1[3]~reg0  ; |liushuideng|led1[3]~reg0             ; regout           ;
+; |liushuideng|led1[4]~reg0  ; |liushuideng|led1[4]~reg0             ; regout           ;
+; |liushuideng|led1[5]~reg0  ; |liushuideng|led1[5]~reg0             ; regout           ;
+; |liushuideng|led1[6]~reg0  ; |liushuideng|led1[6]~reg0             ; regout           ;
+; |liushuideng|led1[7]~reg0  ; |liushuideng|led1[7]~reg0             ; regout           ;
+; |liushuideng|\P2:count1[4] ; |liushuideng|\P2:count1[4]            ; regout           ;
+; |liushuideng|\P2:count1[3] ; |liushuideng|\P2:count1[3]            ; regout           ;
+; |liushuideng|\P2:count1[3] ; |liushuideng|\P2:count1[3]~12         ; cout0            ;
+; |liushuideng|\P2:count1[3] ; |liushuideng|\P2:count1[3]~12COUT1_14 ; cout1            ;
+; |liushuideng|\P2:count1[2] ; |liushuideng|\P2:count1[2]            ; regout           ;
+; |liushuideng|\P2:count1[2] ; |liushuideng|\P2:count1[2]~12         ; cout0            ;
+; |liushuideng|\P2:count1[2] ; |liushuideng|\P2:count1[2]~12COUT1    ; cout1            ;
+; |liushuideng|\P2:count1[1] ; |liushuideng|\P2:count1[1]            ; regout           ;
+; |liushuideng|\P2:count1[1] ; |liushuideng|\P2:count1[1]~12         ; cout0            ;
+; |liushuideng|\P2:count1[1] ; |liushuideng|\P2:count1[1]~12COUT1_14 ; cout1            ;
+; |liushuideng|Equal0~48     ; |liushuideng|Equal0~48                ; combout          ;
+; |liushuideng|CLK2          ; |liushuideng|CLK2                     ; regout           ;
+; |liushuideng|LessThan3~77  ; |liushuideng|LessThan3~77             ; combout          ;
+; |liushuideng|LessThan3~78  ; |liushuideng|LessThan3~78             ; combout          ;
+; |liushuideng|count1~122    ; |liushuideng|count1~122               ; combout          ;
+; |liushuideng|count1~123    ; |liushuideng|count1~123               ; combout          ;
+; |liushuideng|Equal0~49     ; |liushuideng|Equal0~49                ; combout          ;
+; |liushuideng|clk1          ; |liushuideng|clk1                     ; regout           ;
+; |liushuideng|\P1:count[15] ; |liushuideng|\P1:count[15]~16         ; cout0            ;
+; |liushuideng|\P1:count[15] ; |liushuideng|\P1:count[15]~16COUT1_18 ; cout1            ;
+; |liushuideng|\P1:count[18] ; |liushuideng|\P1:count[18]~16         ; cout0            ;
+; |liushuideng|\P1:count[18] ; |liushuideng|\P1:count[18]~16COUT1_18 ; cout1            ;
+; |liushuideng|\P1:count[16] ; |liushuideng|\P1:count[16]~18         ; cout0            ;
+; |liushuideng|\P1:count[16] ; |liushuideng|\P1:count[16]~18COUT1_20 ; cout1            ;
+; |liushuideng|\P1:count[17] ; |liushuideng|\P1:count[17]~18         ; cout0            ;
+; |liushuideng|\P1:count[17] ; |liushuideng|\P1:count[17]~18COUT1_20 ; cout1            ;
+; |liushuideng|count~340     ; |liushuideng|count~340                ; combout          ;
+; |liushuideng|\P1:count[19] ; |liushuideng|\P1:count[19]            ; regout           ;
+; |liushuideng|clk1~427      ; |liushuideng|clk1~427                 ; combout          ;
+; |liushuideng|\P1:count[14] ; |liushuideng|\P1:count[14]~11         ; cout             ;
+; |liushuideng|\P1:count[13] ; |liushuideng|\P1:count[13]~10         ; cout0            ;
+; |liushuideng|\P1:count[13] ; |liushuideng|\P1:count[13]~10COUT1_12 ; cout1            ;
+; |liushuideng|\P1:count[9]  ; |liushuideng|\P1:count[9]~8           ; cout             ;
+; |liushuideng|\P1:count[8]  ; |liushuideng|\P1:count[8]~11          ; cout0            ;
+; |liushuideng|\P1:count[8]  ; |liushuideng|\P1:count[8]~11COUT1_13  ; cout1            ;
+; |liushuideng|\P1:count[5]  ; |liushuideng|\P1:count[5]~9           ; cout0            ;
+; |liushuideng|\P1:count[6]  ; |liushuideng|\P1:count[6]~14          ; cout0            ;
+; |liushuideng|\P1:count[7]  ; |liushuideng|\P1:count[7]~14          ; cout0            ;
+; |liushuideng|\P1:count[7]  ; |liushuideng|\P1:count[7]~14COUT1_16  ; cout1            ;
+; |liushuideng|\P1:count[10] ; |liushuideng|\P1:count[10]~12         ; cout0            ;
+; |liushuideng|\P1:count[10] ; |liushuideng|\P1:count[10]~12COUT1_14 ; cout1            ;
+; |liushuideng|\P1:count[11] ; |liushuideng|\P1:count[11]~12         ; cout0            ;
+; |liushuideng|\P1:count[11] ; |liushuideng|\P1:count[11]~12COUT1_14 ; cout1            ;
+; |liushuideng|\P1:count[12] ; |liushuideng|\P1:count[12]~12         ; cout0            ;
+; |liushuideng|\P1:count[12] ; |liushuideng|\P1:count[12]~12COUT1_14 ; cout1            ;
+; |liushuideng|LessThan2~300 ; |liushuideng|LessThan2~300            ; combout          ;
+; |liushuideng|clk1~429      ; |liushuideng|clk1~429                 ; combout          ;
+; |liushuideng|clk1~430      ; |liushuideng|clk1~430                 ; combout          ;
+; |liushuideng|count~342     ; |liushuideng|count~342                ; combout          ;
+; |liushuideng|count~343     ; |liushuideng|count~343                ; combout          ;
+; |liushuideng|count~344     ; |liushuideng|count~344                ; combout          ;
+; |liushuideng|Mux6~65       ; |liushuideng|Mux6~65                  ; combout          ;
+; |liushuideng|Mux5~65       ; |liushuideng|Mux5~65                  ; combout          ;
+; |liushuideng|Mux4~65       ; |liushuideng|Mux4~65                  ; combout          ;
+; |liushuideng|Mux3~66       ; |liushuideng|Mux3~66                  ; combout          ;
+; |liushuideng|Mux2~65       ; |liushuideng|Mux2~65                  ; combout          ;
+; |liushuideng|Mux1~65       ; |liushuideng|Mux1~65                  ; combout          ;
+; |liushuideng|led1[0]       ; |liushuideng|led1[0]                  ; padio            ;
+; |liushuideng|led1[1]       ; |liushuideng|led1[1]                  ; padio            ;
+; |liushuideng|led1[2]       ; |liushuideng|led1[2]                  ; padio            ;
+; |liushuideng|led1[3]       ; |liushuideng|led1[3]                  ; padio            ;
+; |liushuideng|led1[4]       ; |liushuideng|led1[4]                  ; padio            ;
+; |liushuideng|led1[5]       ; |liushuideng|led1[5]                  ; padio            ;
+; |liushuideng|led1[6]       ; |liushuideng|led1[6]                  ; padio            ;
+; |liushuideng|led1[7]       ; |liushuideng|led1[7]                  ; padio            ;
++----------------------------+---------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sat Jan 03 23:12:57 2009
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off liushuideng -c liushuideng
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      16.09 %
+Info: Number of transitions in simulation is 6060
+Info: Vector file liushuideng.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Processing ended: Sat Jan 03 23:12:57 2009
+    Info: Elapsed time: 00:00:01
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

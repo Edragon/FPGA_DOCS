@@ -1,0 +1,20 @@
+Bill of Material for EPM240MAINBOARD.SCHDOC
+On 2010/9/3 at 23:21:02
+
+ Comment             Pattern     Quantity  Components
+------------------------------------------------------------------------------
+ 0.1uF               1608[0603]       2    C8, C13                      Capacitor            
+ 0                   1608[0603]       4    R2, R3, R4, R5               Resistor             
+ 104                 1608[0603]       1    C1                           Capacitor (Semiconductor SIM Model) 
+ 10K                 1608[0603]       3    R16, R18, R19                Resistor             
+ 1K                  J1-0603          1    R11                          Resistor             
+ 22uF                3528             2    C9, C11                      Electrolytic Capacitor 
+ 50MHZ               OSC_50MHZ        1    U5                                                
+ ASM1117-3.3         SOT223           1    U4                           Three-Terminal Adjustable Output Positive Voltage Regulator 
+ EPM240T100C5N       TQFP100_M        1    U1                           MAX II 3.3/2.5V CPLD, 80 IOs, 240 Logic Elements, 100-Pin Plastic TQFP, Commercial Temperature, Speed Grade 5, Pb-Free 
+ Header 22X2         HDR2X22          2    P1, P2                       Header, 22-Pin, Dual row 
+ JTAG                HDR2X5           1    P3                           Header, 5-Pin, Dual row 
+ LED0                LED-3            1    D1                           Typical INFRARED GaAs LED 
+ POWER               HDR1X2           1    P8                           Header, 2-Pin        
+ POWER               POWER_BIG        1    P7                                                
+ Res3                1608[0603]       1    R1                           Resistor             
