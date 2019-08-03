@@ -1,0 +1,41 @@
+--
+-- 闪灯测试程序
+-- 
+-- 用途：闪灯测试程序
+-- 
+-- 作者					日期				备注
+-- Huafeng Lin			20010/09/10			新增
+-- Huafeng Lin			20010/09/10			修改
+-- 
+
+LIBRARY IEEE;                                                  
+USE IEEE.STD_LOGIC_1164.ALL;                     
+USE IEEE.std_logic_unsigned.ALL;
+                   
+ENTITY shandeng IS                                        
+     PORT
+     (
+          clk:in STD_LOGIC;                                   
+          led:out STD_LOGIC
+     );     
+END shandeng;
+                                              
+ARCHITECTURE light OF shandeng IS                                     
+BEGIN                                                                  
+P1:PROCESS (clk)                                              
+VARIABLE count:INTEGER RANGE 0 TO 9999999;
+BEGIN                                                                
+    IF clk'EVENT AND clk='1' THEN
+		IF count<=4999999 THEN                           
+			led<='0';
+			count:=count+1;                          
+		ELSIF count>=4999999 AND count<=9999999 THEN
+			led<='1';
+			count:=count+1;
+		ELSE
+			count:=0;
+		END IF;                                                      
+     END IF;                                          
+END PROCESS;   
+                             
+END light;

@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE document SYSTEM 'file:///C:/Xilinx/10.1/ISE/chipviewer/data/xsl/buildXML.dtd'>
+
+<document>
+<design name='Main'/>
+<rptdir name='Main'/>
+<xilinx path='C:/Xilinx/10.1/ISE;'/>
+<projDir path='E:\Lcsoft\Hardware\CPLD\XC9572XL\LED'/>
+<xslDir path='chipviewer/data/xsl'/>
+<fileDir path='/chipviewer/data/html'/>
+<dataFile file='index.htm'/>
+<dataFile file='report.htm'/>
+<dataFile file='genmsg.htm'/>
+<dataFile file='eqns.js'/>
+<dataFile file='maplogic.js'/>
+<dataFile file='fbs.js'/>
+<dataFile file='pins.js'/>
+<dataFile file='tooltips.js'/>
+<dataFile file='errors.js'/>
+<dataFile file='leftnav.js'/>
+<dataFile file='paths.js'/>
+<dataFile file='summary.js'/>
+<dataFile file='topnav.js'/>
+<dataFile file='applet.js'/>
+<dataFile file='plugin.js'/>
+<dataFile file='ns4plugin.js'/>
+<dataFile file='equations.htm'/>
+<dataFile file='result.htm'/>
+<dataFile file='style.css'/>
+<dataFile file='blank.gif'/>
+<dataFile file='fbview.jpg'/>
+<dataFile file='pinview.jpg'/>
+<dataFile file='xc9500xl_logo.jpg'/>
+<dataFile file='asciidoc.htm'/>
+<dataFile file='equationsdoc.htm'/>
+<dataFile file='errorsdoc.htm'/>
+<dataFile file='failtabledoc.htm'/>
+<dataFile file='fbs_FBdoc.htm'/>
+<dataFile file='fbsdoc.htm'/>
+<dataFile file='inputleftdoc.htm'/>
+<dataFile file='logicleftdoc.htm'/>
+<dataFile file='mapinputdoc.htm'/>
+<dataFile file='maplogicdoc.htm'/>
+<dataFile file='optionsdoc.htm'/>
+<dataFile file='pinsdoc.htm'/>
+<dataFile file='summarydoc.htm'/>
+<dataFile file='check.htm'/>
+<dataFile file='checkNS4.htm'/>
+<dataFile file='appletref.htm'/>
+<dataFile file='newappletref.htm'/>
+<dataFile file='errors1.gif'/>
+<dataFile file='errors2.gif'/>
+<dataFile file='equations.gif'/>
+<dataFile file='functionblock.gif'/>
+<dataFile file='fb1.gif'/>
+<dataFile file='legend.gif'/>
+<dataFile file='macrocell.gif'/>
+<dataFile file='fb.gif'/>
+<dataFile file='pin.gif'/>
+<dataFile file='pindiagram.gif'/>
+<dataFile file='view.gif'/>
+<dataFile file='xml8.jpg'/>
+<dataFile file='xml7.jpg'/>
+<dataFile file='xml6.jpg'/>
+<dataFile file='xml5.jpg'/>
+<xmlFileGroup id='1'>
+<xmlFile file='Main.xml'>
+  <xslFile file='topnav.xsl'>
+    <output file='topnav.htm'/>
+  </xslFile>
+  <xslFile file='leftnav.xsl'>
+    <param name='result' value='1'/>
+    <output file='leftnav.htm'/>
+  </xslFile>
+  <xslFile file='print.xsl'>
+    <output file='ascii.tmp'/>
+  </xslFile>
+  <xslFile file='eqns.xsl'>
+    <output file='eqns.htm'/>
+  </xslFile>
+  <xslFile file='summary.xsl'>
+    <param name='sumOn' value='1'/>
+    <param name='optOn' value='0'/>
+    <param name='legendOn' value='0'/>
+    <output file='summary.htm'/>
+  </xslFile>
+</xmlFile>
+</xmlFileGroup>
+<xmlFileGroup id='2'>
+<xmlFile file='Main.xml'>
+  <xslFile file='summary.xsl'>
+    <param name='sumOn' value='0'/>
+    <param name='optOn' value='1'/>
+    <param name='legendOn' value='0'/>
+    <output file='options.htm'/>
+  </xslFile>
+  <xslFile file='printErrors.xsl'>
+    <output file='errs.htm'/>
+  </xslFile>
+  <xslFile file='failtable.xsl'>
+    <output file='failtable.htm'/>
+  </xslFile>
+  <xslFile file='logicleft.xsl'>
+    <output file='logicleft.htm'/>
+  </xslFile>
+  <xslFile file='inputleft.xsl'>
+    <output file='inputleft.htm'/>
+  </xslFile>
+  <xslFile file='printPins.xsl'>
+    <param name='appletOn' value='0'/>
+    <output file='pins.htm'/>
+  </xslFile>
+  <xslFile file='wait.xsl'>
+    <output file='wait.htm'/>
+  </xslFile>
+  <xslDebug file='printErrors.xsl'>
+    <output file='errors.htm'/>
+  </xslDebug>
+  <xslDebug file='printPins.xsl'>
+    <output file='pinout.htm'/>
+  </xslDebug>
+  <xslDebug file='printEqns.xsl'>
+    <output file='eqnout.htm'/>
+  </xslDebug>
+  <xslFile file='maplogic.xsl'>
+    <param name='sortType' value='0'/>
+    <param name='mapLog' value='1'/>
+    <param name='mapIn' value='0'/>
+    <param name='unmapLog' value='0'/>
+    <param name='unmapIn' value='0'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='maplogic_00.htm'/>
+    <param name='sortType' value='1'/>
+    <param name='mapLog' value='1'/>
+    <param name='mapIn' value='0'/>
+    <param name='unmapLog' value='0'/>
+    <param name='unmapIn' value='0'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='maplogic_01.htm'/>
+    <param name='sortType' value='2'/>
+    <param name='mapLog' value='1'/>
+    <param name='mapIn' value='0'/>
+    <param name='unmapLog' value='0'/>
+    <param name='unmapIn' value='0'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='maplogic_02.htm'/>
+    <param name='sortType' value='0'/>
+    <param name='mapLog' value='0'/>
+    <param name='mapIn' value='1'/>
+    <param name='unmapLog' value='0'/>
+    <param name='unmapIn' value='0'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='mapinput_00.htm'/>
+    <param name='sortType' value='1'/>
+    <param name='mapLog' value='0'/>
+    <param name='mapIn' value='1'/>
+    <param name='unmapLog' value='0'/>
+    <param name='unmapIn' value='0'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='mapinput_01.htm'/>
+    <param name='sortType' value='2'/>
+    <param name='mapLog' value='0'/>
+    <param name='mapIn' value='1'/>
+    <param name='unmapLog' value='0'/>
+    <param name='unmapIn' value='0'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='mapinput_02.htm'/>
+  </xslFile>
+  <xslFile file='fbsum.xsl'>
+    <param name='legendOn' value='0'/>
+    <output file='fbs.htm'/>
+  </xslFile>
+  <xslFile file='fbs.xsl'>
+    <param name='fb' value='FB1'/>
+    <param name='type' value='1'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='fbs_FB1.htm'/>
+    <param name='fb' value='FB2'/>
+    <param name='type' value='3'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='fbs_FB2.htm'/>
+    <param name='fb' value='FB3'/>
+    <param name='type' value='3'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='fbs_FB3.htm'/>
+    <param name='fb' value='FB4'/>
+    <param name='type' value='2'/>
+    <param name='legendOn' value='1'/>
+    <param name='appletOn' value='0'/>
+    <output file='fbs_FB4.htm'/>
+  </xslFile>
+</xmlFile>
+<xmlFile file='C:/Xilinx/10.1/ISE/chipviewer/data/xsl/pinlegend.xml'>
+  <xslFile file='legend.xsl'>
+    <param name='device' value='XC9572XL-10-VQ44'/>
+    <param name='verOn' value='0'/>
+    <param name='linkName' value='pinlegendV.htm'/>
+    <output file='pinlegend.htm'/>
+    <param name='device' value='XC9572XL-10-VQ44'/>
+    <param name='verOn' value='1'/>
+    <param name='linkName' value='pinlegend.htm'/>
+    <output file='pinlegendV.htm'/>
+  </xslFile>
+</xmlFile>
+<xmlFile file='C:/Xilinx/10.1/ISE/chipviewer/data/xsl/logiclegend.xml'>
+  <xslFile file='legend.xsl'>
+    <param name='device' value='XC9572XL-10-VQ44'/>
+    <param name='verOn' value='0'/>
+    <param name='linkName' value='logiclegendV.htm'/>
+    <output file='logiclegend.htm'/>
+    <param name='device' value='XC9572XL-10-VQ44'/>
+    <param name='verOn' value='1'/>
+    <param name='linkName' value='logiclegend.htm'/>
+    <output file='logiclegendV.htm'/>
+  </xslFile>
+</xmlFile>
+</xmlFileGroup>
+<rptFile file='Main.rpt'/>
+<timFile file='Main.tim'/>
+</document>

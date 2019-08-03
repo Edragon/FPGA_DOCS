@@ -1,0 +1,14 @@
+xst -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -ifn "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/Main.xst" -ofn "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/Main.syr"
+ngdbuild -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-VQ44-10 "Main.ngc" Main.ngd
+cpldfit -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Main.ngd
+XSLTProcess -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" Main_build.xml
+tsim -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise Main Main.nga
+taengine -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -f Main -w --format html1 -l E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/Main_html/tim/timing_report.htm
+hprep6 -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -s IEEE1149 -n Main -i Main
+xst -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -ifn "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/Main.xst" -ofn "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/Main.syr"
+ngdbuild -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -dd _ngo  -i -p xc9572xl-VQ44-10 "Main.ngc" Main.ngd
+cpldfit -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Main.ngd
+XSLTProcess -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" Main_build.xml
+tsim -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise Main Main.nga
+taengine -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -intstyle ise -f Main -w --format html1 -l E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/Main_html/tim/timing_report.htm
+hprep6 -ise "E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise" -s IEEE1149 -n Main -i Main

@@ -1,0 +1,73 @@
+Release 8.1i - Fit K.39
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 7-19-2011  3:19PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The comma ','
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  Main.ngd
+output file: Main_pad.csv
+Part type:   xc9572xl
+Speed grade: -10
+Package:     vq44
+
+Pinout by Pin Number:
+
+-----,-----,-----,-----,-----,-----,-----,-----,-----,-----,
+Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,{blank},Slew Rate,Termination,{blank},Voltage,Constraint,
+P1,iCLK,GCK,I/O/GCK3,,,,,,,,,,
+P2,TIE,,I/O,,,,,,,,,,
+P3,TIE,,I/O,,,,,,,,,,
+P4,GND,,GND,,,,,,,,,,
+P5,TIE,,I/O,,,,,,,,,,
+P6,TIE,,I/O,,,,,,,,,,
+P7,TIE,,I/O,,,,,,,,,,
+P8,TIE,,I/O,,,,,,,,,,
+P9,TDI,,TDI,,,,,,,,,,
+P10,TMS,,TMS,,,,,,,,,,
+P11,TCK,,TCK,,,,,,,,,,
+P12,TIE,,I/O,,,,,,,,,,
+P13,TIE,,I/O,,,,,,,,,,
+P14,TIE,,I/O,,,,,,,,,,
+P15,VCC,,VCCINT,,,,,,,,,,
+P16,TIE,,I/O,,,,,,,,,,
+P17,GND,,GND,,,,,,,,,,
+P18,TIE,,I/O,,,,,,,,,,
+P19,TIE,,I/O,,,,,,,,,,
+P20,TIE,,I/O,,,,,,,,,,
+P21,TIE,,I/O,,,,,,,,,,
+P22,TIE,,I/O,,,,,,,,,,
+P23,TIE,,I/O,,,,,,,,,,
+P24,TDO,,TDO,,,,,,,,,,
+P25,GND,,GND,,,,,,,,,,
+P26,VCC,,VCCIO,,,,,,,,,,
+P27,TIE,,I/O,,,,,,,,,,
+P28,TIE,,I/O,,,,,,,,,,
+P29,TIE,,I/O,,,,,,,,,,
+P30,TIE,,I/O,,,,,,,,,,
+P31,oLED<3>,O,I/O,OUTPUT,,,,,,,,,
+P32,oLED<2>,O,I/O,OUTPUT,,,,,,,,,
+P33,oLED<1>,O,I/O/GSR,OUTPUT,,,,,,,,,
+P34,oLED<0>,O,I/O/GTS2,OUTPUT,,,,,,,,,
+P35,VCC,,VCCINT,,,,,,,,,,
+P36,TIE,,I/O/GTS1,,,,,,,,,,
+P37,TIE,,I/O,,,,,,,,,,
+P38,TIE,,I/O,,,,,,,,,,
+P39,TIE,,I/O,,,,,,,,,,
+P40,TIE,,I/O,,,,,,,,,,
+P41,TIE,,I/O,,,,,,,,,,
+P42,TIE,,I/O,,,,,,,,,,
+P43,TIE,,I/O/GCK1,,,,,,,,,,
+P44,TIE,,I/O/GCK2,,,,,,,,,,
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

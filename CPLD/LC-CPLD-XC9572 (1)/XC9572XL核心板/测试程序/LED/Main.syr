@@ -1,0 +1,236 @@
+Release 10.1.03 - xst K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : Main.lso
+Keep Hierarchy                     : YES
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Main.v" in library work
+Module <Main> compiled
+No errors in compilation
+Analysis of file <"Main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Main> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Main>.
+Module <Main> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Main>.
+    Related source file is "Main.v".
+    Found 25-bit up counter for signal <sr_counter>.
+    Found 25-bit comparator greatequal for signal <sr_counter$cmp_ge0000> created at line 35.
+    Found 4-bit register for signal <sr_led>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <Main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 25-bit up counter                                     : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
+# Comparators                                          : 1
+ 25-bit comparator greatequal                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 25-bit up counter                                     : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Main> ...
+  implementation constraint: INIT=s	 : sr_led_3
+  implementation constraint: INIT=r	 : sr_led_0
+  implementation constraint: INIT=s	 : sr_led_1
+  implementation constraint: INIT=s	 : sr_led_2
+  implementation constraint: INIT=r	 : sr_counter_0
+  implementation constraint: INIT=r	 : sr_counter_1
+  implementation constraint: INIT=r	 : sr_counter_2
+  implementation constraint: INIT=r	 : sr_counter_3
+  implementation constraint: INIT=r	 : sr_counter_4
+  implementation constraint: INIT=r	 : sr_counter_5
+  implementation constraint: INIT=r	 : sr_counter_6
+  implementation constraint: INIT=r	 : sr_counter_7
+  implementation constraint: INIT=r	 : sr_counter_8
+  implementation constraint: INIT=r	 : sr_counter_9
+  implementation constraint: INIT=r	 : sr_counter_10
+  implementation constraint: INIT=r	 : sr_counter_11
+  implementation constraint: INIT=r	 : sr_counter_12
+  implementation constraint: INIT=r	 : sr_counter_13
+  implementation constraint: INIT=r	 : sr_counter_14
+  implementation constraint: INIT=r	 : sr_counter_15
+  implementation constraint: INIT=r	 : sr_counter_16
+  implementation constraint: INIT=r	 : sr_counter_17
+  implementation constraint: INIT=r	 : sr_counter_18
+  implementation constraint: INIT=r	 : sr_counter_19
+  implementation constraint: INIT=r	 : sr_counter_20
+  implementation constraint: INIT=r	 : sr_counter_21
+  implementation constraint: INIT=r	 : sr_counter_22
+  implementation constraint: INIT=r	 : sr_counter_23
+  implementation constraint: INIT=r	 : sr_counter_24
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Main.ngr
+Top Level Output File Name         : Main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 110
+#      AND2                        : 53
+#      AND4                        : 2
+#      GND                         : 1
+#      INV                         : 26
+#      OR2                         : 3
+#      OR5                         : 1
+#      XOR2                        : 24
+# FlipFlops/Latches                : 29
+#      FD                          : 25
+#      FDCE                        : 4
+# IO Buffers                       : 5
+#      IBUF                        : 1
+#      OBUF                        : 4
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.92 secs
+ 
+--> 
+
+Total memory usage is 167424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

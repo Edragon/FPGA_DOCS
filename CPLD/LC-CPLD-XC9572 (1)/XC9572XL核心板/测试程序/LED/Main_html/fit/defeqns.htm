@@ -1,0 +1,418 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+FTCPE_oLED0: FTCPE port map (oLED(0),EXP23_.EXP,iCLK,'0','0');
+</td></tr><tr><td>
+FTCPE_oLED1: FTCPE port map (oLED(1),oLED_T(1),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oLED_T(1) <= ((NOT sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP22_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(18) AND NOT sr_counter(23))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(19) AND NOT sr_counter(23))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(22) AND NOT sr_counter(23)));
+</td></tr><tr><td>
+FTCPE_oLED2: FTCPE port map (oLED(2),oLED_T(2),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oLED_T(2) <= ((NOT sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP21_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_led(1).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(18) AND NOT sr_counter(23))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(19) AND NOT sr_counter(23))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(20) AND NOT sr_counter(23))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(22) AND NOT sr_counter(23)));
+</td></tr><tr><td>
+FTCPE_oLED3: FTCPE port map (oLED(3),oLED_T(3),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oLED_T(3) <= ((NOT sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP20_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(22) AND NOT sr_counter(23)));
+</td></tr><tr><td>
+FTCPE_sr_counter0: FTCPE port map (sr_counter(0),sr_counter_T(0),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(0) <= ((EXP8_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND sr_counter(17) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND sr_counter(15) AND sr_counter(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(18) AND sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(22) AND sr_counter(24)));
+</td></tr><tr><td>
+FDCPE_sr_counter1: FDCPE port map (sr_counter(1),sr_counter_D(1),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(1) <= ((EXP31_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(0) AND sr_counter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FDCPE_sr_counter2: FDCPE port map (sr_counter(2),sr_counter_D(2),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(2) <= ((sr_counter(22).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP41_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(1) AND NOT sr_counter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(0) AND sr_counter(1) AND sr_counter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24)));
+</td></tr><tr><td>
+FDCPE_sr_counter3: FDCPE port map (sr_counter(3),sr_counter_D(3),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(3) <= ((EXP43_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24)));
+</td></tr><tr><td>
+FDCPE_sr_counter4: FDCPE port map (sr_counter(4),sr_counter_D(4),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(4) <= ((EXP46_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(1) AND NOT sr_counter(4)));
+</td></tr><tr><td>
+FDCPE_sr_counter5: FDCPE port map (sr_counter(5),sr_counter_D(5),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(5) <= ((EXP35_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP36_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(1) AND NOT sr_counter(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(2) AND NOT sr_counter(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(3) AND NOT sr_counter(5)));
+</td></tr><tr><td>
+FDCPE_sr_counter6: FDCPE port map (sr_counter(6),sr_counter_D(6),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(6) <= ((EXP28_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP37_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(6) AND NOT sr_counter(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(6) AND NOT sr_counter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(6) AND NOT sr_counter(3)));
+</td></tr><tr><td>
+FDCPE_sr_counter7: FDCPE port map (sr_counter(7),sr_counter_D(7),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(7) <= ((EXP27_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(6) AND NOT sr_counter(7)));
+</td></tr><tr><td>
+FDCPE_sr_counter8: FDCPE port map (sr_counter(8),sr_counter_D(8),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(8) <= ((sr_counter(3).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP44_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(6) AND NOT sr_counter(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(7) AND NOT sr_counter(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(8) AND NOT sr_counter(1)));
+</td></tr><tr><td>
+FDCPE_sr_counter9: FDCPE port map (sr_counter(9),sr_counter_D(9),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(9) <= ((sr_counter(17).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP47_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(0) AND NOT sr_counter(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(6) AND NOT sr_counter(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(7) AND NOT sr_counter(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(8) AND NOT sr_counter(9)));
+</td></tr><tr><td>
+FDCPE_sr_counter10: FDCPE port map (sr_counter(10),sr_counter_D(10),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_D(10) <= ((EXP15_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP16_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(10) AND NOT sr_counter(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(10) AND NOT sr_counter(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(10) AND NOT sr_counter(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sr_counter(10) AND NOT sr_counter(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(23) AND sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter11: FTCPE port map (sr_counter(11),sr_counter_T(11),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(11) <= ((EXP18_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(17) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(15) AND sr_counter(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(18) AND sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(22) AND sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter12: FTCPE port map (sr_counter(12),sr_counter_T(12),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(12) <= ((EXP6_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (EXP7_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(12) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(12) AND sr_counter(17) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(12) AND sr_counter(15) AND sr_counter(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(18) AND sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(10) AND sr_counter(11) AND sr_counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(13) AND sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter13: FTCPE port map (sr_counter(13),sr_counter_T(13),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(13) <= ((EXP11_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(14).EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(13) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(13) AND sr_counter(17) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(13) AND sr_counter(15) AND sr_counter(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(18) AND sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(10) AND sr_counter(11) AND sr_counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(13) AND sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter14: FTCPE port map (sr_counter(14),sr_counter_T(14),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(14) <= ((EXP12_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(14) AND sr_counter(23) AND sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter15: FTCPE port map (sr_counter(15),sr_counter_T(15),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(15) <= ((EXP34_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(17) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(0) AND sr_counter(10) AND sr_counter(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(12) AND sr_counter(13) AND sr_counter(14) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(7) AND sr_counter(8) AND sr_counter(9) AND sr_counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT sr_counter(24) AND sr_counter(2) AND sr_counter(3) AND sr_counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(0) AND sr_counter(10) AND sr_counter(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(12) AND sr_counter(13) AND sr_counter(14) AND NOT sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT sr_counter(23) AND sr_counter(6) AND sr_counter(7) AND sr_counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(9) AND sr_counter(1) AND sr_counter(2) AND sr_counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(4) AND sr_counter(5)));
+</td></tr><tr><td>
+FTCPE_sr_counter16: FTCPE port map (sr_counter(16),sr_counter_T(16),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(16) <= ((EXP10_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(16) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(16) AND sr_counter(17) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter17: FTCPE port map (sr_counter(17),sr_counter_T(17),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(17) <= ((EXP38_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(0) AND sr_counter(10) AND sr_counter(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(12) AND sr_counter(13) AND sr_counter(14) AND sr_counter(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(16) AND sr_counter(6) AND sr_counter(7) AND sr_counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(9) AND sr_counter(1) AND NOT sr_counter(24) AND sr_counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(3) AND sr_counter(4) AND sr_counter(5)));
+</td></tr><tr><td>
+FTCPE_sr_counter18: FTCPE port map (sr_counter(18),sr_counter_T(18),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(18) <= ((EXP33_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(18) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter19: FTCPE port map (sr_counter(19),sr_counter_T(19),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(19) <= ((EXP32_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(19) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter20: FTCPE port map (sr_counter(20),sr_counter_T(20),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(20) <= ((EXP30_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(20) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter21: FTCPE port map (sr_counter(21),sr_counter_T(21),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(21) <= ((EXP29_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(21) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter22: FTCPE port map (sr_counter(22),sr_counter_T(22),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(22) <= ((EXP40_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(22) AND sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+FTCPE_sr_counter23: FTCPE port map (sr_counter(23),sr_counter_T(23),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(23) <= ((sr_counter(23) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(0) AND sr_counter(10) AND sr_counter(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(12) AND sr_counter(13) AND sr_counter(14) AND sr_counter(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(16) AND sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(7) AND sr_counter(8) AND sr_counter(9) AND sr_counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT sr_counter(24) AND sr_counter(2) AND sr_counter(3) AND sr_counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(5)));
+</td></tr><tr><td>
+FTCPE_sr_counter24: FTCPE port map (sr_counter(24),sr_counter_T(24),iCLK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_counter_T(24) <= ((EXP39_.EXP)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(17) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(15) AND sr_counter(16) AND sr_counter(18) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(19) AND sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sr_counter(11) AND sr_counter(12) AND sr_counter(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(14) AND sr_counter(16) AND sr_counter(18) AND sr_counter(19) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(20) AND sr_counter(21) AND sr_counter(22) AND sr_counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sr_counter(24)));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>
