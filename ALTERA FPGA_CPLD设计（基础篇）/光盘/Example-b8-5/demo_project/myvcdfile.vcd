@@ -1,0 +1,59 @@
+$date
+	Sun Nov 10 15:28:00 2002
+$end
+$version
+	ModelSim Version 5.5f
+$end
+$timescale
+	1ns
+$end
+$scope module test_counter $end
+$scope module dut $end
+$var parameter 32 ! tpd_clk_to_count $end
+$var parameter 32 " tpd_reset_to_count $end
+$var reg 8 # count [7:0] $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b101 !
+b1010 "
+bx #
+0$
+0%
+$end
+#5
+1%
+#9
+0%
+#15
+b0 #
+#20
+1$
+#25
+b1 #
+#30
+0$
+#40
+1$
+#45
+b10 #
+#50
+0$
+#60
+1$
+#65
+b11 #
+#70
+0$
+#80
+1$
+#85
+b100 #
+#90
+0$
+#100
+1$

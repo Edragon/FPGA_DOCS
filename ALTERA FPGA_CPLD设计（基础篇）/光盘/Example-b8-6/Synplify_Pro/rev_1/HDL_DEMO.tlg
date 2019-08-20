@@ -1,0 +1,16 @@
+Selecting top level module hdl_demo
+Synthesizing module alu
+Synthesizing module hdl_demo
+@N: CL201 :"D:\prj_D\Synplify_Pro\source\verilog\HDL_DEMO.V":38:0:38:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 10 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   1000
+   1001
+   1010
+   1011
+   1100

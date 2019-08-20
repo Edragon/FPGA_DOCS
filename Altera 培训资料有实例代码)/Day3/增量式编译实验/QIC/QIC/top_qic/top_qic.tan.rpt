@@ -1,0 +1,315 @@
+Classic Timing Analyzer report for top_qic
+Wed Apr 01 11:03:29 2009
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. tpd
+  6. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                       ;
++------------------------------+-------+---------------+-------------+---------+-------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From    ; To                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+---------+-------------------------+------------+----------+--------------+
+; Worst-case tpd               ; N/A   ; None          ; 5.720 ns    ; key[18] ; des:inst2|key[18]~EMPTY ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;         ;                         ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+---------+-------------------------+------------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                ;
++---------------------------------------------------------------------+--------------------+------+---------+-------------+
+; Option                                                              ; Setting            ; From ; To      ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+---------+-------------+
+; Device Name                                                         ; EP2S15F672C3       ;      ;         ;             ;
+; Timing Models                                                       ; Final              ;      ;         ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;         ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;         ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;         ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;         ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;         ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;         ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;         ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;         ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;         ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;         ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;         ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;         ;             ;
+; Number of paths to report                                           ; 200                ;      ;         ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;         ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;         ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;         ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;         ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;         ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;         ;             ;
+; Clock Settings                                                      ; des_clk            ;      ; des_clk ;             ;
++---------------------------------------------------------------------+--------------------+------+---------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; des_clk         ; des_clk            ; User Pin ; 300.03 MHz       ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tpd                                                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+-----------------+------------------------------------+--------------------------------+
+; Slack                                   ; Required P2P Time                                   ; Actual P2P Time ; From                               ; To                             ;
++-----------------------------------------+-----------------------------------------------------+-----------------+------------------------------------+--------------------------------+
+; N/A                                     ; None                                                ; 5.720 ns        ; key[18]                            ; des:inst2|key[18]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.614 ns        ; key[49]                            ; des:inst2|key[49]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.601 ns        ; ph_in[6]                           ; placeholder:inst3|in[6]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.432 ns        ; fir_data_in[4]                     ; fir_top:inst|data_in[4]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.403 ns        ; fir_data_in[7]                     ; fir_top:inst|data_in[7]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.393 ns        ; fir_data_in[3]                     ; fir_top:inst|data_in[3]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.308 ns        ; fir_data_in[0]                     ; fir_top:inst|data_in[0]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.271 ns        ; fir_data_in[11]                    ; fir_top:inst|data_in[11]~EMPTY ;
+; N/A                                     ; None                                                ; 5.257 ns        ; fir_data_in[1]                     ; fir_top:inst|data_in[1]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.251 ns        ; fir_data_in[13]                    ; fir_top:inst|data_in[13]~EMPTY ;
+; N/A                                     ; None                                                ; 5.228 ns        ; ph_in[47]                          ; placeholder:inst3|in[47]~EMPTY ;
+; N/A                                     ; None                                                ; 5.227 ns        ; fir_data_in[6]                     ; fir_top:inst|data_in[6]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.226 ns        ; key[17]                            ; des:inst2|key[17]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.211 ns        ; decrypt                            ; des:inst2|decrypt~EMPTY        ;
+; N/A                                     ; None                                                ; 5.152 ns        ; des_clk                            ; des:inst2|des_clk~EMPTY        ;
+; N/A                                     ; None                                                ; 5.137 ns        ; key[11]                            ; des:inst2|key[11]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.112 ns        ; key[47]                            ; des:inst2|key[47]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.080 ns        ; ph_in[27]                          ; placeholder:inst3|in[27]~EMPTY ;
+; N/A                                     ; None                                                ; 5.067 ns        ; fir_data_in[2]                     ; fir_top:inst|data_in[2]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.062 ns        ; key[45]                            ; des:inst2|key[45]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.049 ns        ; key[40]                            ; des:inst2|key[40]~EMPTY        ;
+; N/A                                     ; None                                                ; 5.044 ns        ; fir_data_in[15]                    ; fir_top:inst|data_in[15]~EMPTY ;
+; N/A                                     ; None                                                ; 5.028 ns        ; key[3]                             ; des:inst2|key[3]~EMPTY         ;
+; N/A                                     ; None                                                ; 5.015 ns        ; fir_data_in[5]                     ; fir_top:inst|data_in[5]~EMPTY  ;
+; N/A                                     ; None                                                ; 5.011 ns        ; fir_data_in[12]                    ; fir_top:inst|data_in[12]~EMPTY ;
+; N/A                                     ; None                                                ; 4.980 ns        ; key[26]                            ; des:inst2|key[26]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.960 ns        ; key[43]                            ; des:inst2|key[43]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.955 ns        ; fir_data_in[10]                    ; fir_top:inst|data_in[10]~EMPTY ;
+; N/A                                     ; None                                                ; 4.927 ns        ; ph_in[59]                          ; placeholder:inst3|in[59]~EMPTY ;
+; N/A                                     ; None                                                ; 4.915 ns        ; key[20]                            ; des:inst2|key[20]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.908 ns        ; ph_in[61]                          ; placeholder:inst3|in[61]~EMPTY ;
+; N/A                                     ; None                                                ; 4.897 ns        ; ph_in[30]                          ; placeholder:inst3|in[30]~EMPTY ;
+; N/A                                     ; None                                                ; 4.896 ns        ; key[4]                             ; des:inst2|key[4]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.895 ns        ; fir_data_in[8]                     ; fir_top:inst|data_in[8]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.892 ns        ; key[30]                            ; des:inst2|key[30]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.891 ns        ; fir_clk                            ; fir_top:inst|clk~EMPTY         ;
+; N/A                                     ; None                                                ; 4.879 ns        ; key[50]                            ; des:inst2|key[50]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.868 ns        ; key[42]                            ; des:inst2|key[42]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.861 ns        ; ph_in[24]                          ; placeholder:inst3|in[24]~EMPTY ;
+; N/A                                     ; None                                                ; 4.857 ns        ; key[31]                            ; des:inst2|key[31]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.846 ns        ; key[41]                            ; des:inst2|key[41]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.836 ns        ; key[38]                            ; des:inst2|key[38]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.823 ns        ; key[28]                            ; des:inst2|key[28]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.811 ns        ; ph_in[56]                          ; placeholder:inst3|in[56]~EMPTY ;
+; N/A                                     ; None                                                ; 4.809 ns        ; key[48]                            ; des:inst2|key[48]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.809 ns        ; fir_data_in[14]                    ; fir_top:inst|data_in[14]~EMPTY ;
+; N/A                                     ; None                                                ; 4.790 ns        ; key[16]                            ; des:inst2|key[16]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.770 ns        ; ph_in[53]                          ; placeholder:inst3|in[53]~EMPTY ;
+; N/A                                     ; None                                                ; 4.754 ns        ; ph_in[60]                          ; placeholder:inst3|in[60]~EMPTY ;
+; N/A                                     ; None                                                ; 4.738 ns        ; ph_in[35]                          ; placeholder:inst3|in[35]~EMPTY ;
+; N/A                                     ; None                                                ; 4.733 ns        ; ph_in[44]                          ; placeholder:inst3|in[44]~EMPTY ;
+; N/A                                     ; None                                                ; 4.722 ns        ; ph_in[54]                          ; placeholder:inst3|in[54]~EMPTY ;
+; N/A                                     ; None                                                ; 4.705 ns        ; ph_in[58]                          ; placeholder:inst3|in[58]~EMPTY ;
+; N/A                                     ; None                                                ; 4.704 ns        ; ph_in[10]                          ; placeholder:inst3|in[10]~EMPTY ;
+; N/A                                     ; None                                                ; 4.702 ns        ; key[2]                             ; des:inst2|key[2]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.699 ns        ; ph_in[41]                          ; placeholder:inst3|in[41]~EMPTY ;
+; N/A                                     ; None                                                ; 4.694 ns        ; ph_in[50]                          ; placeholder:inst3|in[50]~EMPTY ;
+; N/A                                     ; None                                                ; 4.692 ns        ; key[1]                             ; des:inst2|key[1]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.688 ns        ; ph_in[32]                          ; placeholder:inst3|in[32]~EMPTY ;
+; N/A                                     ; None                                                ; 4.681 ns        ; fir_data_in[9]                     ; fir_top:inst|data_in[9]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.674 ns        ; ph_in[5]                           ; placeholder:inst3|in[5]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.664 ns        ; ph_in[20]                          ; placeholder:inst3|in[20]~EMPTY ;
+; N/A                                     ; None                                                ; 4.663 ns        ; key[15]                            ; des:inst2|key[15]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.648 ns        ; key[51]                            ; des:inst2|key[51]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.648 ns        ; key[21]                            ; des:inst2|key[21]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.648 ns        ; key[14]                            ; des:inst2|key[14]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.642 ns        ; key[44]                            ; des:inst2|key[44]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.641 ns        ; ph_in[29]                          ; placeholder:inst3|in[29]~EMPTY ;
+; N/A                                     ; None                                                ; 4.636 ns        ; key[46]                            ; des:inst2|key[46]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.636 ns        ; key[13]                            ; des:inst2|key[13]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.634 ns        ; ph_in[17]                          ; placeholder:inst3|in[17]~EMPTY ;
+; N/A                                     ; None                                                ; 4.632 ns        ; key[39]                            ; des:inst2|key[39]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.627 ns        ; ph_in[62]                          ; placeholder:inst3|in[62]~EMPTY ;
+; N/A                                     ; None                                                ; 4.627 ns        ; ph_in[25]                          ; placeholder:inst3|in[25]~EMPTY ;
+; N/A                                     ; None                                                ; 4.617 ns        ; key[53]                            ; des:inst2|key[53]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.615 ns        ; ph_in[63]                          ; placeholder:inst3|in[63]~EMPTY ;
+; N/A                                     ; None                                                ; 4.611 ns        ; ph_in[13]                          ; placeholder:inst3|in[13]~EMPTY ;
+; N/A                                     ; None                                                ; 4.611 ns        ; key[37]                            ; des:inst2|key[37]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.610 ns        ; ph_in[40]                          ; placeholder:inst3|in[40]~EMPTY ;
+; N/A                                     ; None                                                ; 4.610 ns        ; key[19]                            ; des:inst2|key[19]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.609 ns        ; ph_in[7]                           ; placeholder:inst3|in[7]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.609 ns        ; key[22]                            ; des:inst2|key[22]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.598 ns        ; ph_in[42]                          ; placeholder:inst3|in[42]~EMPTY ;
+; N/A                                     ; None                                                ; 4.594 ns        ; ph_in[51]                          ; placeholder:inst3|in[51]~EMPTY ;
+; N/A                                     ; None                                                ; 4.592 ns        ; key[0]                             ; des:inst2|key[0]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.588 ns        ; ph_in[2]                           ; placeholder:inst3|in[2]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.582 ns        ; ph_in[8]                           ; placeholder:inst3|in[8]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.582 ns        ; key[23]                            ; des:inst2|key[23]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.577 ns        ; ph_in[46]                          ; placeholder:inst3|in[46]~EMPTY ;
+; N/A                                     ; None                                                ; 4.572 ns        ; ph_in[48]                          ; placeholder:inst3|in[48]~EMPTY ;
+; N/A                                     ; None                                                ; 4.569 ns        ; key[55]                            ; des:inst2|key[55]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.569 ns        ; key[33]                            ; des:inst2|key[33]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.568 ns        ; ph_in[9]                           ; placeholder:inst3|in[9]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.567 ns        ; key[10]                            ; des:inst2|key[10]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.565 ns        ; ph_in[23]                          ; placeholder:inst3|in[23]~EMPTY ;
+; N/A                                     ; None                                                ; 4.562 ns        ; ph_in[28]                          ; placeholder:inst3|in[28]~EMPTY ;
+; N/A                                     ; None                                                ; 4.561 ns        ; ph_in[36]                          ; placeholder:inst3|in[36]~EMPTY ;
+; N/A                                     ; None                                                ; 4.555 ns        ; ph_in[22]                          ; placeholder:inst3|in[22]~EMPTY ;
+; N/A                                     ; None                                                ; 4.555 ns        ; ph_in[14]                          ; placeholder:inst3|in[14]~EMPTY ;
+; N/A                                     ; None                                                ; 4.553 ns        ; ph_in[3]                           ; placeholder:inst3|in[3]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.553 ns        ; ph_in[34]                          ; placeholder:inst3|in[34]~EMPTY ;
+; N/A                                     ; None                                                ; 4.552 ns        ; ph_in[55]                          ; placeholder:inst3|in[55]~EMPTY ;
+; N/A                                     ; None                                                ; 4.551 ns        ; ph_in[33]                          ; placeholder:inst3|in[33]~EMPTY ;
+; N/A                                     ; None                                                ; 4.548 ns        ; ph_in[19]                          ; placeholder:inst3|in[19]~EMPTY ;
+; N/A                                     ; None                                                ; 4.547 ns        ; ph_in[39]                          ; placeholder:inst3|in[39]~EMPTY ;
+; N/A                                     ; None                                                ; 4.545 ns        ; ph_in[57]                          ; placeholder:inst3|in[57]~EMPTY ;
+; N/A                                     ; None                                                ; 4.545 ns        ; ph_in[16]                          ; placeholder:inst3|in[16]~EMPTY ;
+; N/A                                     ; None                                                ; 4.544 ns        ; ph_in[4]                           ; placeholder:inst3|in[4]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.543 ns        ; ph_in[18]                          ; placeholder:inst3|in[18]~EMPTY ;
+; N/A                                     ; None                                                ; 4.541 ns        ; key[5]                             ; des:inst2|key[5]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.540 ns        ; key[34]                            ; des:inst2|key[34]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.535 ns        ; key[52]                            ; des:inst2|key[52]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.532 ns        ; ph_in[1]                           ; placeholder:inst3|in[1]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.530 ns        ; key[12]                            ; des:inst2|key[12]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.528 ns        ; key[36]                            ; des:inst2|key[36]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.525 ns        ; fir_rst                            ; fir_top:inst|rst~EMPTY         ;
+; N/A                                     ; None                                                ; 4.524 ns        ; key[29]                            ; des:inst2|key[29]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.521 ns        ; ph_in[11]                          ; placeholder:inst3|in[11]~EMPTY ;
+; N/A                                     ; None                                                ; 4.518 ns        ; key[8]                             ; des:inst2|key[8]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.518 ns        ; key[24]                            ; des:inst2|key[24]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.351 ns        ; ph_in[52]                          ; placeholder:inst3|in[52]~EMPTY ;
+; N/A                                     ; None                                                ; 4.347 ns        ; ph_in[38]                          ; placeholder:inst3|in[38]~EMPTY ;
+; N/A                                     ; None                                                ; 4.332 ns        ; ph_in[43]                          ; placeholder:inst3|in[43]~EMPTY ;
+; N/A                                     ; None                                                ; 4.330 ns        ; key[9]                             ; des:inst2|key[9]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.325 ns        ; key[7]                             ; des:inst2|key[7]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.321 ns        ; ph_in[37]                          ; placeholder:inst3|in[37]~EMPTY ;
+; N/A                                     ; None                                                ; 4.318 ns        ; ph_in[31]                          ; placeholder:inst3|in[31]~EMPTY ;
+; N/A                                     ; None                                                ; 4.316 ns        ; ph_in[26]                          ; placeholder:inst3|in[26]~EMPTY ;
+; N/A                                     ; None                                                ; 4.311 ns        ; key[25]                            ; des:inst2|key[25]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.310 ns        ; key[54]                            ; des:inst2|key[54]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.305 ns        ; ph_in[45]                          ; placeholder:inst3|in[45]~EMPTY ;
+; N/A                                     ; None                                                ; 4.302 ns        ; des:inst2|desOut[9]~EMPTY          ; desOut[9]                      ;
+; N/A                                     ; None                                                ; 4.299 ns        ; key[35]                            ; des:inst2|key[35]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.288 ns        ; ph_in[21]                          ; placeholder:inst3|in[21]~EMPTY ;
+; N/A                                     ; None                                                ; 4.287 ns        ; ph_in[15]                          ; placeholder:inst3|in[15]~EMPTY ;
+; N/A                                     ; None                                                ; 4.286 ns        ; ph_in[49]                          ; placeholder:inst3|in[49]~EMPTY ;
+; N/A                                     ; None                                                ; 4.285 ns        ; ph_in[0]                           ; placeholder:inst3|in[0]~EMPTY  ;
+; N/A                                     ; None                                                ; 4.276 ns        ; ph_in[12]                          ; placeholder:inst3|in[12]~EMPTY ;
+; N/A                                     ; None                                                ; 4.275 ns        ; key[32]                            ; des:inst2|key[32]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.270 ns        ; key[6]                             ; des:inst2|key[6]~EMPTY         ;
+; N/A                                     ; None                                                ; 4.265 ns        ; key[27]                            ; des:inst2|key[27]~EMPTY        ;
+; N/A                                     ; None                                                ; 4.204 ns        ; fir_top:inst|fir_result[19]~EMPTY  ; result[19]                     ;
+; N/A                                     ; None                                                ; 4.038 ns        ; des:inst2|desOut[30]~EMPTY         ; desOut[30]                     ;
+; N/A                                     ; None                                                ; 4.034 ns        ; des:inst2|desOut[31]~EMPTY         ; desOut[31]                     ;
+; N/A                                     ; None                                                ; 4.009 ns        ; des:inst2|desOut[10]~EMPTY         ; desOut[10]                     ;
+; N/A                                     ; None                                                ; 3.676 ns        ; des:inst2|desOut[42]~EMPTY         ; desOut[42]                     ;
+; N/A                                     ; None                                                ; 3.661 ns        ; des:inst2|desOut[38]~EMPTY         ; desOut[38]                     ;
+; N/A                                     ; None                                                ; 3.605 ns        ; des:inst2|desOut[12]~EMPTY         ; desOut[12]                     ;
+; N/A                                     ; None                                                ; 3.519 ns        ; des:inst2|desOut[14]~EMPTY         ; desOut[14]                     ;
+; N/A                                     ; None                                                ; 3.513 ns        ; des:inst2|desOut[39]~EMPTY         ; desOut[39]                     ;
+; N/A                                     ; None                                                ; 3.416 ns        ; des:inst2|desOut[44]~EMPTY         ; desOut[44]                     ;
+; N/A                                     ; None                                                ; 3.415 ns        ; des:inst2|desOut[29]~EMPTY         ; desOut[29]                     ;
+; N/A                                     ; None                                                ; 3.399 ns        ; des:inst2|desOut[33]~EMPTY         ; desOut[33]                     ;
+; N/A                                     ; None                                                ; 3.381 ns        ; des:inst2|desOut[34]~EMPTY         ; desOut[34]                     ;
+; N/A                                     ; None                                                ; 3.289 ns        ; fir_top:inst|fir_result[12]~EMPTY  ; result[12]                     ;
+; N/A                                     ; None                                                ; 3.212 ns        ; des:inst2|desOut[36]~EMPTY         ; desOut[36]                     ;
+; N/A                                     ; None                                                ; 3.204 ns        ; fir_top:inst|fir_result[16]~EMPTY  ; result[16]                     ;
+; N/A                                     ; None                                                ; 3.083 ns        ; des:inst2|desOut[28]~EMPTY         ; desOut[28]                     ;
+; N/A                                     ; None                                                ; 3.029 ns        ; fir_top:inst|fir_result[20]~EMPTY  ; result[20]                     ;
+; N/A                                     ; None                                                ; 3.027 ns        ; des:inst2|desOut[0]~EMPTY          ; desOut[0]                      ;
+; N/A                                     ; None                                                ; 3.027 ns        ; des:inst2|desOut[48]~EMPTY         ; desOut[48]                     ;
+; N/A                                     ; None                                                ; 3.019 ns        ; fir_top:inst|fir_result[13]~EMPTY  ; result[13]                     ;
+; N/A                                     ; None                                                ; 3.018 ns        ; fir_top:inst|fir_result[15]~EMPTY  ; result[15]                     ;
+; N/A                                     ; None                                                ; 3.015 ns        ; fir_top:inst|output_ch_id[1]~EMPTY ; fir_out_ch[1]                  ;
+; N/A                                     ; None                                                ; 3.014 ns        ; des:inst2|desOut[47]~EMPTY         ; desOut[47]                     ;
+; N/A                                     ; None                                                ; 2.987 ns        ; des:inst2|desOut[6]~EMPTY          ; desOut[6]                      ;
+; N/A                                     ; None                                                ; 2.893 ns        ; des:inst2|desOut[54]~EMPTY         ; desOut[54]                     ;
+; N/A                                     ; None                                                ; 2.882 ns        ; des:inst2|desOut[5]~EMPTY          ; desOut[5]                      ;
+; N/A                                     ; None                                                ; 2.877 ns        ; des:inst2|desOut[15]~EMPTY         ; desOut[15]                     ;
+; N/A                                     ; None                                                ; 2.873 ns        ; des:inst2|desOut[55]~EMPTY         ; desOut[55]                     ;
+; N/A                                     ; None                                                ; 2.799 ns        ; des:inst2|desOut[63]~EMPTY         ; desOut[63]                     ;
+; N/A                                     ; None                                                ; 2.798 ns        ; des:inst2|desOut[8]~EMPTY          ; desOut[8]                      ;
+; N/A                                     ; None                                                ; 2.795 ns        ; des:inst2|desOut[40]~EMPTY         ; desOut[40]                     ;
+; N/A                                     ; None                                                ; 2.793 ns        ; des:inst2|desOut[45]~EMPTY         ; desOut[45]                     ;
+; N/A                                     ; None                                                ; 2.792 ns        ; fir_top:inst|fir_result[10]~EMPTY  ; result[10]                     ;
+; N/A                                     ; None                                                ; 2.792 ns        ; des:inst2|desOut[21]~EMPTY         ; desOut[21]                     ;
+; N/A                                     ; None                                                ; 2.791 ns        ; des:inst2|desOut[25]~EMPTY         ; desOut[25]                     ;
+; N/A                                     ; None                                                ; 2.771 ns        ; fir_top:inst|fir_result[23]~EMPTY  ; result[23]                     ;
+; N/A                                     ; None                                                ; 2.771 ns        ; des:inst2|desOut[59]~EMPTY         ; desOut[59]                     ;
+; N/A                                     ; None                                                ; 2.769 ns        ; fir_top:inst|fir_result[5]~EMPTY   ; result[5]                      ;
+; N/A                                     ; None                                                ; 2.769 ns        ; des:inst2|desOut[61]~EMPTY         ; desOut[61]                     ;
+; N/A                                     ; None                                                ; 2.766 ns        ; des:inst2|desOut[27]~EMPTY         ; desOut[27]                     ;
+; N/A                                     ; None                                                ; 2.765 ns        ; des:inst2|desOut[1]~EMPTY          ; desOut[1]                      ;
+; N/A                                     ; None                                                ; 2.760 ns        ; des:inst2|desOut[52]~EMPTY         ; desOut[52]                     ;
+; N/A                                     ; None                                                ; 2.751 ns        ; des:inst2|desOut[56]~EMPTY         ; desOut[56]                     ;
+; N/A                                     ; None                                                ; 2.748 ns        ; fir_top:inst|fir_result[26]~EMPTY  ; result[26]                     ;
+; N/A                                     ; None                                                ; 2.748 ns        ; des:inst2|desOut[2]~EMPTY          ; desOut[2]                      ;
+; N/A                                     ; None                                                ; 2.745 ns        ; des:inst2|desOut[11]~EMPTY         ; desOut[11]                     ;
+; N/A                                     ; None                                                ; 2.745 ns        ; des:inst2|desOut[20]~EMPTY         ; desOut[20]                     ;
+; N/A                                     ; None                                                ; 2.730 ns        ; des:inst2|desOut[35]~EMPTY         ; desOut[35]                     ;
+; N/A                                     ; None                                                ; 2.728 ns        ; des:inst2|desOut[41]~EMPTY         ; desOut[41]                     ;
+; N/A                                     ; None                                                ; 2.724 ns        ; des:inst2|desOut[16]~EMPTY         ; desOut[16]                     ;
+; N/A                                     ; None                                                ; 2.712 ns        ; des:inst2|desOut[3]~EMPTY          ; desOut[3]                      ;
+; N/A                                     ; None                                                ; 2.710 ns        ; fir_top:inst|fir_result[4]~EMPTY   ; result[4]                      ;
+; N/A                                     ; None                                                ; 2.704 ns        ; fir_top:inst|fir_result[2]~EMPTY   ; result[2]                      ;
+; N/A                                     ; None                                                ; 2.701 ns        ; des:inst2|desOut[43]~EMPTY         ; desOut[43]                     ;
+; N/A                                     ; None                                                ; 2.699 ns        ; fir_top:inst|fir_result[21]~EMPTY  ; result[21]                     ;
+; N/A                                     ; None                                                ; 2.687 ns        ; fir_top:inst|fir_result[29]~EMPTY  ; result[29]                     ;
+; N/A                                     ; None                                                ; 2.647 ns        ; des:inst2|desOut[23]~EMPTY         ; desOut[23]                     ;
+; N/A                                     ; None                                                ; 2.633 ns        ; des:inst2|desOut[22]~EMPTY         ; desOut[22]                     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                 ;                                    ;                                ;
++-----------------------------------------+-----------------------------------------------------+-----------------+------------------------------------+--------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Wed Apr 01 11:03:28 2009
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off top_qic -c top_qic --timing_analysis_only
+Info: No valid register-to-register data paths exist for clock "des_clk"
+Info: Longest tpd from source pin "key[18]" to destination pin "des:inst2|key[18]~EMPTY" is 5.720 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.867 ns) = 0.867 ns; Loc. = PIN_AE18; Fanout = 1; PIN Node = 'key[18]'
+    Info: 2: + IC(4.853 ns) + CELL(0.000 ns) = 5.720 ns; Loc. = LCCOMB_X11_Y23_N18; Fanout = 0; PIN Node = 'des:inst2|key[18]~EMPTY'
+    Info: Total cell delay = 0.867 ns ( 15.16 % )
+    Info: Total interconnect delay = 4.853 ns ( 84.84 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 133 megabytes
+    Info: Processing ended: Wed Apr 01 11:03:29 2009
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,6 @@
+
+State Machine - |two_d_dct|data_valid_state
+Name data_valid_state.idle data_valid_state.col_dct data_valid_state.row_dct 
+data_valid_state.idle 0 0 0 
+data_valid_state.row_dct 1 0 1 
+data_valid_state.col_dct 1 1 0 

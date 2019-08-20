@@ -1,0 +1,694 @@
+//
+// Written by Synplify
+// Synplify 7.3.5, Build 250R.
+// Wed Mar 23 01:24:20 2005
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "noname"
+// file 1 "\d:\prj_d\synplify_pro\source\verilog\alu.v "
+
+module alu (
+  clk,
+  a,
+  b,
+  opcode,
+  outp
+);
+input clk ;
+input [7:0] a ;
+input [7:0] b ;
+input [2:0] opcode ;
+output [7:0] outp /* synthesis syn_tristate = 1 */;
+wire clk ;
+wire [7:0] outpz;
+wire [2:0] opcode_c;
+wire [7:0] outp_8_a;
+wire [7:0] un1_b_1_x;
+wire [7:0] b_c;
+wire [7:0] a_c;
+wire VCC ;
+wire GND ;
+wire un1_a_1_add0_start_cout ;
+wire NoName_un1_opcode_x ;
+wire clk_c ;
+wire un1_a_1_add7 ;
+wire un1_a_1_add6 ;
+wire un1_a_1_add5 ;
+wire un1_a_1_add4 ;
+wire un1_a_1_add3 ;
+wire un1_a_1_add2 ;
+wire un1_a_1_add1 ;
+wire un1_a_1_add0 ;
+wire un1_a_1_carry_6 ;
+wire un1_a_1_carry_5 ;
+wire un1_a_1_carry_4 ;
+wire un1_a_1_carry_3 ;
+wire un1_a_1_carry_2 ;
+wire un1_a_1_carry_1 ;
+wire un1_a_1_carry_0 ;
+wire N_1 ;
+//@1:1
+  assign VCC = 1'b1;
+//@1:1
+  assign GND = 1'b0;
+  stratix_lcell un1_a_1_add0_start (
+	.combout(N_1),
+	.cout(un1_a_1_add0_start_cout),
+	.dataa(NoName_un1_opcode_x)
+);
+defparam un1_a_1_add0_start.operation_mode="arithmetic";
+defparam un1_a_1_add0_start.output_mode="comb_only";
+defparam un1_a_1_add0_start.lut_mask="00aa";
+defparam un1_a_1_add0_start.synch_mode="off";
+defparam un1_a_1_add0_start.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_7_ (
+	.regout(outpz[7]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add7),
+	.datad(outp_8_a[7])
+);
+defparam outp_7_.operation_mode="normal";
+defparam outp_7_.output_mode="reg_only";
+defparam outp_7_.lut_mask="54ba";
+defparam outp_7_.synch_mode="off";
+defparam outp_7_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_6_ (
+	.regout(outpz[6]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add6),
+	.datad(outp_8_a[6])
+);
+defparam outp_6_.operation_mode="normal";
+defparam outp_6_.output_mode="reg_only";
+defparam outp_6_.lut_mask="54ba";
+defparam outp_6_.synch_mode="off";
+defparam outp_6_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_5_ (
+	.regout(outpz[5]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add5),
+	.datad(outp_8_a[5])
+);
+defparam outp_5_.operation_mode="normal";
+defparam outp_5_.output_mode="reg_only";
+defparam outp_5_.lut_mask="54ba";
+defparam outp_5_.synch_mode="off";
+defparam outp_5_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_4_ (
+	.regout(outpz[4]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add4),
+	.datad(outp_8_a[4])
+);
+defparam outp_4_.operation_mode="normal";
+defparam outp_4_.output_mode="reg_only";
+defparam outp_4_.lut_mask="54ba";
+defparam outp_4_.synch_mode="off";
+defparam outp_4_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_3_ (
+	.regout(outpz[3]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add3),
+	.datad(outp_8_a[3])
+);
+defparam outp_3_.operation_mode="normal";
+defparam outp_3_.output_mode="reg_only";
+defparam outp_3_.lut_mask="54ba";
+defparam outp_3_.synch_mode="off";
+defparam outp_3_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_2_ (
+	.regout(outpz[2]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add2),
+	.datad(outp_8_a[2])
+);
+defparam outp_2_.operation_mode="normal";
+defparam outp_2_.output_mode="reg_only";
+defparam outp_2_.lut_mask="54ba";
+defparam outp_2_.synch_mode="off";
+defparam outp_2_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_1_ (
+	.regout(outpz[1]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add1),
+	.datad(outp_8_a[1])
+);
+defparam outp_1_.operation_mode="normal";
+defparam outp_1_.output_mode="reg_only";
+defparam outp_1_.lut_mask="54ba";
+defparam outp_1_.synch_mode="off";
+defparam outp_1_.sum_lutc_input="datac";
+// @1:9
+  stratix_lcell outp_0_ (
+	.regout(outpz[0]),
+	.clk(clk_c),
+	.dataa(opcode_c[1]),
+	.datab(opcode_c[2]),
+	.datac(un1_a_1_add0),
+	.datad(outp_8_a[0])
+);
+defparam outp_0_.operation_mode="normal";
+defparam outp_0_.output_mode="reg_only";
+defparam outp_0_.lut_mask="54ba";
+defparam outp_0_.synch_mode="off";
+defparam outp_0_.sum_lutc_input="datac";
+// @1:12
+  stratix_lcell NoName_un1_opcode_x_Z (
+	.combout(NoName_un1_opcode_x),
+	.dataa(opcode_c[2]),
+	.datab(opcode_c[0])
+);
+defparam NoName_un1_opcode_x_Z.operation_mode="normal";
+defparam NoName_un1_opcode_x_Z.output_mode="comb_only";
+defparam NoName_un1_opcode_x_Z.lut_mask="1111";
+defparam NoName_un1_opcode_x_Z.synch_mode="off";
+defparam NoName_un1_opcode_x_Z.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_b_1_x_2_ (
+	.combout(un1_b_1_x[2]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[2])
+);
+defparam un1_b_1_x_2_.operation_mode="normal";
+defparam un1_b_1_x_2_.output_mode="comb_only";
+defparam un1_b_1_x_2_.lut_mask="1e1e";
+defparam un1_b_1_x_2_.synch_mode="off";
+defparam un1_b_1_x_2_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_b_1_x_3_ (
+	.combout(un1_b_1_x[3]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[3])
+);
+defparam un1_b_1_x_3_.operation_mode="normal";
+defparam un1_b_1_x_3_.output_mode="comb_only";
+defparam un1_b_1_x_3_.lut_mask="1e1e";
+defparam un1_b_1_x_3_.synch_mode="off";
+defparam un1_b_1_x_3_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_b_1_x_4_ (
+	.combout(un1_b_1_x[4]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[4])
+);
+defparam un1_b_1_x_4_.operation_mode="normal";
+defparam un1_b_1_x_4_.output_mode="comb_only";
+defparam un1_b_1_x_4_.lut_mask="1e1e";
+defparam un1_b_1_x_4_.synch_mode="off";
+defparam un1_b_1_x_4_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_b_1_x_5_ (
+	.combout(un1_b_1_x[5]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[5])
+);
+defparam un1_b_1_x_5_.operation_mode="normal";
+defparam un1_b_1_x_5_.output_mode="comb_only";
+defparam un1_b_1_x_5_.lut_mask="1e1e";
+defparam un1_b_1_x_5_.synch_mode="off";
+defparam un1_b_1_x_5_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_b_1_x_6_ (
+	.combout(un1_b_1_x[6]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[6])
+);
+defparam un1_b_1_x_6_.operation_mode="normal";
+defparam un1_b_1_x_6_.output_mode="comb_only";
+defparam un1_b_1_x_6_.lut_mask="1e1e";
+defparam un1_b_1_x_6_.synch_mode="off";
+defparam un1_b_1_x_6_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_b_1_x_7_ (
+	.combout(un1_b_1_x[7]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[7])
+);
+defparam un1_b_1_x_7_.operation_mode="normal";
+defparam un1_b_1_x_7_.output_mode="comb_only";
+defparam un1_b_1_x_7_.lut_mask="1e1e";
+defparam un1_b_1_x_7_.synch_mode="off";
+defparam un1_b_1_x_7_.sum_lutc_input="datac";
+  stratix_lcell un1_b_1_x_0_ (
+	.combout(un1_b_1_x[0]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[0])
+);
+defparam un1_b_1_x_0_.operation_mode="normal";
+defparam un1_b_1_x_0_.output_mode="comb_only";
+defparam un1_b_1_x_0_.lut_mask="1e1e";
+defparam un1_b_1_x_0_.synch_mode="off";
+defparam un1_b_1_x_0_.sum_lutc_input="datac";
+  stratix_lcell un1_b_1_x_1_ (
+	.combout(un1_b_1_x[1]),
+	.dataa(opcode_c[0]),
+	.datab(opcode_c[2]),
+	.datac(b_c[1])
+);
+defparam un1_b_1_x_1_.operation_mode="normal";
+defparam un1_b_1_x_1_.output_mode="comb_only";
+defparam un1_b_1_x_1_.lut_mask="1e1e";
+defparam un1_b_1_x_1_.synch_mode="off";
+defparam un1_b_1_x_1_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_7_ (
+	.combout(outp_8_a[7]),
+	.dataa(b_c[7]),
+	.datab(opcode_c[0]),
+	.datac(a_c[7]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_7_.operation_mode="normal";
+defparam outp_8_a_7_.output_mode="comb_only";
+defparam outp_8_a_7_.lut_mask="170f";
+defparam outp_8_a_7_.synch_mode="off";
+defparam outp_8_a_7_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_6_ (
+	.combout(outp_8_a[6]),
+	.dataa(b_c[6]),
+	.datab(opcode_c[0]),
+	.datac(a_c[6]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_6_.operation_mode="normal";
+defparam outp_8_a_6_.output_mode="comb_only";
+defparam outp_8_a_6_.lut_mask="170f";
+defparam outp_8_a_6_.synch_mode="off";
+defparam outp_8_a_6_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_5_ (
+	.combout(outp_8_a[5]),
+	.dataa(b_c[5]),
+	.datab(opcode_c[0]),
+	.datac(a_c[5]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_5_.operation_mode="normal";
+defparam outp_8_a_5_.output_mode="comb_only";
+defparam outp_8_a_5_.lut_mask="170f";
+defparam outp_8_a_5_.synch_mode="off";
+defparam outp_8_a_5_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_4_ (
+	.combout(outp_8_a[4]),
+	.dataa(b_c[4]),
+	.datab(opcode_c[0]),
+	.datac(a_c[4]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_4_.operation_mode="normal";
+defparam outp_8_a_4_.output_mode="comb_only";
+defparam outp_8_a_4_.lut_mask="170f";
+defparam outp_8_a_4_.synch_mode="off";
+defparam outp_8_a_4_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_3_ (
+	.combout(outp_8_a[3]),
+	.dataa(b_c[3]),
+	.datab(opcode_c[0]),
+	.datac(a_c[3]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_3_.operation_mode="normal";
+defparam outp_8_a_3_.output_mode="comb_only";
+defparam outp_8_a_3_.lut_mask="170f";
+defparam outp_8_a_3_.synch_mode="off";
+defparam outp_8_a_3_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_2_ (
+	.combout(outp_8_a[2]),
+	.dataa(b_c[2]),
+	.datab(opcode_c[0]),
+	.datac(a_c[2]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_2_.operation_mode="normal";
+defparam outp_8_a_2_.output_mode="comb_only";
+defparam outp_8_a_2_.lut_mask="170f";
+defparam outp_8_a_2_.synch_mode="off";
+defparam outp_8_a_2_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_1_ (
+	.combout(outp_8_a[1]),
+	.dataa(b_c[1]),
+	.datab(opcode_c[0]),
+	.datac(a_c[1]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_1_.operation_mode="normal";
+defparam outp_8_a_1_.output_mode="comb_only";
+defparam outp_8_a_1_.lut_mask="170f";
+defparam outp_8_a_1_.synch_mode="off";
+defparam outp_8_a_1_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell outp_8_a_0_ (
+	.combout(outp_8_a[0]),
+	.dataa(b_c[0]),
+	.datab(opcode_c[0]),
+	.datac(a_c[0]),
+	.datad(opcode_c[1])
+);
+defparam outp_8_a_0_.operation_mode="normal";
+defparam outp_8_a_0_.output_mode="comb_only";
+defparam outp_8_a_0_.lut_mask="170f";
+defparam outp_8_a_0_.synch_mode="off";
+defparam outp_8_a_0_.sum_lutc_input="datac";
+// @1:11
+  stratix_lcell un1_a_1_add7_Z (
+	.combout(un1_a_1_add7),
+	.dataa(a_c[7]),
+	.datab(un1_b_1_x[7]),
+	.cin(un1_a_1_carry_6)
+);
+defparam un1_a_1_add7_Z.cin_used="true";
+defparam un1_a_1_add7_Z.operation_mode="normal";
+defparam un1_a_1_add7_Z.output_mode="comb_only";
+defparam un1_a_1_add7_Z.lut_mask="9696";
+defparam un1_a_1_add7_Z.synch_mode="off";
+defparam un1_a_1_add7_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add6_Z (
+	.combout(un1_a_1_add6),
+	.cout(un1_a_1_carry_6),
+	.dataa(a_c[6]),
+	.datab(un1_b_1_x[6]),
+	.cin(un1_a_1_carry_5)
+);
+defparam un1_a_1_add6_Z.cin_used="true";
+defparam un1_a_1_add6_Z.operation_mode="arithmetic";
+defparam un1_a_1_add6_Z.output_mode="comb_only";
+defparam un1_a_1_add6_Z.lut_mask="96e8";
+defparam un1_a_1_add6_Z.synch_mode="off";
+defparam un1_a_1_add6_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add5_Z (
+	.combout(un1_a_1_add5),
+	.cout(un1_a_1_carry_5),
+	.dataa(a_c[5]),
+	.datab(un1_b_1_x[5]),
+	.cin(un1_a_1_carry_4)
+);
+defparam un1_a_1_add5_Z.cin_used="true";
+defparam un1_a_1_add5_Z.operation_mode="arithmetic";
+defparam un1_a_1_add5_Z.output_mode="comb_only";
+defparam un1_a_1_add5_Z.lut_mask="96e8";
+defparam un1_a_1_add5_Z.synch_mode="off";
+defparam un1_a_1_add5_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add4_Z (
+	.combout(un1_a_1_add4),
+	.cout(un1_a_1_carry_4),
+	.dataa(a_c[4]),
+	.datab(un1_b_1_x[4]),
+	.cin(un1_a_1_carry_3)
+);
+defparam un1_a_1_add4_Z.cin_used="true";
+defparam un1_a_1_add4_Z.operation_mode="arithmetic";
+defparam un1_a_1_add4_Z.output_mode="comb_only";
+defparam un1_a_1_add4_Z.lut_mask="96e8";
+defparam un1_a_1_add4_Z.synch_mode="off";
+defparam un1_a_1_add4_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add3_Z (
+	.combout(un1_a_1_add3),
+	.cout(un1_a_1_carry_3),
+	.dataa(a_c[3]),
+	.datab(un1_b_1_x[3]),
+	.cin(un1_a_1_carry_2)
+);
+defparam un1_a_1_add3_Z.cin_used="true";
+defparam un1_a_1_add3_Z.operation_mode="arithmetic";
+defparam un1_a_1_add3_Z.output_mode="comb_only";
+defparam un1_a_1_add3_Z.lut_mask="96e8";
+defparam un1_a_1_add3_Z.synch_mode="off";
+defparam un1_a_1_add3_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add2_Z (
+	.combout(un1_a_1_add2),
+	.cout(un1_a_1_carry_2),
+	.dataa(a_c[2]),
+	.datab(un1_b_1_x[2]),
+	.cin(un1_a_1_carry_1)
+);
+defparam un1_a_1_add2_Z.cin_used="true";
+defparam un1_a_1_add2_Z.operation_mode="arithmetic";
+defparam un1_a_1_add2_Z.output_mode="comb_only";
+defparam un1_a_1_add2_Z.lut_mask="96e8";
+defparam un1_a_1_add2_Z.synch_mode="off";
+defparam un1_a_1_add2_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add1_Z (
+	.combout(un1_a_1_add1),
+	.cout(un1_a_1_carry_1),
+	.dataa(a_c[1]),
+	.datab(un1_b_1_x[1]),
+	.cin(un1_a_1_carry_0)
+);
+defparam un1_a_1_add1_Z.cin_used="true";
+defparam un1_a_1_add1_Z.operation_mode="arithmetic";
+defparam un1_a_1_add1_Z.output_mode="comb_only";
+defparam un1_a_1_add1_Z.lut_mask="96e8";
+defparam un1_a_1_add1_Z.synch_mode="off";
+defparam un1_a_1_add1_Z.sum_lutc_input="cin";
+// @1:11
+  stratix_lcell un1_a_1_add0_Z (
+	.combout(un1_a_1_add0),
+	.cout(un1_a_1_carry_0),
+	.dataa(a_c[0]),
+	.datab(un1_b_1_x[0]),
+	.cin(un1_a_1_add0_start_cout)
+);
+defparam un1_a_1_add0_Z.cin_used="true";
+defparam un1_a_1_add0_Z.operation_mode="arithmetic";
+defparam un1_a_1_add0_Z.output_mode="comb_only";
+defparam un1_a_1_add0_Z.lut_mask="698e";
+defparam un1_a_1_add0_Z.synch_mode="off";
+defparam un1_a_1_add0_Z.sum_lutc_input="cin";
+// @1:4
+  stratix_io opcode_in_2_ (
+	.padio(opcode[2]),
+	.combout(opcode_c[2]),
+	.oe(GND)
+);
+defparam opcode_in_2_.operation_mode = "input";
+// @1:4
+  stratix_io opcode_in_1_ (
+	.padio(opcode[1]),
+	.combout(opcode_c[1]),
+	.oe(GND)
+);
+defparam opcode_in_1_.operation_mode = "input";
+// @1:4
+  stratix_io opcode_in_0_ (
+	.padio(opcode[0]),
+	.combout(opcode_c[0]),
+	.oe(GND)
+);
+defparam opcode_in_0_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_7_ (
+	.padio(b[7]),
+	.combout(b_c[7]),
+	.oe(GND)
+);
+defparam b_in_7_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_6_ (
+	.padio(b[6]),
+	.combout(b_c[6]),
+	.oe(GND)
+);
+defparam b_in_6_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_5_ (
+	.padio(b[5]),
+	.combout(b_c[5]),
+	.oe(GND)
+);
+defparam b_in_5_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_4_ (
+	.padio(b[4]),
+	.combout(b_c[4]),
+	.oe(GND)
+);
+defparam b_in_4_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_3_ (
+	.padio(b[3]),
+	.combout(b_c[3]),
+	.oe(GND)
+);
+defparam b_in_3_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_2_ (
+	.padio(b[2]),
+	.combout(b_c[2]),
+	.oe(GND)
+);
+defparam b_in_2_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_1_ (
+	.padio(b[1]),
+	.combout(b_c[1]),
+	.oe(GND)
+);
+defparam b_in_1_.operation_mode = "input";
+// @1:3
+  stratix_io b_in_0_ (
+	.padio(b[0]),
+	.combout(b_c[0]),
+	.oe(GND)
+);
+defparam b_in_0_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_7_ (
+	.padio(a[7]),
+	.combout(a_c[7]),
+	.oe(GND)
+);
+defparam a_in_7_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_6_ (
+	.padio(a[6]),
+	.combout(a_c[6]),
+	.oe(GND)
+);
+defparam a_in_6_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_5_ (
+	.padio(a[5]),
+	.combout(a_c[5]),
+	.oe(GND)
+);
+defparam a_in_5_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_4_ (
+	.padio(a[4]),
+	.combout(a_c[4]),
+	.oe(GND)
+);
+defparam a_in_4_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_3_ (
+	.padio(a[3]),
+	.combout(a_c[3]),
+	.oe(GND)
+);
+defparam a_in_3_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_2_ (
+	.padio(a[2]),
+	.combout(a_c[2]),
+	.oe(GND)
+);
+defparam a_in_2_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_1_ (
+	.padio(a[1]),
+	.combout(a_c[1]),
+	.oe(GND)
+);
+defparam a_in_1_.operation_mode = "input";
+// @1:3
+  stratix_io a_in_0_ (
+	.padio(a[0]),
+	.combout(a_c[0]),
+	.oe(GND)
+);
+defparam a_in_0_.operation_mode = "input";
+// @1:2
+  stratix_io clk_in (
+	.padio(clk),
+	.combout(clk_c),
+	.oe(GND)
+);
+defparam clk_in.operation_mode = "input";
+// @1:5
+  stratix_io outp_out_7_ (
+	.padio(outp[7]),
+	.datain(outpz[7]),
+	.oe(VCC)
+);
+defparam outp_out_7_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_6_ (
+	.padio(outp[6]),
+	.datain(outpz[6]),
+	.oe(VCC)
+);
+defparam outp_out_6_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_5_ (
+	.padio(outp[5]),
+	.datain(outpz[5]),
+	.oe(VCC)
+);
+defparam outp_out_5_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_4_ (
+	.padio(outp[4]),
+	.datain(outpz[4]),
+	.oe(VCC)
+);
+defparam outp_out_4_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_3_ (
+	.padio(outp[3]),
+	.datain(outpz[3]),
+	.oe(VCC)
+);
+defparam outp_out_3_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_2_ (
+	.padio(outp[2]),
+	.datain(outpz[2]),
+	.oe(VCC)
+);
+defparam outp_out_2_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_1_ (
+	.padio(outp[1]),
+	.datain(outpz[1]),
+	.oe(VCC)
+);
+defparam outp_out_1_.operation_mode = "output";
+// @1:5
+  stratix_io outp_out_0_ (
+	.padio(outp[0]),
+	.datain(outpz[0]),
+	.oe(VCC)
+);
+defparam outp_out_0_.operation_mode = "output";
+endmodule /* alu */
+

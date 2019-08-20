@@ -1,0 +1,47 @@
+m255
+cModel Technology
+dC:\prj\modelSim_altera_domo\functional_sim
+vdpram8x32
+Izc>i^Yj>J[8d003^2kL[23
+V34i;b@?_M`ghP1Zez>=@=1
+dD:\prj_D\modelsim_demo\func_sim
+w1102174290
+FD:/prj_D/modelsim_demo/func_sim/dpram8x32.v
+L0 42
+OE;L;5.8b;17
+r1
+31
+o-work work
+vpll_ram
+I8ga=^:6eAlZRBLI4>4laf2
+V4i_6U`jz[_iCPGYNUNh^T3
+dD:\prj_D\modelsim_demo\func_sim
+w1102184558
+FD:/prj_D/modelsim_demo/func_sim/pll_ram.v
+L0 5
+OE;L;5.8b;17
+r1
+31
+o-work work
+vpll_ram_tb
+ILeJh]U?V<lVYIFXaNX?NW3
+VAj7VK2no563kdd<lL`?dz2
+dD:\prj_D\modelsim_demo\func_sim
+w1102184769
+FD:/prj_D/modelsim_demo/func_sim/pll_ram_tb.v
+L0 7
+OE;L;5.8b;17
+r1
+31
+o-work work
+vpllx2
+IY]XTaALiLlJf3[VWX6DYg1
+V<<cThPm9?0bmJ6^2]c7d61
+dD:\prj_D\modelsim_demo\func_sim
+w1102173559
+FD:/prj_D/modelsim_demo/func_sim/pllx2.v
+L0 42
+OE;L;5.8b;17
+r1
+31
+o-work work

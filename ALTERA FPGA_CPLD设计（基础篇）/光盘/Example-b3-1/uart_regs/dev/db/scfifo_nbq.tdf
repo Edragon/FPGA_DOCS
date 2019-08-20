@@ -1,0 +1,59 @@
+--scfifo DEVICE_FAMILY=Stratix LPM_NUMWORDS=16 LPM_SHOWAHEAD=OFF lpm_width=10 OPTIMIZE_FOR_SPEED=5 OVERFLOW_CHECKING=ON UNDERFLOW_CHECKING=ON USE_EAB=ON aclr clock data empty full q rdreq usedw wrreq ADD_RAM_OUTPUT_REGISTER=OFF lpm_hint=RAM_BLOCK_TYPE=AUTO RAM_BLOCK_TYPE=AUTO
+--VERSION_BEGIN 4.0 cbx_altdpram 2003:08:18:15:59:18:SJ cbx_altsyncram 2003:12:02:15:28:30:SJ cbx_fifo_common 2003:08:19:18:07:00:SJ cbx_lpm_compare 2003:09:10:10:27:44:SJ cbx_lpm_counter 2003:12:16:17:25:44:SJ cbx_lpm_decode 2003:03:25:17:43:04:SJ cbx_lpm_mux 2003:10:21:14:09:22:SJ cbx_mgl 2004:01:13:14:00:54:SJ cbx_scfifo 2003:11:25:13:14:44:SJ cbx_stratix 2003:12:15:10:23:28:SJ cbx_stratixii 2003:11:06:16:12:54:SJ cbx_util 2003:12:05:10:31:30:SJ  VERSION_END
+
+
+--  Copyright (C) 1988-2004 Altera Corporation
+--  Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+--  support information,  device programming or simulation file,  and any other
+--  associated  documentation or information  provided by  Altera  or a partner
+--  under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+--  to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+--  other  use  of such  megafunction  design,  netlist,  support  information,
+--  device programming or simulation file,  or any other  related documentation
+--  or information  is prohibited  for  any  other purpose,  including, but not
+--  limited to  modification,  reverse engineering,  de-compiling, or use  with
+--  any other  silicon devices,  unless such use is  explicitly  licensed under
+--  a separate agreement with  Altera  or a megafunction partner.  Title to the
+--  intellectual property,  including patents,  copyrights,  trademarks,  trade
+--  secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+--  support  information,  device programming or simulation file,  or any other
+--  related documentation or information provided by  Altera  or a megafunction
+--  partner, remains with Altera, the megafunction partner, or their respective
+--  licensors. No other licenses, including any licenses needed under any third
+--  party's intellectual property, are provided herein.
+
+
+FUNCTION a_dpfifo_4nl (aclr, clock, data[9..0], rreq, sclr, wreq)
+RETURNS ( empty, full, q[9..0], usedw[3..0]);
+
+--synthesis_resources = lpm_counter 2 ram_bits (auto) 160 
+SUBDESIGN scfifo_nbq
+( 
+	aclr	:	input;
+	clock	:	input;
+	data[9..0]	:	input;
+	empty	:	output;
+	full	:	output;
+	q[9..0]	:	output;
+	rdreq	:	input;
+	usedw[3..0]	:	output;
+	wrreq	:	input;
+) 
+VARIABLE 
+	dpfifo : a_dpfifo_4nl;
+	sclr	: NODE;
+
+BEGIN 
+	dpfifo.aclr = aclr;
+	dpfifo.clock = clock;
+	dpfifo.data[] = data[];
+	dpfifo.rreq = rdreq;
+	dpfifo.sclr = sclr;
+	dpfifo.wreq = wrreq;
+	empty = dpfifo.empty;
+	full = dpfifo.full;
+	q[] = dpfifo.q[];
+	sclr = GND;
+	usedw[] = dpfifo.usedw[];
+END;
+--VALID FILE

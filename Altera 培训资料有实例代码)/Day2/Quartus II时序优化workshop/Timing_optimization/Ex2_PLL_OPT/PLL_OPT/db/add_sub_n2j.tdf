@@ -1,0 +1,51 @@
+--lpm_add_sub CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="Stratix II" LPM_DIRECTION="ADD" LPM_PIPELINE=1 LPM_WIDTH=22 ONE_INPUT_IS_CONSTANT="NO" aclr clken clock cout dataa datab overflow result
+--VERSION_BEGIN 8.0 cbx_cycloneii 2008:02:23:252825 cbx_lpm_add_sub 2008:03:09:257947 cbx_mgl 2008:04:11:273944 cbx_stratix 2008:02:23:252825 cbx_stratixii 2008:02:23:252825  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = lut 23 
+SUBDESIGN add_sub_n2j
+( 
+	aclr	:	input;
+	clken	:	input;
+	clock	:	input;
+	cout	:	output;
+	dataa[21..0]	:	input;
+	datab[21..0]	:	input;
+	overflow	:	output;
+	result[21..0]	:	output;
+) 
+VARIABLE
+	pipeline_dffe[22..0]	:	DFFE;
+	overflow_dffe[22..0]	:	DFFE;
+	result_int[22..0]	:	WIRE;
+BEGIN 
+	result_int[] = (0, dataa[]) + (0, datab[]);
+	pipeline_dffe[].clk = clock;
+	pipeline_dffe[].clrn = !aclr;
+	pipeline_dffe[].ena = clken;
+	overflow_dffe[].clk = clock;
+	overflow_dffe[].clrn = !aclr;
+	overflow_dffe[].ena = clken;
+	result[] = pipeline_dffe[21..0].q;
+	cout = pipeline_dffe[22..22].q;
+	pipeline_dffe[22..0].d = result_int[];
+	overflow = overflow_dffe[0..0].q;
+	overflow_dffe[0].d = ! (dataa[21] $ datab[21]) & (dataa[21] $ result_int[21]);
+END;
+--VALID FILE

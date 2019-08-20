@@ -1,0 +1,3643 @@
+--E4_safe_q[3] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is normal
+
+E4_safe_q[3]_carry_eqn = E4L7;
+E4_safe_q[3]_lut_out = E4_safe_q[3] $ (J1L2 & E4_safe_q[3]_carry_eqn);
+E4_safe_q[3] = DFFEA(E4_safe_q[3]_lut_out, clk, !C1L93, , , , );
+
+
+--E4_safe_q[2] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E4_safe_q[2]_carry_eqn = E4L5;
+E4_safe_q[2]_lut_out = E4_safe_q[2] $ (J1L2 & !E4_safe_q[2]_carry_eqn);
+E4_safe_q[2] = DFFEA(E4_safe_q[2]_lut_out, clk, !C1L93, , , , );
+
+--E4L7 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E4L7 = CARRY(E4_safe_q[2] & !E4L5);
+
+
+--E4_safe_q[1] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E4_safe_q[1]_carry_eqn = E4L3;
+E4_safe_q[1]_lut_out = E4_safe_q[1] $ (J1L2 & E4_safe_q[1]_carry_eqn);
+E4_safe_q[1] = DFFEA(E4_safe_q[1]_lut_out, clk, !C1L93, , , , );
+
+--E4L5 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E4L5 = CARRY(!E4L3 # !E4_safe_q[1]);
+
+
+--E4_safe_q[0] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E4_safe_q[0]_lut_out = E4_safe_q[0] $ J1L2;
+E4_safe_q[0] = DFFEA(E4_safe_q[0]_lut_out, clk, !C1L93, , , , );
+
+--E4L3 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E4L3 = CARRY(E4_safe_q[0]);
+
+
+--E3_safe_q[3] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is normal
+
+E3_safe_q[3]_carry_eqn = E3L7;
+E3_safe_q[3]_lut_out = E3_safe_q[3] $ (J1L1 & E3_safe_q[3]_carry_eqn);
+E3_safe_q[3] = DFFEA(E3_safe_q[3]_lut_out, clk, !C1L93, , , , );
+
+
+--E3_safe_q[2] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E3_safe_q[2]_carry_eqn = E3L5;
+E3_safe_q[2]_lut_out = E3_safe_q[2] $ (J1L1 & !E3_safe_q[2]_carry_eqn);
+E3_safe_q[2] = DFFEA(E3_safe_q[2]_lut_out, clk, !C1L93, , , , );
+
+--E3L7 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E3L7 = CARRY(E3_safe_q[2] & !E3L5);
+
+
+--E3_safe_q[1] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E3_safe_q[1]_carry_eqn = E3L3;
+E3_safe_q[1]_lut_out = E3_safe_q[1] $ (J1L1 & E3_safe_q[1]_carry_eqn);
+E3_safe_q[1] = DFFEA(E3_safe_q[1]_lut_out, clk, !C1L93, , , , );
+
+--E3L5 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E3L5 = CARRY(!E3L3 # !E3_safe_q[1]);
+
+
+--E3_safe_q[0] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E3_safe_q[0]_lut_out = E3_safe_q[0] $ J1L1;
+E3_safe_q[0] = DFFEA(E3_safe_q[0]_lut_out, clk, !C1L93, , , , );
+
+--E3L3 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E3L3 = CARRY(E3_safe_q[0]);
+
+
+--M1_q_b[0] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[0]
+M1_q_b[0]_PORT_A_data_in = C1_rf_data_in[0];
+M1_q_b[0]_PORT_A_data_in_reg = DFFE(M1_q_b[0]_PORT_A_data_in, M1_q_b[0]_clock_0, , , );
+M1_q_b[0]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[0]_PORT_A_address_reg = DFFE(M1_q_b[0]_PORT_A_address, M1_q_b[0]_clock_0, , , );
+M1_q_b[0]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[0]_PORT_B_address_reg = DFFE(M1_q_b[0]_PORT_B_address, M1_q_b[0]_clock_1, , , M1_q_b[0]_clock_enable_1);
+M1_q_b[0]_PORT_A_write_enable = J1L2;
+M1_q_b[0]_PORT_A_write_enable_reg = DFFE(M1_q_b[0]_PORT_A_write_enable, M1_q_b[0]_clock_0, , , );
+M1_q_b[0]_PORT_B_read_enable = VCC;
+M1_q_b[0]_PORT_B_read_enable_reg = DFFE(M1_q_b[0]_PORT_B_read_enable, M1_q_b[0]_clock_1, , , M1_q_b[0]_clock_enable_1);
+M1_q_b[0]_clock_0 = clk;
+M1_q_b[0]_clock_1 = clk;
+M1_q_b[0]_clock_enable_1 = J1L1;
+M1_q_b[0]_PORT_B_data_out = MEMORY(M1_q_b[0]_PORT_A_data_in_reg, , M1_q_b[0]_PORT_A_address_reg, M1_q_b[0]_PORT_B_address_reg, M1_q_b[0]_PORT_A_write_enable_reg, M1_q_b[0]_PORT_B_read_enable_reg, , , M1_q_b[0]_clock_0, M1_q_b[0]_clock_1, , M1_q_b[0]_clock_enable_1, , );
+M1_q_b[0] = M1_q_b[0]_PORT_B_data_out[0];
+
+
+--M1_q_b[1] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[1]
+M1_q_b[1]_PORT_A_data_in = C1_rf_data_in[1];
+M1_q_b[1]_PORT_A_data_in_reg = DFFE(M1_q_b[1]_PORT_A_data_in, M1_q_b[1]_clock_0, , , );
+M1_q_b[1]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[1]_PORT_A_address_reg = DFFE(M1_q_b[1]_PORT_A_address, M1_q_b[1]_clock_0, , , );
+M1_q_b[1]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[1]_PORT_B_address_reg = DFFE(M1_q_b[1]_PORT_B_address, M1_q_b[1]_clock_1, , , M1_q_b[1]_clock_enable_1);
+M1_q_b[1]_PORT_A_write_enable = J1L2;
+M1_q_b[1]_PORT_A_write_enable_reg = DFFE(M1_q_b[1]_PORT_A_write_enable, M1_q_b[1]_clock_0, , , );
+M1_q_b[1]_PORT_B_read_enable = VCC;
+M1_q_b[1]_PORT_B_read_enable_reg = DFFE(M1_q_b[1]_PORT_B_read_enable, M1_q_b[1]_clock_1, , , M1_q_b[1]_clock_enable_1);
+M1_q_b[1]_clock_0 = clk;
+M1_q_b[1]_clock_1 = clk;
+M1_q_b[1]_clock_enable_1 = J1L1;
+M1_q_b[1]_PORT_B_data_out = MEMORY(M1_q_b[1]_PORT_A_data_in_reg, , M1_q_b[1]_PORT_A_address_reg, M1_q_b[1]_PORT_B_address_reg, M1_q_b[1]_PORT_A_write_enable_reg, M1_q_b[1]_PORT_B_read_enable_reg, , , M1_q_b[1]_clock_0, M1_q_b[1]_clock_1, , M1_q_b[1]_clock_enable_1, , );
+M1_q_b[1] = M1_q_b[1]_PORT_B_data_out[0];
+
+
+--M1_q_b[2] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[2]
+M1_q_b[2]_PORT_A_data_in = C1_rf_data_in[2];
+M1_q_b[2]_PORT_A_data_in_reg = DFFE(M1_q_b[2]_PORT_A_data_in, M1_q_b[2]_clock_0, , , );
+M1_q_b[2]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[2]_PORT_A_address_reg = DFFE(M1_q_b[2]_PORT_A_address, M1_q_b[2]_clock_0, , , );
+M1_q_b[2]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[2]_PORT_B_address_reg = DFFE(M1_q_b[2]_PORT_B_address, M1_q_b[2]_clock_1, , , M1_q_b[2]_clock_enable_1);
+M1_q_b[2]_PORT_A_write_enable = J1L2;
+M1_q_b[2]_PORT_A_write_enable_reg = DFFE(M1_q_b[2]_PORT_A_write_enable, M1_q_b[2]_clock_0, , , );
+M1_q_b[2]_PORT_B_read_enable = VCC;
+M1_q_b[2]_PORT_B_read_enable_reg = DFFE(M1_q_b[2]_PORT_B_read_enable, M1_q_b[2]_clock_1, , , M1_q_b[2]_clock_enable_1);
+M1_q_b[2]_clock_0 = clk;
+M1_q_b[2]_clock_1 = clk;
+M1_q_b[2]_clock_enable_1 = J1L1;
+M1_q_b[2]_PORT_B_data_out = MEMORY(M1_q_b[2]_PORT_A_data_in_reg, , M1_q_b[2]_PORT_A_address_reg, M1_q_b[2]_PORT_B_address_reg, M1_q_b[2]_PORT_A_write_enable_reg, M1_q_b[2]_PORT_B_read_enable_reg, , , M1_q_b[2]_clock_0, M1_q_b[2]_clock_1, , M1_q_b[2]_clock_enable_1, , );
+M1_q_b[2] = M1_q_b[2]_PORT_B_data_out[0];
+
+
+--M1_q_b[3] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[3]
+M1_q_b[3]_PORT_A_data_in = C1_rf_data_in[3];
+M1_q_b[3]_PORT_A_data_in_reg = DFFE(M1_q_b[3]_PORT_A_data_in, M1_q_b[3]_clock_0, , , );
+M1_q_b[3]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[3]_PORT_A_address_reg = DFFE(M1_q_b[3]_PORT_A_address, M1_q_b[3]_clock_0, , , );
+M1_q_b[3]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[3]_PORT_B_address_reg = DFFE(M1_q_b[3]_PORT_B_address, M1_q_b[3]_clock_1, , , M1_q_b[3]_clock_enable_1);
+M1_q_b[3]_PORT_A_write_enable = J1L2;
+M1_q_b[3]_PORT_A_write_enable_reg = DFFE(M1_q_b[3]_PORT_A_write_enable, M1_q_b[3]_clock_0, , , );
+M1_q_b[3]_PORT_B_read_enable = VCC;
+M1_q_b[3]_PORT_B_read_enable_reg = DFFE(M1_q_b[3]_PORT_B_read_enable, M1_q_b[3]_clock_1, , , M1_q_b[3]_clock_enable_1);
+M1_q_b[3]_clock_0 = clk;
+M1_q_b[3]_clock_1 = clk;
+M1_q_b[3]_clock_enable_1 = J1L1;
+M1_q_b[3]_PORT_B_data_out = MEMORY(M1_q_b[3]_PORT_A_data_in_reg, , M1_q_b[3]_PORT_A_address_reg, M1_q_b[3]_PORT_B_address_reg, M1_q_b[3]_PORT_A_write_enable_reg, M1_q_b[3]_PORT_B_read_enable_reg, , , M1_q_b[3]_clock_0, M1_q_b[3]_clock_1, , M1_q_b[3]_clock_enable_1, , );
+M1_q_b[3] = M1_q_b[3]_PORT_B_data_out[0];
+
+
+--M1_q_b[4] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[4]
+M1_q_b[4]_PORT_A_data_in = C1_rf_data_in[4];
+M1_q_b[4]_PORT_A_data_in_reg = DFFE(M1_q_b[4]_PORT_A_data_in, M1_q_b[4]_clock_0, , , );
+M1_q_b[4]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[4]_PORT_A_address_reg = DFFE(M1_q_b[4]_PORT_A_address, M1_q_b[4]_clock_0, , , );
+M1_q_b[4]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[4]_PORT_B_address_reg = DFFE(M1_q_b[4]_PORT_B_address, M1_q_b[4]_clock_1, , , M1_q_b[4]_clock_enable_1);
+M1_q_b[4]_PORT_A_write_enable = J1L2;
+M1_q_b[4]_PORT_A_write_enable_reg = DFFE(M1_q_b[4]_PORT_A_write_enable, M1_q_b[4]_clock_0, , , );
+M1_q_b[4]_PORT_B_read_enable = VCC;
+M1_q_b[4]_PORT_B_read_enable_reg = DFFE(M1_q_b[4]_PORT_B_read_enable, M1_q_b[4]_clock_1, , , M1_q_b[4]_clock_enable_1);
+M1_q_b[4]_clock_0 = clk;
+M1_q_b[4]_clock_1 = clk;
+M1_q_b[4]_clock_enable_1 = J1L1;
+M1_q_b[4]_PORT_B_data_out = MEMORY(M1_q_b[4]_PORT_A_data_in_reg, , M1_q_b[4]_PORT_A_address_reg, M1_q_b[4]_PORT_B_address_reg, M1_q_b[4]_PORT_A_write_enable_reg, M1_q_b[4]_PORT_B_read_enable_reg, , , M1_q_b[4]_clock_0, M1_q_b[4]_clock_1, , M1_q_b[4]_clock_enable_1, , );
+M1_q_b[4] = M1_q_b[4]_PORT_B_data_out[0];
+
+
+--M1_q_b[5] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[5]
+M1_q_b[5]_PORT_A_data_in = C1_rf_data_in[5];
+M1_q_b[5]_PORT_A_data_in_reg = DFFE(M1_q_b[5]_PORT_A_data_in, M1_q_b[5]_clock_0, , , );
+M1_q_b[5]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[5]_PORT_A_address_reg = DFFE(M1_q_b[5]_PORT_A_address, M1_q_b[5]_clock_0, , , );
+M1_q_b[5]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[5]_PORT_B_address_reg = DFFE(M1_q_b[5]_PORT_B_address, M1_q_b[5]_clock_1, , , M1_q_b[5]_clock_enable_1);
+M1_q_b[5]_PORT_A_write_enable = J1L2;
+M1_q_b[5]_PORT_A_write_enable_reg = DFFE(M1_q_b[5]_PORT_A_write_enable, M1_q_b[5]_clock_0, , , );
+M1_q_b[5]_PORT_B_read_enable = VCC;
+M1_q_b[5]_PORT_B_read_enable_reg = DFFE(M1_q_b[5]_PORT_B_read_enable, M1_q_b[5]_clock_1, , , M1_q_b[5]_clock_enable_1);
+M1_q_b[5]_clock_0 = clk;
+M1_q_b[5]_clock_1 = clk;
+M1_q_b[5]_clock_enable_1 = J1L1;
+M1_q_b[5]_PORT_B_data_out = MEMORY(M1_q_b[5]_PORT_A_data_in_reg, , M1_q_b[5]_PORT_A_address_reg, M1_q_b[5]_PORT_B_address_reg, M1_q_b[5]_PORT_A_write_enable_reg, M1_q_b[5]_PORT_B_read_enable_reg, , , M1_q_b[5]_clock_0, M1_q_b[5]_clock_1, , M1_q_b[5]_clock_enable_1, , );
+M1_q_b[5] = M1_q_b[5]_PORT_B_data_out[0];
+
+
+--M1_q_b[6] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[6]
+M1_q_b[6]_PORT_A_data_in = C1_rf_data_in[6];
+M1_q_b[6]_PORT_A_data_in_reg = DFFE(M1_q_b[6]_PORT_A_data_in, M1_q_b[6]_clock_0, , , );
+M1_q_b[6]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[6]_PORT_A_address_reg = DFFE(M1_q_b[6]_PORT_A_address, M1_q_b[6]_clock_0, , , );
+M1_q_b[6]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[6]_PORT_B_address_reg = DFFE(M1_q_b[6]_PORT_B_address, M1_q_b[6]_clock_1, , , M1_q_b[6]_clock_enable_1);
+M1_q_b[6]_PORT_A_write_enable = J1L2;
+M1_q_b[6]_PORT_A_write_enable_reg = DFFE(M1_q_b[6]_PORT_A_write_enable, M1_q_b[6]_clock_0, , , );
+M1_q_b[6]_PORT_B_read_enable = VCC;
+M1_q_b[6]_PORT_B_read_enable_reg = DFFE(M1_q_b[6]_PORT_B_read_enable, M1_q_b[6]_clock_1, , , M1_q_b[6]_clock_enable_1);
+M1_q_b[6]_clock_0 = clk;
+M1_q_b[6]_clock_1 = clk;
+M1_q_b[6]_clock_enable_1 = J1L1;
+M1_q_b[6]_PORT_B_data_out = MEMORY(M1_q_b[6]_PORT_A_data_in_reg, , M1_q_b[6]_PORT_A_address_reg, M1_q_b[6]_PORT_B_address_reg, M1_q_b[6]_PORT_A_write_enable_reg, M1_q_b[6]_PORT_B_read_enable_reg, , , M1_q_b[6]_clock_0, M1_q_b[6]_clock_1, , M1_q_b[6]_clock_enable_1, , );
+M1_q_b[6] = M1_q_b[6]_PORT_B_data_out[0];
+
+
+--M1_q_b[7] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[7]
+M1_q_b[7]_PORT_A_data_in = C1_rf_data_in[7];
+M1_q_b[7]_PORT_A_data_in_reg = DFFE(M1_q_b[7]_PORT_A_data_in, M1_q_b[7]_clock_0, , , );
+M1_q_b[7]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[7]_PORT_A_address_reg = DFFE(M1_q_b[7]_PORT_A_address, M1_q_b[7]_clock_0, , , );
+M1_q_b[7]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[7]_PORT_B_address_reg = DFFE(M1_q_b[7]_PORT_B_address, M1_q_b[7]_clock_1, , , M1_q_b[7]_clock_enable_1);
+M1_q_b[7]_PORT_A_write_enable = J1L2;
+M1_q_b[7]_PORT_A_write_enable_reg = DFFE(M1_q_b[7]_PORT_A_write_enable, M1_q_b[7]_clock_0, , , );
+M1_q_b[7]_PORT_B_read_enable = VCC;
+M1_q_b[7]_PORT_B_read_enable_reg = DFFE(M1_q_b[7]_PORT_B_read_enable, M1_q_b[7]_clock_1, , , M1_q_b[7]_clock_enable_1);
+M1_q_b[7]_clock_0 = clk;
+M1_q_b[7]_clock_1 = clk;
+M1_q_b[7]_clock_enable_1 = J1L1;
+M1_q_b[7]_PORT_B_data_out = MEMORY(M1_q_b[7]_PORT_A_data_in_reg, , M1_q_b[7]_PORT_A_address_reg, M1_q_b[7]_PORT_B_address_reg, M1_q_b[7]_PORT_A_write_enable_reg, M1_q_b[7]_PORT_B_read_enable_reg, , , M1_q_b[7]_clock_0, M1_q_b[7]_clock_1, , M1_q_b[7]_clock_enable_1, , );
+M1_q_b[7] = M1_q_b[7]_PORT_B_data_out[0];
+
+
+--M1_q_b[8] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[8]
+M1_q_b[8]_PORT_A_data_in = C1_rf_data_in[8];
+M1_q_b[8]_PORT_A_data_in_reg = DFFE(M1_q_b[8]_PORT_A_data_in, M1_q_b[8]_clock_0, , , );
+M1_q_b[8]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[8]_PORT_A_address_reg = DFFE(M1_q_b[8]_PORT_A_address, M1_q_b[8]_clock_0, , , );
+M1_q_b[8]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[8]_PORT_B_address_reg = DFFE(M1_q_b[8]_PORT_B_address, M1_q_b[8]_clock_1, , , M1_q_b[8]_clock_enable_1);
+M1_q_b[8]_PORT_A_write_enable = J1L2;
+M1_q_b[8]_PORT_A_write_enable_reg = DFFE(M1_q_b[8]_PORT_A_write_enable, M1_q_b[8]_clock_0, , , );
+M1_q_b[8]_PORT_B_read_enable = VCC;
+M1_q_b[8]_PORT_B_read_enable_reg = DFFE(M1_q_b[8]_PORT_B_read_enable, M1_q_b[8]_clock_1, , , M1_q_b[8]_clock_enable_1);
+M1_q_b[8]_clock_0 = clk;
+M1_q_b[8]_clock_1 = clk;
+M1_q_b[8]_clock_enable_1 = J1L1;
+M1_q_b[8]_PORT_B_data_out = MEMORY(M1_q_b[8]_PORT_A_data_in_reg, , M1_q_b[8]_PORT_A_address_reg, M1_q_b[8]_PORT_B_address_reg, M1_q_b[8]_PORT_A_write_enable_reg, M1_q_b[8]_PORT_B_read_enable_reg, , , M1_q_b[8]_clock_0, M1_q_b[8]_clock_1, , M1_q_b[8]_clock_enable_1, , );
+M1_q_b[8] = M1_q_b[8]_PORT_B_data_out[0];
+
+
+--M1_q_b[9] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|q_b[9]
+M1_q_b[9]_PORT_A_data_in = C1_rf_data_in[9];
+M1_q_b[9]_PORT_A_data_in_reg = DFFE(M1_q_b[9]_PORT_A_data_in, M1_q_b[9]_clock_0, , , );
+M1_q_b[9]_PORT_A_address = BUS(E4_safe_q[0], E4_safe_q[1], E4_safe_q[2], E4_safe_q[3]);
+M1_q_b[9]_PORT_A_address_reg = DFFE(M1_q_b[9]_PORT_A_address, M1_q_b[9]_clock_0, , , );
+M1_q_b[9]_PORT_B_address = BUS(E3_safe_q[0], E3_safe_q[1], E3_safe_q[2], E3_safe_q[3]);
+M1_q_b[9]_PORT_B_address_reg = DFFE(M1_q_b[9]_PORT_B_address, M1_q_b[9]_clock_1, , , M1_q_b[9]_clock_enable_1);
+M1_q_b[9]_PORT_A_write_enable = J1L2;
+M1_q_b[9]_PORT_A_write_enable_reg = DFFE(M1_q_b[9]_PORT_A_write_enable, M1_q_b[9]_clock_0, , , );
+M1_q_b[9]_PORT_B_read_enable = VCC;
+M1_q_b[9]_PORT_B_read_enable_reg = DFFE(M1_q_b[9]_PORT_B_read_enable, M1_q_b[9]_clock_1, , , M1_q_b[9]_clock_enable_1);
+M1_q_b[9]_clock_0 = clk;
+M1_q_b[9]_clock_1 = clk;
+M1_q_b[9]_clock_enable_1 = J1L1;
+M1_q_b[9]_PORT_B_data_out = MEMORY(M1_q_b[9]_PORT_A_data_in_reg, , M1_q_b[9]_PORT_A_address_reg, M1_q_b[9]_PORT_B_address_reg, M1_q_b[9]_PORT_A_write_enable_reg, M1_q_b[9]_PORT_B_read_enable_reg, , , M1_q_b[9]_clock_0, M1_q_b[9]_clock_1, , M1_q_b[9]_clock_enable_1, , );
+M1_q_b[9] = M1_q_b[9]_PORT_B_data_out[0];
+
+
+--E2_safe_q[3] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is normal
+
+E2_safe_q[3]_carry_eqn = E2L7;
+E2_safe_q[3]_lut_out = E2_safe_q[3] $ E2_safe_q[3]_carry_eqn;
+E2_safe_q[3] = DFFEA(E2_safe_q[3]_lut_out, clk, !C1L93, , K1L1, , );
+
+
+--E2_safe_q[2] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E2_safe_q[2]_carry_eqn = E2L5;
+E2_safe_q[2]_lut_out = E2_safe_q[2] $ !E2_safe_q[2]_carry_eqn;
+E2_safe_q[2] = DFFEA(E2_safe_q[2]_lut_out, clk, !C1L93, , K1L1, , );
+
+--E2L7 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E2L7 = CARRY(!E2L5 & (E2_safe_q[2] $ !J1L2));
+
+
+--E2_safe_q[1] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E2_safe_q[1]_carry_eqn = E2L3;
+E2_safe_q[1]_lut_out = E2_safe_q[1] $ E2_safe_q[1]_carry_eqn;
+E2_safe_q[1] = DFFEA(E2_safe_q[1]_lut_out, clk, !C1L93, , K1L1, , );
+
+--E2L5 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E2L5 = CARRY(E2_safe_q[1] $ J1L2 # !E2L3);
+
+
+--E2_safe_q[0] is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E2_safe_q[0]_lut_out = !E2_safe_q[0];
+E2_safe_q[0] = DFFEA(E2_safe_q[0]_lut_out, clk, !C1L93, , K1L1, , );
+
+--E2L3 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E2L3 = CARRY(E2_safe_q[0] $ !J1L2);
+
+
+--E7_safe_q[3] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is normal
+
+E7_safe_q[3]_carry_eqn = E7L7;
+E7_safe_q[3]_lut_out = E7_safe_q[3] $ (K2L9 & E7_safe_q[3]_carry_eqn);
+E7_safe_q[3] = DFFEA(E7_safe_q[3]_lut_out, clk, !D1_i12, , , , );
+
+
+--E7_safe_q[2] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E7_safe_q[2]_carry_eqn = E7L5;
+E7_safe_q[2]_lut_out = E7_safe_q[2] $ (K2L9 & !E7_safe_q[2]_carry_eqn);
+E7_safe_q[2] = DFFEA(E7_safe_q[2]_lut_out, clk, !D1_i12, , , , );
+
+--E7L7 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E7L7 = CARRY(E7_safe_q[2] & !E7L5);
+
+
+--E7_safe_q[1] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E7_safe_q[1]_carry_eqn = E7L3;
+E7_safe_q[1]_lut_out = E7_safe_q[1] $ (K2L9 & E7_safe_q[1]_carry_eqn);
+E7_safe_q[1] = DFFEA(E7_safe_q[1]_lut_out, clk, !D1_i12, , , , );
+
+--E7L5 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E7L5 = CARRY(!E7L3 # !E7_safe_q[1]);
+
+
+--E7_safe_q[0] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E7_safe_q[0]_lut_out = E7_safe_q[0] $ K2L9;
+E7_safe_q[0] = DFFEA(E7_safe_q[0]_lut_out, clk, !D1_i12, , , , );
+
+--E7L3 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:wr_ptr|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E7L3 = CARRY(E7_safe_q[0]);
+
+
+--E6_safe_q[3] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is normal
+
+E6_safe_q[3]_carry_eqn = E6L7;
+E6_safe_q[3]_lut_out = E6_safe_q[3] $ (K2_valid_rreq & E6_safe_q[3]_carry_eqn);
+E6_safe_q[3] = DFFEA(E6_safe_q[3]_lut_out, clk, !D1_i12, , , , );
+
+
+--E6_safe_q[2] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E6_safe_q[2]_carry_eqn = E6L5;
+E6_safe_q[2]_lut_out = E6_safe_q[2] $ (K2_valid_rreq & !E6_safe_q[2]_carry_eqn);
+E6_safe_q[2] = DFFEA(E6_safe_q[2]_lut_out, clk, !D1_i12, , , , );
+
+--E6L7 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E6L7 = CARRY(E6_safe_q[2] & !E6L5);
+
+
+--E6_safe_q[1] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E6_safe_q[1]_carry_eqn = E6L3;
+E6_safe_q[1]_lut_out = E6_safe_q[1] $ (K2_valid_rreq & E6_safe_q[1]_carry_eqn);
+E6_safe_q[1] = DFFEA(E6_safe_q[1]_lut_out, clk, !D1_i12, , , , );
+
+--E6L5 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E6L5 = CARRY(!E6L3 # !E6_safe_q[1]);
+
+
+--E6_safe_q[0] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E6_safe_q[0]_lut_out = E6_safe_q[0] $ K2_valid_rreq;
+E6_safe_q[0] = DFFEA(E6_safe_q[0]_lut_out, clk, !D1_i12, , , , );
+
+--E6L3 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|lpm_counter:rd_ptr_count|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E6L3 = CARRY(E6_safe_q[0]);
+
+
+--S1_q_b[0] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[0]
+S1_q_b[0]_PORT_A_data_in = wb_dat_i[0];
+S1_q_b[0]_PORT_A_data_in_reg = DFFE(S1_q_b[0]_PORT_A_data_in, S1_q_b[0]_clock_0, , , );
+S1_q_b[0]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[0]_PORT_A_address_reg = DFFE(S1_q_b[0]_PORT_A_address, S1_q_b[0]_clock_0, , , );
+S1_q_b[0]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[0]_PORT_B_address_reg = DFFE(S1_q_b[0]_PORT_B_address, S1_q_b[0]_clock_1, , , S1_q_b[0]_clock_enable_1);
+S1_q_b[0]_PORT_A_write_enable = K2L9;
+S1_q_b[0]_PORT_A_write_enable_reg = DFFE(S1_q_b[0]_PORT_A_write_enable, S1_q_b[0]_clock_0, , , );
+S1_q_b[0]_PORT_B_read_enable = VCC;
+S1_q_b[0]_PORT_B_read_enable_reg = DFFE(S1_q_b[0]_PORT_B_read_enable, S1_q_b[0]_clock_1, , , S1_q_b[0]_clock_enable_1);
+S1_q_b[0]_clock_0 = clk;
+S1_q_b[0]_clock_1 = clk;
+S1_q_b[0]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[0]_PORT_B_data_out = MEMORY(S1_q_b[0]_PORT_A_data_in_reg, , S1_q_b[0]_PORT_A_address_reg, S1_q_b[0]_PORT_B_address_reg, S1_q_b[0]_PORT_A_write_enable_reg, S1_q_b[0]_PORT_B_read_enable_reg, , , S1_q_b[0]_clock_0, S1_q_b[0]_clock_1, , S1_q_b[0]_clock_enable_1, , );
+S1_q_b[0] = S1_q_b[0]_PORT_B_data_out[0];
+
+
+--S1_q_b[1] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[1]
+S1_q_b[1]_PORT_A_data_in = wb_dat_i[1];
+S1_q_b[1]_PORT_A_data_in_reg = DFFE(S1_q_b[1]_PORT_A_data_in, S1_q_b[1]_clock_0, , , );
+S1_q_b[1]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[1]_PORT_A_address_reg = DFFE(S1_q_b[1]_PORT_A_address, S1_q_b[1]_clock_0, , , );
+S1_q_b[1]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[1]_PORT_B_address_reg = DFFE(S1_q_b[1]_PORT_B_address, S1_q_b[1]_clock_1, , , S1_q_b[1]_clock_enable_1);
+S1_q_b[1]_PORT_A_write_enable = K2L9;
+S1_q_b[1]_PORT_A_write_enable_reg = DFFE(S1_q_b[1]_PORT_A_write_enable, S1_q_b[1]_clock_0, , , );
+S1_q_b[1]_PORT_B_read_enable = VCC;
+S1_q_b[1]_PORT_B_read_enable_reg = DFFE(S1_q_b[1]_PORT_B_read_enable, S1_q_b[1]_clock_1, , , S1_q_b[1]_clock_enable_1);
+S1_q_b[1]_clock_0 = clk;
+S1_q_b[1]_clock_1 = clk;
+S1_q_b[1]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[1]_PORT_B_data_out = MEMORY(S1_q_b[1]_PORT_A_data_in_reg, , S1_q_b[1]_PORT_A_address_reg, S1_q_b[1]_PORT_B_address_reg, S1_q_b[1]_PORT_A_write_enable_reg, S1_q_b[1]_PORT_B_read_enable_reg, , , S1_q_b[1]_clock_0, S1_q_b[1]_clock_1, , S1_q_b[1]_clock_enable_1, , );
+S1_q_b[1] = S1_q_b[1]_PORT_B_data_out[0];
+
+
+--S1_q_b[2] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[2]
+S1_q_b[2]_PORT_A_data_in = wb_dat_i[2];
+S1_q_b[2]_PORT_A_data_in_reg = DFFE(S1_q_b[2]_PORT_A_data_in, S1_q_b[2]_clock_0, , , );
+S1_q_b[2]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[2]_PORT_A_address_reg = DFFE(S1_q_b[2]_PORT_A_address, S1_q_b[2]_clock_0, , , );
+S1_q_b[2]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[2]_PORT_B_address_reg = DFFE(S1_q_b[2]_PORT_B_address, S1_q_b[2]_clock_1, , , S1_q_b[2]_clock_enable_1);
+S1_q_b[2]_PORT_A_write_enable = K2L9;
+S1_q_b[2]_PORT_A_write_enable_reg = DFFE(S1_q_b[2]_PORT_A_write_enable, S1_q_b[2]_clock_0, , , );
+S1_q_b[2]_PORT_B_read_enable = VCC;
+S1_q_b[2]_PORT_B_read_enable_reg = DFFE(S1_q_b[2]_PORT_B_read_enable, S1_q_b[2]_clock_1, , , S1_q_b[2]_clock_enable_1);
+S1_q_b[2]_clock_0 = clk;
+S1_q_b[2]_clock_1 = clk;
+S1_q_b[2]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[2]_PORT_B_data_out = MEMORY(S1_q_b[2]_PORT_A_data_in_reg, , S1_q_b[2]_PORT_A_address_reg, S1_q_b[2]_PORT_B_address_reg, S1_q_b[2]_PORT_A_write_enable_reg, S1_q_b[2]_PORT_B_read_enable_reg, , , S1_q_b[2]_clock_0, S1_q_b[2]_clock_1, , S1_q_b[2]_clock_enable_1, , );
+S1_q_b[2] = S1_q_b[2]_PORT_B_data_out[0];
+
+
+--S1_q_b[3] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[3]
+S1_q_b[3]_PORT_A_data_in = wb_dat_i[3];
+S1_q_b[3]_PORT_A_data_in_reg = DFFE(S1_q_b[3]_PORT_A_data_in, S1_q_b[3]_clock_0, , , );
+S1_q_b[3]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[3]_PORT_A_address_reg = DFFE(S1_q_b[3]_PORT_A_address, S1_q_b[3]_clock_0, , , );
+S1_q_b[3]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[3]_PORT_B_address_reg = DFFE(S1_q_b[3]_PORT_B_address, S1_q_b[3]_clock_1, , , S1_q_b[3]_clock_enable_1);
+S1_q_b[3]_PORT_A_write_enable = K2L9;
+S1_q_b[3]_PORT_A_write_enable_reg = DFFE(S1_q_b[3]_PORT_A_write_enable, S1_q_b[3]_clock_0, , , );
+S1_q_b[3]_PORT_B_read_enable = VCC;
+S1_q_b[3]_PORT_B_read_enable_reg = DFFE(S1_q_b[3]_PORT_B_read_enable, S1_q_b[3]_clock_1, , , S1_q_b[3]_clock_enable_1);
+S1_q_b[3]_clock_0 = clk;
+S1_q_b[3]_clock_1 = clk;
+S1_q_b[3]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[3]_PORT_B_data_out = MEMORY(S1_q_b[3]_PORT_A_data_in_reg, , S1_q_b[3]_PORT_A_address_reg, S1_q_b[3]_PORT_B_address_reg, S1_q_b[3]_PORT_A_write_enable_reg, S1_q_b[3]_PORT_B_read_enable_reg, , , S1_q_b[3]_clock_0, S1_q_b[3]_clock_1, , S1_q_b[3]_clock_enable_1, , );
+S1_q_b[3] = S1_q_b[3]_PORT_B_data_out[0];
+
+
+--S1_q_b[4] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[4]
+S1_q_b[4]_PORT_A_data_in = wb_dat_i[4];
+S1_q_b[4]_PORT_A_data_in_reg = DFFE(S1_q_b[4]_PORT_A_data_in, S1_q_b[4]_clock_0, , , );
+S1_q_b[4]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[4]_PORT_A_address_reg = DFFE(S1_q_b[4]_PORT_A_address, S1_q_b[4]_clock_0, , , );
+S1_q_b[4]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[4]_PORT_B_address_reg = DFFE(S1_q_b[4]_PORT_B_address, S1_q_b[4]_clock_1, , , S1_q_b[4]_clock_enable_1);
+S1_q_b[4]_PORT_A_write_enable = K2L9;
+S1_q_b[4]_PORT_A_write_enable_reg = DFFE(S1_q_b[4]_PORT_A_write_enable, S1_q_b[4]_clock_0, , , );
+S1_q_b[4]_PORT_B_read_enable = VCC;
+S1_q_b[4]_PORT_B_read_enable_reg = DFFE(S1_q_b[4]_PORT_B_read_enable, S1_q_b[4]_clock_1, , , S1_q_b[4]_clock_enable_1);
+S1_q_b[4]_clock_0 = clk;
+S1_q_b[4]_clock_1 = clk;
+S1_q_b[4]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[4]_PORT_B_data_out = MEMORY(S1_q_b[4]_PORT_A_data_in_reg, , S1_q_b[4]_PORT_A_address_reg, S1_q_b[4]_PORT_B_address_reg, S1_q_b[4]_PORT_A_write_enable_reg, S1_q_b[4]_PORT_B_read_enable_reg, , , S1_q_b[4]_clock_0, S1_q_b[4]_clock_1, , S1_q_b[4]_clock_enable_1, , );
+S1_q_b[4] = S1_q_b[4]_PORT_B_data_out[0];
+
+
+--S1_q_b[5] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[5]
+S1_q_b[5]_PORT_A_data_in = wb_dat_i[5];
+S1_q_b[5]_PORT_A_data_in_reg = DFFE(S1_q_b[5]_PORT_A_data_in, S1_q_b[5]_clock_0, , , );
+S1_q_b[5]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[5]_PORT_A_address_reg = DFFE(S1_q_b[5]_PORT_A_address, S1_q_b[5]_clock_0, , , );
+S1_q_b[5]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[5]_PORT_B_address_reg = DFFE(S1_q_b[5]_PORT_B_address, S1_q_b[5]_clock_1, , , S1_q_b[5]_clock_enable_1);
+S1_q_b[5]_PORT_A_write_enable = K2L9;
+S1_q_b[5]_PORT_A_write_enable_reg = DFFE(S1_q_b[5]_PORT_A_write_enable, S1_q_b[5]_clock_0, , , );
+S1_q_b[5]_PORT_B_read_enable = VCC;
+S1_q_b[5]_PORT_B_read_enable_reg = DFFE(S1_q_b[5]_PORT_B_read_enable, S1_q_b[5]_clock_1, , , S1_q_b[5]_clock_enable_1);
+S1_q_b[5]_clock_0 = clk;
+S1_q_b[5]_clock_1 = clk;
+S1_q_b[5]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[5]_PORT_B_data_out = MEMORY(S1_q_b[5]_PORT_A_data_in_reg, , S1_q_b[5]_PORT_A_address_reg, S1_q_b[5]_PORT_B_address_reg, S1_q_b[5]_PORT_A_write_enable_reg, S1_q_b[5]_PORT_B_read_enable_reg, , , S1_q_b[5]_clock_0, S1_q_b[5]_clock_1, , S1_q_b[5]_clock_enable_1, , );
+S1_q_b[5] = S1_q_b[5]_PORT_B_data_out[0];
+
+
+--S1_q_b[6] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[6]
+S1_q_b[6]_PORT_A_data_in = wb_dat_i[6];
+S1_q_b[6]_PORT_A_data_in_reg = DFFE(S1_q_b[6]_PORT_A_data_in, S1_q_b[6]_clock_0, , , );
+S1_q_b[6]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[6]_PORT_A_address_reg = DFFE(S1_q_b[6]_PORT_A_address, S1_q_b[6]_clock_0, , , );
+S1_q_b[6]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[6]_PORT_B_address_reg = DFFE(S1_q_b[6]_PORT_B_address, S1_q_b[6]_clock_1, , , S1_q_b[6]_clock_enable_1);
+S1_q_b[6]_PORT_A_write_enable = K2L9;
+S1_q_b[6]_PORT_A_write_enable_reg = DFFE(S1_q_b[6]_PORT_A_write_enable, S1_q_b[6]_clock_0, , , );
+S1_q_b[6]_PORT_B_read_enable = VCC;
+S1_q_b[6]_PORT_B_read_enable_reg = DFFE(S1_q_b[6]_PORT_B_read_enable, S1_q_b[6]_clock_1, , , S1_q_b[6]_clock_enable_1);
+S1_q_b[6]_clock_0 = clk;
+S1_q_b[6]_clock_1 = clk;
+S1_q_b[6]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[6]_PORT_B_data_out = MEMORY(S1_q_b[6]_PORT_A_data_in_reg, , S1_q_b[6]_PORT_A_address_reg, S1_q_b[6]_PORT_B_address_reg, S1_q_b[6]_PORT_A_write_enable_reg, S1_q_b[6]_PORT_B_read_enable_reg, , , S1_q_b[6]_clock_0, S1_q_b[6]_clock_1, , S1_q_b[6]_clock_enable_1, , );
+S1_q_b[6] = S1_q_b[6]_PORT_B_data_out[0];
+
+
+--S1_q_b[7] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|q_b[7]
+S1_q_b[7]_PORT_A_data_in = wb_dat_i[7];
+S1_q_b[7]_PORT_A_data_in_reg = DFFE(S1_q_b[7]_PORT_A_data_in, S1_q_b[7]_clock_0, , , );
+S1_q_b[7]_PORT_A_address = BUS(E7_safe_q[0], E7_safe_q[1], E7_safe_q[2], E7_safe_q[3]);
+S1_q_b[7]_PORT_A_address_reg = DFFE(S1_q_b[7]_PORT_A_address, S1_q_b[7]_clock_0, , , );
+S1_q_b[7]_PORT_B_address = BUS(E6_safe_q[0], E6_safe_q[1], E6_safe_q[2], E6_safe_q[3]);
+S1_q_b[7]_PORT_B_address_reg = DFFE(S1_q_b[7]_PORT_B_address, S1_q_b[7]_clock_1, , , S1_q_b[7]_clock_enable_1);
+S1_q_b[7]_PORT_A_write_enable = K2L9;
+S1_q_b[7]_PORT_A_write_enable_reg = DFFE(S1_q_b[7]_PORT_A_write_enable, S1_q_b[7]_clock_0, , , );
+S1_q_b[7]_PORT_B_read_enable = VCC;
+S1_q_b[7]_PORT_B_read_enable_reg = DFFE(S1_q_b[7]_PORT_B_read_enable, S1_q_b[7]_clock_1, , , S1_q_b[7]_clock_enable_1);
+S1_q_b[7]_clock_0 = clk;
+S1_q_b[7]_clock_1 = clk;
+S1_q_b[7]_clock_enable_1 = K2_valid_rreq;
+S1_q_b[7]_PORT_B_data_out = MEMORY(S1_q_b[7]_PORT_A_data_in_reg, , S1_q_b[7]_PORT_A_address_reg, S1_q_b[7]_PORT_B_address_reg, S1_q_b[7]_PORT_A_write_enable_reg, S1_q_b[7]_PORT_B_read_enable_reg, , , S1_q_b[7]_clock_0, S1_q_b[7]_clock_1, , S1_q_b[7]_clock_enable_1, , );
+S1_q_b[7] = S1_q_b[7]_PORT_B_data_out[0];
+
+
+--E5_safe_q[3] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is normal
+
+E5_safe_q[3]_carry_eqn = E5L7;
+E5_safe_q[3]_lut_out = E5_safe_q[3] $ E5_safe_q[3]_carry_eqn;
+E5_safe_q[3] = DFFEA(E5_safe_q[3]_lut_out, clk, !D1_i12, , K2L1, , );
+
+
+--E5_safe_q[2] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E5_safe_q[2]_carry_eqn = E5L5;
+E5_safe_q[2]_lut_out = E5_safe_q[2] $ !E5_safe_q[2]_carry_eqn;
+E5_safe_q[2] = DFFEA(E5_safe_q[2]_lut_out, clk, !D1_i12, , K2L1, , );
+
+--E5L7 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E5L7 = CARRY(!E5L5 & (E5_safe_q[2] $ !K2L9));
+
+
+--E5_safe_q[1] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E5_safe_q[1]_carry_eqn = E5L3;
+E5_safe_q[1]_lut_out = E5_safe_q[1] $ E5_safe_q[1]_carry_eqn;
+E5_safe_q[1] = DFFEA(E5_safe_q[1]_lut_out, clk, !D1_i12, , K2L1, , );
+
+--E5L5 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E5L5 = CARRY(E5_safe_q[1] $ K2L9 # !E5L3);
+
+
+--E5_safe_q[0] is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E5_safe_q[0]_lut_out = !E5_safe_q[0];
+E5_safe_q[0] = DFFEA(E5_safe_q[0]_lut_out, clk, !D1_i12, , K2L1, , );
+
+--E5L3 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E5L3 = CARRY(E5_safe_q[0] $ !K2L9);
+
+
+--A1L221 is i~159
+--operation mode is arithmetic
+
+A1L221 = !dl[0];
+
+--A1L321 is i~159COUT
+--operation mode is arithmetic
+
+A1L321 = CARRY(dl[0]);
+
+
+--A1L421 is i~160
+--operation mode is arithmetic
+
+A1L421_carry_eqn = A1L321;
+A1L421 = dl[1] $ !A1L421_carry_eqn;
+
+--A1L521 is i~160COUT
+--operation mode is arithmetic
+
+A1L521 = CARRY(!dl[1] & !A1L321);
+
+
+--A1L621 is i~161
+--operation mode is arithmetic
+
+A1L621_carry_eqn = A1L521;
+A1L621 = dl[2] $ A1L621_carry_eqn;
+
+--A1L721 is i~161COUT
+--operation mode is arithmetic
+
+A1L721 = CARRY(dl[2] # !A1L521);
+
+
+--A1L821 is i~162
+--operation mode is arithmetic
+
+A1L821_carry_eqn = A1L721;
+A1L821 = dl[3] $ !A1L821_carry_eqn;
+
+--A1L921 is i~162COUT
+--operation mode is arithmetic
+
+A1L921 = CARRY(!dl[3] & !A1L721);
+
+
+--A1L031 is i~163
+--operation mode is arithmetic
+
+A1L031_carry_eqn = A1L921;
+A1L031 = dl[4] $ A1L031_carry_eqn;
+
+--A1L131 is i~163COUT
+--operation mode is arithmetic
+
+A1L131 = CARRY(dl[4] # !A1L921);
+
+
+--A1L231 is i~164
+--operation mode is arithmetic
+
+A1L231_carry_eqn = A1L131;
+A1L231 = dl[5] $ !A1L231_carry_eqn;
+
+--A1L331 is i~164COUT
+--operation mode is arithmetic
+
+A1L331 = CARRY(!dl[5] & !A1L131);
+
+
+--A1L431 is i~165
+--operation mode is arithmetic
+
+A1L431_carry_eqn = A1L331;
+A1L431 = dl[6] $ A1L431_carry_eqn;
+
+--A1L531 is i~165COUT
+--operation mode is arithmetic
+
+A1L531 = CARRY(dl[6] # !A1L331);
+
+
+--A1L631 is i~166
+--operation mode is arithmetic
+
+A1L631_carry_eqn = A1L531;
+A1L631 = dl[7] $ !A1L631_carry_eqn;
+
+--A1L731 is i~166COUT
+--operation mode is arithmetic
+
+A1L731 = CARRY(!dl[7] & !A1L531);
+
+
+--A1L831 is i~167
+--operation mode is arithmetic
+
+A1L831_carry_eqn = A1L731;
+A1L831 = dl[8] $ A1L831_carry_eqn;
+
+--A1L931 is i~167COUT
+--operation mode is arithmetic
+
+A1L931 = CARRY(dl[8] # !A1L731);
+
+
+--A1L041 is i~168
+--operation mode is arithmetic
+
+A1L041_carry_eqn = A1L931;
+A1L041 = dl[9] $ !A1L041_carry_eqn;
+
+--A1L141 is i~168COUT
+--operation mode is arithmetic
+
+A1L141 = CARRY(!dl[9] & !A1L931);
+
+
+--A1L241 is i~169
+--operation mode is arithmetic
+
+A1L241_carry_eqn = A1L141;
+A1L241 = dl[10] $ A1L241_carry_eqn;
+
+--A1L341 is i~169COUT
+--operation mode is arithmetic
+
+A1L341 = CARRY(dl[10] # !A1L141);
+
+
+--A1L441 is i~170
+--operation mode is arithmetic
+
+A1L441_carry_eqn = A1L341;
+A1L441 = dl[11] $ !A1L441_carry_eqn;
+
+--A1L541 is i~170COUT
+--operation mode is arithmetic
+
+A1L541 = CARRY(!dl[11] & !A1L341);
+
+
+--A1L641 is i~171
+--operation mode is arithmetic
+
+A1L641_carry_eqn = A1L541;
+A1L641 = dl[12] $ A1L641_carry_eqn;
+
+--A1L741 is i~171COUT
+--operation mode is arithmetic
+
+A1L741 = CARRY(dl[12] # !A1L541);
+
+
+--A1L841 is i~172
+--operation mode is arithmetic
+
+A1L841_carry_eqn = A1L741;
+A1L841 = dl[13] $ !A1L841_carry_eqn;
+
+--A1L941 is i~172COUT
+--operation mode is arithmetic
+
+A1L941 = CARRY(!dl[13] & !A1L741);
+
+
+--A1L051 is i~173
+--operation mode is arithmetic
+
+A1L051_carry_eqn = A1L941;
+A1L051 = dl[14] $ A1L051_carry_eqn;
+
+--A1L151 is i~173COUT
+--operation mode is arithmetic
+
+A1L151 = CARRY(dl[14] # !A1L941);
+
+
+--A1L251 is i~174
+--operation mode is normal
+
+A1L251_carry_eqn = A1L151;
+A1L251 = dl[15] $ !A1L251_carry_eqn;
+
+
+--block_cnt[0] is block_cnt[0]
+--operation mode is arithmetic
+
+block_cnt[0]_lut_out = block_cnt[0] $ i354;
+block_cnt[0]_sload_eqn = (A1L07 & VCC) # (!A1L07 & block_cnt[0]_lut_out);
+block_cnt[0] = DFFEA(block_cnt[0]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L3 is block_cnt[0]~COUT
+--operation mode is arithmetic
+
+A1L3 = CARRY(block_cnt[0] & i354);
+
+
+--block_cnt[1] is block_cnt[1]
+--operation mode is arithmetic
+
+block_cnt[1]_carry_eqn = A1L3;
+block_cnt[1]_lut_out = block_cnt[1] $ i354 $ block_cnt[1]_carry_eqn;
+block_cnt[1]_sload_eqn = (A1L07 & VCC) # (!A1L07 & block_cnt[1]_lut_out);
+block_cnt[1] = DFFEA(block_cnt[1]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L5 is block_cnt[1]~COUT
+--operation mode is arithmetic
+
+A1L5 = CARRY(block_cnt[1] & !i354 & !A1L3 # !block_cnt[1] & (!A1L3 # !i354));
+
+
+--block_cnt[2] is block_cnt[2]
+--operation mode is arithmetic
+
+block_cnt[2]_carry_eqn = A1L5;
+block_cnt[2]_lut_out = block_cnt[2] $ i354 $ !block_cnt[2]_carry_eqn;
+block_cnt[2]_sload_eqn = (A1L07 & VCC) # (!A1L07 & block_cnt[2]_lut_out);
+block_cnt[2] = DFFEA(block_cnt[2]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L7 is block_cnt[2]~COUT
+--operation mode is arithmetic
+
+A1L7 = CARRY(block_cnt[2] & (i354 # !A1L5) # !block_cnt[2] & i354 & !A1L5);
+
+
+--block_cnt[3] is block_cnt[3]
+--operation mode is arithmetic
+
+block_cnt[3]_carry_eqn = A1L7;
+block_cnt[3]_lut_out = block_cnt[3] $ i354 $ block_cnt[3]_carry_eqn;
+block_cnt[3]_sload_eqn = (A1L07 & VCC) # (!A1L07 & block_cnt[3]_lut_out);
+block_cnt[3] = DFFEA(block_cnt[3]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L9 is block_cnt[3]~COUT
+--operation mode is arithmetic
+
+A1L9 = CARRY(block_cnt[3] & !i354 & !A1L7 # !block_cnt[3] & (!A1L7 # !i354));
+
+
+--block_cnt[4] is block_cnt[4]
+--operation mode is arithmetic
+
+block_cnt[4]_carry_eqn = A1L9;
+block_cnt[4]_lut_out = block_cnt[4] $ i354 $ !block_cnt[4]_carry_eqn;
+block_cnt[4]_sload_eqn = (A1L07 & ~GND) # (!A1L07 & block_cnt[4]_lut_out);
+block_cnt[4] = DFFEA(block_cnt[4]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L11 is block_cnt[4]~COUT
+--operation mode is arithmetic
+
+A1L11 = CARRY(block_cnt[4] & (i354 # !A1L9) # !block_cnt[4] & i354 & !A1L9);
+
+
+--block_cnt[5] is block_cnt[5]
+--operation mode is arithmetic
+
+block_cnt[5]_carry_eqn = A1L11;
+block_cnt[5]_lut_out = block_cnt[5] $ i354 $ block_cnt[5]_carry_eqn;
+block_cnt[5]_sload_eqn = (A1L07 & ~GND) # (!A1L07 & block_cnt[5]_lut_out);
+block_cnt[5] = DFFEA(block_cnt[5]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L31 is block_cnt[5]~COUT
+--operation mode is arithmetic
+
+A1L31 = CARRY(block_cnt[5] & !i354 & !A1L11 # !block_cnt[5] & (!A1L11 # !i354));
+
+
+--block_cnt[6] is block_cnt[6]
+--operation mode is arithmetic
+
+block_cnt[6]_carry_eqn = A1L31;
+block_cnt[6]_lut_out = block_cnt[6] $ i354 $ !block_cnt[6]_carry_eqn;
+block_cnt[6]_sload_eqn = (A1L07 & ~GND) # (!A1L07 & block_cnt[6]_lut_out);
+block_cnt[6] = DFFEA(block_cnt[6]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--A1L51 is block_cnt[6]~COUT
+--operation mode is arithmetic
+
+A1L51 = CARRY(block_cnt[6] & (i354 # !A1L31) # !block_cnt[6] & i354 & !A1L31);
+
+
+--block_cnt[7] is block_cnt[7]
+--operation mode is normal
+
+block_cnt[7]_carry_eqn = A1L51;
+block_cnt[7]_lut_out = block_cnt[7] $ i354 $ block_cnt[7]_carry_eqn;
+block_cnt[7]_sload_eqn = (A1L07 & VCC) # (!A1L07 & block_cnt[7]_lut_out);
+block_cnt[7] = DFFEA(block_cnt[7]_sload_eqn, clk, !wb_rst_i, , , , );
+
+
+--C1L02Q is uart_receiver:receiver|counter_t[0]~reg0
+--operation mode is arithmetic
+
+C1L02Q_lut_out = C1L02Q $ C1_i279;
+C1L02Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L02Q_lut_out);
+C1L02Q = DFFEA(C1L02Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L12 is uart_receiver:receiver|counter_t[0]~reg0COUT
+--operation mode is arithmetic
+
+C1L12 = CARRY(C1L02Q & C1_i279);
+
+
+--C1L22Q is uart_receiver:receiver|counter_t[1]~reg0
+--operation mode is arithmetic
+
+C1L22Q_carry_eqn = C1L12;
+C1L22Q_lut_out = C1L22Q $ C1_i279 $ C1L22Q_carry_eqn;
+C1L22Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L22Q_lut_out);
+C1L22Q = DFFEA(C1L22Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L32 is uart_receiver:receiver|counter_t[1]~reg0COUT
+--operation mode is arithmetic
+
+C1L32 = CARRY(C1L22Q & !C1_i279 & !C1L12 # !C1L22Q & (!C1L12 # !C1_i279));
+
+
+--C1L42Q is uart_receiver:receiver|counter_t[2]~reg0
+--operation mode is arithmetic
+
+C1L42Q_carry_eqn = C1L32;
+C1L42Q_lut_out = C1L42Q $ C1_i279 $ !C1L42Q_carry_eqn;
+C1L42Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L42Q_lut_out);
+C1L42Q = DFFEA(C1L42Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L52 is uart_receiver:receiver|counter_t[2]~reg0COUT
+--operation mode is arithmetic
+
+C1L52 = CARRY(C1L42Q & (C1_i279 # !C1L32) # !C1L42Q & C1_i279 & !C1L32);
+
+
+--C1L62Q is uart_receiver:receiver|counter_t[3]~reg0
+--operation mode is arithmetic
+
+C1L62Q_carry_eqn = C1L52;
+C1L62Q_lut_out = C1L62Q $ C1_i279 $ C1L62Q_carry_eqn;
+C1L62Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L62Q_lut_out);
+C1L62Q = DFFEA(C1L62Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L72 is uart_receiver:receiver|counter_t[3]~reg0COUT
+--operation mode is arithmetic
+
+C1L72 = CARRY(C1L62Q & !C1_i279 & !C1L52 # !C1L62Q & (!C1L52 # !C1_i279));
+
+
+--C1L82Q is uart_receiver:receiver|counter_t[4]~reg0
+--operation mode is arithmetic
+
+C1L82Q_carry_eqn = C1L72;
+C1L82Q_lut_out = C1L82Q $ C1_i279 $ !C1L82Q_carry_eqn;
+C1L82Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L82Q_lut_out);
+C1L82Q = DFFEA(C1L82Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L92 is uart_receiver:receiver|counter_t[4]~reg0COUT
+--operation mode is arithmetic
+
+C1L92 = CARRY(C1L82Q & (C1_i279 # !C1L72) # !C1L82Q & C1_i279 & !C1L72);
+
+
+--C1L03Q is uart_receiver:receiver|counter_t[5]~reg0
+--operation mode is arithmetic
+
+C1L03Q_carry_eqn = C1L92;
+C1L03Q_lut_out = C1L03Q $ C1_i279 $ C1L03Q_carry_eqn;
+C1L03Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L03Q_lut_out);
+C1L03Q = DFFEA(C1L03Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L13 is uart_receiver:receiver|counter_t[5]~reg0COUT
+--operation mode is arithmetic
+
+C1L13 = CARRY(C1L03Q & !C1_i279 & !C1L92 # !C1L03Q & (!C1L92 # !C1_i279));
+
+
+--C1L23Q is uart_receiver:receiver|counter_t[6]~reg0
+--operation mode is arithmetic
+
+C1L23Q_carry_eqn = C1L13;
+C1L23Q_lut_out = C1L23Q $ C1_i279 $ !C1L23Q_carry_eqn;
+C1L23Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L23Q_lut_out);
+C1L23Q = DFFEA(C1L23Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L33 is uart_receiver:receiver|counter_t[6]~reg0COUT
+--operation mode is arithmetic
+
+C1L33 = CARRY(C1L23Q & (C1_i279 # !C1L13) # !C1L23Q & C1_i279 & !C1L13);
+
+
+--C1L43Q is uart_receiver:receiver|counter_t[7]~reg0
+--operation mode is arithmetic
+
+C1L43Q_carry_eqn = C1L33;
+C1L43Q_lut_out = C1L43Q $ C1_i279 $ C1L43Q_carry_eqn;
+C1L43Q_sload_eqn = (C1_i277 & ~GND) # (!C1_i277 & C1L43Q_lut_out);
+C1L43Q = DFFEA(C1L43Q_sload_eqn, clk, VCC, , , ~GND, wb_rst_i);
+
+--C1L53 is uart_receiver:receiver|counter_t[7]~reg0COUT
+--operation mode is arithmetic
+
+C1L53 = CARRY(C1L43Q & !C1_i279 & !C1L33 # !C1L43Q & (!C1L33 # !C1_i279));
+
+
+--C1L63Q is uart_receiver:receiver|counter_t[8]~reg0
+--operation mode is arithmetic
+
+C1L63Q_carry_eqn = C1L53;
+C1L63Q_lut_out = C1L63Q $ C1_i279 $ !C1L63Q_carry_eqn;
+C1L63Q_sload_eqn = (C1_i277 & ~GND) # (!C1_i277 & C1L63Q_lut_out);
+C1L63Q = DFFEA(C1L63Q_sload_eqn, clk, VCC, , , ~GND, wb_rst_i);
+
+--C1L73 is uart_receiver:receiver|counter_t[8]~reg0COUT
+--operation mode is arithmetic
+
+C1L73 = CARRY(C1L63Q & (C1_i279 # !C1L53) # !C1L63Q & C1_i279 & !C1L53);
+
+
+--C1L83Q is uart_receiver:receiver|counter_t[9]~reg0
+--operation mode is normal
+
+C1L83Q_carry_eqn = C1L73;
+C1L83Q_lut_out = C1L83Q $ C1_i279 $ C1L83Q_carry_eqn;
+C1L83Q_sload_eqn = (C1_i277 & VCC) # (!C1_i277 & C1L83Q_lut_out);
+C1L83Q = DFFEA(C1L83Q_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+
+--C1_counter_b[0] is uart_receiver:receiver|counter_b[0]
+--operation mode is arithmetic
+
+C1_counter_b[0]_lut_out = C1_counter_b[0] $ C1L94;
+C1_counter_b[0]_sload_eqn = (!serial_in & VCC) # (serial_in & C1_counter_b[0]_lut_out);
+C1_counter_b[0] = DFFEA(C1_counter_b[0]_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L6 is uart_receiver:receiver|counter_b[0]~COUT
+--operation mode is arithmetic
+
+C1L6 = CARRY(C1_counter_b[0] & C1L94);
+
+
+--C1_counter_b[1] is uart_receiver:receiver|counter_b[1]
+--operation mode is arithmetic
+
+C1_counter_b[1]_carry_eqn = C1L6;
+C1_counter_b[1]_lut_out = C1_counter_b[1] $ C1L94 $ C1_counter_b[1]_carry_eqn;
+C1_counter_b[1]_sload_eqn = (!serial_in & VCC) # (serial_in & C1_counter_b[1]_lut_out);
+C1_counter_b[1] = DFFEA(C1_counter_b[1]_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L8 is uart_receiver:receiver|counter_b[1]~COUT
+--operation mode is arithmetic
+
+C1L8 = CARRY(C1_counter_b[1] & !C1L94 & !C1L6 # !C1_counter_b[1] & (!C1L6 # !C1L94));
+
+
+--C1_counter_b[2] is uart_receiver:receiver|counter_b[2]
+--operation mode is arithmetic
+
+C1_counter_b[2]_carry_eqn = C1L8;
+C1_counter_b[2]_lut_out = C1_counter_b[2] $ C1L94 $ !C1_counter_b[2]_carry_eqn;
+C1_counter_b[2]_sload_eqn = (!serial_in & VCC) # (serial_in & C1_counter_b[2]_lut_out);
+C1_counter_b[2] = DFFEA(C1_counter_b[2]_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L01 is uart_receiver:receiver|counter_b[2]~COUT
+--operation mode is arithmetic
+
+C1L01 = CARRY(C1_counter_b[2] & (C1L94 # !C1L8) # !C1_counter_b[2] & C1L94 & !C1L8);
+
+
+--C1_counter_b[3] is uart_receiver:receiver|counter_b[3]
+--operation mode is arithmetic
+
+C1_counter_b[3]_carry_eqn = C1L01;
+C1_counter_b[3]_lut_out = C1_counter_b[3] $ C1L94 $ C1_counter_b[3]_carry_eqn;
+C1_counter_b[3]_sload_eqn = (!serial_in & VCC) # (serial_in & C1_counter_b[3]_lut_out);
+C1_counter_b[3] = DFFEA(C1_counter_b[3]_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L21 is uart_receiver:receiver|counter_b[3]~COUT
+--operation mode is arithmetic
+
+C1L21 = CARRY(C1_counter_b[3] & !C1L94 & !C1L01 # !C1_counter_b[3] & (!C1L01 # !C1L94));
+
+
+--C1_counter_b[4] is uart_receiver:receiver|counter_b[4]
+--operation mode is arithmetic
+
+C1_counter_b[4]_carry_eqn = C1L21;
+C1_counter_b[4]_lut_out = C1_counter_b[4] $ C1L94 $ !C1_counter_b[4]_carry_eqn;
+C1_counter_b[4]_sload_eqn = (!serial_in & VCC) # (serial_in & C1_counter_b[4]_lut_out);
+C1_counter_b[4] = DFFEA(C1_counter_b[4]_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+--C1L41 is uart_receiver:receiver|counter_b[4]~COUT
+--operation mode is arithmetic
+
+C1L41 = CARRY(C1_counter_b[4] & (C1L94 # !C1L21) # !C1_counter_b[4] & C1L94 & !C1L21);
+
+
+--C1_counter_b[5] is uart_receiver:receiver|counter_b[5]
+--operation mode is arithmetic
+
+C1_counter_b[5]_carry_eqn = C1L41;
+C1_counter_b[5]_lut_out = C1_counter_b[5] $ C1L94 $ C1_counter_b[5]_carry_eqn;
+C1_counter_b[5]_sload_eqn = (!serial_in & ~GND) # (serial_in & C1_counter_b[5]_lut_out);
+C1_counter_b[5] = DFFEA(C1_counter_b[5]_sload_eqn, clk, VCC, , , ~GND, wb_rst_i);
+
+--C1L61 is uart_receiver:receiver|counter_b[5]~COUT
+--operation mode is arithmetic
+
+C1L61 = CARRY(C1_counter_b[5] & !C1L94 & !C1L41 # !C1_counter_b[5] & (!C1L41 # !C1L94));
+
+
+--C1_counter_b[6] is uart_receiver:receiver|counter_b[6]
+--operation mode is arithmetic
+
+C1_counter_b[6]_carry_eqn = C1L61;
+C1_counter_b[6]_lut_out = C1_counter_b[6] $ C1L94 $ !C1_counter_b[6]_carry_eqn;
+C1_counter_b[6]_sload_eqn = (!serial_in & ~GND) # (serial_in & C1_counter_b[6]_lut_out);
+C1_counter_b[6] = DFFEA(C1_counter_b[6]_sload_eqn, clk, VCC, , , ~GND, wb_rst_i);
+
+--C1L81 is uart_receiver:receiver|counter_b[6]~COUT
+--operation mode is arithmetic
+
+C1L81 = CARRY(C1_counter_b[6] & (C1L94 # !C1L61) # !C1_counter_b[6] & C1L94 & !C1L61);
+
+
+--C1_counter_b[7] is uart_receiver:receiver|counter_b[7]
+--operation mode is normal
+
+C1_counter_b[7]_carry_eqn = C1L81;
+C1_counter_b[7]_lut_out = C1_counter_b[7] $ C1L94 $ C1_counter_b[7]_carry_eqn;
+C1_counter_b[7]_sload_eqn = (!serial_in & VCC) # (serial_in & C1_counter_b[7]_lut_out);
+C1_counter_b[7] = DFFEA(C1_counter_b[7]_sload_eqn, clk, VCC, , , VCC, wb_rst_i);
+
+
+--D1L42 is uart_transmitter:transmitter|i~302
+--operation mode is arithmetic
+
+D1L42 = !D1_counter[0];
+
+--D1L52 is uart_transmitter:transmitter|i~302COUT
+--operation mode is arithmetic
+
+D1L52 = CARRY(D1_counter[0]);
+
+
+--D1L62 is uart_transmitter:transmitter|i~303
+--operation mode is arithmetic
+
+D1L62_carry_eqn = D1L52;
+D1L62 = D1_counter[1] $ !D1L62_carry_eqn;
+
+--D1L72 is uart_transmitter:transmitter|i~303COUT
+--operation mode is arithmetic
+
+D1L72 = CARRY(!D1_counter[1] & !D1L52);
+
+
+--D1L82 is uart_transmitter:transmitter|i~304
+--operation mode is arithmetic
+
+D1L82_carry_eqn = D1L72;
+D1L82 = D1_counter[2] $ D1L82_carry_eqn;
+
+--D1L92 is uart_transmitter:transmitter|i~304COUT
+--operation mode is arithmetic
+
+D1L92 = CARRY(D1_counter[2] # !D1L72);
+
+
+--D1L03 is uart_transmitter:transmitter|i~305
+--operation mode is arithmetic
+
+D1L03_carry_eqn = D1L92;
+D1L03 = D1_counter[3] $ !D1L03_carry_eqn;
+
+--D1L13 is uart_transmitter:transmitter|i~305COUT
+--operation mode is arithmetic
+
+D1L13 = CARRY(!D1_counter[3] & !D1L92);
+
+
+--D1L23 is uart_transmitter:transmitter|i~306
+--operation mode is normal
+
+D1L23_carry_eqn = D1L13;
+D1L23 = D1_counter[4] $ D1L23_carry_eqn;
+
+
+--D1L85Q is uart_transmitter:transmitter|tstate[0]~0
+--operation mode is normal
+
+D1L85Q_lut_out = D1L32 & D1L73 & !D1L85Q # !D1L32 & (D1L73 # D1L85Q);
+D1L85Q_sload_eqn = (D1L06Q & D1L83) # (!D1L06Q & D1L85Q_lut_out);
+D1L85Q = DFFEA(D1L85Q_sload_eqn, clk, !wb_rst_i, , enable, , );
+
+
+--D1L6Q is uart_transmitter:transmitter|bit_out~1
+--operation mode is normal
+
+D1L6Q_lut_out = D1L6Q & (D1L91 # !D1L32) # !D1L6Q & D1L91 & D1L32;
+D1L6Q_sload_eqn = (!D1L95Q & S1_q_b[0]) # (D1L95Q & D1L6Q_lut_out);
+D1L6Q = DFFEA(D1L6Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--C1L901Q is uart_receiver:receiver|rshift[7]~8
+--operation mode is normal
+
+C1L901Q_lut_out = serial_in & C1L901Q & C1L38 # !serial_in & (C1L901Q # !C1L38);
+C1L901Q_sload_eqn = (C1L011Q & C1L04) # (!C1L011Q & C1L901Q_lut_out);
+C1L901Q = DFFEA(C1L901Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L701Q is uart_receiver:receiver|rshift[6]~9
+--operation mode is normal
+
+C1L701Q_lut_out = C1L901Q & (C1L701Q # !C1L38) # !C1L901Q & C1L701Q & C1L38;
+C1L701Q_sload_eqn = (C1L011Q & C1L14) # (!C1L011Q & C1L701Q_lut_out);
+C1L701Q = DFFEA(C1L701Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L601Q is uart_receiver:receiver|rshift[5]~10
+--operation mode is normal
+
+C1L601Q_lut_out = C1L701Q & (C1L601Q # !C1L38) # !C1L701Q & C1L601Q & C1L38;
+C1L601Q_sload_eqn = (C1L011Q & C1L24) # (!C1L011Q & C1L601Q_lut_out);
+C1L601Q = DFFEA(C1L601Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L501Q is uart_receiver:receiver|rshift[4]~11
+--operation mode is normal
+
+C1L501Q_lut_out = C1L601Q & (C1L501Q # !C1L38) # !C1L601Q & C1L501Q & C1L38;
+C1L501Q_sload_eqn = (C1L011Q & C1L34) # (!C1L011Q & C1L501Q_lut_out);
+C1L501Q = DFFEA(C1L501Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L401Q is uart_receiver:receiver|rshift[3]~12
+--operation mode is normal
+
+C1L401Q_lut_out = C1L501Q & (C1L401Q # !C1L38) # !C1L501Q & C1L401Q & C1L38;
+C1L401Q_sload_eqn = (C1L011Q & C1L44) # (!C1L011Q & C1L401Q_lut_out);
+C1L401Q = DFFEA(C1L401Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L301Q is uart_receiver:receiver|rshift[2]~13
+--operation mode is normal
+
+C1L301Q_lut_out = C1L401Q & (C1L301Q # !C1L38) # !C1L401Q & C1L301Q & C1L38;
+C1L301Q_sload_eqn = (C1L011Q & C1L54) # (!C1L011Q & C1L301Q_lut_out);
+C1L301Q = DFFEA(C1L301Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L201Q is uart_receiver:receiver|rshift[1]~14
+--operation mode is normal
+
+C1L201Q_lut_out = C1L301Q & (C1L201Q # !C1L38) # !C1L301Q & C1L201Q & C1L38;
+C1L201Q_sload_eqn = (C1L011Q & C1L64) # (!C1L011Q & C1L201Q_lut_out);
+C1L201Q = DFFEA(C1L201Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--C1L101Q is uart_receiver:receiver|rshift[0]~15
+--operation mode is normal
+
+C1L101Q_lut_out = C1L201Q & (C1L101Q # !C1L38) # !C1L201Q & C1L101Q & C1L38;
+C1L101Q_sload_eqn = (C1L011Q & C1L74) # (!C1L011Q & C1L101Q_lut_out);
+C1L101Q = DFFEA(C1L101Q_sload_eqn, clk, !wb_rst_i, , C1L801, , );
+
+
+--D1L84Q is uart_transmitter:transmitter|shift_out[0]~7
+--operation mode is normal
+
+D1L84Q_lut_out = D1L84Q & (D1L94Q # !D1L02) # !D1L84Q & D1L94Q & D1L02;
+D1L84Q_sload_eqn = (!D1L95Q & S1_q_b[1]) # (D1L95Q & D1L84Q_lut_out);
+D1L84Q = DFFEA(D1L84Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--C1L08Q is uart_receiver:receiver|rcounter16[3]~0
+--operation mode is normal
+
+C1L08Q_lut_out = C1L45 & (C1L08Q # !C1L111Q) # !C1L45 & C1L08Q & C1L111Q;
+C1L08Q_sload_eqn = (!C1L211Q & C1L35) # (C1L211Q & C1L08Q_lut_out);
+C1L08Q = DFFEA(C1L08Q_sload_eqn, clk, !wb_rst_i, , enable, , );
+
+
+--C1L97Q is uart_receiver:receiver|rcounter16[2]~1
+--operation mode is normal
+
+C1L97Q_lut_out = C1L16 & (C1L97Q # !C1L111Q) # !C1L16 & C1L97Q & C1L111Q;
+C1L97Q_sload_eqn = (!C1L211Q & C1L26) # (C1L211Q & C1L97Q_lut_out);
+C1L97Q = DFFEA(C1L97Q_sload_eqn, clk, !wb_rst_i, , enable, , );
+
+
+--C1L87Q is uart_receiver:receiver|rcounter16[1]~2
+--operation mode is normal
+
+C1L87Q_lut_out = C1L55 & (C1L87Q # !C1L111Q) # !C1L55 & C1L87Q & C1L111Q;
+C1L87Q_sload_eqn = (!C1L211Q & C1L06) # (C1L211Q & C1L87Q_lut_out);
+C1L87Q = DFFEA(C1L87Q_sload_eqn, clk, !wb_rst_i, , enable, , );
+
+
+--D1L94Q is uart_transmitter:transmitter|shift_out[1]~8
+--operation mode is normal
+
+D1L94Q_lut_out = D1L94Q & (D1L05Q # !D1L02) # !D1L94Q & D1L05Q & D1L02;
+D1L94Q_sload_eqn = (!D1L95Q & S1_q_b[2]) # (D1L95Q & D1L94Q_lut_out);
+D1L94Q = DFFEA(D1L94Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--D1L05Q is uart_transmitter:transmitter|shift_out[2]~9
+--operation mode is normal
+
+D1L05Q_lut_out = D1L05Q & (D1L15Q # !D1L02) # !D1L05Q & D1L15Q & D1L02;
+D1L05Q_sload_eqn = (!D1L95Q & S1_q_b[3]) # (D1L95Q & D1L05Q_lut_out);
+D1L05Q = DFFEA(D1L05Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--D1L15Q is uart_transmitter:transmitter|shift_out[3]~10
+--operation mode is normal
+
+D1L15Q_lut_out = D1L15Q & (D1L25Q # !D1L02) # !D1L15Q & D1L25Q & D1L02;
+D1L15Q_sload_eqn = (!D1L95Q & S1_q_b[4]) # (D1L95Q & D1L15Q_lut_out);
+D1L15Q = DFFEA(D1L15Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--D1L25Q is uart_transmitter:transmitter|shift_out[4]~11
+--operation mode is normal
+
+D1L25Q_lut_out = D1L25Q & (D1L35Q # !D1L02) # !D1L25Q & D1L35Q & D1L02;
+D1L25Q_sload_eqn = (!D1L95Q & S1_q_b[5]) # (D1L95Q & D1L25Q_lut_out);
+D1L25Q = DFFEA(D1L25Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--D1L35Q is uart_transmitter:transmitter|shift_out[5]~12
+--operation mode is normal
+
+D1L35Q_lut_out = D1L35Q & (D1_shift_out[6] # !D1L02) # !D1L35Q & D1_shift_out[6] & D1L02;
+D1L35Q_sload_eqn = (!D1L95Q & S1_q_b[6]) # (D1L95Q & D1L35Q_lut_out);
+D1L35Q = DFFEA(D1L35Q_sload_eqn, clk, !wb_rst_i, , D1L7, , );
+
+
+--E1_safe_q[15] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[15]
+--operation mode is normal
+
+E1_safe_q[15]_carry_eqn = E1L13;
+E1_safe_q[15]_lut_out = E1_safe_q[15] $ E1_safe_q[15]_carry_eqn;
+E1_safe_q[15]_sload_eqn = (i279 & A1L251) # (!i279 & E1_safe_q[15]_lut_out);
+E1_safe_q[15] = DFFEA(E1_safe_q[15]_sload_eqn, clk, !wb_rst_i, , , , );
+
+
+--E1_safe_q[14] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[14]
+--operation mode is arithmetic
+
+E1_safe_q[14]_carry_eqn = E1L92;
+E1_safe_q[14]_lut_out = E1_safe_q[14] $ !E1_safe_q[14]_carry_eqn;
+E1_safe_q[14]_sload_eqn = (i279 & A1L051) # (!i279 & E1_safe_q[14]_lut_out);
+E1_safe_q[14] = DFFEA(E1_safe_q[14]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L13 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[14]~COUT
+--operation mode is arithmetic
+
+E1L13 = CARRY(!E1_safe_q[14] & !E1L92);
+
+
+--E1_safe_q[13] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[13]
+--operation mode is arithmetic
+
+E1_safe_q[13]_carry_eqn = E1L72;
+E1_safe_q[13]_lut_out = E1_safe_q[13] $ E1_safe_q[13]_carry_eqn;
+E1_safe_q[13]_sload_eqn = (i279 & A1L841) # (!i279 & E1_safe_q[13]_lut_out);
+E1_safe_q[13] = DFFEA(E1_safe_q[13]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L92 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[13]~COUT
+--operation mode is arithmetic
+
+E1L92 = CARRY(E1_safe_q[13] # !E1L72);
+
+
+--E1_safe_q[12] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[12]
+--operation mode is arithmetic
+
+E1_safe_q[12]_carry_eqn = E1L52;
+E1_safe_q[12]_lut_out = E1_safe_q[12] $ !E1_safe_q[12]_carry_eqn;
+E1_safe_q[12]_sload_eqn = (i279 & A1L641) # (!i279 & E1_safe_q[12]_lut_out);
+E1_safe_q[12] = DFFEA(E1_safe_q[12]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L72 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[12]~COUT
+--operation mode is arithmetic
+
+E1L72 = CARRY(!E1_safe_q[12] & !E1L52);
+
+
+--E1_safe_q[11] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[11]
+--operation mode is arithmetic
+
+E1_safe_q[11]_carry_eqn = E1L32;
+E1_safe_q[11]_lut_out = E1_safe_q[11] $ E1_safe_q[11]_carry_eqn;
+E1_safe_q[11]_sload_eqn = (i279 & A1L441) # (!i279 & E1_safe_q[11]_lut_out);
+E1_safe_q[11] = DFFEA(E1_safe_q[11]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L52 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[11]~COUT
+--operation mode is arithmetic
+
+E1L52 = CARRY(E1_safe_q[11] # !E1L32);
+
+
+--E1_safe_q[10] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[10]
+--operation mode is arithmetic
+
+E1_safe_q[10]_carry_eqn = E1L12;
+E1_safe_q[10]_lut_out = E1_safe_q[10] $ !E1_safe_q[10]_carry_eqn;
+E1_safe_q[10]_sload_eqn = (i279 & A1L241) # (!i279 & E1_safe_q[10]_lut_out);
+E1_safe_q[10] = DFFEA(E1_safe_q[10]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L32 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[10]~COUT
+--operation mode is arithmetic
+
+E1L32 = CARRY(!E1_safe_q[10] & !E1L12);
+
+
+--E1_safe_q[9] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[9]
+--operation mode is arithmetic
+
+E1_safe_q[9]_carry_eqn = E1L91;
+E1_safe_q[9]_lut_out = E1_safe_q[9] $ E1_safe_q[9]_carry_eqn;
+E1_safe_q[9]_sload_eqn = (i279 & A1L041) # (!i279 & E1_safe_q[9]_lut_out);
+E1_safe_q[9] = DFFEA(E1_safe_q[9]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L12 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[9]~COUT
+--operation mode is arithmetic
+
+E1L12 = CARRY(E1_safe_q[9] # !E1L91);
+
+
+--E1_safe_q[8] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[8]
+--operation mode is arithmetic
+
+E1_safe_q[8]_carry_eqn = E1L71;
+E1_safe_q[8]_lut_out = E1_safe_q[8] $ !E1_safe_q[8]_carry_eqn;
+E1_safe_q[8]_sload_eqn = (i279 & A1L831) # (!i279 & E1_safe_q[8]_lut_out);
+E1_safe_q[8] = DFFEA(E1_safe_q[8]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L91 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[8]~COUT
+--operation mode is arithmetic
+
+E1L91 = CARRY(!E1_safe_q[8] & !E1L71);
+
+
+--E1_safe_q[7] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[7]
+--operation mode is arithmetic
+
+E1_safe_q[7]_carry_eqn = E1L51;
+E1_safe_q[7]_lut_out = E1_safe_q[7] $ E1_safe_q[7]_carry_eqn;
+E1_safe_q[7]_sload_eqn = (i279 & A1L631) # (!i279 & E1_safe_q[7]_lut_out);
+E1_safe_q[7] = DFFEA(E1_safe_q[7]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L71 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[7]~COUT
+--operation mode is arithmetic
+
+E1L71 = CARRY(E1_safe_q[7] # !E1L51);
+
+
+--E1_safe_q[6] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[6]
+--operation mode is arithmetic
+
+E1_safe_q[6]_carry_eqn = E1L31;
+E1_safe_q[6]_lut_out = E1_safe_q[6] $ !E1_safe_q[6]_carry_eqn;
+E1_safe_q[6]_sload_eqn = (i279 & A1L431) # (!i279 & E1_safe_q[6]_lut_out);
+E1_safe_q[6] = DFFEA(E1_safe_q[6]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L51 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[6]~COUT
+--operation mode is arithmetic
+
+E1L51 = CARRY(!E1_safe_q[6] & !E1L31);
+
+
+--E1_safe_q[5] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[5]
+--operation mode is arithmetic
+
+E1_safe_q[5]_carry_eqn = E1L11;
+E1_safe_q[5]_lut_out = E1_safe_q[5] $ E1_safe_q[5]_carry_eqn;
+E1_safe_q[5]_sload_eqn = (i279 & A1L231) # (!i279 & E1_safe_q[5]_lut_out);
+E1_safe_q[5] = DFFEA(E1_safe_q[5]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L31 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[5]~COUT
+--operation mode is arithmetic
+
+E1L31 = CARRY(E1_safe_q[5] # !E1L11);
+
+
+--E1_safe_q[4] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[4]
+--operation mode is arithmetic
+
+E1_safe_q[4]_carry_eqn = E1L9;
+E1_safe_q[4]_lut_out = E1_safe_q[4] $ !E1_safe_q[4]_carry_eqn;
+E1_safe_q[4]_sload_eqn = (i279 & A1L031) # (!i279 & E1_safe_q[4]_lut_out);
+E1_safe_q[4] = DFFEA(E1_safe_q[4]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L11 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[4]~COUT
+--operation mode is arithmetic
+
+E1L11 = CARRY(!E1_safe_q[4] & !E1L9);
+
+
+--E1_safe_q[3] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[3]
+--operation mode is arithmetic
+
+E1_safe_q[3]_carry_eqn = E1L7;
+E1_safe_q[3]_lut_out = E1_safe_q[3] $ E1_safe_q[3]_carry_eqn;
+E1_safe_q[3]_sload_eqn = (i279 & A1L821) # (!i279 & E1_safe_q[3]_lut_out);
+E1_safe_q[3] = DFFEA(E1_safe_q[3]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L9 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[3]~COUT
+--operation mode is arithmetic
+
+E1L9 = CARRY(E1_safe_q[3] # !E1L7);
+
+
+--E1_safe_q[2] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[2]
+--operation mode is arithmetic
+
+E1_safe_q[2]_carry_eqn = E1L5;
+E1_safe_q[2]_lut_out = E1_safe_q[2] $ !E1_safe_q[2]_carry_eqn;
+E1_safe_q[2]_sload_eqn = (i279 & A1L621) # (!i279 & E1_safe_q[2]_lut_out);
+E1_safe_q[2] = DFFEA(E1_safe_q[2]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L7 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[2]~COUT
+--operation mode is arithmetic
+
+E1L7 = CARRY(!E1_safe_q[2] & !E1L5);
+
+
+--E1_safe_q[1] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[1]
+--operation mode is arithmetic
+
+E1_safe_q[1]_carry_eqn = E1L3;
+E1_safe_q[1]_lut_out = E1_safe_q[1] $ E1_safe_q[1]_carry_eqn;
+E1_safe_q[1]_sload_eqn = (i279 & A1L421) # (!i279 & E1_safe_q[1]_lut_out);
+E1_safe_q[1] = DFFEA(E1_safe_q[1]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L5 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[1]~COUT
+--operation mode is arithmetic
+
+E1L5 = CARRY(E1_safe_q[1] # !E1L3);
+
+
+--E1_safe_q[0] is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|safe_q[0]
+--operation mode is arithmetic
+
+E1_safe_q[0]_lut_out = !E1_safe_q[0];
+E1_safe_q[0]_sload_eqn = (i279 & A1L221) # (!i279 & E1_safe_q[0]_lut_out);
+E1_safe_q[0] = DFFEA(E1_safe_q[0]_sload_eqn, clk, !wb_rst_i, , , , );
+
+--E1L3 is lpm_counter:dlc_rtl_0|alt_counter_stratix:wysi_counter|counter_cell[0]~COUT
+--operation mode is arithmetic
+
+E1L3 = CARRY(!E1_safe_q[0]);
+
+
+--dl[7] is dl[7]
+--operation mode is normal
+
+dl[7]_lut_out = wb_dat_i[7];
+dl[7] = DFFEA(dl[7]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--lcr[7] is lcr[7]
+--operation mode is normal
+
+lcr[7]_lut_out = wb_dat_i[7];
+lcr[7] = DFFEA(lcr[7]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--A1L551 is i~1473
+--operation mode is normal
+
+A1L551 = wb_addr_i[1] # lcr[7] & dl[7] # !lcr[7] & M1_q_b[9];
+
+
+--lsr7r is lsr7r
+--operation mode is normal
+
+lsr7r_lut_out = i80 & (lsr7r # A1L86 & !lsr7_d);
+lsr7r = DFFEA(lsr7r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--dl[15] is dl[15]
+--operation mode is normal
+
+dl[15]_lut_out = wb_dat_i[7];
+dl[15] = DFFEA(dl[15]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--A1L601 is i~124
+--operation mode is normal
+
+A1L601 = wb_addr_i[1] & (lcr[7] # wb_addr_i[2]) # !wb_addr_i[1] & dl[15] & lcr[7] & !wb_addr_i[2];
+
+
+--scratch[7] is scratch[7]
+--operation mode is normal
+
+scratch[7]_lut_out = wb_dat_i[7];
+scratch[7] = DFFEA(scratch[7]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--A1L701 is i~125
+--operation mode is normal
+
+A1L701 = A1L601 & (scratch[7] # !wb_addr_i[2]) # !A1L601 & lsr7r & wb_addr_i[2];
+
+
+--A1L58 is i444~45
+--operation mode is normal
+
+A1L58 = !wb_addr_i[0] & !wb_addr_i[2];
+
+
+--lsr6r is lsr6r
+--operation mode is normal
+
+lsr6r_lut_out = A1L55 # lsr6r & (!A1L66 # !lsr6_d);
+lsr6r = DFFEA(lsr6r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--lcr[6] is lcr[6]
+--operation mode is normal
+
+lcr[6]_lut_out = wb_dat_i[6];
+lcr[6] = DFFEA(lcr[6]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--dl[14] is dl[14]
+--operation mode is normal
+
+dl[14]_lut_out = wb_dat_i[6];
+dl[14] = DFFEA(dl[14]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--A1L54 is i25~0
+--operation mode is normal
+
+A1L54 = dl[14] & lcr[7];
+
+
+--A1L801 is i~126
+--operation mode is normal
+
+A1L801 = wb_addr_i[1] & (wb_addr_i[2] # lcr[6]) # !wb_addr_i[1] & !wb_addr_i[2] & A1L54;
+
+
+--scratch[6] is scratch[6]
+--operation mode is normal
+
+scratch[6]_lut_out = wb_dat_i[6];
+scratch[6] = DFFEA(scratch[6]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--A1L901 is i~127
+--operation mode is normal
+
+A1L901 = A1L801 & (scratch[6] # !wb_addr_i[2]) # !A1L801 & !lsr6r & wb_addr_i[2];
+
+
+--dl[6] is dl[6]
+--operation mode is normal
+
+dl[6]_lut_out = wb_dat_i[6];
+dl[6] = DFFEA(dl[6]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L651 is i~1474
+--operation mode is normal
+
+A1L651 = wb_addr_i[1] # lcr[7] & dl[6] # !lcr[7] & M1_q_b[8];
+
+
+--A1L751 is i~1475
+--operation mode is normal
+
+A1L751 = wb_addr_i[0] & A1L901 # !wb_addr_i[0] & A1L651 & !wb_addr_i[2];
+
+
+--dl[5] is dl[5]
+--operation mode is normal
+
+dl[5]_lut_out = wb_dat_i[5];
+dl[5] = DFFEA(dl[5]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L851 is i~1476
+--operation mode is normal
+
+A1L851 = dl[5] & (M1_q_b[7] # lcr[7]) # !dl[5] & M1_q_b[7] & !lcr[7];
+
+
+--lsr5r is lsr5r
+--operation mode is normal
+
+lsr5r_lut_out = A1L55 # lsr5r & (!i231 # !lsr5_d);
+lsr5r = DFFEA(lsr5r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--lcr[5] is lcr[5]
+--operation mode is normal
+
+lcr[5]_lut_out = wb_dat_i[5];
+lcr[5] = DFFEA(lcr[5]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--dl[13] is dl[13]
+--operation mode is normal
+
+dl[13]_lut_out = wb_dat_i[5];
+dl[13] = DFFEA(dl[13]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--A1L64 is i26~0
+--operation mode is normal
+
+A1L64 = dl[13] & lcr[7];
+
+
+--A1L011 is i~128
+--operation mode is normal
+
+A1L011 = wb_addr_i[1] & (wb_addr_i[2] # lcr[5]) # !wb_addr_i[1] & !wb_addr_i[2] & A1L64;
+
+
+--scratch[5] is scratch[5]
+--operation mode is normal
+
+scratch[5]_lut_out = wb_dat_i[5];
+scratch[5] = DFFEA(scratch[5]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--A1L111 is i~129
+--operation mode is normal
+
+A1L111 = A1L011 & (scratch[5] # !wb_addr_i[2]) # !A1L011 & !lsr5r & wb_addr_i[2];
+
+
+--A1L951 is i~1477
+--operation mode is normal
+
+A1L951 = wb_addr_i[0] & (A1L111 # A1L45 & A1L851) # !wb_addr_i[0] & A1L45 & A1L851;
+
+
+--dl[4] is dl[4]
+--operation mode is normal
+
+dl[4]_lut_out = wb_dat_i[4];
+dl[4] = DFFEA(dl[4]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L061 is i~1478
+--operation mode is normal
+
+A1L061 = dl[4] & (M1_q_b[6] # lcr[7]) # !dl[4] & M1_q_b[6] & !lcr[7];
+
+
+--lsr4r is lsr4r
+--operation mode is normal
+
+lsr4r_lut_out = i80 & (lsr4r # M1_q_b[1] & !lsr4_d);
+lsr4r = DFFEA(lsr4r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--lcr[4] is lcr[4]
+--operation mode is normal
+
+lcr[4]_lut_out = wb_dat_i[4];
+lcr[4] = DFFEA(lcr[4]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--dl[12] is dl[12]
+--operation mode is normal
+
+dl[12]_lut_out = wb_dat_i[4];
+dl[12] = DFFEA(dl[12]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--A1L74 is i27~0
+--operation mode is normal
+
+A1L74 = dl[12] & lcr[7];
+
+
+--A1L211 is i~130
+--operation mode is normal
+
+A1L211 = wb_addr_i[1] & (wb_addr_i[2] # lcr[4]) # !wb_addr_i[1] & !wb_addr_i[2] & A1L74;
+
+
+--scratch[4] is scratch[4]
+--operation mode is normal
+
+scratch[4]_lut_out = wb_dat_i[4];
+scratch[4] = DFFEA(scratch[4]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--A1L311 is i~131
+--operation mode is normal
+
+A1L311 = A1L211 & (scratch[4] # !wb_addr_i[2]) # !A1L211 & lsr4r & wb_addr_i[2];
+
+
+--A1L161 is i~1479
+--operation mode is normal
+
+A1L161 = wb_addr_i[0] & (A1L311 # A1L45 & A1L061) # !wb_addr_i[0] & A1L45 & A1L061;
+
+
+--scratch[3] is scratch[3]
+--operation mode is normal
+
+scratch[3]_lut_out = wb_dat_i[3];
+scratch[3] = DFFEA(scratch[3]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--lsr3r is lsr3r
+--operation mode is normal
+
+lsr3r_lut_out = i80 & (lsr3r # M1_q_b[0] & !lsr3_d);
+lsr3r = DFFEA(lsr3r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L261 is i~1480
+--operation mode is normal
+
+A1L261 = scratch[3] & (lsr3r # wb_addr_i[1]) # !scratch[3] & lsr3r & !wb_addr_i[1];
+
+
+--dl[11] is dl[11]
+--operation mode is normal
+
+dl[11]_lut_out = wb_dat_i[3];
+dl[11] = DFFEA(dl[11]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--ier[3] is ier[3]
+--operation mode is normal
+
+ier[3]_lut_out = wb_dat_i[3];
+ier[3] = DFFEA(ier[3]_lut_out, wb_we_i, !wb_rst_i, , A1L69, , );
+
+
+--A1L84 is i28~7
+--operation mode is normal
+
+A1L84 = dl[11] & (ier[3] # lcr[7]) # !dl[11] & ier[3] & !lcr[7];
+
+
+--iir[3] is iir[3]
+--operation mode is normal
+
+iir[3]_lut_out = ti_int_pnd & !rls_int_pnd & !A1L57;
+iir[3] = DFFEA(iir[3]_lut_out, clk, !wb_rst_i, , , , );
+
+
+--dl[3] is dl[3]
+--operation mode is normal
+
+dl[3]_lut_out = wb_dat_i[3];
+dl[3] = DFFEA(dl[3]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L14 is i20~7
+--operation mode is normal
+
+A1L14 = dl[3] & (M1_q_b[5] # lcr[7]) # !dl[3] & M1_q_b[5] & !lcr[7];
+
+
+--A1L411 is i~132
+--operation mode is normal
+
+A1L411 = wb_addr_i[1] & (wb_addr_i[0] # iir[3]) # !wb_addr_i[1] & !wb_addr_i[0] & A1L14;
+
+
+--lcr[3] is lcr[3]
+--operation mode is normal
+
+lcr[3]_lut_out = wb_dat_i[3];
+lcr[3] = DFFEA(lcr[3]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--A1L511 is i~133
+--operation mode is normal
+
+A1L511 = A1L411 & (lcr[3] # !wb_addr_i[0]) # !A1L411 & A1L84 & wb_addr_i[0];
+
+
+--A1L361 is i~1481
+--operation mode is normal
+
+A1L361 = wb_addr_i[2] & wb_addr_i[0] & A1L261 # !wb_addr_i[2] & A1L511;
+
+
+--A1L36 is i159~13
+--operation mode is normal
+
+A1L36 = wb_addr_i[2] & wb_addr_i[0];
+
+
+--scratch[2] is scratch[2]
+--operation mode is normal
+
+scratch[2]_lut_out = wb_dat_i[2];
+scratch[2] = DFFEA(scratch[2]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--dl[10] is dl[10]
+--operation mode is normal
+
+dl[10]_lut_out = wb_dat_i[2];
+dl[10] = DFFEA(dl[10]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--ier[2] is ier[2]
+--operation mode is normal
+
+ier[2]_lut_out = wb_dat_i[2];
+ier[2] = DFFEA(ier[2]_lut_out, wb_we_i, !wb_rst_i, , A1L69, , );
+
+
+--A1L94 is i29~7
+--operation mode is normal
+
+A1L94 = dl[10] & (ier[2] # lcr[7]) # !dl[10] & ier[2] & !lcr[7];
+
+
+--iir[2] is iir[2]
+--operation mode is normal
+
+iir[2]_lut_out = ti_int_pnd # rls_int_pnd # A1L57;
+iir[2] = DFFEA(iir[2]_lut_out, clk, !wb_rst_i, , , , );
+
+
+--dl[2] is dl[2]
+--operation mode is normal
+
+dl[2]_lut_out = wb_dat_i[2];
+dl[2] = DFFEA(dl[2]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L24 is i21~7
+--operation mode is normal
+
+A1L24 = dl[2] & (M1_q_b[4] # lcr[7]) # !dl[2] & M1_q_b[4] & !lcr[7];
+
+
+--A1L611 is i~134
+--operation mode is normal
+
+A1L611 = wb_addr_i[1] & (wb_addr_i[0] # iir[2]) # !wb_addr_i[1] & !wb_addr_i[0] & A1L24;
+
+
+--lcr[2] is lcr[2]
+--operation mode is normal
+
+lcr[2]_lut_out = wb_dat_i[2];
+lcr[2] = DFFEA(lcr[2]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--A1L711 is i~135
+--operation mode is normal
+
+A1L711 = A1L611 & (lcr[2] # !wb_addr_i[0]) # !A1L611 & A1L94 & wb_addr_i[0];
+
+
+--A1L461 is i~1482
+--operation mode is normal
+
+A1L461 = A1L16 & (scratch[2] # A1L711 & !wb_addr_i[2]) # !A1L16 & A1L711 & !wb_addr_i[2];
+
+
+--scratch[1] is scratch[1]
+--operation mode is normal
+
+scratch[1]_lut_out = wb_dat_i[1];
+scratch[1] = DFFEA(scratch[1]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--lsr1r is lsr1r
+--operation mode is normal
+
+lsr1r_lut_out = i80 & (lsr1r # K1_b_full & !lsr1_d);
+lsr1r = DFFEA(lsr1r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L561 is i~1483
+--operation mode is normal
+
+A1L561 = scratch[1] & (lsr1r # wb_addr_i[1]) # !scratch[1] & lsr1r & !wb_addr_i[1];
+
+
+--dl[9] is dl[9]
+--operation mode is normal
+
+dl[9]_lut_out = wb_dat_i[1];
+dl[9] = DFFEA(dl[9]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--ier[1] is ier[1]
+--operation mode is normal
+
+ier[1]_lut_out = wb_dat_i[1];
+ier[1] = DFFEA(ier[1]_lut_out, wb_we_i, !wb_rst_i, , A1L69, , );
+
+
+--A1L05 is i30~7
+--operation mode is normal
+
+A1L05 = dl[9] & (ier[1] # lcr[7]) # !dl[9] & ier[1] & !lcr[7];
+
+
+--iir[1] is iir[1]
+--operation mode is normal
+
+iir[1]_lut_out = rls_int_pnd # thre_int_pnd & !A1L57 & !ti_int_pnd;
+iir[1] = DFFEA(iir[1]_lut_out, clk, !wb_rst_i, , , , );
+
+
+--dl[1] is dl[1]
+--operation mode is normal
+
+dl[1]_lut_out = wb_dat_i[1];
+dl[1] = DFFEA(dl[1]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L34 is i22~7
+--operation mode is normal
+
+A1L34 = dl[1] & (M1_q_b[3] # lcr[7]) # !dl[1] & M1_q_b[3] & !lcr[7];
+
+
+--A1L811 is i~136
+--operation mode is normal
+
+A1L811 = wb_addr_i[1] & (wb_addr_i[0] # iir[1]) # !wb_addr_i[1] & !wb_addr_i[0] & A1L34;
+
+
+--lcr[1] is lcr[1]
+--operation mode is normal
+
+lcr[1]_lut_out = !wb_dat_i[1];
+lcr[1] = DFFEA(lcr[1]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--A1L911 is i~137
+--operation mode is normal
+
+A1L911 = A1L811 & (!lcr[1] # !wb_addr_i[0]) # !A1L811 & A1L05 & wb_addr_i[0];
+
+
+--A1L661 is i~1484
+--operation mode is normal
+
+A1L661 = wb_addr_i[2] & wb_addr_i[0] & A1L561 # !wb_addr_i[2] & A1L911;
+
+
+--scratch[0] is scratch[0]
+--operation mode is normal
+
+scratch[0]_lut_out = wb_dat_i[0];
+scratch[0] = DFFEA(scratch[0]_lut_out, wb_we_i, !wb_rst_i, , A1L26, , );
+
+
+--lsr0r is lsr0r
+--operation mode is normal
+
+lsr0r_lut_out = !E2L11 & !rx_reset;
+lsr0r = DFFEA(lsr0r_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L761 is i~1485
+--operation mode is normal
+
+A1L761 = scratch[0] & (lsr0r # wb_addr_i[1]) # !scratch[0] & lsr0r & !wb_addr_i[1];
+
+
+--dl[8] is dl[8]
+--operation mode is normal
+
+dl[8]_lut_out = wb_dat_i[0];
+dl[8] = DFFEA(dl[8]_lut_out, wb_we_i, !wb_rst_i, , A1L63, , );
+
+
+--ier[0] is ier[0]
+--operation mode is normal
+
+ier[0]_lut_out = wb_dat_i[0];
+ier[0] = DFFEA(ier[0]_lut_out, wb_we_i, !wb_rst_i, , A1L69, , );
+
+
+--A1L15 is i31~7
+--operation mode is normal
+
+A1L15 = dl[8] & (ier[0] # lcr[7]) # !dl[8] & ier[0] & !lcr[7];
+
+
+--iir[0] is iir[0]
+--operation mode is normal
+
+iir[0]_lut_out = A1L57 # thre_int_pnd # rls_int_pnd # ti_int_pnd;
+iir[0] = DFFEA(iir[0]_lut_out, clk, !wb_rst_i, , , , );
+
+
+--dl[0] is dl[0]
+--operation mode is normal
+
+dl[0]_lut_out = wb_dat_i[0];
+dl[0] = DFFEA(dl[0]_lut_out, wb_we_i, !wb_rst_i, , A1L72, , );
+
+
+--A1L44 is i23~7
+--operation mode is normal
+
+A1L44 = dl[0] & (M1_q_b[2] # lcr[7]) # !dl[0] & M1_q_b[2] & !lcr[7];
+
+
+--A1L021 is i~138
+--operation mode is normal
+
+A1L021 = wb_addr_i[1] & (wb_addr_i[0] # !iir[0]) # !wb_addr_i[1] & !wb_addr_i[0] & A1L44;
+
+
+--lcr[0] is lcr[0]
+--operation mode is normal
+
+lcr[0]_lut_out = !wb_dat_i[0];
+lcr[0] = DFFEA(lcr[0]_lut_out, wb_we_i, !wb_rst_i, , A1L75, , );
+
+
+--A1L121 is i~139
+--operation mode is normal
+
+A1L121 = A1L021 & (!lcr[0] # !wb_addr_i[0]) # !A1L021 & A1L15 & wb_addr_i[0];
+
+
+--A1L861 is i~1486
+--operation mode is normal
+
+A1L861 = wb_addr_i[2] & wb_addr_i[0] & A1L761 # !wb_addr_i[2] & A1L121;
+
+
+--D1_stx_o_tmp is uart_transmitter:transmitter|stx_o_tmp
+--operation mode is normal
+
+D1_stx_o_tmp_lut_out = !D1L43 & (D1L85Q # D1L95Q);
+D1_stx_o_tmp = DFFEA(D1_stx_o_tmp_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--D1L22 is uart_transmitter:transmitter|i233~0
+--operation mode is normal
+
+D1L22 = !lcr[6] & !D1_stx_o_tmp;
+
+
+--A1L301Q is int_o~reg0
+--operation mode is normal
+
+A1L301Q_lut_out = A1L09 # rls_int_pnd & i80 # !rls_int_pnd & rda_int_pnd;
+A1L301Q = DFFEA(A1L301Q_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L72 is dl[7]~155
+--operation mode is normal
+
+A1L72 = lcr[7] & A1L45 & !mc_cs3;
+
+
+--C1_rf_push is uart_receiver:receiver|rf_push
+--operation mode is normal
+
+C1_rf_push_lut_out = C1L111Q & (C1_rf_push # C1L84);
+C1_rf_push = DFFEA(C1_rf_push_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--C1_rf_push_q is uart_receiver:receiver|rf_push_q
+--operation mode is normal
+
+C1_rf_push_q_lut_out = C1_rf_push;
+C1_rf_push_q = DFFEA(C1_rf_push_q_lut_out, clk, !wb_rst_i, , , , );
+
+
+--J1L3 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|valid_wreq~11
+--operation mode is normal
+
+J1L3 = C1_rf_push & !C1_rf_push_q;
+
+
+--K1_b_full is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_full
+--operation mode is normal
+
+K1_b_full_lut_out = K1L3 & (rf_pop_delay # !rf_pop_temp);
+K1_b_full = DFFEA(K1_b_full_lut_out, clk, !C1L93, , , , );
+
+
+--K1_b_non_empty is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_non_empty
+--operation mode is normal
+
+K1_b_non_empty_lut_out = K1L7 # K1L8 # K1L6 # J1L3;
+K1_b_non_empty = DFFEA(K1_b_non_empty_lut_out, clk, !C1L93, , , , );
+
+
+--rf_pop_temp is rf_pop_temp
+--operation mode is normal
+
+rf_pop_temp_lut_out = !i73;
+rf_pop_temp = DFFEA(rf_pop_temp_lut_out, clk, !wb_rst_i, , , , );
+
+
+--rf_pop_delay is rf_pop_delay
+--operation mode is normal
+
+rf_pop_delay_lut_out = rf_pop_temp;
+rf_pop_delay = DFFEA(rf_pop_delay_lut_out, clk, !wb_rst_i, , , , );
+
+
+--J1L1 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|valid_rreq~9
+--operation mode is normal
+
+J1L1 = K1_b_non_empty & rf_pop_temp & !rf_pop_delay;
+
+
+--C1_rf_data_in[9] is uart_receiver:receiver|rf_data_in[9]
+--operation mode is normal
+
+C1_rf_data_in[9]_lut_out = C1L901Q & (C1L95 # C1_rf_data_in[9] & C1L85) # !C1L901Q & C1_rf_data_in[9] & C1L85;
+C1_rf_data_in[9] = DFFEA(C1_rf_data_in[9]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--A1L85 is i85~23
+--operation mode is normal
+
+A1L85 = wb_addr_i[0] & !mc_cs3 & !wb_addr_i[2];
+
+
+--lsr_mask_d is lsr_mask_d
+--operation mode is normal
+
+lsr_mask_d_lut_out = i64;
+lsr_mask_d = DFFEA(lsr_mask_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--i64 is i64
+--operation mode is normal
+
+i64 = A1L36 & wb_re_i & !lcr[7] & !wb_addr_i[1];
+
+
+--i80 is i80
+--operation mode is normal
+
+i80 = lsr_mask_d # !i64;
+
+
+--A1L86 is i236~13
+--operation mode is normal
+
+A1L86 = M1_q_b[1] # M1_q_b[0] # K1_b_full;
+
+
+--lsr7_d is lsr7_d
+--operation mode is normal
+
+lsr7_d_lut_out = A1L86;
+lsr7_d = DFFEA(lsr7_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L63 is dl[15]~156
+--operation mode is normal
+
+A1L63 = lcr[7] & A1L85 & !wb_addr_i[1];
+
+
+--lsr6_d is lsr6_d
+--operation mode is normal
+
+lsr6_d_lut_out = !A1L66;
+lsr6_d = DFFEA(lsr6_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--D1L06Q is uart_transmitter:transmitter|tstate[2]~reg0
+--operation mode is normal
+
+D1L06Q_lut_out = D1L93 # D1L14 # A1L76 & !A1L56;
+D1L06Q = DFFEA(D1L06Q_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--D1L95Q is uart_transmitter:transmitter|tstate[1]~reg0
+--operation mode is normal
+
+D1L95Q_lut_out = D1L24 # D1L04 & !D1L85Q & !D1L61;
+D1L95Q = DFFEA(D1L95Q_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--A1L76 is i235~17
+--operation mode is normal
+
+A1L76 = !D1L85Q & !D1L06Q & !D1L95Q;
+
+
+--A1L56 is i231~29
+--operation mode is normal
+
+A1L56 = !E5_safe_q[3] & !E5_safe_q[2] & !E5_safe_q[1] & !E5_safe_q[0];
+
+
+--A1L961 is i~1487
+--operation mode is normal
+
+A1L961 = block_cnt[4] # block_cnt[5] # block_cnt[6] # block_cnt[7];
+
+
+--A1L071 is i~1488
+--operation mode is normal
+
+A1L071 = block_cnt[0] # block_cnt[1] # block_cnt[2] # block_cnt[3];
+
+
+--i231 is i231
+--operation mode is normal
+
+i231 = A1L56 & !A1L961 & !A1L071;
+
+
+--A1L55 is i77~23
+--operation mode is normal
+
+A1L55 = A1L45 & wb_we_i & !lcr[7];
+
+
+--C1_rf_data_in[8] is uart_receiver:receiver|rf_data_in[8]
+--operation mode is normal
+
+C1_rf_data_in[8]_lut_out = C1L701Q & (C1L95 # C1_rf_data_in[8] & C1L85) # !C1L701Q & C1_rf_data_in[8] & C1L85;
+C1_rf_data_in[8] = DFFEA(C1_rf_data_in[8]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--C1_rf_data_in[7] is uart_receiver:receiver|rf_data_in[7]
+--operation mode is normal
+
+C1_rf_data_in[7]_lut_out = C1L601Q & (C1L95 # C1_rf_data_in[7] & C1L85) # !C1L601Q & C1_rf_data_in[7] & C1L85;
+C1_rf_data_in[7] = DFFEA(C1_rf_data_in[7]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--lsr5_d is lsr5_d
+--operation mode is normal
+
+lsr5_d_lut_out = !i231;
+lsr5_d = DFFEA(lsr5_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--C1_rf_data_in[6] is uart_receiver:receiver|rf_data_in[6]
+--operation mode is normal
+
+C1_rf_data_in[6]_lut_out = C1L501Q & (C1L95 # C1_rf_data_in[6] & C1L85) # !C1L501Q & C1_rf_data_in[6] & C1L85;
+C1_rf_data_in[6] = DFFEA(C1_rf_data_in[6]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--lsr4_d is lsr4_d
+--operation mode is normal
+
+lsr4_d_lut_out = M1_q_b[1];
+lsr4_d = DFFEA(lsr4_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--lsr3_d is lsr3_d
+--operation mode is normal
+
+lsr3_d_lut_out = M1_q_b[0];
+lsr3_d = DFFEA(lsr3_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L69 is ier[3]~13
+--operation mode is normal
+
+A1L69 = A1L85 & !lcr[7] & !wb_addr_i[1];
+
+
+--ti_int_pnd is ti_int_pnd
+--operation mode is normal
+
+ti_int_pnd_lut_out = i73 & (A1L98 # i413 & !ti_int_d);
+ti_int_pnd = DFFEA(ti_int_pnd_lut_out, clk, !wb_rst_i, , , , );
+
+
+--rls_int_pnd is rls_int_pnd
+--operation mode is normal
+
+rls_int_pnd_lut_out = A1L18 & (lsr_mask_d # !i64);
+rls_int_pnd = DFFEA(rls_int_pnd_lut_out, clk, !wb_rst_i, , , , );
+
+
+--fcr[1] is fcr[1]
+--operation mode is normal
+
+fcr[1]_lut_out = !wb_dat_i[7];
+fcr[1] = DFFEA(fcr[1]_lut_out, wb_we_i, !wb_rst_i, , A1L06, , );
+
+
+--fcr[0] is fcr[0]
+--operation mode is normal
+
+fcr[0]_lut_out = !wb_dat_i[6];
+fcr[0] = DFFEA(fcr[0]_lut_out, wb_we_i, !wb_rst_i, , A1L06, , );
+
+
+--A1L37 is i410~114
+--operation mode is normal
+
+A1L37 = fcr[1] & (E2_safe_q[3] # fcr[0] # E2_safe_q[2]) # !fcr[1] & E2_safe_q[3] & (fcr[0] # E2_safe_q[2]);
+
+
+--A1L501 is i~59
+--operation mode is normal
+
+A1L501 = E2_safe_q[1] $ (!fcr[0] & !fcr[1]);
+
+
+--A1L171 is i~1489
+--operation mode is normal
+
+A1L171 = fcr[0] & !E2_safe_q[2] & (fcr[1] $ E2_safe_q[3]) # !fcr[0] & E2_safe_q[2] & (fcr[1] $ E2_safe_q[3]);
+
+
+--A1L271 is i~1490
+--operation mode is normal
+
+A1L271 = fcr[0] & fcr[1] & !E2_safe_q[0];
+
+
+--A1L47 is i410~115
+--operation mode is normal
+
+A1L47 = A1L37 & (A1L501 # !A1L271 # !A1L171);
+
+
+--A1L401 is i~52
+--operation mode is normal
+
+A1L401 = !fcr[0] & !fcr[1];
+
+
+--A1L57 is i410~116
+--operation mode is normal
+
+A1L57 = A1L47 & ier[0] & (E2_safe_q[1] # !A1L451);
+
+
+--C1_rf_data_in[5] is uart_receiver:receiver|rf_data_in[5]
+--operation mode is normal
+
+C1_rf_data_in[5]_lut_out = C1L401Q & (C1L95 # C1_rf_data_in[5] & C1L85) # !C1L401Q & C1_rf_data_in[5] & C1L85;
+C1_rf_data_in[5] = DFFEA(C1_rf_data_in[5]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--C1_rf_data_in[4] is uart_receiver:receiver|rf_data_in[4]
+--operation mode is normal
+
+C1_rf_data_in[4]_lut_out = C1L301Q & (C1L95 # C1_rf_data_in[4] & C1L85) # !C1L301Q & C1_rf_data_in[4] & C1L85;
+C1_rf_data_in[4] = DFFEA(C1_rf_data_in[4]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--lsr1_d is lsr1_d
+--operation mode is normal
+
+lsr1_d_lut_out = K1_b_full;
+lsr1_d = DFFEA(lsr1_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--thre_int_pnd is thre_int_pnd
+--operation mode is normal
+
+thre_int_pnd_lut_out = A1L88 & !A1L78 & !A1L55;
+thre_int_pnd = DFFEA(thre_int_pnd_lut_out, clk, !wb_rst_i, , , , );
+
+
+--C1_rf_data_in[3] is uart_receiver:receiver|rf_data_in[3]
+--operation mode is normal
+
+C1_rf_data_in[3]_lut_out = C1L201Q & (C1L95 # C1_rf_data_in[3] & C1L85) # !C1L201Q & C1_rf_data_in[3] & C1L85;
+C1_rf_data_in[3] = DFFEA(C1_rf_data_in[3]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--E2L11 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|lpm_counter:count_usedw|alt_counter_stratix:wysi_counter|safe_q[0]~69
+--operation mode is normal
+
+E2L11 = !E2_safe_q[3] & !E2_safe_q[2] & !E2_safe_q[1] & !E2_safe_q[0];
+
+
+--rx_reset is rx_reset
+--operation mode is normal
+
+rx_reset_lut_out = wb_dat_i[1] & A1L06;
+rx_reset = DFFEA(rx_reset_lut_out, wb_we_i, !wb_rst_i, , , , );
+
+
+--C1_rf_data_in[2] is uart_receiver:receiver|rf_data_in[2]
+--operation mode is normal
+
+C1_rf_data_in[2]_lut_out = C1L101Q & (C1L95 # C1_rf_data_in[2] & C1L85) # !C1L101Q & C1_rf_data_in[2] & C1L85;
+C1_rf_data_in[2] = DFFEA(C1_rf_data_in[2]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--D1L43 is uart_transmitter:transmitter|i~1192
+--operation mode is normal
+
+D1L43 = D1L06Q & !D1_stx_o_tmp # !D1L06Q & D1L6Q & D1L95Q;
+
+
+--enable is enable
+--operation mode is normal
+
+enable_lut_out = A1L771 & !A1L281;
+enable = DFFEA(enable_lut_out, clk, !wb_rst_i, , , , );
+
+
+--i73 is i73
+--operation mode is normal
+
+i73 = wb_addr_i[1] # lcr[7] # !A1L58 # !wb_re_i;
+
+
+--A1L09 is i554~146
+--operation mode is normal
+
+A1L09 = !rls_int_pnd & (ti_int_pnd & i73 # !ti_int_pnd & thre_int_pnd);
+
+
+--rda_int_pnd is rda_int_pnd
+--operation mode is normal
+
+rda_int_pnd_lut_out = !i435 & (A1L48 # rda_int_pnd & ier[0]);
+rda_int_pnd = DFFEA(rda_int_pnd_lut_out, clk, !wb_rst_i, , , , );
+
+
+--C1L111Q is uart_receiver:receiver|rstate[1]~reg0
+--operation mode is normal
+
+C1L111Q_lut_out = C1L76 # C1L86 & C1L111Q & !C1L84;
+C1L111Q = DFFEA(C1L111Q_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--C1L2 is uart_receiver:receiver|break_error~56
+--operation mode is normal
+
+C1L2 = !C1_counter_b[4] & !C1_counter_b[5] & !C1_counter_b[6] & !C1_counter_b[7];
+
+
+--C1L3 is uart_receiver:receiver|break_error~57
+--operation mode is normal
+
+C1L3 = !C1_counter_b[0] & !C1_counter_b[1] & !C1_counter_b[2] & !C1_counter_b[3];
+
+
+--C1_break_error is uart_receiver:receiver|break_error
+--operation mode is normal
+
+C1_break_error = C1L2 & C1L3;
+
+
+--serial_in is serial_in
+--operation mode is normal
+
+serial_in_lut_out = serial_delay;
+serial_in = DFFEA(serial_in_lut_out, clk, !wb_rst_i, , , , );
+
+
+--C1L211Q is uart_receiver:receiver|rstate[2]~reg0
+--operation mode is normal
+
+C1L211Q_lut_out = C1L07 # C1L211Q & !C1L011Q & !C1L84;
+C1L211Q = DFFEA(C1L211Q_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--C1L011Q is uart_receiver:receiver|rstate[0]~reg0
+--operation mode is normal
+
+C1L011Q_lut_out = !C1L211Q & (C1L75 # C1L001 & !C1L84);
+C1L011Q = DFFEA(C1L011Q_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--C1L79 is uart_receiver:receiver|rf_push~38
+--operation mode is normal
+
+C1L79 = enable & !C1L011Q & (C1L111Q $ !C1L211Q);
+
+
+--K1L4 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_full~64
+--operation mode is normal
+
+K1L4 = E2_safe_q[2] & E2_safe_q[1] & E2_safe_q[0];
+
+
+--K1L6 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_non_empty~62
+--operation mode is normal
+
+K1L6 = E2_safe_q[3] & K1_b_non_empty;
+
+
+--K1L3 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_full~1
+--operation mode is normal
+
+K1L3 = K1_b_full # K1L4 & K1L6 & J1L3;
+
+
+--K1L7 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_non_empty~63
+--operation mode is normal
+
+K1L7 = K1_b_full # K1_b_non_empty & (E2_safe_q[1] # !rf_pop_temp);
+
+
+--K1L8 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|b_non_empty~64
+--operation mode is normal
+
+K1L8 = K1_b_non_empty & (E2_safe_q[2] # rf_pop_delay # !E2_safe_q[0]);
+
+
+--C1_rf_data_in[1] is uart_receiver:receiver|rf_data_in[1]
+--operation mode is normal
+
+C1_rf_data_in[1]_lut_out = C1L111Q & (C1_break_error # C1_rf_data_in[1] & !C1L84);
+C1_rf_data_in[1] = DFFEA(C1_rf_data_in[1]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--C1_rf_data_in[0] is uart_receiver:receiver|rf_data_in[0]
+--operation mode is normal
+
+C1_rf_data_in[0]_lut_out = C1_rf_data_in[0] & (C1L85 # C1L95 & C1_rframing_error) # !C1_rf_data_in[0] & C1L95 & C1_rframing_error;
+C1_rf_data_in[0] = DFFEA(C1_rf_data_in[0]_lut_out, clk, !wb_rst_i, , C1L79, , );
+
+
+--D1_counter[0] is uart_transmitter:transmitter|counter[0]
+--operation mode is normal
+
+D1_counter[0]_lut_out = D1L42 & (!D1_counter[0] # !D1L53) # !D1L42 & D1L53 & !D1_counter[0];
+D1_counter[0] = DFFEA(D1_counter[0]_lut_out, clk, !wb_rst_i, , D1L41, , );
+
+
+--D1_counter[4] is uart_transmitter:transmitter|counter[4]
+--operation mode is normal
+
+D1_counter[4]_lut_out = D1L23 & !D1L53;
+D1_counter[4] = DFFEA(D1_counter[4]_lut_out, clk, !wb_rst_i, , D1L41, , );
+
+
+--D1_counter[3] is uart_transmitter:transmitter|counter[3]
+--operation mode is normal
+
+D1_counter[3]_lut_out = D1L03 & (!D1_counter[0] # !D1L53) # !D1L03 & D1L53 & !D1_counter[0];
+D1_counter[3] = DFFEA(D1_counter[3]_lut_out, clk, !wb_rst_i, , D1L41, , );
+
+
+--D1_counter[2] is uart_transmitter:transmitter|counter[2]
+--operation mode is normal
+
+D1_counter[2]_lut_out = D1L82 & (!D1_counter[0] # !D1L53) # !D1L82 & D1L53 & !D1_counter[0];
+D1_counter[2] = DFFEA(D1_counter[2]_lut_out, clk, !wb_rst_i, , D1L41, , );
+
+
+--D1_counter[1] is uart_transmitter:transmitter|counter[1]
+--operation mode is normal
+
+D1_counter[1]_lut_out = D1L53 & !D1L06Q & !D1_counter[0] # !D1L53 & D1L62;
+D1_counter[1] = DFFEA(D1_counter[1]_lut_out, clk, !wb_rst_i, , D1L41, , );
+
+
+--D1L53 is uart_transmitter:transmitter|i~1194
+--operation mode is normal
+
+D1L53 = !D1_counter[4] & !D1_counter[3] & !D1_counter[2] & !D1_counter[1];
+
+
+--D1L32 is uart_transmitter:transmitter|i~7
+--operation mode is normal
+
+D1L32 = D1_counter[0] & D1L53;
+
+
+--D1_bit_counter[1] is uart_transmitter:transmitter|bit_counter[1]
+--operation mode is normal
+
+D1_bit_counter[1]_lut_out = D1L06Q # D1_bit_counter[1] $ (!D1_bit_counter[0] & D1L02);
+D1_bit_counter[1] = DFFEA(D1_bit_counter[1]_lut_out, clk, !wb_rst_i, , D1L5, , );
+
+
+--D1_bit_counter[0] is uart_transmitter:transmitter|bit_counter[0]
+--operation mode is normal
+
+D1_bit_counter[0]_lut_out = D1L06Q # D1_bit_counter[0] $ D1L02;
+D1_bit_counter[0] = DFFEA(D1_bit_counter[0]_lut_out, clk, !wb_rst_i, , D1L5, , );
+
+
+--D1L63 is uart_transmitter:transmitter|i~1195
+--operation mode is normal
+
+D1L63 = !D1_bit_counter[1] & !D1_bit_counter[0];
+
+
+--D1_bit_counter[2] is uart_transmitter:transmitter|bit_counter[2]
+--operation mode is normal
+
+D1_bit_counter[2]_lut_out = D1L06Q # D1_bit_counter[2] & (!D1L63 # !D1L32);
+D1_bit_counter[2] = DFFEA(D1_bit_counter[2]_lut_out, clk, !wb_rst_i, , D1L5, , );
+
+
+--D1L73 is uart_transmitter:transmitter|i~1196
+--operation mode is normal
+
+D1L73 = D1L95Q & D1L33 & D1L32 # !D1L95Q & !A1L56;
+
+
+--D1L83 is uart_transmitter:transmitter|i~1197
+--operation mode is normal
+
+D1L83 = D1L85Q & !D1L95Q;
+
+
+--D1L93 is uart_transmitter:transmitter|i~1198
+--operation mode is normal
+
+D1L93 = D1L06Q & !D1L32 & !D1L85Q & !D1L95Q;
+
+
+--D1L04 is uart_transmitter:transmitter|i~1199
+--operation mode is normal
+
+D1L04 = D1L95Q & !D1L06Q;
+
+
+--D1L14 is uart_transmitter:transmitter|i~1200
+--operation mode is normal
+
+D1L14 = D1L04 & D1L32 & (D1L85Q # D1L61);
+
+
+--D1L24 is uart_transmitter:transmitter|i~1202
+--operation mode is normal
+
+D1L24 = !D1L06Q & (D1L95Q & !D1L32 # !D1L95Q & D1L32 & D1L85Q);
+
+
+--tx_reset is tx_reset
+--operation mode is normal
+
+tx_reset_lut_out = wb_dat_i[2] & A1L06;
+tx_reset = DFFEA(tx_reset_lut_out, wb_we_i, !wb_rst_i, , , , );
+
+
+--D1_i12 is uart_transmitter:transmitter|i12
+--operation mode is normal
+
+D1_i12 = tx_reset # wb_rst_i;
+
+
+--D1_tf_pop is uart_transmitter:transmitter|tf_pop
+--operation mode is normal
+
+D1_tf_pop_lut_out = D1L64 # enable & D1_tf_pop & D1L12;
+D1_tf_pop = DFFEA(D1_tf_pop_lut_out, clk, !wb_rst_i, , , , );
+
+
+--K2_b_non_empty is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|b_non_empty
+--operation mode is normal
+
+K2_b_non_empty_lut_out = K2L7 # K2L01 # E5_safe_q[3] & K2_b_non_empty;
+K2_b_non_empty = DFFEA(K2_b_non_empty_lut_out, clk, !D1_i12, , , , );
+
+
+--K2_valid_rreq is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|valid_rreq
+--operation mode is normal
+
+K2_valid_rreq = D1_tf_pop & K2_b_non_empty;
+
+
+--tf_push_temp is tf_push_temp
+--operation mode is normal
+
+tf_push_temp_lut_out = A1L55;
+tf_push_temp = DFFEA(tf_push_temp_lut_out, clk, !wb_rst_i, , , , );
+
+
+--tf_push_delay is tf_push_delay
+--operation mode is normal
+
+tf_push_delay_lut_out = tf_push_temp;
+tf_push_delay = DFFEA(tf_push_delay_lut_out, clk, !wb_rst_i, , , , );
+
+
+--K2L01 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|valid_wreq~11
+--operation mode is normal
+
+K2L01 = tf_push_temp & !tf_push_delay;
+
+
+--K2_b_full is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|b_full
+--operation mode is normal
+
+K2_b_full_lut_out = K2L4 # K2_b_full & !D1_tf_pop;
+K2_b_full = DFFEA(K2_b_full_lut_out, clk, !D1_i12, , , , );
+
+
+--i354 is i354
+--operation mode is normal
+
+i354 = enable & (A1L961 # A1L071);
+
+
+--A1L98 is i452~95
+--operation mode is normal
+
+A1L98 = ier[0] & ti_int_pnd;
+
+
+--A1L87 is i413~69
+--operation mode is normal
+
+A1L87 = !C1L82Q & !C1L03Q & !C1L23Q & !C1L43Q;
+
+
+--A1L97 is i413~70
+--operation mode is normal
+
+A1L97 = !C1L02Q & !C1L22Q & !C1L42Q & !C1L62Q;
+
+
+--A1L08 is i413~71
+--operation mode is normal
+
+A1L08 = A1L87 & A1L97 & !C1L63Q & !C1L83Q;
+
+
+--i413 is i413
+--operation mode is normal
+
+i413 = ier[0] & A1L08;
+
+
+--ti_int_d is ti_int_d
+--operation mode is normal
+
+ti_int_d_lut_out = i413;
+ti_int_d = DFFEA(ti_int_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L27 is i408~29
+--operation mode is normal
+
+A1L27 = ier[2] & (lsr4r # lsr3r # lsr1r);
+
+
+--rls_int_d is rls_int_d
+--operation mode is normal
+
+rls_int_d_lut_out = A1L27;
+rls_int_d = DFFEA(rls_int_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L18 is i428~59
+--operation mode is normal
+
+A1L18 = ier[2] & (rls_int_pnd # A1L27 & !rls_int_d) # !ier[2] & A1L27 & !rls_int_d;
+
+
+--thre_int_d is thre_int_d
+--operation mode is normal
+
+thre_int_d_lut_out = ier[1] & !lsr5r;
+thre_int_d = DFFEA(thre_int_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L88 is i448~87
+--operation mode is normal
+
+A1L88 = ier[1] & (thre_int_pnd # !lsr5r & !thre_int_d);
+
+
+--A1L68 is i444~46
+--operation mode is normal
+
+A1L68 = iir[1] & wb_re_i & !lcr[7] & !iir[2];
+
+
+--A1L78 is i444~47
+--operation mode is normal
+
+A1L78 = iir[0] & A1L68 & A1L95 & !iir[3];
+
+
+--D1_parity_xor is uart_transmitter:transmitter|parity_xor
+--operation mode is normal
+
+D1_parity_xor_lut_out = D1L34 $ D1L44;
+D1_parity_xor = DFFEA(D1_parity_xor_lut_out, clk, !wb_rst_i, , D1L64, , );
+
+
+--D1L81 is uart_transmitter:transmitter|i61~305
+--operation mode is normal
+
+D1L81 = D1L33 & (lcr[4] $ (lcr[5] # !D1_parity_xor));
+
+
+--D1L91 is uart_transmitter:transmitter|i61~306
+--operation mode is normal
+
+D1L91 = D1L71 # D1L81 # D1L6Q & D1L61;
+
+
+--D1L7 is uart_transmitter:transmitter|bit_out~20
+--operation mode is normal
+
+D1L7 = enable & !D1L06Q & (D1L85Q $ D1L95Q);
+
+
+--A1L371 is i~1491
+--operation mode is normal
+
+A1L371 = dl[9] # dl[1] # dl[8] # dl[0];
+
+
+--A1L471 is i~1492
+--operation mode is normal
+
+A1L471 = dl[11] # dl[3] # dl[10] # dl[2];
+
+
+--A1L571 is i~1493
+--operation mode is normal
+
+A1L571 = dl[13] # dl[5] # dl[12] # dl[4];
+
+
+--A1L671 is i~1494
+--operation mode is normal
+
+A1L671 = dl[15] # dl[7] # dl[14] # dl[6];
+
+
+--A1L771 is i~1495
+--operation mode is normal
+
+A1L771 = A1L371 # A1L471 # A1L571 # A1L671;
+
+
+--A1L871 is i~1496
+--operation mode is normal
+
+A1L871 = E1_safe_q[3] # E1_safe_q[2] # E1_safe_q[1] # E1_safe_q[0];
+
+
+--A1L971 is i~1497
+--operation mode is normal
+
+A1L971 = E1_safe_q[7] # E1_safe_q[6] # E1_safe_q[5] # E1_safe_q[4];
+
+
+--A1L081 is i~1498
+--operation mode is normal
+
+A1L081 = E1_safe_q[11] # E1_safe_q[10] # E1_safe_q[9] # E1_safe_q[8];
+
+
+--A1L181 is i~1499
+--operation mode is normal
+
+A1L181 = E1_safe_q[15] # E1_safe_q[14] # E1_safe_q[13] # E1_safe_q[12];
+
+
+--A1L281 is i~1500
+--operation mode is normal
+
+A1L281 = A1L871 # A1L971 # A1L081 # A1L181;
+
+
+--A1L67 is i410~117
+--operation mode is normal
+
+A1L67 = ier[0] & (E2_safe_q[1] # !A1L401 # !A1L171);
+
+
+--rda_int_d is rda_int_d
+--operation mode is normal
+
+rda_int_d_lut_out = A1L57;
+rda_int_d = DFFEA(rda_int_d_lut_out, clk, !wb_rst_i, , , , );
+
+
+--A1L48 is i438~152
+--operation mode is normal
+
+A1L48 = A1L47 & A1L67 & !rda_int_d;
+
+
+--i430 is i430
+--operation mode is normal
+
+i430 = E2_safe_q[0] $ (!fcr[0] # !fcr[1]);
+
+
+--i435 is i435
+--operation mode is normal
+
+i435 = A1L171 & i430 & !A1L501 & !i73;
+
+
+--C1L36 is uart_receiver:receiver|i~2787
+--operation mode is normal
+
+C1L36 = C1L211Q & !C1L111Q;
+
+
+--C1_rbit_counter[0] is uart_receiver:receiver|rbit_counter[0]
+--operation mode is normal
+
+C1_rbit_counter[0]_lut_out = C1L111Q # !C1_rbit_counter[0] & (C1_rbit_counter[1] # C1_rbit_counter[2]);
+C1_rbit_counter[0] = DFFEA(C1_rbit_counter[0]_lut_out, clk, !wb_rst_i, , C1L57, , );
+
+
+--C1_rbit_counter[1] is uart_receiver:receiver|rbit_counter[1]
+--operation mode is normal
+
+C1_rbit_counter[1]_lut_out = C1L111Q # C1_rbit_counter[0] & C1_rbit_counter[1] # !C1_rbit_counter[0] & !C1_rbit_counter[1] & C1_rbit_counter[2];
+C1_rbit_counter[1] = DFFEA(C1_rbit_counter[1]_lut_out, clk, !wb_rst_i, , C1L57, , );
+
+
+--C1_rbit_counter[2] is uart_receiver:receiver|rbit_counter[2]
+--operation mode is normal
+
+C1_rbit_counter[2]_lut_out = C1L111Q # C1_rbit_counter[2] & (C1_rbit_counter[1] # C1_rbit_counter[0]);
+C1_rbit_counter[2] = DFFEA(C1_rbit_counter[2]_lut_out, clk, !wb_rst_i, , C1L57, , );
+
+
+--C1L25 is uart_receiver:receiver|i~2
+--operation mode is normal
+
+C1L25 = C1_rbit_counter[0] # C1_rbit_counter[1] # C1_rbit_counter[2];
+
+
+--C1_rcounter16[0] is uart_receiver:receiver|rcounter16[0]
+--operation mode is normal
+
+C1_rcounter16[0]_lut_out = C1_rcounter16[0] & C1L211Q & C1L111Q # !C1_rcounter16[0] & (C1L211Q $ (C1L011Q # C1L111Q));
+C1_rcounter16[0] = DFFEA(C1_rcounter16[0]_lut_out, clk, !wb_rst_i, , enable, , );
+
+
+--C1L38 is uart_receiver:receiver|rcounter16_eq_7~23
+--operation mode is normal
+
+C1L38 = C1L08Q # !C1L97Q # !C1L87Q # !C1_rcounter16[0];
+
+
+--C1L46 is uart_receiver:receiver|i~2788
+--operation mode is normal
+
+C1L46 = C1L36 & (C1L011Q & C1L25 # !C1L011Q & !C1L38);
+
+
+--C1L56 is uart_receiver:receiver|i~2789
+--operation mode is normal
+
+C1L56 = C1L011Q & serial_in & !C1L38;
+
+
+--C1_rcounter16_eq_0 is uart_receiver:receiver|rcounter16_eq_0
+--operation mode is normal
+
+C1_rcounter16_eq_0 = C1_rcounter16[0] # C1L87Q # C1L97Q # C1L08Q;
+
+
+--C1L66 is uart_receiver:receiver|i~2790
+--operation mode is normal
+
+C1L66 = C1L111Q & (C1_rcounter16_eq_0 # C1L011Q);
+
+
+--C1L76 is uart_receiver:receiver|i~2791
+--operation mode is normal
+
+C1L76 = C1L46 # !C1L211Q & (C1L56 # C1L66);
+
+
+--C1L86 is uart_receiver:receiver|i~2792
+--operation mode is normal
+
+C1L86 = C1L211Q & !C1L011Q;
+
+
+--serial_delay is serial_delay
+--operation mode is normal
+
+serial_delay_lut_out = !srx_pad_i;
+serial_delay = DFFEA(serial_delay_lut_out, clk, !wb_rst_i, , , , );
+
+
+--C1L96 is uart_receiver:receiver|i~2794
+--operation mode is normal
+
+C1L96 = C1L111Q & !C1L211Q & !C1L011Q & !C1_rcounter16_eq_0;
+
+
+--C1L07 is uart_receiver:receiver|i~2795
+--operation mode is normal
+
+C1L07 = C1L96 # C1L36 & (!C1L25 # !C1L011Q);
+
+
+--C1L001 is uart_receiver:receiver|rframing_error~27
+--operation mode is normal
+
+C1L001 = !C1L111Q & !C1L011Q;
+
+
+--C1L65 is uart_receiver:receiver|i~2747
+--operation mode is normal
+
+C1L65 = serial_in # C1L38;
+
+
+--C1L75 is uart_receiver:receiver|i~2753
+--operation mode is normal
+
+C1L75 = C1L111Q & (C1_rcounter16_eq_0 $ !C1L011Q) # !C1L111Q & C1L011Q & C1L65;
+
+
+--C1L04 is uart_receiver:receiver|i37~0
+--operation mode is normal
+
+C1L04 = C1L901Q & C1_rcounter16_eq_0;
+
+
+--C1L801 is uart_receiver:receiver|rshift[7]~0
+--operation mode is normal
+
+C1L801 = enable & C1L111Q & !C1L211Q;
+
+
+--C1_rframing_error is uart_receiver:receiver|rframing_error
+--operation mode is normal
+
+C1_rframing_error_lut_out = serial_in;
+C1_rframing_error = DFFEA(C1_rframing_error_lut_out, clk, !wb_rst_i, , C1L99, , );
+
+
+--D1L41 is uart_transmitter:transmitter|counter[4]~0
+--operation mode is normal
+
+D1L41 = enable & (D1L06Q $ (D1L85Q # D1L95Q));
+
+
+--D1L5 is uart_transmitter:transmitter|bit_counter[2]~99
+--operation mode is normal
+
+D1L5 = enable & (D1L85Q & D1L06Q & !D1L95Q # !D1L85Q & !D1L06Q & D1L95Q);
+
+
+--D1L12 is uart_transmitter:transmitter|i190~119
+--operation mode is normal
+
+D1L12 = D1L06Q # D1L95Q # A1L56 & !D1L85Q;
+
+
+--K2L6 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|b_non_empty~56
+--operation mode is normal
+
+K2L6 = K2_b_non_empty & (E5_safe_q[2] # E5_safe_q[1] # !E5_safe_q[0]);
+
+
+--K2L7 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|b_non_empty~57
+--operation mode is normal
+
+K2L7 = K2_b_full # K2L6 # K2_b_non_empty & !D1_tf_pop;
+
+
+--K2L3 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|b_full~49
+--operation mode is normal
+
+K2L3 = E5_safe_q[2] & E5_safe_q[1] & E5_safe_q[0] & !D1_tf_pop;
+
+
+--K2L4 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|b_full~50
+--operation mode is normal
+
+K2L4 = E5_safe_q[3] & K2L3 & K2_b_non_empty & K2L01;
+
+
+--C1L14 is uart_receiver:receiver|i38~0
+--operation mode is normal
+
+C1L14 = C1L701Q & C1_rcounter16_eq_0;
+
+
+--C1L24 is uart_receiver:receiver|i39~0
+--operation mode is normal
+
+C1L24 = C1L601Q & C1_rcounter16_eq_0;
+
+
+--C1L34 is uart_receiver:receiver|i40~0
+--operation mode is normal
+
+C1L34 = C1L501Q & C1_rcounter16_eq_0;
+
+
+--C1_i279 is uart_receiver:receiver|i279
+--operation mode is normal
+
+C1_i279 = enable & !A1L08;
+
+
+--C1_i277 is uart_receiver:receiver|i277
+--operation mode is normal
+
+C1_i277 = E2L11 # J1L3 # rf_pop_temp & !rf_pop_delay;
+
+
+--C1L44 is uart_receiver:receiver|i41~0
+--operation mode is normal
+
+C1L44 = C1L401Q & C1_rcounter16_eq_0;
+
+
+--C1L54 is uart_receiver:receiver|i42~0
+--operation mode is normal
+
+C1L54 = C1L301Q & C1_rcounter16_eq_0;
+
+
+--C1L64 is uart_receiver:receiver|i43~0
+--operation mode is normal
+
+C1L64 = C1L201Q & C1_rcounter16_eq_0;
+
+
+--C1L74 is uart_receiver:receiver|i44~0
+--operation mode is normal
+
+C1L74 = C1L101Q & C1_rcounter16_eq_0;
+
+
+--D1L34 is uart_transmitter:transmitter|i~1206
+--operation mode is normal
+
+D1L34 = S1_q_b[7] $ S1_q_b[6] $ S1_q_b[5] $ S1_q_b[4];
+
+
+--D1L44 is uart_transmitter:transmitter|i~1207
+--operation mode is normal
+
+D1L44 = S1_q_b[3] $ S1_q_b[2] $ S1_q_b[1] $ S1_q_b[0];
+
+
+--start_dlc is start_dlc
+--operation mode is normal
+
+start_dlc_lut_out = A1L72;
+start_dlc = DFFEA(start_dlc_lut_out, wb_we_i, !wb_rst_i, , , , );
+
+
+--i279 is i279
+--operation mode is normal
+
+i279 = start_dlc # !A1L281;
+
+
+--C1L57 is uart_receiver:receiver|rbit_counter[2]~74
+--operation mode is normal
+
+C1L57 = enable & C1L011Q & (C1L111Q $ C1L211Q);
+
+
+--C1L28 is uart_receiver:receiver|rcounter16_eq_0~7
+--operation mode is normal
+
+C1L28 = !C1L87Q & !C1_rcounter16[0];
+
+
+--C1L45 is uart_receiver:receiver|i~348
+--operation mode is normal
+
+C1L45 = C1L011Q # C1L08Q $ (!C1L97Q & C1L28);
+
+
+--C1L35 is uart_receiver:receiver|i~345
+--operation mode is normal
+
+C1L35 = C1L001 # C1L08Q $ (!C1L97Q & C1L28);
+
+
+--C1L55 is uart_receiver:receiver|i~350
+--operation mode is normal
+
+C1L55 = C1L011Q # C1L87Q $ !C1_rcounter16[0];
+
+
+--C1L99 is uart_receiver:receiver|rframing_error~0
+--operation mode is normal
+
+C1L99 = enable & C1L211Q & C1L001 & !C1L38;
+
+
+--D1_shift_out[6] is uart_transmitter:transmitter|shift_out[6]
+--operation mode is normal
+
+D1_shift_out[6]_lut_out = S1_q_b[7];
+D1_shift_out[6] = DFFEA(D1_shift_out[6]_lut_out, clk, !wb_rst_i, , D1L55, , );
+
+
+--D1L55 is uart_transmitter:transmitter|shift_out[6]~0
+--operation mode is normal
+
+D1L55 = D1L85Q & enable & !D1L06Q & !D1L95Q;
+
+
+--A1L351 is i~1468
+--operation mode is normal
+
+A1L351 = wb_addr_i[0] & A1L701 # !wb_addr_i[0] & !wb_addr_i[2] & A1L551;
+
+
+--A1L45 is i77~22
+--operation mode is normal
+
+A1L45 = !wb_addr_i[0] & !wb_addr_i[2] & !wb_addr_i[1];
+
+
+--A1L16 is i159~10
+--operation mode is normal
+
+A1L16 = wb_addr_i[2] & wb_addr_i[0] & wb_addr_i[1];
+
+
+--J1L2 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|valid_wreq~10
+--operation mode is normal
+
+J1L2 = C1_rf_push & !C1_rf_push_q & !K1_b_full;
+
+
+--A1L75 is i85~22
+--operation mode is normal
+
+A1L75 = wb_addr_i[0] & !mc_cs3 & !wb_addr_i[2] & wb_addr_i[1];
+
+
+--A1L26 is i159~12
+--operation mode is normal
+
+A1L26 = wb_addr_i[2] & wb_addr_i[0] & wb_addr_i[1] & !mc_cs3;
+
+
+--A1L66 is i235~14
+--operation mode is normal
+
+A1L66 = !D1L85Q & !D1L06Q & !D1L95Q & i231;
+
+
+--C1L84 is uart_receiver:receiver|i68~10
+--operation mode is normal
+
+C1L84 = C1L2 & C1L3 # !serial_in;
+
+
+--C1L93 is uart_receiver:receiver|i7~13
+--operation mode is normal
+
+C1L93 = rx_reset # wb_rst_i # !lsr_mask_d & i64;
+
+
+--C1L85 is uart_receiver:receiver|i~2761
+--operation mode is normal
+
+C1L85 = serial_in & C1L111Q & (!C1L3 # !C1L2);
+
+
+--C1L95 is uart_receiver:receiver|i~2763
+--operation mode is normal
+
+C1L95 = C1L111Q & !serial_in & (!C1L3 # !C1L2);
+
+
+--D1L33 is uart_transmitter:transmitter|i~1191
+--operation mode is normal
+
+D1L33 = !D1_bit_counter[1] & !D1_bit_counter[0] & lcr[3] & !D1_bit_counter[2];
+
+
+--D1L61 is uart_transmitter:transmitter|i61~302
+--operation mode is normal
+
+D1L61 = !D1_bit_counter[1] & !D1_bit_counter[0] & !lcr[3] & !D1_bit_counter[2];
+
+
+--K2L9 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|valid_wreq~10
+--operation mode is normal
+
+K2L9 = tf_push_temp & !tf_push_delay & !K2_b_full;
+
+
+--K2L1 is uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|a_fefifo_qve:fifo_state|_~57
+--operation mode is normal
+
+K2L1 = K2L9 $ (D1_tf_pop & K2_b_non_empty);
+
+
+--A1L07 is i352~10
+--operation mode is normal
+
+A1L07 = A1L45 & wb_we_i & !lcr[7] & !lsr5r;
+
+
+--A1L95 is i145~4
+--operation mode is normal
+
+A1L95 = !wb_addr_i[0] & !wb_addr_i[2] & wb_addr_i[1];
+
+
+--A1L06 is i145~6
+--operation mode is normal
+
+A1L06 = !wb_addr_i[0] & !wb_addr_i[2] & wb_addr_i[1] & !mc_cs3;
+
+
+--K1L1 is uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|a_fefifo_qve:fifo_state|_~59
+--operation mode is normal
+
+K1L1 = J1L2 $ (K1_b_non_empty & rf_pop_temp & !rf_pop_delay);
+
+
+--D1L71 is uart_transmitter:transmitter|i61~304
+--operation mode is normal
+
+D1L71 = D1L84Q & (D1_bit_counter[1] # D1_bit_counter[0] # D1_bit_counter[2]);
+
+
+--C1L94 is uart_receiver:receiver|i225~34
+--operation mode is normal
+
+C1L94 = enable & (!C1L3 # !C1L2);
+
+
+--D1L02 is uart_transmitter:transmitter|i97~30
+--operation mode is normal
+
+D1L02 = D1L32 & (D1_bit_counter[1] # D1_bit_counter[0] # D1_bit_counter[2]);
+
+
+--D1L64 is uart_transmitter:transmitter|parity_xor~13
+--operation mode is normal
+
+D1L64 = D1L85Q & !D1L95Q & D1L06Q & enable;
+
+
+--C1L06 is uart_receiver:receiver|i~2771
+--operation mode is normal
+
+C1L06 = C1L111Q & (C1L87Q $ !C1_rcounter16[0]) # !C1L111Q & (C1L87Q $ !C1_rcounter16[0] # !C1L011Q);
+
+
+--C1L16 is uart_receiver:receiver|i~2773
+--operation mode is normal
+
+C1L16 = C1L011Q # C1L97Q $ (!C1L87Q & !C1_rcounter16[0]);
+
+
+--C1L26 is uart_receiver:receiver|i~2775
+--operation mode is normal
+
+C1L26 = C1L111Q & (C1L97Q $ C1L28) # !C1L111Q & (C1L97Q $ C1L28 # !C1L011Q);
+
+
+--A1L451 is i~1472
+--operation mode is normal
+
+A1L451 = !fcr[0] & E2_safe_q[2] & !fcr[1] & E2_safe_q[3];
+
+
+--~GND is ~GND
+--operation mode is normal
+
+~GND = GND;
+
+
+--wb_addr_i[1] is wb_addr_i[1]
+--operation mode is input
+
+wb_addr_i[1] = INPUT();
+
+
+--wb_addr_i[2] is wb_addr_i[2]
+--operation mode is input
+
+wb_addr_i[2] = INPUT();
+
+
+--wb_addr_i[0] is wb_addr_i[0]
+--operation mode is input
+
+wb_addr_i[0] = INPUT();
+
+
+--wb_dat_i[7] is wb_dat_i[7]
+--operation mode is input
+
+wb_dat_i[7] = INPUT();
+
+
+--wb_we_i is wb_we_i
+--operation mode is input
+
+wb_we_i = INPUT();
+
+
+--wb_rst_i is wb_rst_i
+--operation mode is input
+
+wb_rst_i = INPUT();
+
+
+--mc_cs3 is mc_cs3
+--operation mode is input
+
+mc_cs3 = INPUT();
+
+
+--clk is clk
+--operation mode is input
+
+clk = INPUT();
+
+
+--wb_re_i is wb_re_i
+--operation mode is input
+
+wb_re_i = INPUT();
+
+
+--wb_dat_i[6] is wb_dat_i[6]
+--operation mode is input
+
+wb_dat_i[6] = INPUT();
+
+
+--wb_dat_i[5] is wb_dat_i[5]
+--operation mode is input
+
+wb_dat_i[5] = INPUT();
+
+
+--wb_dat_i[4] is wb_dat_i[4]
+--operation mode is input
+
+wb_dat_i[4] = INPUT();
+
+
+--wb_dat_i[3] is wb_dat_i[3]
+--operation mode is input
+
+wb_dat_i[3] = INPUT();
+
+
+--wb_dat_i[2] is wb_dat_i[2]
+--operation mode is input
+
+wb_dat_i[2] = INPUT();
+
+
+--wb_dat_i[1] is wb_dat_i[1]
+--operation mode is input
+
+wb_dat_i[1] = INPUT();
+
+
+--wb_dat_i[0] is wb_dat_i[0]
+--operation mode is input
+
+wb_dat_i[0] = INPUT();
+
+
+--srx_pad_i is srx_pad_i
+--operation mode is input
+
+srx_pad_i = INPUT();
+
+
+--wb_dat_o[7] is wb_dat_o[7]
+--operation mode is output
+
+wb_dat_o[7] = OUTPUT(A1L351);
+
+
+--wb_dat_o[6] is wb_dat_o[6]
+--operation mode is output
+
+wb_dat_o[6] = OUTPUT(A1L751);
+
+
+--wb_dat_o[5] is wb_dat_o[5]
+--operation mode is output
+
+wb_dat_o[5] = OUTPUT(A1L951);
+
+
+--wb_dat_o[4] is wb_dat_o[4]
+--operation mode is output
+
+wb_dat_o[4] = OUTPUT(A1L161);
+
+
+--wb_dat_o[3] is wb_dat_o[3]
+--operation mode is output
+
+wb_dat_o[3] = OUTPUT(A1L361);
+
+
+--wb_dat_o[2] is wb_dat_o[2]
+--operation mode is output
+
+wb_dat_o[2] = OUTPUT(A1L461);
+
+
+--wb_dat_o[1] is wb_dat_o[1]
+--operation mode is output
+
+wb_dat_o[1] = OUTPUT(A1L661);
+
+
+--wb_dat_o[0] is wb_dat_o[0]
+--operation mode is output
+
+wb_dat_o[0] = OUTPUT(A1L861);
+
+
+--stx_pad_o is stx_pad_o
+--operation mode is output
+
+stx_pad_o = OUTPUT(D1L22);
+
+
+--int_o is int_o
+--operation mode is output
+
+int_o = OUTPUT(A1L301Q);
+
+

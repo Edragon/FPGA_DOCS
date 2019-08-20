@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="top">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|TDM_mult:mult|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_dcq.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|mux_2to1:mux_ax|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|mux_2to1:mux_by|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_smc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

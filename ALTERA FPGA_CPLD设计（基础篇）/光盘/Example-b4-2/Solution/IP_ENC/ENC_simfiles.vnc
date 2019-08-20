@@ -1,0 +1,22 @@
+tb.v
+@@ if( $simtype eq "rtl" ){
+../../rtl/enc8b10b.v
+@@ }elsif ( $simtype eq "simgen_verilog" ) {
+-v  ../../model/riophy.vo
+/opt/quartus/eda/sim_lib/220model.v
+/opt/quartus/eda/sim_lib/sgate.v
+@@ }elsif ($simtype eq "gate" ) {
+-v  ../../par/simulation/modelsim/enc8b10b.vo
+/opt/quartus/eda/sim_lib/220model.v
+/opt/quartus/eda/sim_lib/altera_mf.v
+/opt/quartus/eda/sim_lib/stratix_atoms.v
+@@ }elsif ( $simtype eq "simgen_vhdl" ) {
+../../model/riophy.vho
+/opt/quartus/eda/sim_lib/220pack.vhd
+/opt/quartus/eda/sim_lib/220model.vhd
+/opt/quartus/eda/sim_lib/altera_mf_components.vhd
+/opt/quartus/eda/sim_lib/altera_mf.vhd
+/opt/quartus/eda/sim_lib/sgate_pack.vhd
+/opt/quartus/eda/sim_lib/sgate.vhd
+-L /opt/quartus/eda/sim_lib/modelsim/vhdl/altgxb
+@@ }

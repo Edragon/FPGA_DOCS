@@ -1,0 +1,40 @@
+--dffpipe DELAY=2 WIDTH=9 clock d q ALTERA_INTERNAL_OPTIONS=X_ON_VIOLATION_OPTION=OFF
+--VERSION_BEGIN 8.1 cbx_a_gray2bin 2008:05:19:09:32:04:SJ cbx_a_graycounter 2008:05:19:09:39:53:SJ cbx_altdpram 2008:05:19:10:27:12:SJ cbx_altsyncram 2008:08:26:11:57:11:SJ cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_dcfifo 2008:09:07:22:36:06:SJ cbx_fifo_common 2008:05:19:10:54:06:SJ cbx_flex10ke 2008:05:19:10:53:03:SJ cbx_lpm_add_sub 2008:05:19:10:49:01:SJ cbx_lpm_compare 2008:09:01:07:44:05:SJ cbx_lpm_counter 2008:05:19:10:42:20:SJ cbx_lpm_decode 2008:05:19:10:39:27:SJ cbx_lpm_mux 2008:05:19:10:30:36:SJ cbx_mgl 2008:08:08:15:16:18:SJ cbx_scfifo 2008:05:19:10:25:30:SJ cbx_stratix 2008:08:05:17:10:23:SJ cbx_stratixii 2008:08:07:13:54:47:SJ cbx_stratixiii 2008:07:11:13:32:02:SJ cbx_util_mgl 2008:07:18:09:58:54:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION dffpipe_3v8 (clock, d[8..0])
+RETURNS ( q[8..0]);
+
+--synthesis_resources = reg 18 
+OPTIONS ALTERA_INTERNAL_OPTION = "X_ON_VIOLATION_OPTION=OFF";
+
+SUBDESIGN alt_synch_pipe_9u7
+( 
+	clock	:	input;
+	d[8..0]	:	input;
+	q[8..0]	:	output;
+) 
+VARIABLE 
+	dffpipe11 : dffpipe_3v8;
+
+BEGIN 
+	dffpipe11.clock = clock;
+	dffpipe11.d[] = d[];
+	q[] = dffpipe11.q[];
+END;
+--VALID FILE

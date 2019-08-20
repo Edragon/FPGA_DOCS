@@ -1,0 +1,65 @@
+
+BeginView top NoName
+Inst: b_in[7]   b_in_7_ stratix_io 
+Inst: b_in[6]   b_in_6_ stratix_io 
+Inst: b_in[5]   b_in_5_ stratix_io 
+Inst: b_in[4]   b_in_4_ stratix_io 
+Inst: b_in[3]   b_in_3_ stratix_io 
+Inst: b_in[2]   b_in_2_ stratix_io 
+Inst: b_in[1]   b_in_1_ stratix_io 
+Inst: b_in[0]   b_in_0_ stratix_io 
+Inst: a_in[7]   a_in_7_ stratix_io 
+Inst: a_in[6]   a_in_6_ stratix_io 
+Inst: a_in[5]   a_in_5_ stratix_io 
+Inst: a_in[4]   a_in_4_ stratix_io 
+Inst: a_in[3]   a_in_3_ stratix_io 
+Inst: a_in[2]   a_in_2_ stratix_io 
+Inst: a_in[1]   a_in_1_ stratix_io 
+Inst: a_in[0]   a_in_0_ stratix_io 
+Inst: q_out[7]   q_out_7_ stratix_io 
+Inst: q_out[6]   q_out_6_ stratix_io 
+Inst: q_out[5]   q_out_5_ stratix_io 
+Inst: q_out[4]   q_out_4_ stratix_io 
+Inst: q_out[3]   q_out_3_ stratix_io 
+Inst: q_out[2]   q_out_2_ stratix_io 
+Inst: q_out[1]   q_out_1_ stratix_io 
+Inst: q_out[0]   q_out_0_ stratix_io 
+Net:  rotate_1.q[7]   rotate_1_q[7] 
+Net:  rotate_1.q[6]   rotate_1_q[6] 
+Net:  rotate_1.q[5]   rotate_1_q[5] 
+Net:  rotate_1.q[4]   rotate_1_q[4] 
+Net:  rotate_1.q[3]   rotate_1_q[3] 
+Net:  rotate_1.q[2]   rotate_1_q[2] 
+Net:  rotate_1.q[1]   rotate_1_q[1] 
+Net:  rotate_1.q[0]   rotate_1_q[0] 
+Net:  reg8_1.q[0]   reg8_1_q[0] 
+Net:  reg8_1.q[1]   reg8_1_q[1] 
+Net:  reg8_1.q[2]   reg8_1_q[2] 
+Net:  reg8_1.q[3]   reg8_1_q[3] 
+Net:  reg8_1.q[4]   reg8_1_q[4] 
+Net:  reg8_1.q[5]   reg8_1_q[5] 
+Net:  reg8_1.q[6]   reg8_1_q[6] 
+Net:  reg8_1.q[7]   reg8_1_q[7] 
+EndView top NoName
+
+BeginView rotate NoName
+Inst: q[7]   q_7_ stratix_lcell_ff 
+Inst: q[6]   q_6_ stratix_lcell_ff 
+Inst: q[5]   q_5_ stratix_lcell_ff 
+Inst: q[4]   q_4_ stratix_lcell_ff 
+Inst: q[3]   q_3_ stratix_lcell_ff 
+Inst: q[2]   q_2_ stratix_lcell_ff 
+Inst: q[1]   q_1_ stratix_lcell_ff 
+Inst: q[0]   q_0_ stratix_lcell_ff 
+EndView rotate NoName
+
+BeginView reg8 NoName
+Inst: q[7]   q_7_ stratix_lcell_ff 
+Inst: q[6]   q_6_ stratix_lcell_ff 
+Inst: q[5]   q_5_ stratix_lcell_ff 
+Inst: q[4]   q_4_ stratix_lcell_ff 
+Inst: q[3]   q_3_ stratix_lcell_ff 
+Inst: q[2]   q_2_ stratix_lcell_ff 
+Inst: q[1]   q_1_ stratix_lcell_ff 
+Inst: q[0]   q_0_ stratix_lcell_ff 
+EndView reg8 NoName

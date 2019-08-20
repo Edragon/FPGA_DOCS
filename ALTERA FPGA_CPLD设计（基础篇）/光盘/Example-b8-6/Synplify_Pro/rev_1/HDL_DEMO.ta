@@ -1,0 +1,41 @@
+###########################################################[
+Synplicity Altera Technology Mapper, version 7.3.5, Build 250R, built Mar 18 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+BLogParam: No file to write into.
+Found clock hdl_demo|clk with period 6.67ns 
+All Input Ports in the design have input constraint of 2.00ns 
+All Output Ports in the design have output constraint of 2.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Mar 23 02:14:43 2005
+#
+
+
+Top view:               hdl_demo
+Requested Frequency:    150.0 MHz
+Wire load mode:         top
+Paths requested:        5
+from:                   i:op_code[2] i:op_code[1] i:op_code[0] p:clk 
+to:                     p:result[7:0] 
+Constraint File(s):    
+@N: MT195 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+
+
+
+Worst From-To Path Information
+*******************************
+
+    No valid timing path found.
+
+
+##### END OF TIMING REPORT #####]
+
+
+Timing constraint (from p:rst to p:result[7:0]) (false path) never applies in design
+Timing constraint (from i:op_code[2:0] to p:result[7:0]) (max delay 10.000000) never applies in design
+Writing Analyst data base D:\prj_D\Synplify_Pro\rev_1\HDL_DEMO_ta.srm
+Mapper successful!
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################]

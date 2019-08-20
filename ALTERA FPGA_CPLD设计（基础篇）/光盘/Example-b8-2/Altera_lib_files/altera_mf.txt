@@ -1,0 +1,31 @@
+Filename    :  altera_mf.txt
+Description :  This file contains the general description on Quartus
+               release
+
+Copyright (c) Altera Corporation 1997-2002
+All rights reserved
+
+
+Quartus II 3.0 
+1. Retrofit the Altera models based on Modelsim and VCS Hazards checks.
+2. Increase regtest coverage for all Altera models.
+3. Important parameters check for the models.
+4. Bug fix for: altcam, altpll, altclklock, altcdr, altdpram, altsyncram, altqpram, dcfifo, altlvds_tx, altlvds_rx. 
+
+Quartus II 2.2 sp1 
+1. Retrofit the following models based on new coding guideline : altmult_add, alt3pram, altaccumulate, altqpram, altsqrt, altfp_mult, altcdr_tx, altclklock, altddio_in, altddio_out, altddio_bidir, altshift_taps, scfifo and dcfifo
+2. Bug fix for altsyncram, altqpram, altdpram, altlvds, altpll and dcfifo.
+
+QuartusII 2.2
+
+QuartusII 2.1 SP1
+ALTLVDS_RX, ALTLVDS_TX, ALTPLL, ALTQPRAM: Enhancement
+
+QuartusII 2.1
+GENERAL: Added support for Stratix_GX and Cyclone families
+ALTFP_MULT: Added new megafunction
+ALTLVDS_RX: Added Stratix_GX DPA feature support
+
+QuartusII 2.0
+GENERAL: Added support for Stratix family
+ALTMULT_ACCUM, ALTMULT_ADD, ALTACCUMULATE, ALTSYNCRAM, ALTSHIFT_TAPS, ALTPLL: Added new megafunction

@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.952 ns
+From           : dataa[1]
+To             : mult:mult_inst|lpm_mult:lpm_mult_component|mult_ccq:auto_generated|mac_mult1~OBSERVABLEDATAA_REGOUT1
+From Clock     : --
+To Clock       : clk1
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.576 ns
+From           : inst2[15]
+To             : q[15]
+From Clock     : clk1
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.613 ns
+From           : rdaddress[1]
+To             : ram:ram_inst|altsyncram:altsyncram_component|altsyncram_coq1:auto_generated|ram_block1a0~portb_address_reg1
+From Clock     : --
+To Clock       : clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk1'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 235.07 MHz ( period = 4.254 ns )
+From           : ram:ram_inst|altsyncram:altsyncram_component|altsyncram_coq1:auto_generated|ram_block1a0~portb_address_reg4
+To             : inst2[15]
+From Clock     : clk1
+To Clock       : clk1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

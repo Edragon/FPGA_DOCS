@@ -1,0 +1,85 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk_int'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clk'
+Slack : 0.687
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clk_out'
+Slack : 0.715
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk_int'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk_out'
+Slack : 1.719
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : 2.087
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk_out'
+Slack : 1.239
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk_int'
+Slack : 1.536
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clk_int'
+Slack : 1.161
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clk_out'
+Slack : 2.496
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : 1.817
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk_int'
+Slack : 1.853
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk_out'
+Slack : 2.162
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk_int'
+Slack : -0.277
+TNS   : -2.188
+
+Type  : Fast Model Hold 'clk_out'
+Slack : 1.019
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : 1.027
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk_out'
+Slack : 2.300
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk_int'
+Slack : 2.488
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk_int'
+Slack : 0.738
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk_out'
+Slack : 1.545
+TNS   : 0.000
+
+------------------------------------------------------------

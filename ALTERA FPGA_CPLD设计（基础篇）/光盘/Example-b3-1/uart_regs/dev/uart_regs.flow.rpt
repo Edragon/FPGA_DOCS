@@ -1,0 +1,94 @@
+Flow report for uart_regs
+Fri Jan 14 21:03:30 2005
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Elapsed Time
+  5. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++------------------------------------------------------------------+
+; Flow Summary                                                     ;
++--------------------------+---------------------------------------+
+; Flow Status              ; Successful - Fri Jan 14 21:03:29 2005 ;
+; Revision Name            ; uart_regs                             ;
+; Top-level Entity Name    ; uart_regs                             ;
+; Family                   ; Stratix                               ;
+; Device                   ; EP1S10B672C6                          ;
+; Total logic elements     ; 408 / 10,570 ( 3 % )                  ;
+; Total pins               ; 27 / 346 ( 7 % )                      ;
+; Total memory bits        ; 288 / 920,448 ( < 1 % )               ;
+; DSP block 9-bit elements ; 0 / 48 ( 0 % )                        ;
+; Total PLLs               ; 0 / 6 ( 0 % )                         ;
+; Total DLLs               ; 0 / 2 ( 0 % )                         ;
++--------------------------+---------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++------------------------------------------
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/31/2004 13:35:17 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; uart_regs           ;
++-------------------+---------------------+
+
+
++-------------------------------------+
+; Flow Elapsed Time                   ;
++--------------------------------------
+; Module Name          ; Elapsed Time ;
++----------------------+--------------+
+; Analysis & Synthesis ; 00:00:18     ;
+; Fitter               ; 00:01:16     ;
+; Assembler            ; 00:00:08     ;
+; Timing Analyzer      ; 00:00:01     ;
+; Fitter               ; 00:00:10     ;
+; Total                ; 00:01:53     ;
++----------------------+--------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --import_settings_files=on --export_settings_files=off uart_regs -c uart_regs
+quartus_fit --import_settings_files=off --export_settings_files=off uart_regs -c uart_regs
+quartus_asm --import_settings_files=off --export_settings_files=off uart_regs -c uart_regs
+quartus_tan --import_settings_files=off --export_settings_files=off uart_regs -c uart_regs --timing_analysis_only
+quartus_fit --import_settings_files=on --export_settings_files=off uart_regs -c uart_regs --check_ios
+
+
+

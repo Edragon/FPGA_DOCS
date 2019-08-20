@@ -1,0 +1,4 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,mult:mult_inst|lpm_mult:lpm_mult_component|mult_uar:auto_generated|mac_out2,
+GLOBAL_SIGNAL_SINGLE_POINT_ASSIGNMENT,,,
+GLOBAL_SIGNAL_SINGLE_POINT_ASSIGNMENT,clk1,Global Clock,

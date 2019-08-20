@@ -1,0 +1,66 @@
+fsm_options -device {state[9:0]}
+
+define_state 0000 0000 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 47 7 47 6
+state_output 0000 {state[0]} 1
+
+define_state 0001 0001 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 56 7 56 6
+state_output 0001 {state[1]} 1
+
+define_state 0010 0010 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 65 5 65 4
+state_output 0010 {state[2]} 1
+
+define_state 0011 0011 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 74 5 74 4
+state_output 0011 {state[3]} 1
+
+define_state 0100 0100 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 83 5 83 4
+state_output 0100 {state[4]} 1
+
+define_state 1000 1000 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 50 8 50 7
+state_output 1000 {state[5]} 1
+
+define_state 1001 1001 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 59 8 59 7
+state_output 1001 {state[6]} 1
+
+define_state 1010 1010 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 68 6 68 5
+state_output 1010 {state[7]} 1
+
+define_state 1011 1011 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 77 6 77 5
+state_output 1011 {state[8]} 1
+
+define_state 1100 1100 {d:\prj_d\synplify_pro\source\verilog\hdl_demo.v} 86 6 86 5
+state_output 1100 {state[9]} 1
+
+fsm_options -resetState 0000
+
+define_transition 1100 1100 {in_c,in_b,in_a,start = ---0}
+define_transition 0100 1100 {in_c,in_b,in_a,start = ---1}
+define_transition 1011 1011 {in_c,in_b,in_a,start = ---0}
+define_transition 0011 1011 {in_c,in_b,in_a,start = ---1}
+define_transition 1010 1010 {in_c,in_b,in_a,start = ---0}
+define_transition 0010 1010 {in_c,in_b,in_a,start = ---1}
+define_transition 1001 1001 {in_c,in_b,in_a,start = ---0}
+define_transition 0001 1001 {in_c,in_b,in_a,start = ---1}
+define_transition 1000 1000 {in_c,in_b,in_a,start = ---0}
+define_transition 0000 1000 {in_c,in_b,in_a,start = ---1}
+define_transition 1100 0100 {in_c,in_b,in_a,start = ---1}
+define_transition 1011 0100 {in_c,in_b,in_a,start = 1011}
+define_transition 0100 0100 {in_c,in_b,in_a,start = ---0}
+define_transition 1011 0011 {in_c,in_b,in_a,start = -1-1}
+define_transition 1011 0011 {in_c,in_b,in_a,start = --01}
+define_transition 1011 0011 {in_c,in_b,in_a,start = 0--1}
+define_transition 1010 0011 {in_c,in_b,in_a,start = 1--1}
+define_transition 0011 0011 {in_c,in_b,in_a,start = ---0}
+define_transition 1010 0010 {in_c,in_b,in_a,start = 0--1}
+define_transition 1001 0010 {in_c,in_b,in_a,start = -101}
+define_transition 0010 0010 {in_c,in_b,in_a,start = ---0}
+define_transition 1001 0001 {in_c,in_b,in_a,start = --11}
+define_transition 1001 0001 {in_c,in_b,in_a,start = -0-1}
+define_transition 1000 0001 {in_c,in_b,in_a,start = --11}
+define_transition 0001 0001 {in_c,in_b,in_a,start = ---0}
+define_transition 1000 0000 {in_c,in_b,in_a,start = --01}
+define_transition 0000 0000 {in_c,in_b,in_a,start = ---0}
+fsm_options -SRSPath {D:\\prj_D\\Synplify_Pro\\rev_1\\HDL_DEMO.srs}
+fsm_options -SRSTime 1111511813
+fsm_options -FSMPath {state[9:0]}
+fsm_options -view {ScratchLib.cell8.netlist|i:state[9:0]}
+fsm_options -ID {1380381}

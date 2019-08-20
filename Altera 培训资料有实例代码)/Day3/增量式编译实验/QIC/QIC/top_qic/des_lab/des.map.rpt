@@ -1,0 +1,546 @@
+Analysis & Synthesis report for des
+Wed Apr 01 11:17:40 2009
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                             ;
++-------------------------------+------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Wed Apr 01 11:17:40 2009    ;
+; Quartus II Version            ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name                 ; des                                      ;
+; Top-level Entity Name         ; des                                      ;
+; Family                        ; Stratix II                               ;
+; Logic utilization             ; N/A                                      ;
+;     Combinational ALUTs       ; 1,792                                    ;
+;     Dedicated logic registers ; 1,984                                    ;
+; Total registers               ; 1984                                     ;
+; Total pins                    ; 186                                      ;
+; Total virtual pins            ; 0                                        ;
+; Total block memory bits       ; 0                                        ;
+; DSP block 9-bit elements      ; 0                                        ;
+; Total PLLs                    ; 0                                        ;
+; Total DLLs                    ; 0                                        ;
++-------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2S15F672C3       ;                    ;
+; Top-level entity name                                        ; des                ; des                ;
+; Family name                                                  ; Stratix II         ; Stratix            ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Perform gate-level register retiming                         ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto DSP Block Replacement                                   ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------+-------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type ; File Name with Absolute Path                                                        ;
++----------------------------------+-----------------+-----------+-------------------------------------------------------------------------------------+
+; des.v                            ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/des.v     ;
+; key_sel.v                        ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/key_sel.v ;
+; crp.v                            ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/crp.v     ;
+; sbox1.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox1.v   ;
+; sbox2.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox2.v   ;
+; sbox3.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox3.v   ;
+; sbox4.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox4.v   ;
+; sbox5.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox5.v   ;
+; sbox6.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox6.v   ;
+; sbox7.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox7.v   ;
+; sbox8.v                          ; yes             ; Other     ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_lab/sbox8.v   ;
++----------------------------------+-----------------+-----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++-----------------------------------------------+---------+
+; Resource                                      ; Usage   ;
++-----------------------------------------------+---------+
+; Estimated ALUTs Used                          ; 1792    ;
+; Dedicated logic registers                     ; 1984    ;
+;                                               ;         ;
+; Estimated ALUTs Unavailable                   ; 338     ;
+;                                               ;         ;
+; Total combinational functions                 ; 1792    ;
+; Combinational ALUT usage by number of inputs  ;         ;
+;     -- 7 input functions                      ; 0       ;
+;     -- 6 input functions                      ; 512     ;
+;     -- 5 input functions                      ; 0       ;
+;     -- 4 input functions                      ; 768     ;
+;     -- <=3 input functions                    ; 512     ;
+;                                               ;         ;
+; Combinational ALUTs by mode                   ;         ;
+;     -- normal mode                            ; 1792    ;
+;     -- extended LUT mode                      ; 0       ;
+;     -- arithmetic mode                        ; 0       ;
+;     -- shared arithmetic mode                 ; 0       ;
+;                                               ;         ;
+; Estimated ALUT/register pairs used            ; 2130    ;
+;                                               ;         ;
+; Total registers                               ; 1984    ;
+;     -- Dedicated logic registers              ; 1984    ;
+;     -- I/O registers                          ; 0       ;
+;                                               ;         ;
+; Estimated ALMs:  partially or completely used ; 1,065   ;
+;                                               ;         ;
+; I/O pins                                      ; 186     ;
+; Maximum fan-out node                          ; des_clk ;
+; Maximum fan-out                               ; 1984    ;
+; Total fan-out                                 ; 11200   ;
+; Average fan-out                               ; 2.83    ;
++-----------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
+; |des                       ; 1792 (512)        ; 1984 (1144)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 186  ; 0            ; |des                  ; work         ;
+;    |crp:u0|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u0|sbox8:u7  ; work         ;
+;    |crp:u10|               ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10          ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox1:u0 ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox2:u1 ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox3:u2 ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox4:u3 ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox5:u4 ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox6:u5 ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox7:u6 ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u10|sbox8:u7 ; work         ;
+;    |crp:u11|               ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11          ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox1:u0 ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox2:u1 ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox3:u2 ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox4:u3 ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox5:u4 ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox6:u5 ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox7:u6 ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u11|sbox8:u7 ; work         ;
+;    |crp:u12|               ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12          ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox1:u0 ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox2:u1 ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox3:u2 ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox4:u3 ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox5:u4 ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox6:u5 ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox7:u6 ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u12|sbox8:u7 ; work         ;
+;    |crp:u13|               ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13          ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox1:u0 ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox2:u1 ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox3:u2 ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox4:u3 ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox5:u4 ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox6:u5 ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox7:u6 ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u13|sbox8:u7 ; work         ;
+;    |crp:u14|               ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14          ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox1:u0 ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox2:u1 ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox3:u2 ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox4:u3 ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox5:u4 ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox6:u5 ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox7:u6 ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u14|sbox8:u7 ; work         ;
+;    |crp:u15|               ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15          ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox1:u0 ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox2:u1 ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox3:u2 ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox4:u3 ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox5:u4 ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox6:u5 ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox7:u6 ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u15|sbox8:u7 ; work         ;
+;    |crp:u1|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u1|sbox8:u7  ; work         ;
+;    |crp:u2|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u2|sbox8:u7  ; work         ;
+;    |crp:u3|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u3|sbox8:u7  ; work         ;
+;    |crp:u4|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u4|sbox8:u7  ; work         ;
+;    |crp:u5|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u5|sbox8:u7  ; work         ;
+;    |crp:u6|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u6|sbox8:u7  ; work         ;
+;    |crp:u7|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u7|sbox8:u7  ; work         ;
+;    |crp:u8|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u8|sbox8:u7  ; work         ;
+;    |crp:u9|                ; 80 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9           ; work         ;
+;       |sbox1:u0|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox1:u0  ; work         ;
+;       |sbox2:u1|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox2:u1  ; work         ;
+;       |sbox3:u2|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox3:u2  ; work         ;
+;       |sbox4:u3|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox4:u3  ; work         ;
+;       |sbox5:u4|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox5:u4  ; work         ;
+;       |sbox6:u5|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox6:u5  ; work         ;
+;       |sbox7:u6|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox7:u6  ; work         ;
+;       |sbox8:u7|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|crp:u9|sbox8:u7  ; work         ;
+;    |key_sel:uk|            ; 0 (0)             ; 840 (840)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |des|key_sel:uk       ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1984  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Wed Apr 01 11:16:32 2009
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off des -c des
+Warning: Using design file des.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: des
+Info: Elaborating entity "des" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at des.v(46): object "L15" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at des.v(47): object "R15" assigned a value but never read
+Warning: Using design file key_sel.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: key_sel
+Info: Elaborating entity "key_sel" for hierarchy "key_sel:uk"
+Warning: Using design file crp.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: crp
+Info: Elaborating entity "crp" for hierarchy "crp:u0"
+Warning: Using design file sbox1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox1
+Info: Elaborating entity "sbox1" for hierarchy "crp:u0|sbox1:u0"
+Warning: Using design file sbox2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox2
+Info: Elaborating entity "sbox2" for hierarchy "crp:u0|sbox2:u1"
+Warning: Using design file sbox3.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox3
+Info: Elaborating entity "sbox3" for hierarchy "crp:u0|sbox3:u2"
+Warning: Using design file sbox4.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox4
+Info: Elaborating entity "sbox4" for hierarchy "crp:u0|sbox4:u3"
+Warning: Using design file sbox5.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox5
+Info: Elaborating entity "sbox5" for hierarchy "crp:u0|sbox5:u4"
+Warning: Using design file sbox6.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox6
+Info: Elaborating entity "sbox6" for hierarchy "crp:u0|sbox6:u5"
+Warning: Using design file sbox7.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox7
+Info: Elaborating entity "sbox7" for hierarchy "crp:u0|sbox7:u6"
+Warning: Using design file sbox8.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: sbox8
+Info: Elaborating entity "sbox8" for hierarchy "crp:u0|sbox8:u7"
+Info: Found 128 instances of uninferred RAM logic
+    Info: RAM logic "crp:u15|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u15|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u14|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u13|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u12|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u11|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u10|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u9|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u8|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u7|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u6|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u5|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u4|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u3|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u2|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u1|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox5:u4|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox1:u0|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox4:u3|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox2:u1|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox8:u7|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox6:u5|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox7:u6|Ram0" is uninferred due to asynchronous read logic
+    Info: RAM logic "crp:u0|sbox3:u2|Ram0" is uninferred due to asynchronous read logic
+Info: Implemented 3450 device resources after synthesis - the final resource count might be different
+    Info: Implemented 122 input pins
+    Info: Implemented 64 output pins
+    Info: Implemented 3264 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Wed Apr 01 11:17:40 2009
+    Info: Elapsed time: 00:01:08
+    Info: Total CPU time (on all processors): 00:00:57
+
+

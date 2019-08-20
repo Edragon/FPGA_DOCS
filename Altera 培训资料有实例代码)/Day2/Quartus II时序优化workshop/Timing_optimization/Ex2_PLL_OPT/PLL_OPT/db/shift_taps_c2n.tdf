@@ -1,0 +1,78 @@
+--altshift_taps CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Stratix II" NUMBER_OF_TAPS=1 TAP_DISTANCE=3 WIDTH=44 aclr clken clock shiftin taps CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 CYCLONEII_M4K_COMPATIBILITY="ON" LOW_POWER_MODE="AUTO"
+--VERSION_BEGIN 8.0 cbx_altdpram 2008:03:07:257777 cbx_altshift_taps 2008:02:23:252825 cbx_altsyncram 2008:03:26:267331 cbx_cycloneii 2008:02:23:252825 cbx_lpm_add_sub 2008:03:09:257947 cbx_lpm_compare 2008:02:23:252825 cbx_lpm_counter 2008:02:23:252825 cbx_lpm_decode 2008:02:23:252825 cbx_lpm_mux 2008:02:23:252825 cbx_mgl 2008:04:11:273944 cbx_stratix 2008:02:23:252825 cbx_stratixii 2008:02:23:252825 cbx_stratixiii 2008:04:23:278548 cbx_util_mgl 2008:04:15:275689  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION altsyncram_j561 (aclr0, address_a[1..0], address_b[1..0], clock0, clock1, clocken0, clocken1, data_a[43..0], wren_a)
+RETURNS ( q_b[43..0]);
+FUNCTION cntr_mlf (clk_en, clock)
+RETURNS ( q[1..0]);
+FUNCTION cntr_95h (aset, clk_en, clock, cnt_en)
+RETURNS ( cout, q[0..0]);
+
+--synthesis_resources = lut 6 ram_bits (AUTO) 132 reg 6 
+SUBDESIGN shift_taps_c2n
+( 
+	aclr	:	input;
+	clken	:	input;
+	clock	:	input;
+	shiftin[43..0]	:	input;
+	shiftout[43..0]	:	output;
+	taps[43..0]	:	output;
+) 
+VARIABLE 
+	altsyncram4 : altsyncram_j561;
+	dffe3a[1..0] : dffe;
+	dffe6 : dffe;
+	add_sub2_dataa[1..0]	:	WIRE;
+	add_sub2_datab[1..0]	:	WIRE;
+	add_sub2_result[1..0]	:	WIRE;
+	cntr1 : cntr_mlf;
+	cntr5 : cntr_95h;
+	rdaddress[1..0]	: WIRE;
+
+BEGIN 
+	altsyncram4.aclr0 = dffe6.q;
+	altsyncram4.address_a[] = cntr1.q[];
+	altsyncram4.address_b[] = rdaddress[];
+	altsyncram4.clock0 = clock;
+	altsyncram4.clock1 = clock;
+	altsyncram4.clocken0 = clken;
+	altsyncram4.clocken1 = clken;
+	altsyncram4.data_a[] = ( shiftin[]);
+	altsyncram4.wren_a = B"1";
+	dffe3a[].clk = clock;
+	dffe3a[].d = ( (! add_sub2_result[1..1]), add_sub2_result[0..0]);
+	dffe3a[].ena = clken;
+	dffe6.clk = clock;
+	dffe6.d = (! cntr5.cout);
+	dffe6.ena = clken;
+	dffe6.prn = (! aclr);
+	add_sub2_result[] = add_sub2_dataa[] + add_sub2_datab[];
+	add_sub2_dataa[] = cntr1.q[];
+	add_sub2_datab[] = B"00";
+	cntr1.clk_en = clken;
+	cntr1.clock = clock;
+	cntr5.aset = aclr;
+	cntr5.clk_en = clken;
+	cntr5.clock = clock;
+	cntr5.cnt_en = (! cntr5.cout);
+	rdaddress[] = ( (! dffe3a[1..1].q), dffe3a[0..0].q);
+	shiftout[43..0] = altsyncram4.q_b[43..0];
+	taps[] = altsyncram4.q_b[];
+END;
+--VALID FILE

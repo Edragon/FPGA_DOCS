@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Wed Apr 01 11:17:40 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : des
+Top-level Entity Name : des
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 1,792
+    Dedicated logic registers : 1,984
+Total registers : 1984
+Total pins : 186
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

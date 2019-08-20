@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\cpldfit.exe -ise E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise -intstyle ise -p xc9572xl-10-VQ44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper Main.ngd
-s
-FormatString
-cpldfit <design[.ngd]> [-p <part>] [-intstyle ise|xflow|silent] [-optimize density|speed] [-nomlopt] [-ignoretspec] [-init low|high|fpga] [-slew fast|slow|auto] [-loc on|off|try] [-log <logfile>] [-wysiwyg] [-keepio] [-terminate float|keeper] [-unused float|ground] [-power std|low|auto] [-nogclkopt] [-nogsropt] [-nogtsopt] [-ofmt abel|vhdl|verilog] [-exhaust] [-pterms <limit:1,90>] [-inputs <limit:2,54>] [--blkfanin <limit:30,54>] [--nomdf] [--noxml] [--neweqn] [--noibis] [--htmlrpt] [--libxslt <limit:-1,10>] [--noselfpinlock] [--readngd_debug] [--write_mapped_network <limit:1,2>] [--write_optimized_network <limit:1,2>] [--fmp_debug] [--xstrategy inputs|pterms] [--xinputs <limit:-10,10>] [--xpterms <limit:-10,10>] [--readngd] [--partgen] 
-s

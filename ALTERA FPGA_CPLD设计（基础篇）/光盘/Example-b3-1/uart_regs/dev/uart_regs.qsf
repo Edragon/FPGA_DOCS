@@ -1,0 +1,123 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:00:02  DECEMBER 31, 2004"
+set_global_assignment -name LAST_QUARTUS_VERSION 4.0
+set_global_assignment -name VERILOG_FILE ../core/myfifo_8.v
+set_global_assignment -name VERILOG_FILE ../core/myfifo_10.v
+set_global_assignment -name VERILOG_FILE ../src/seriesPort.v
+set_global_assignment -name VERILOG_FILE ../src/uart_defines.v
+set_global_assignment -name VERILOG_FILE ../src/uart_receiver.v
+set_global_assignment -name VERILOG_FILE ../src/uart_regs.v
+set_global_assignment -name VERILOG_FILE ../src/uart_transmitter.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../sim/funcsim/uart_regs_pre.vwf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_A15 -to clk
+set_location_assignment PIN_A5 -to int_o
+set_location_assignment PIN_A6 -to mc_cs3
+set_location_assignment PIN_A17 -to srx_pad_i
+set_location_assignment PIN_A19 -to stx_pad_o
+set_location_assignment PIN_A20 -to wb_addr_i\[0\]
+set_location_assignment PIN_A21 -to wb_addr_i\[1\]
+set_location_assignment PIN_A24 -to wb_addr_i\[2\]
+set_location_assignment PIN_AA1 -to wb_dat_i\[0\]
+set_location_assignment PIN_AA2 -to wb_dat_i\[1\]
+set_location_assignment PIN_AA3 -to wb_dat_i\[2\]
+set_location_assignment PIN_AA26 -to wb_dat_i\[3\]
+set_location_assignment PIN_AA5 -to wb_dat_i\[4\]
+set_location_assignment PIN_AA4 -to wb_dat_i\[5\]
+set_location_assignment PIN_AA6 -to wb_dat_i\[6\]
+set_location_assignment PIN_AA8 -to wb_dat_i\[7\]
+set_location_assignment PIN_AB16 -to wb_dat_o\[0\]
+set_location_assignment PIN_AB17 -to wb_dat_o\[1\]
+set_location_assignment PIN_AB19 -to wb_dat_o\[2\]
+set_location_assignment PIN_AB14 -to wb_dat_o\[3\]
+set_location_assignment PIN_AB20 -to wb_dat_o\[4\]
+set_location_assignment PIN_AB21 -to wb_dat_o\[5\]
+set_location_assignment PIN_AB23 -to wb_dat_o\[6\]
+set_location_assignment PIN_AB24 -to wb_dat_o\[7\]
+set_location_assignment PIN_AE15 -to wb_re_i
+set_location_assignment PIN_N6 -to wb_rst_i
+set_location_assignment PIN_N3 -to wb_we_i
+
+# Timing Assignments
+# ==================
+set_global_assignment -name INCLUDE_EXTERNAL_PIN_DELAYS_IN_FMAX_CALCULATIONS OFF
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY Stratix
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
+set_global_assignment -name TOP_LEVEL_ENTITY uart_regs
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name DEVICE EP1S10B672C6
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name GENERATE_RBF_FILE ON
+
+# Simulator Assignments
+# =====================
+set_global_assignment -name GLITCH_INTERVAL "1.0 ns"
+set_global_assignment -name POWER_ESTIMATION_START_TIME "0.0 ns"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_INPUT_SOURCE ../sim/funcsim/uart_regs_pre.vwf
+
+# ----------------
+# start CLOCK(clk)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name FMAX_REQUIREMENT "130.0 MHz" -section_id clk
+	set_global_assignment -name INCLUDE_EXTERNAL_PIN_DELAYS_IN_FMAX_CALCULATIONS OFF -section_id clk
+
+# end CLOCK(clk)
+# --------------
+
+# -----------------------
+# start ENTITY(uart_regs)
+
+	# Timing Assignments
+	# ==================
+	set_instance_assignment -name TSU_REQUIREMENT 12ns -from wb_re_i -to wb_addr_i
+	set_instance_assignment -name TSU_REQUIREMENT 12ns -from wb_we_i -to wb_addr_i
+	set_instance_assignment -name TH_REQUIREMENT 3ns -from wb_re_i -to wb_addr_i
+	set_instance_assignment -name TH_REQUIREMENT 3ns -from wb_we_i -to wb_addr_i
+	set_instance_assignment -name CLOCK_SETTINGS clk -to clk
+
+# end ENTITY(uart_regs)
+# ---------------------

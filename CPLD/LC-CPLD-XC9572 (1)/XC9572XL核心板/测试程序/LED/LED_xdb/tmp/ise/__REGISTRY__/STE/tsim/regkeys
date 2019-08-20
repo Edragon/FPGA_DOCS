@@ -1,6 +1,0 @@
-CommandLine
-C:\Xilinx\10.1\ISE\bin\nt\unwrapped\tsim.exe -ise E:/Lcsoft/Hardware/CPLD/XC9572XL/LED/LED.ise -intstyle ise Main Main.nga
-s
-FormatString
-tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
-s

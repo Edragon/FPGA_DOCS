@@ -1,6 +1,0 @@
-Device 0 options are:
-Row 0 => Verify	,TRUERow 1 ===== General CPLD And PROM Properties =====,
-Row 2 => Erase Before Programming	,TRUERow 3 => Read Protect	,FALSERow 4 => PROM/CoolRunner-II Usercode (8 Hex Digit)	,
-Row 5 ===== CPLD Specific Properties =====,
-Row 8 => On-The-Fly Program	,FALSERow 10 ===== CoolRunner-II Security Properties =====,
-Row 12 => CR2 Read Protect with Boundary-Scan Test Disabled (Step 1 only)	,FALSERow 13 => CR2 One Time Programmable (Step 1 only)	,FALSE

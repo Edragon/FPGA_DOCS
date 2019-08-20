@@ -1,0 +1,17 @@
+Fitter Status : Successful - Wed Apr 01 11:03:21 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : top_qic
+Top-level Entity Name : top_qic
+Family : Stratix II
+Device : EP2S15F672C3
+Timing Models : Final
+Logic utilization : 0 %
+    Combinational ALUTs : 0 / 12,480 ( 0 % )
+    Dedicated logic registers : 0 / 12,480 ( 0 % )
+Total registers : 0
+Total pins : 240 / 367 ( 65 % )
+Total virtual pins : 368
+Total block memory bits : 0 / 419,328 ( 0 % )
+DSP block 9-bit elements : 0 / 96 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

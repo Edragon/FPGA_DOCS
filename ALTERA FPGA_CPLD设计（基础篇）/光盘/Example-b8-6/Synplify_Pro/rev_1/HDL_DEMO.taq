@@ -1,0 +1,3 @@
+ta_from_paths=i:op_code[2] i:op_code[1] i:op_code[0] p:clk
+ta_to_paths=p:result[7:0]
+ta_max_display_worst_paths=5

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="pipemult_lc">
+		<CBX_INST_ENTRY INSTANCE_NAME="|pipemult|mult:mult_inst|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_uar.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pipemult|mult:mult_inst|lpm_mult:lpm_mult_component|mult_uar:auto_generated|alt_mac_mult:mac_mult1" CBX_FILE_NAME="mac_mult_qrh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pipemult|mult:mult_inst|lpm_mult:lpm_mult_component|mult_uar:auto_generated|alt_mac_out:mac_out2" CBX_FILE_NAME="mac_out_j7a2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|pipemult|ram:ram_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_coq1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

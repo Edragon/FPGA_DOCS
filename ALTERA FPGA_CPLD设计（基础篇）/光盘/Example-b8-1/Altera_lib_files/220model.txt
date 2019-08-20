@@ -1,0 +1,122 @@
+Filename    :  220model.txt
+Description :  This file contains the general description on Quartus release
+
+Copyright (c) Altera Corporation 1997-2002
+All rights reserved
+
+Quartus II 3.0 
+1. Important parameters check for the models.
+2. Bug fix for: lpm_divide, lpm_counter, lpm_fifo_dc, lpm_rom. 
+
+QuartusII 2.2
+
+QuartusII 2.0
+GENERAL: Support for non-PLI flow for convert_hex2ver in Verilog.
+LPM_RAM_DQ, LPM_RAM_DP, LPM_RAM_IO, LPM_ROM: Read correctly values from LPM_FILE (*.hex) when DATA width is greater than
+16 bits.
+
+QuartusII 1.1
+LPM_RAM_DQ, LPM_RAM_IO, LPM_RAM_DP, LPM_ROM: Fixed SPR 82832, inapporiate use of blocking assignments.
+LPM_RAM_DQ: Fixed SPR82832, race condition in LPM_RAM_DQ with VerilogXL.
+LPM_RAM_IO: Fixed SPR82096, the memenab and outenab signals are not initialized.
+LPM_RAM_IO, LPM_RAM_DP, LPM_RAM_DQ: Adding USE_EAB=ON suppport.
+LPM_FIFO_DC: Make DCFIFO and LPM_FIFO_DC models consistent.
+
+QuartusII 1.0
+LPM_FIFO_DC: Fixed SPR78303, remove use of blocking assignments.
+LPM_RAM_DP: Changed rdclken, and wrclken to connect to pull up properly.
+
+Quartus 2.2
+LPM_COUNTER: Fixed to remove requirement to use '-explicit' option in modelsim.
+LPM_ROM, LPM_RAM_DQ, LPM_RAM_DP, LPM_RAM_IO: Fixed hex reading to support width>32 bits.
+
+Quartus 2.1
+LPM_SHIFTREG: Fixed to perform left shift or right shift according to LPM_DIRECTION value.
+LPM_SHIFTREG: Change q port to be initialized with 0's.
+LPM_SHIFTREG: Added validity check for LPM_DIRECTION value of LPM_SHIFTREG.
+LPM_SHIFTREG: Changed shiftout port LPM_SHIFTREG to output LSB of q when LPM_DIRECTION is 'RIGHT'.
+LPM_CLSHIFT: Fixed to correctly sign extend output.
+LPM_CLSHIFT: Corrected overflow and underflow ports.
+LPM_ROM: Check for null init file name.
+LPM_LATCH: Changed data port to be initialized with 0's.
+LPM_CLSHIFT, LPM_MULT: Fixed array sizes mismatch error.
+LPM_FF: Fixed initial state of output.
+
+Quartus 2.0
+LPM_RAM_DQ, LPM_RAM_DP, LPM_RAM_IO, LPM_ROM: Fixed to correctly read in values from LPM_FILE (*.hex) when the data width is
+greater than 16 bits.
+LPM_RAM_DQ, LPM_RAM_DP, LPM_RAM_IO, LPM_ROM: Explicit sign conversions are added to standard logic vector comparisons in
+VHDL.
+
+Quartus 1.9
+LPM_RAM_DP, LPM_RAM_DQ, LPM_RAM_IO: Fixed UNUSED file not found problem and initialization problem in VHDL.
+LPM_MULT: Fixed when sum port is not used in VHDL.
+LPM_FIFO_DC: Fixed to enable read when rdclock and wrclock rise at the same time.
+LPM_COUNTER: Fixed comparison problem when signed library is loaded and counter is incrementing.
+LPM_COUNTER: Got rid of 'Illegal Character' error message at time=0ns when stimulating.
+
+Quartus 1.8
+LPM_COUNTER: Fixed to count correctly without conversion overflow, that is, when LPM_MODULUS = 2**LPM_WIDTH in VHDL.
+
+Quartus 1.7
+LPM_RAM_IO: Changed so that it can be used to stimulate both MP2 and Quartus behaviour and LPM220-compliant behaviour.
+
+Quartus 1.6
+LPM_FIFO_DC: Changed the behaviour to match that of Quartus.
+LPM_LATCH: Changed data port to be initialized with 0.
+LPM_COUNTER, LPM_FF, LPM_SHIFTREG: Fixed to output correctly after aclr goes low but before any clock edge, and to output Xs
+when both aclr and aset are high.
+LPM_FF, LPM_SHIFTREG: Changed q port to be initialized with 0.
+LPM_CLSHIFT: Fixed underflow and overflow port in ROTATE mode.
+LPM_DIVIDE: Added LPM_REMAINERPOSITIVE parameter. This is a non-LPM 220 standard parameter. It defaults to TRUE for LPM 220
+behaviour.
+LPM_MULT: Fixed to output correctly.
+LPM_ADD_SUB: Changed default value of CIN port when substract.
+LPM_ADD_SUB: Changed output pipelines to be initialized with 0's.
+LPM_ADD_SUB: Fixed overflow port for signed inputs.
+LPM_COUNTER, LPM_FF: Added data port to the sensitivity list. Synthesis tools do not allow mixing of level and edge 
+sensitive signals, and hence data port was omitted from the list.
+LPM_COUNTER: Corrected the interpretation of CIN port.
+LPM_COUNTER: Fixed cout port to go high when count is all 1's.
+LPM_COUNTER: Fixed to use LPM_MODULUS.
+LPM_RAM_DP, LPM_RAM_DQ, LPM_RAM_IO: Fixed to write data at rising clock edge and to output correctly.
+
+Quartus 1.59
+GENERAL: Updated comments in header about synthesis issues.
+LPM_FIFO_DC: Corrected rdempty flag.
+LPM_COUNTER: Fixed error detection of LPM_DIRECTION and UPDOWN conflict.
+LPM_ROM: Changed to have no default name for initialization file.
+
+Quartus 1.5
+LPM_ADD_SUB, LPM_MULT: Modified to accomodate LPM_WIDTH=1. Default values for LPM_WIDTH is changed back to 1.
+LPM_DIVIDE: Added LPM_HINT.
+LPM_FIFO_DC: Rewritten to output correctly.
+LPM_FIFO: Modified to output 0s before first read, output correct values after aclr and sclr, and output LPM_NUMWORDS mod 
+exp(2, LPM_WIDTHU) when FIFO is full.
+LPM_COUNTER: Changed LPM_MODULUS from string type to integer.
+
+Quartus 1.4.1
+LPM_ADD_SUB, LPM_MULT: Default value of LPM_WIDTH* is changed from 1 to 2.
+
+Quartus 1.4
+GENERAL: Added default values for each optional input.
+GENERAL: Some LPM_PVALUE implementations were missing, and now implemented.
+LPM_MUX, LPM_DECODE, LPM_ADD_SUB, LPM_MULT, LPM_COMPARE: Added clken port.
+
+Quartus 1.3
+GENERAL: Changed default value to 'UNUSED' for LPM_SVALUE, LPM_AVALUE, LPM_MODULUS and LPM_NUMWORDS, LPM_HINT, LPM_STRENGTH,
+LPM_DIRECTION and LPM_PVALUE in VHDL.
+LPM_AND, LPM_OR, LPM_XOR, LPM_MUX: Added two dimentional port components in VHDL.
+LPM_FIFO, LPM_FIFO_DC: Corrected cout and empty/full flags.
+LPM_COUNTER: Implemented cin/cout.
+LPM_MODULUS: It's now working.
+
+Quartus 1.2
+GENERAL: Parameters and ports are added/discarded according to the spec.
+LPM_RAM_DP, LPM_RAM_DQ, LPM_RAM_IO, LPM_ROM, LPM_FIFO, LPM_FIFO_DC: Added new functions.
+
+Quartus 1.1
+LPM_DIVIDE: Added new function.
+
+Quartus 1.0
+LPM_FSM, LPM_TTABLE: Excludes these functions.

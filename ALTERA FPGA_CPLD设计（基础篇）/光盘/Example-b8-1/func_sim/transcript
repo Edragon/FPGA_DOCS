@@ -1,0 +1,63 @@
+vmap altera_220 C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model
+# Modifying D:/prj_D/modelsim_demo/func_sim/func_sim.mpf
+# Compile of pllx2.v was successful.
+# Compile of pll_ram.v was successful.
+# Compile of pll_ram_tb.v was successful.
+# Compile of dpram8x32.v was successful.
+# 4 compiles, 0 failed with no errors. 
+vsim work.pll_ram_tb
+# vsim work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# ** Warning: (vsim-3009) [TSCALE] - Module 'pll_ram' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Loading work.pllx2
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/func_sim/pllx2.v(95): Instantiation of 'altpll' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1/pllx2_u1
+#         Searched libraries:
+#             work
+# Loading work.dpram8x32
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/func_sim/dpram8x32.v(88): Instantiation of 'altsyncram' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1/dpram8x32_u1
+#         Searched libraries:
+#             work
+# Error loading design
+vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf work.pll_ram_tb
+# vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# ** Warning: (vsim-3009) [TSCALE] - Module 'pll_ram' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Loading work.pllx2
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.altpll
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.altpll
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.ALTERA_DEVICE_FAMILIES
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.ALTERA_DEVICE_FAMILIES
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.MF_stratix_pll
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.MF_stratix_pll
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.stx_m_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.stx_m_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.stx_n_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.stx_n_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.stx_scale_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.stx_scale_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.MF_pll_reg
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.MF_pll_reg
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.dffp
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.dffp
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.MF_stratixii_pll
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.MF_stratixii_pll
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.arm_m_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.arm_m_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.arm_n_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.arm_n_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.arm_scale_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.arm_scale_cntr
+# Loading work.dpram8x32
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.altsyncram
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf.altsyncram
+# ** Warning: (vsim-PLI-3003) QuartusIIVersion4.0(C:/Modeltech_5.8b/win32/../altera/Verilog/src/altera_mf.v)(23623): [TOFD] - System task or function '$convert_hex2ver' is not defined.
+#         Region: /pll_ram_tb/pll_ram_u1/dpram8x32_u1/altsyncram_component
+# ** Warning: (vsim-PLI-3003) QuartusIIVersion4.0(C:/Modeltech_5.8b/win32/../altera/Verilog/src/altera_mf.v)(23641): [TOFD] - System task or function '$convert_hex2ver' is not defined.
+#         Region: /pll_ram_tb/pll_ram_u1/dpram8x32_u1/altsyncram_component
+quit

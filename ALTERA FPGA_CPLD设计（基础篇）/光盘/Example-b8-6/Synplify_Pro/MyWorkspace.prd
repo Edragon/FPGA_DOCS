@@ -1,0 +1,13 @@
+#-- Synplicity, Inc.
+#-- Version 7.5.1     
+#-- Project file D:\prj_D\Synplify_Pro\MyWorkspace.prd
+#-- Written on Wed Mar 23 01:26:58 2005
+
+#
+### Watch Implementation type ###
+#
+watch_impl -active
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

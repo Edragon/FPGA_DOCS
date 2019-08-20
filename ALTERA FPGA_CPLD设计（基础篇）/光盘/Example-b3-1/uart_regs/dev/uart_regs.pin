@@ -1,0 +1,734 @@
+ -- Copyright (C) 1991-2004 Altera Corporation
+ -- Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+ -- support information,  device programming or simulation file,  and any other
+ -- associated  documentation or information  provided by  Altera  or a partner
+ -- under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+ -- to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+ -- other  use  of such  megafunction  design,  netlist,  support  information,
+ -- device programming or simulation file,  or any other  related documentation
+ -- or information  is prohibited  for  any  other purpose,  including, but not
+ -- limited to  modification,  reverse engineering,  de-compiling, or use  with
+ -- any other  silicon devices,  unless such use is  explicitly  licensed under
+ -- a separate agreement with  Altera  or a megafunction partner.  Title to the
+ -- intellectual property,  including patents,  copyrights,  trademarks,  trade
+ -- secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+ -- support  information,  device programming or simulation file,  or any other
+ -- related documentation or information provided by  Altera  or a megafunction
+ -- partner, remains with Altera, the megafunction partner, or their respective
+ -- licensors. No other licenses, including any licenses needed under any third
+ -- party's intellectual property, are provided herein.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.5V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ --					Bank 5:		3.3V
+ --					Bank 6:		3.3V
+ --					Bank 7:		3.3V
+ --					Bank 8:		3.3V
+ --					Bank 9:		3.3V
+ --					Bank 10:	3.3V
+ --					Bank 11:	3.3V
+ --					Bank 12:	3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 4.0 Build 190 1/28/2004 SJ Full Version
+CHIP  "uart_regs"  ASSIGNED TO AN: EP1S10B672C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A2        : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : A3        :        :                   :         : 3         :                
+VCCIO3                       : A4        : power  :                   : 3.3V    : 3         :                
+int_o                        : A5        : output : LVTTL             :         : 3         : Y              
+mc_cs3                       : A6        : input  : LVTTL             :         : 3         : Y              
+RESERVED_INPUT               : A7        :        :                   :         : 3         :                
+RESERVED_INPUT               : A8        :        :                   :         : 3         :                
+RESERVED_INPUT               : A9        :        :                   :         : 3         :                
+RESERVED_INPUT               : A10       :        :                   :         : 3         :                
+VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
+RESERVED_INPUT               : A12       :        :                   :         : 3         :                
+GND                          : A13       : gnd    :                   :         : 1         :                
+GND                          : A14       : gnd    :                   :         : 1         :                
+clk                          : A15       : input  : LVTTL             :         : 4         : Y              
+VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
+srx_pad_i                    : A17       : input  : LVTTL             :         : 4         : Y              
+NC                           : A18       :        :                   :         : 1         :                
+stx_pad_o                    : A19       : output : LVTTL             :         : 4         : Y              
+wb_addr_i[0]                 : A20       : input  : LVTTL             :         : 4         : Y              
+wb_addr_i[1]                 : A21       : input  : LVTTL             :         : 4         : Y              
+RESERVED_INPUT               : A22       :        :                   :         : 4         :                
+VCCIO4                       : A23       : power  :                   : 3.3V    : 4         :                
+wb_addr_i[2]                 : A24       : input  : LVTTL             :         : 4         : Y              
+GND                          : A25       : gnd    :                   :         : 1         :                
+wb_dat_i[0]                  : AA1       : input  : LVTTL             :         : 1         : Y              
+wb_dat_i[1]                  : AA2       : input  : LVTTL             :         : 1         : Y              
+wb_dat_i[2]                  : AA3       : input  : LVTTL             :         : 1         : Y              
+wb_dat_i[5]                  : AA4       : input  : LVTTL             :         : 1         : Y              
+wb_dat_i[4]                  : AA5       : input  : LVTTL             :         : 1         : Y              
+wb_dat_i[6]                  : AA6       : input  : LVTTL             :         : 1         : Y              
+RESERVED_INPUT               : AA7       :        :                   :         : 8         :                
+wb_dat_i[7]                  : AA8       : input  : LVTTL             :         : 8         : Y              
+RESERVED_INPUT               : AA9       :        :                   :         : 8         :                
+RESERVED_INPUT               : AA10      :        :                   :         : 8         :                
+RESERVED_INPUT               : AA11      :        :                   :         : 8         :                
+RESERVED_INPUT               : AA12      :        :                   :         : 11        :                
+RESERVED_INPUT               : AA13      :        :                   :         : 11        :                
+RESERVED_INPUT               : AA14      :        :                   :         : 11        :                
+nIO_PULLUP                   : AA15      :        :                   :         : 7         :                
+NC                           : AA16      :        :                   :         : 1         :                
+RESERVED_INPUT               : AA17      :        :                   :         : 7         :                
+RESERVED_INPUT               : AA18      :        :                   :         : 7         :                
+RESERVED_INPUT               : AA19      :        :                   :         : 7         :                
+RESERVED_INPUT               : AA20      :        :                   :         : 7         :                
+RESERVED_INPUT               : AA21      :        :                   :         : 7         :                
+RESERVED_INPUT               : AA22      :        :                   :         : 6         :                
+RESERVED_INPUT               : AA23      :        :                   :         : 6         :                
+RESERVED_INPUT               : AA24      :        :                   :         : 6         :                
+RESERVED_INPUT               : AA25      :        :                   :         : 6         :                
+wb_dat_i[3]                  : AA26      : input  : LVTTL             :         : 6         : Y              
+NC                           : AB1       :        :                   :         : 1         :                
+NC                           : AB2       :        :                   :         : 1         :                
+RESERVED_INPUT               : AB3       :        :                   :         : 1         :                
+RESERVED_INPUT               : AB4       :        :                   :         : 1         :                
+RESERVED_INPUT               : AB5       :        :                   :         : 8         :                
+NC                           : AB6       :        :                   :         : 1         :                
+RESERVED_INPUT               : AB7       :        :                   :         : 8         :                
+NC                           : AB8       :        :                   :         : 1         :                
+RESERVED_INPUT               : AB9       :        :                   :         : 8         :                
+RESERVED_INPUT               : AB10      :        :                   :         : 8         :                
+RESERVED_INPUT               : AB11      :        :                   :         : 8         :                
+RESERVED_INPUT               : AB12      :        :                   :         : 11        :                
+RESERVED_INPUT               : AB13      :        :                   :         : 11        :                
+wb_dat_o[3]                  : AB14      : output : LVTTL             :         : 11        : Y              
+GND                          : AB15      :        :                   :         : 7         :                
+wb_dat_o[0]                  : AB16      : output : LVTTL             :         : 7         : Y              
+wb_dat_o[1]                  : AB17      : output : LVTTL             :         : 7         : Y              
+GND                          : AB18      :        :                   :         : 7         :                
+wb_dat_o[2]                  : AB19      : output : LVTTL             :         : 7         : Y              
+wb_dat_o[4]                  : AB20      : output : LVTTL             :         : 7         : Y              
+wb_dat_o[5]                  : AB21      : output : LVTTL             :         : 7         : Y              
+RESERVED_INPUT               : AB22      :        :                   :         : 7         :                
+wb_dat_o[6]                  : AB23      : output : LVTTL             :         : 6         : Y              
+wb_dat_o[7]                  : AB24      : output : LVTTL             :         : 6         : Y              
+NC                           : AB25      :        :                   :         : 1         :                
+NC                           : AB26      :        :                   :         : 1         :                
+VCCIO1                       : AC1       : power  :                   : 3.3V    : 1         :                
+RESERVED_INPUT               : AC2       :        :                   :         : 1         :                
+RESERVED_INPUT               : AC3       :        :                   :         : 1         :                
+RESERVED_INPUT               : AC4       :        :                   :         : 1         :                
+NC                           : AC5       :        :                   :         : 1         :                
+NC                           : AC6       :        :                   :         : 1         :                
+RESERVED_INPUT               : AC7       :        :                   :         : 8         :                
+NC                           : AC8       :        :                   :         : 1         :                
+RESERVED_INPUT               : AC9       :        :                   :         : 8         :                
+RESERVED_INPUT               : AC10      :        :                   :         : 8         :                
+RESERVED_INPUT               : AC11      :        :                   :         : 8         :                
+GND+                         : AC12      :        :                   :         : 8         :                
+GND                          : AC13      : gnd    :                   :         : 1         :                
+GNDA_PLL6                    : AC14      : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : AC15      :        :                   :         : 7         :                
+RESERVED_INPUT               : AC16      :        :                   :         : 7         :                
+RESERVED_INPUT               : AC17      :        :                   :         : 7         :                
+NC                           : AC18      :        :                   :         : 1         :                
+NC                           : AC19      :        :                   :         : 1         :                
+RESERVED_INPUT               : AC20      :        :                   :         : 7         :                
+RESERVED_INPUT               : AC21      :        :                   :         : 7         :                
+RESERVED_INPUT               : AC22      :        :                   :         : 7         :                
+RESERVED_INPUT               : AC23      :        :                   :         : 7         :                
+RESERVED_INPUT               : AC24      :        :                   :         : 6         :                
+RESERVED_INPUT               : AC25      :        :                   :         : 6         :                
+VCCIO6                       : AC26      : power  :                   : 3.3V    : 6         :                
+RESERVED_INPUT               : AD1       :        :                   :         : 1         :                
+RESERVED_INPUT               : AD2       :        :                   :         : 8         :                
+RESERVED_INPUT               : AD3       :        :                   :         : 8         :                
+RESERVED_INPUT               : AD4       :        :                   :         : 8         :                
+RESERVED_INPUT               : AD5       :        :                   :         : 8         :                
+RESERVED_INPUT               : AD6       :        :                   :         : 8         :                
+RESERVED_INPUT               : AD7       :        :                   :         : 8         :                
+NC                           : AD8       :        :                   :         : 1         :                
+RESERVED_INPUT               : AD9       :        :                   :         : 8         :                
+RESERVED_INPUT               : AD10      :        :                   :         : 8         :                
+NC                           : AD11      :        :                   :         : 1         :                
+RESERVED_INPUT               : AD12      :        :                   :         : 8         :                
+VCCG_PLL6                    : AD13      : power  :                   : 1.5V    : 1         :                
+VCCA_PLL6                    : AD14      : power  :                   : 1.5V    : 1         :                
+RESERVED_INPUT               : AD15      :        :                   :         : 7         :                
+RESERVED_INPUT               : AD16      :        :                   :         : 7         :                
+RESERVED_INPUT               : AD17      :        :                   :         : 7         :                
+NC                           : AD18      :        :                   :         : 1         :                
+NC                           : AD19      :        :                   :         : 1         :                
+RESERVED_INPUT               : AD20      :        :                   :         : 7         :                
+NC                           : AD21      :        :                   :         : 1         :                
+NC                           : AD22      :        :                   :         : 1         :                
+NC                           : AD23      :        :                   :         : 1         :                
+NC                           : AD24      :        :                   :         : 1         :                
+RESERVED_INPUT               : AD25      :        :                   :         : 6         :                
+RESERVED_INPUT               : AD26      :        :                   :         : 6         :                
+GND                          : AE1       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : AE2       :        :                   :         : 8         :                
+RESERVED_INPUT               : AE3       :        :                   :         : 8         :                
+RESERVED_INPUT               : AE4       :        :                   :         : 8         :                
+GND                          : AE5       :        :                   :         : 8         :                
+RESERVED_INPUT               : AE6       :        :                   :         : 8         :                
+RESERVED_INPUT               : AE7       :        :                   :         : 8         :                
+NC                           : AE8       :        :                   :         : 1         :                
+GND                          : AE9       :        :                   :         : 8         :                
+RESERVED_INPUT               : AE10      :        :                   :         : 8         :                
+RESERVED_INPUT               : AE11      :        :                   :         : 8         :                
+GND+                         : AE12      :        :                   :         : 8         :                
+VCC_PLL6_OUTA                : AE13      : power  :                   : 3.3V    : 11        :                
+GNDG_PLL6                    : AE14      : gnd    :                   :         : 1         :                
+wb_re_i                      : AE15      : input  : LVTTL             :         : 7         : Y              
+RESERVED_INPUT               : AE16      :        :                   :         : 7         :                
+RESERVED_INPUT               : AE17      :        :                   :         : 7         :                
+NC                           : AE18      :        :                   :         : 1         :                
+NC                           : AE19      :        :                   :         : 1         :                
+RESERVED_INPUT               : AE20      :        :                   :         : 7         :                
+RESERVED_INPUT               : AE21      :        :                   :         : 7         :                
+RESERVED_INPUT               : AE22      :        :                   :         : 7         :                
+RESERVED_INPUT               : AE23      :        :                   :         : 7         :                
+RESERVED_INPUT               : AE24      :        :                   :         : 7         :                
+RESERVED_INPUT               : AE25      :        :                   :         : 7         :                
+GND                          : AE26      : gnd    :                   :         : 1         :                
+GND                          : AF2       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : AF3       :        :                   :         : 8         :                
+VCCIO8                       : AF4       : power  :                   : 3.3V    : 8         :                
+NC                           : AF5       :        :                   :         : 1         :                
+RESERVED_INPUT               : AF6       :        :                   :         : 8         :                
+RESERVED_INPUT               : AF7       :        :                   :         : 8         :                
+RESERVED_INPUT               : AF8       :        :                   :         : 8         :                
+RESERVED_INPUT               : AF9       :        :                   :         : 8         :                
+RESERVED_INPUT               : AF10      :        :                   :         : 8         :                
+VCCIO8                       : AF11      : power  :                   : 3.3V    : 8         :                
+RESERVED_INPUT               : AF12      :        :                   :         : 8         :                
+GND                          : AF13      : gnd    :                   :         : 1         :                
+GND                          : AF14      : gnd    :                   :         : 1         :                
+GND+                         : AF15      :        :                   :         : 7         :                
+VCCIO7                       : AF16      : power  :                   : 3.3V    : 7         :                
+RESERVED_INPUT               : AF17      :        :                   :         : 7         :                
+RESERVED_INPUT               : AF18      :        :                   :         : 7         :                
+RESERVED_INPUT               : AF19      :        :                   :         : 7         :                
+NC                           : AF20      :        :                   :         : 1         :                
+RESERVED_INPUT               : AF21      :        :                   :         : 7         :                
+RESERVED_INPUT               : AF22      :        :                   :         : 7         :                
+VCCIO7                       : AF23      : power  :                   : 3.3V    : 7         :                
+RESERVED_INPUT               : AF24      :        :                   :         : 7         :                
+GND                          : AF25      : gnd    :                   :         : 1         :                
+GND                          : B1        : gnd    :                   :         : 1         :                
+GND                          : B2        : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : B3        :        :                   :         : 3         :                
+RESERVED_INPUT               : B4        :        :                   :         : 3         :                
+NC                           : B5        :        :                   :         : 1         :                
+RESERVED_INPUT               : B6        :        :                   :         : 3         :                
+NC                           : B7        :        :                   :         : 1         :                
+RESERVED_INPUT               : B8        :        :                   :         : 3         :                
+RESERVED_INPUT               : B9        :        :                   :         : 3         :                
+RESERVED_INPUT               : B10       :        :                   :         : 3         :                
+NC                           : B11       :        :                   :         : 1         :                
+GND+                         : B12       :        :                   :         : 3         :                
+GNDG_PLL5                    : B13       : gnd    :                   :         : 1         :                
+GNDA_PLL5                    : B14       : gnd    :                   :         : 1         :                
+GND+                         : B15       :        :                   :         : 4         :                
+NC                           : B16       :        :                   :         : 1         :                
+RESERVED_INPUT               : B17       :        :                   :         : 4         :                
+RESERVED_INPUT               : B18       :        :                   :         : 4         :                
+NC                           : B19       :        :                   :         : 1         :                
+RESERVED_INPUT               : B20       :        :                   :         : 4         :                
+NC                           : B21       :        :                   :         : 1         :                
+RESERVED_INPUT               : B22       :        :                   :         : 4         :                
+NC                           : B23       :        :                   :         : 1         :                
+RESERVED_INPUT               : B24       :        :                   :         : 4         :                
+NC                           : B25       :        :                   :         : 1         :                
+GND                          : B26       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : C1        :        :                   :         : 2         :                
+RESERVED_INPUT               : C2        :        :                   :         : 3         :                
+RESERVED_INPUT               : C3        :        :                   :         : 3         :                
+RESERVED_INPUT               : C4        :        :                   :         : 3         :                
+NC                           : C5        :        :                   :         : 1         :                
+NC                           : C6        :        :                   :         : 1         :                
+RESERVED_INPUT               : C7        :        :                   :         : 3         :                
+NC                           : C8        :        :                   :         : 1         :                
+RESERVED_INPUT               : C9        :        :                   :         : 3         :                
+RESERVED_INPUT               : C10       :        :                   :         : 3         :                
+RESERVED_INPUT               : C11       :        :                   :         : 3         :                
+RESERVED_INPUT               : C12       :        :                   :         : 3         :                
+GND                          : C13       : gnd    :                   :         : 1         :                
+VCCG_PLL5                    : C14       : power  :                   : 1.5V    : 1         :                
+RESERVED_INPUT               : C15       :        :                   :         : 4         :                
+RESERVED_INPUT               : C16       :        :                   :         : 4         :                
+RESERVED_INPUT               : C17       :        :                   :         : 4         :                
+RESERVED_INPUT               : C18       :        :                   :         : 4         :                
+NC                           : C19       :        :                   :         : 1         :                
+RESERVED_INPUT               : C20       :        :                   :         : 4         :                
+RESERVED_INPUT               : C21       :        :                   :         : 4         :                
+RESERVED_INPUT               : C22       :        :                   :         : 4         :                
+RESERVED_INPUT               : C23       :        :                   :         : 4         :                
+RESERVED_INPUT               : C24       :        :                   :         : 4         :                
+RESERVED_INPUT               : C25       :        :                   :         : 5         :                
+RESERVED_INPUT               : C26       :        :                   :         : 5         :                
+VCCIO2                       : D1        : power  :                   : 3.3V    : 2         :                
+RESERVED_INPUT               : D2        :        :                   :         : 2         :                
+RESERVED_INPUT               : D3        :        :                   :         : 3         :                
+RESERVED_INPUT               : D4        :        :                   :         : 3         :                
+RESERVED_INPUT               : D5        :        :                   :         : 3         :                
+RESERVED_INPUT               : D6        :        :                   :         : 3         :                
+NC                           : D7        :        :                   :         : 1         :                
+NC                           : D8        :        :                   :         : 1         :                
+GND                          : D9        :        :                   :         : 3         :                
+RESERVED_INPUT               : D10       :        :                   :         : 3         :                
+RESERVED_INPUT               : D11       :        :                   :         : 3         :                
+GND+                         : D12       :        :                   :         : 3         :                
+VCC_PLL5_OUTA                : D13       : power  :                   : 3.3V    : 9         :                
+VCCA_PLL5                    : D14       : power  :                   : 1.5V    : 1         :                
+TRST                         : D15       : input  :                   :         : 4         :                
+RESERVED_INPUT               : D16       :        :                   :         : 4         :                
+RESERVED_INPUT               : D17       :        :                   :         : 4         :                
+RESERVED_INPUT               : D18       :        :                   :         : 4         :                
+NC                           : D19       :        :                   :         : 1         :                
+RESERVED_INPUT               : D20       :        :                   :         : 4         :                
+RESERVED_INPUT               : D21       :        :                   :         : 4         :                
+RESERVED_INPUT               : D22       :        :                   :         : 4         :                
+RESERVED_INPUT               : D23       :        :                   :         : 4         :                
+RESERVED_INPUT               : D24       :        :                   :         : 5         :                
+RESERVED_INPUT               : D25       :        :                   :         : 5         :                
+VCCIO5                       : D26       : power  :                   : 3.3V    : 5         :                
+NC                           : E1        :        :                   :         : 1         :                
+NC                           : E2        :        :                   :         : 1         :                
+RESERVED_INPUT               : E3        :        :                   :         : 2         :                
+RESERVED_INPUT               : E4        :        :                   :         : 2         :                
+RESERVED_INPUT               : E5        :        :                   :         : 3         :                
+RESERVED_INPUT               : E6        :        :                   :         : 3         :                
+NC                           : E7        :        :                   :         : 1         :                
+NC                           : E8        :        :                   :         : 1         :                
+RESERVED_INPUT               : E9        :        :                   :         : 3         :                
+RESERVED_INPUT               : E10       :        :                   :         : 3         :                
+RESERVED_INPUT               : E11       :        :                   :         : 3         :                
+RESERVED_INPUT               : E12       :        :                   :         : 9         :                
+RESERVED_INPUT               : E13       :        :                   :         : 9         :                
+RESERVED_INPUT               : E14       :        :                   :         : 9         :                
+TMS                          : E15       : input  :                   :         : 4         :                
+RESERVED_INPUT               : E16       :        :                   :         : 4         :                
+RESERVED_INPUT               : E17       :        :                   :         : 4         :                
+RESERVED_INPUT               : E18       :        :                   :         : 4         :                
+NC                           : E19       :        :                   :         : 1         :                
+NC                           : E20       :        :                   :         : 1         :                
+RESERVED_INPUT               : E21       :        :                   :         : 4         :                
+RESERVED_INPUT               : E22       :        :                   :         : 4         :                
+RESERVED_INPUT               : E23       :        :                   :         : 5         :                
+RESERVED_INPUT               : E24       :        :                   :         : 5         :                
+NC                           : E25       :        :                   :         : 1         :                
+NC                           : E26       :        :                   :         : 1         :                
+RESERVED_INPUT               : F1        :        :                   :         : 2         :                
+RESERVED_INPUT               : F2        :        :                   :         : 2         :                
+RESERVED_INPUT               : F3        :        :                   :         : 2         :                
+RESERVED_INPUT               : F4        :        :                   :         : 2         :                
+RESERVED_INPUT               : F5        :        :                   :         : 3         :                
+RESERVED_INPUT               : F6        :        :                   :         : 3         :                
+NC                           : F7        :        :                   :         : 1         :                
+GND                          : F8        :        :                   :         : 1         :                
+RESERVED_INPUT               : F9        :        :                   :         : 3         :                
+RESERVED_INPUT               : F10       :        :                   :         : 3         :                
+GND                          : F11       :        :                   :         : 3         :                
+RESERVED_INPUT               : F12       :        :                   :         : 9         :                
+RESERVED_INPUT               : F13       :        :                   :         : 9         :                
+RESERVED_INPUT               : F14       :        :                   :         : 9         :                
+RESERVED_INPUT               : F15       :        :                   :         : 4         :                
+~DATA0~ / RESERVED_INPUT     : F16       : input  : LVTTL             :         : 4         : N              
+RESERVED_INPUT               : F17       :        :                   :         : 4         :                
+GND                          : F18       :        :                   :         : 4         :                
+RESERVED_INPUT               : F19       :        :                   :         : 4         :                
+NC                           : F20       :        :                   :         : 1         :                
+RESERVED_INPUT               : F21       :        :                   :         : 4         :                
+GND                          : F22       :        :                   :         : 4         :                
+RESERVED_INPUT               : F23       :        :                   :         : 5         :                
+RESERVED_INPUT               : F24       :        :                   :         : 5         :                
+RESERVED_INPUT               : F25       :        :                   :         : 5         :                
+RESERVED_INPUT               : F26       :        :                   :         : 5         :                
+RESERVED_INPUT               : G1        :        :                   :         : 2         :                
+RESERVED_INPUT               : G2        :        :                   :         : 2         :                
+RESERVED_INPUT               : G3        :        :                   :         : 2         :                
+RESERVED_INPUT               : G4        :        :                   :         : 2         :                
+RESERVED_INPUT               : G5        :        :                   :         : 2         :                
+RESERVED_INPUT               : G6        :        :                   :         : 2         :                
+NC                           : G7        :        :                   :         : 1         :                
+GND                          : G8        : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : G9        :        :                   :         : 3         :                
+RESERVED_INPUT               : G10       :        :                   :         : 3         :                
+RESERVED_INPUT               : G11       :        :                   :         : 3         :                
+DCLK                         : G12       :        :                   :         : 3         :                
+DIODEL                       : G13       :        :                   :         : 1         :                
+TDO                          : G14       : output :                   :         : 4         :                
+TCK                          : G15       : input  :                   :         : 4         :                
+NC                           : G16       :        :                   :         : 1         :                
+RESERVED_INPUT               : G17       :        :                   :         : 4         :                
+RESERVED_INPUT               : G18       :        :                   :         : 4         :                
+RESERVED_INPUT               : G19       :        :                   :         : 4         :                
+RESERVED_INPUT               : G20       :        :                   :         : 4         :                
+RESERVED_INPUT               : G21       :        :                   :         : 5         :                
+RESERVED_INPUT               : G22       :        :                   :         : 5         :                
+RESERVED_INPUT               : G23       :        :                   :         : 5         :                
+RESERVED_INPUT               : G24       :        :                   :         : 5         :                
+RESERVED_INPUT               : G25       :        :                   :         : 5         :                
+RESERVED_INPUT               : G26       :        :                   :         : 5         :                
+NC                           : H1        :        :                   :         : 1         :                
+NC                           : H2        :        :                   :         : 1         :                
+RESERVED_INPUT               : H3        :        :                   :         : 2         :                
+RESERVED_INPUT               : H4        :        :                   :         : 2         :                
+NC                           : H5        :        :                   :         : 1         :                
+NC                           : H6        :        :                   :         : 1         :                
+NC                           : H7        :        :                   :         : 1         :                
+GND                          : H8        :        :                   :         : 2         :                
+GND                          : H9        : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : H10       :        :                   :         : 3         :                
+CONF_DONE                    : H11       :        :                   :         : 3         :                
+nCONFIG                      : H12       :        :                   :         : 3         :                
+nSTATUS                      : H13       :        :                   :         : 3         :                
+DIODEH                       : H14       :        :                   :         : 1         :                
+TDI                          : H15       : input  :                   :         : 4         :                
+RESERVED_INPUT               : H16       :        :                   :         : 4         :                
+GND                          : H17       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : H18       :        :                   :         : 4         :                
+NC                           : H19       :        :                   :         : 1         :                
+NC                           : H20       :        :                   :         : 1         :                
+NC                           : H21       :        :                   :         : 1         :                
+NC                           : H22       :        :                   :         : 1         :                
+NC                           : H23       :        :                   :         : 1         :                
+NC                           : H24       :        :                   :         : 1         :                
+NC                           : H25       :        :                   :         : 1         :                
+NC                           : H26       :        :                   :         : 1         :                
+NC                           : J1        :        :                   :         : 1         :                
+NC                           : J2        :        :                   :         : 1         :                
+NC                           : J3        :        :                   :         : 1         :                
+NC                           : J4        :        :                   :         : 1         :                
+NC                           : J5        :        :                   :         : 1         :                
+NC                           : J6        :        :                   :         : 1         :                
+NC                           : J7        :        :                   :         : 1         :                
+NC                           : J8        :        :                   :         : 1         :                
+GND                          : J9        : gnd    :                   :         : 1         :                
+GND                          : J10       : gnd    :                   :         : 1         :                
+VCCIO3                       : J11       : power  :                   : 3.3V    : 3         :                
+VCCIO3                       : J12       : power  :                   : 3.3V    : 3         :                
+GND                          : J13       : gnd    :                   :         : 1         :                
+GND                          : J14       : gnd    :                   :         : 1         :                
+VCCIO4                       : J15       : power  :                   : 3.3V    : 4         :                
+VCCIO4                       : J16       : power  :                   : 3.3V    : 4         :                
+GND                          : J17       : gnd    :                   :         : 1         :                
+GND                          : J18       :        :                   :         : 5         :                
+NC                           : J19       :        :                   :         : 1         :                
+NC                           : J20       :        :                   :         : 1         :                
+RESERVED_INPUT               : J21       :        :                   :         : 5         :                
+RESERVED_INPUT               : J22       :        :                   :         : 5         :                
+NC                           : J23       :        :                   :         : 1         :                
+NC                           : J24       :        :                   :         : 1         :                
+NC                           : J25       :        :                   :         : 1         :                
+NC                           : J26       :        :                   :         : 1         :                
+NC                           : K1        :        :                   :         : 1         :                
+NC                           : K2        :        :                   :         : 1         :                
+RESERVED_INPUT               : K3        :        :                   :         : 2         :                
+RESERVED_INPUT               : K4        :        :                   :         : 2         :                
+RESERVED_INPUT               : K5        :        :                   :         : 2         :                
+RESERVED_INPUT               : K6        :        :                   :         : 2         :                
+NC                           : K7        :        :                   :         : 1         :                
+NC                           : K8        :        :                   :         : 1         :                
+NC                           : K9        :        :                   :         : 1         :                
+GND                          : K10       : gnd    :                   :         : 1         :                
+VCCINT                       : K11       : power  :                   : 1.5V    :           :                
+GND                          : K12       : gnd    :                   :         : 1         :                
+VCCINT                       : K13       : power  :                   : 1.5V    :           :                
+GND                          : K14       : gnd    :                   :         : 1         :                
+VCCINT                       : K15       : power  :                   : 1.5V    :           :                
+GND                          : K16       : gnd    :                   :         : 1         :                
+VCCINT                       : K17       : power  :                   : 1.5V    :           :                
+GND                          : K18       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : K19       :        :                   :         : 5         :                
+RESERVED_INPUT               : K20       :        :                   :         : 5         :                
+NC                           : K21       :        :                   :         : 1         :                
+NC                           : K22       :        :                   :         : 1         :                
+RESERVED_INPUT               : K23       :        :                   :         : 5         :                
+RESERVED_INPUT               : K24       :        :                   :         : 5         :                
+NC                           : K25       :        :                   :         : 1         :                
+NC                           : K26       :        :                   :         : 1         :                
+VCCIO2                       : L1        : power  :                   : 3.3V    : 2         :                
+RESERVED_INPUT               : L2        :        :                   :         : 2         :                
+RESERVED_INPUT               : L3        :        :                   :         : 2         :                
+RESERVED_INPUT               : L4        :        :                   :         : 2         :                
+RESERVED_INPUT               : L5        :        :                   :         : 2         :                
+RESERVED_INPUT               : L6        :        :                   :         : 2         :                
+RESERVED_INPUT               : L7        :        :                   :         : 2         :                
+GND                          : L8        :        :                   :         : 2         :                
+VCCIO2                       : L9        : power  :                   : 3.3V    : 2         :                
+VCCINT                       : L10       : power  :                   : 1.5V    :           :                
+GND                          : L11       : gnd    :                   :         : 1         :                
+VCCINT                       : L12       : power  :                   : 1.5V    :           :                
+GND                          : L13       : gnd    :                   :         : 1         :                
+VCCINT                       : L14       : power  :                   : 1.5V    :           :                
+GND                          : L15       : gnd    :                   :         : 1         :                
+VCCINT                       : L16       : power  :                   : 1.5V    :           :                
+GND                          : L17       : gnd    :                   :         : 1         :                
+VCCIO5                       : L18       : power  :                   : 3.3V    : 5         :                
+GND                          : L19       :        :                   :         : 5         :                
+RESERVED_INPUT               : L20       :        :                   :         : 5         :                
+RESERVED_INPUT               : L21       :        :                   :         : 5         :                
+RESERVED_INPUT               : L22       :        :                   :         : 5         :                
+RESERVED_INPUT               : L23       :        :                   :         : 5         :                
+RESERVED_INPUT               : L24       :        :                   :         : 5         :                
+RESERVED_INPUT               : L25       :        :                   :         : 5         :                
+VCCIO5                       : L26       : power  :                   : 3.3V    : 5         :                
+GND+                         : M1        :        :                   :         : 2         :                
+VCCG_PLL1                    : M2        : power  :                   : 1.5V    : 1         :                
+VCCA_PLL1                    : M3        : power  :                   : 1.5V    : 1         :                
+RESERVED_INPUT               : M4        :        :                   :         : 2         :                
+RESERVED_INPUT               : M5        :        :                   :         : 2         :                
+RESERVED_INPUT               : M6        :        :                   :         : 2         :                
+RESERVED_INPUT               : M7        :        :                   :         : 2         :                
+RESERVED_INPUT               : M8        :        :                   :         : 2         :                
+RESERVED_INPUT               : M9        :        :                   :         : 2         :                
+GND                          : M10       : gnd    :                   :         : 1         :                
+VCCINT                       : M11       : power  :                   : 1.5V    :           :                
+GND                          : M12       : gnd    :                   :         : 1         :                
+VCCINT                       : M13       : power  :                   : 1.5V    :           :                
+GND                          : M14       : gnd    :                   :         : 1         :                
+VCCINT                       : M15       : power  :                   : 1.5V    :           :                
+GND                          : M16       : gnd    :                   :         : 1         :                
+VCCINT                       : M17       : power  :                   : 1.5V    :           :                
+RESERVED_INPUT               : M18       :        :                   :         : 5         :                
+RESERVED_INPUT               : M19       :        :                   :         : 5         :                
+RESERVED_INPUT               : M20       :        :                   :         : 5         :                
+RESERVED_INPUT               : M21       :        :                   :         : 5         :                
+RESERVED_INPUT               : M22       :        :                   :         : 5         :                
+RESERVED_INPUT               : M23       :        :                   :         : 5         :                
+GND+                         : M24       :        :                   :         : 5         :                
+GND+                         : M25       :        :                   :         : 5         :                
+GND+                         : M26       :        :                   :         : 5         :                
+GND                          : N1        : gnd    :                   :         : 1         :                
+GND+                         : N2        :        :                   :         : 2         :                
+wb_we_i                      : N3        : input  : LVTTL             :         : 2         : Y              
+GNDG_PLL1                    : N4        : gnd    :                   :         : 1         :                
+GNDA_PLL1                    : N5        : gnd    :                   :         : 1         :                
+wb_rst_i                     : N6        : input  : LVTTL             :         : 2         : Y              
+RESERVED_INPUT               : N7        :        :                   :         : 2         :                
+RESERVED_INPUT               : N8        :        :                   :         : 2         :                
+GND                          : N9        : gnd    :                   :         : 1         :                
+VCCINT                       : N10       : power  :                   : 1.5V    :           :                
+GND                          : N11       : gnd    :                   :         : 1         :                
+VCCINT                       : N12       : power  :                   : 1.5V    :           :                
+GND                          : N13       : gnd    :                   :         : 1         :                
+VCCINT                       : N14       : power  :                   : 1.5V    :           :                
+GND                          : N15       : gnd    :                   :         : 1         :                
+VCCINT                       : N16       : power  :                   : 1.5V    :           :                
+GND                          : N17       : gnd    :                   :         : 1         :                
+GND                          : N18       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : N19       :        :                   :         : 6         :                
+RESERVED_INPUT               : N20       :        :                   :         : 5         :                
+RESERVED_INPUT               : N21       :        :                   :         : 5         :                
+GNDG_PLL4                    : N22       : gnd    :                   :         : 1         :                
+GNDA_PLL4                    : N23       : gnd    :                   :         : 1         :                
+VCCG_PLL4                    : N24       : power  :                   : 1.5V    : 1         :                
+VCCA_PLL4                    : N25       : power  :                   : 1.5V    : 1         :                
+GND                          : N26       : gnd    :                   :         : 1         :                
+GND                          : P1        : gnd    :                   :         : 1         :                
+GNDG_PLL2                    : P2        : gnd    :                   :         : 1         :                
+GNDA_PLL2                    : P3        : gnd    :                   :         : 1         :                
+VCCG_PLL2                    : P4        : power  :                   : 1.5V    : 1         :                
+VCCA_PLL2                    : P5        : power  :                   : 1.5V    : 1         :                
+RESERVED_INPUT               : P6        :        :                   :         : 1         :                
+RESERVED_INPUT               : P7        :        :                   :         : 1         :                
+RESERVED_INPUT               : P8        :        :                   :         : 2         :                
+GND                          : P9        : gnd    :                   :         : 1         :                
+GND                          : P10       : gnd    :                   :         : 1         :                
+VCCINT                       : P11       : power  :                   : 1.5V    :           :                
+GND                          : P12       : gnd    :                   :         : 1         :                
+VCCINT                       : P13       : power  :                   : 1.5V    :           :                
+GND                          : P14       : gnd    :                   :         : 1         :                
+VCCINT                       : P15       : power  :                   : 1.5V    :           :                
+GND                          : P16       : gnd    :                   :         : 1         :                
+VCCINT                       : P17       : power  :                   : 1.5V    :           :                
+GND                          : P18       : gnd    :                   :         : 1         :                
+RESERVED_INPUT               : P19       :        :                   :         : 6         :                
+RESERVED_INPUT               : P20       :        :                   :         : 6         :                
+RESERVED_INPUT               : P21       :        :                   :         : 6         :                
+VCCA_PLL3                    : P22       : power  :                   : 1.5V    : 1         :                
+VCCG_PLL3                    : P23       : power  :                   : 1.5V    : 1         :                
+GND+                         : P24       :        :                   :         : 6         :                
+GND+                         : P25       :        :                   :         : 6         :                
+GND                          : P26       : gnd    :                   :         : 1         :                
+GND+                         : R1        :        :                   :         : 1         :                
+GND+                         : R2        :        :                   :         : 1         :                
+GND+                         : R3        :        :                   :         : 1         :                
+RESERVED_INPUT               : R4        :        :                   :         : 1         :                
+RESERVED_INPUT               : R5        :        :                   :         : 1         :                
+RESERVED_INPUT               : R6        :        :                   :         : 1         :                
+RESERVED_INPUT               : R7        :        :                   :         : 1         :                
+RESERVED_INPUT               : R8        :        :                   :         : 1         :                
+RESERVED_INPUT               : R9        :        :                   :         : 1         :                
+VCCINT                       : R10       : power  :                   : 1.5V    :           :                
+GND                          : R11       : gnd    :                   :         : 1         :                
+VCCINT                       : R12       : power  :                   : 1.5V    :           :                
+GND                          : R13       : gnd    :                   :         : 1         :                
+VCCINT                       : R14       : power  :                   : 1.5V    :           :                
+GND                          : R15       : gnd    :                   :         : 1         :                
+VCCINT                       : R16       : power  :                   : 1.5V    :           :                
+GND                          : R17       : gnd    :                   :         : 1         :                
+NC                           : R18       :        :                   :         : 1         :                
+RESERVED_INPUT               : R19       :        :                   :         : 6         :                
+RESERVED_INPUT               : R20       :        :                   :         : 6         :                
+RESERVED_INPUT               : R21       :        :                   :         : 6         :                
+RESERVED_INPUT               : R22       :        :                   :         : 6         :                
+RESERVED_INPUT               : R23       :        :                   :         : 6         :                
+GNDA_PLL3                    : R24       : gnd    :                   :         : 1         :                
+GNDG_PLL3                    : R25       : gnd    :                   :         : 1         :                
+GND+                         : R26       :        :                   :         : 6         :                
+VCCIO1                       : T1        : power  :                   : 3.3V    : 1         :                
+RESERVED_INPUT               : T2        :        :                   :         : 1         :                
+RESERVED_INPUT               : T3        :        :                   :         : 1         :                
+RESERVED_INPUT               : T4        :        :                   :         : 1         :                
+RESERVED_INPUT               : T5        :        :                   :         : 1         :                
+RESERVED_INPUT               : T6        :        :                   :         : 1         :                
+RESERVED_INPUT               : T7        :        :                   :         : 1         :                
+GND                          : T8        :        :                   :         : 1         :                
+VCCIO1                       : T9        : power  :                   : 3.3V    : 1         :                
+GND                          : T10       : gnd    :                   :         : 1         :                
+VCCINT                       : T11       : power  :                   : 1.5V    :           :                
+GND                          : T12       : gnd    :                   :         : 1         :                
+VCCINT                       : T13       : power  :                   : 1.5V    :           :                
+GND                          : T14       : gnd    :                   :         : 1         :                
+VCCINT                       : T15       : power  :                   : 1.5V    :           :                
+GND                          : T16       : gnd    :                   :         : 1         :                
+VCCINT                       : T17       : power  :                   : 1.5V    :           :                
+VCCIO6                       : T18       : power  :                   : 3.3V    : 6         :                
+RESERVED_INPUT               : T19       :        :                   :         : 6         :                
+RESERVED_INPUT               : T20       :        :                   :         : 6         :                
+RESERVED_INPUT               : T21       :        :                   :         : 6         :                
+RESERVED_INPUT               : T22       :        :                   :         : 6         :                
+RESERVED_INPUT               : T23       :        :                   :         : 6         :                
+RESERVED_INPUT               : T24       :        :                   :         : 6         :                
+RESERVED_INPUT               : T25       :        :                   :         : 6         :                
+VCCIO6                       : T26       : power  :                   : 3.3V    : 6         :                
+RESERVED_INPUT               : U1        :        :                   :         : 1         :                
+RESERVED_INPUT               : U2        :        :                   :         : 1         :                
+NC                           : U3        :        :                   :         : 1         :                
+NC                           : U4        :        :                   :         : 1         :                
+RESERVED_INPUT               : U5        :        :                   :         : 1         :                
+RESERVED_INPUT               : U6        :        :                   :         : 1         :                
+NC                           : U7        :        :                   :         : 1         :                
+NC                           : U8        :        :                   :         : 1         :                
+NC                           : U9        :        :                   :         : 1         :                
+VCCINT                       : U10       : power  :                   : 1.5V    :           :                
+GND                          : U11       : gnd    :                   :         : 1         :                
+VCCINT                       : U12       : power  :                   : 1.5V    :           :                
+GND                          : U13       : gnd    :                   :         : 1         :                
+VCCINT                       : U14       : power  :                   : 1.5V    :           :                
+GND                          : U15       : gnd    :                   :         : 1         :                
+VCCINT                       : U16       : power  :                   : 1.5V    :           :                
+GND                          : U17       : gnd    :                   :         : 1         :                
+NC                           : U18       :        :                   :         : 1         :                
+NC                           : U19       :        :                   :         : 1         :                
+NC                           : U20       :        :                   :         : 1         :                
+RESERVED_INPUT               : U21       :        :                   :         : 6         :                
+RESERVED_INPUT               : U22       :        :                   :         : 6         :                
+RESERVED_INPUT               : U23       :        :                   :         : 6         :                
+RESERVED_INPUT               : U24       :        :                   :         : 6         :                
+NC                           : U25       :        :                   :         : 1         :                
+NC                           : U26       :        :                   :         : 1         :                
+NC                           : V1        :        :                   :         : 1         :                
+NC                           : V2        :        :                   :         : 1         :                
+NC                           : V3        :        :                   :         : 1         :                
+NC                           : V4        :        :                   :         : 1         :                
+RESERVED_INPUT               : V5        :        :                   :         : 1         :                
+RESERVED_INPUT               : V6        :        :                   :         : 1         :                
+GND                          : V7        :        :                   :         : 1         :                
+NC                           : V8        :        :                   :         : 1         :                
+GND                          : V9        : gnd    :                   :         : 1         :                
+GND                          : V10       : gnd    :                   :         : 1         :                
+VCCIO8                       : V11       : power  :                   : 3.3V    : 8         :                
+VCCIO8                       : V12       : power  :                   : 3.3V    : 8         :                
+GND                          : V13       : gnd    :                   :         : 1         :                
+GND                          : V14       : gnd    :                   :         : 1         :                
+VCCIO7                       : V15       : power  :                   : 3.3V    : 7         :                
+VCCIO7                       : V16       : power  :                   : 3.3V    : 7         :                
+GND                          : V17       : gnd    :                   :         : 1         :                
+GND                          : V18       : gnd    :                   :         : 1         :                
+NC                           : V19       :        :                   :         : 1         :                
+GND                          : V20       :        :                   :         : 6         :                
+NC                           : V21       :        :                   :         : 1         :                
+NC                           : V22       :        :                   :         : 1         :                
+NC                           : V23       :        :                   :         : 1         :                
+NC                           : V24       :        :                   :         : 1         :                
+NC                           : V25       :        :                   :         : 1         :                
+NC                           : V26       :        :                   :         : 1         :                
+NC                           : W1        :        :                   :         : 1         :                
+NC                           : W2        :        :                   :         : 1         :                
+NC                           : W3        :        :                   :         : 1         :                
+NC                           : W4        :        :                   :         : 1         :                
+NC                           : W5        :        :                   :         : 1         :                
+NC                           : W6        :        :                   :         : 1         :                
+NC                           : W7        :        :                   :         : 1         :                
+NC                           : W8        :        :                   :         : 1         :                
+RESERVED_INPUT               : W9        :        :                   :         : 8         :                
+RESERVED_INPUT               : W10       :        :                   :         : 8         :                
+NC                           : W11       :        :                   :         : 1         :                
+PLL_ENA                      : W12       :        :                   :         : 8         :                
+MSEL2                        : W13       :        :                   :         : 8         :                
+nCEO                         : W14       :        :                   :         : 7         :                
+RESERVED_INPUT               : W15       :        :                   :         : 7         :                
+PORSEL                       : W16       :        :                   :         : 7         :                
+RESERVED_INPUT               : W17       :        :                   :         : 7         :                
+RESERVED_INPUT               : W18       :        :                   :         : 7         :                
+NC                           : W19       :        :                   :         : 1         :                
+NC                           : W20       :        :                   :         : 1         :                
+NC                           : W21       :        :                   :         : 1         :                
+NC                           : W22       :        :                   :         : 1         :                
+NC                           : W23       :        :                   :         : 1         :                
+NC                           : W24       :        :                   :         : 1         :                
+NC                           : W25       :        :                   :         : 1         :                
+NC                           : W26       :        :                   :         : 1         :                
+RESERVED_INPUT               : Y1        :        :                   :         : 1         :                
+RESERVED_INPUT               : Y2        :        :                   :         : 1         :                
+NC                           : Y3        :        :                   :         : 1         :                
+NC                           : Y4        :        :                   :         : 1         :                
+RESERVED_INPUT               : Y5        :        :                   :         : 1         :                
+RESERVED_INPUT               : Y6        :        :                   :         : 1         :                
+NC                           : Y7        :        :                   :         : 1         :                
+RESERVED_INPUT               : Y8        :        :                   :         : 8         :                
+NC                           : Y9        :        :                   :         : 1         :                
+RESERVED_INPUT               : Y10       :        :                   :         : 8         :                
+RESERVED_INPUT               : Y11       :        :                   :         : 8         :                
+MSEL0                        : Y12       :        :                   :         : 8         :                
+MSEL1                        : Y13       :        :                   :         : 8         :                
+nCE                          : Y14       :        :                   :         : 7         :                
+VCCSEL                       : Y15       :        :                   :         : 7         :                
+RESERVED_INPUT               : Y16       :        :                   :         : 7         :                
+RESERVED_INPUT               : Y17       :        :                   :         : 7         :                
+RESERVED_INPUT               : Y18       :        :                   :         : 7         :                
+NC                           : Y19       :        :                   :         : 1         :                
+RESERVED_INPUT               : Y20       :        :                   :         : 7         :                
+GND                          : Y21       :        :                   :         : 6         :                
+RESERVED_INPUT               : Y22       :        :                   :         : 6         :                
+RESERVED_INPUT               : Y23       :        :                   :         : 6         :                
+RESERVED_INPUT               : Y24       :        :                   :         : 6         :                
+RESERVED_INPUT               : Y25       :        :                   :         : 6         :                
+RESERVED_INPUT               : Y26       :        :                   :         : 6         :                

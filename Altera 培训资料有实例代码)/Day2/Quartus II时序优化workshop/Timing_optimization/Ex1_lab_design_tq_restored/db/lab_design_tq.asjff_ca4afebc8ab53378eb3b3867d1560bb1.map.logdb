@@ -1,0 +1,4 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|lpm_mult:\gen_ded_m1:gen_unext_m_a_b_c_d:m_a_b_c_d|mult_a701:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|lpm_mult:\gen_ded_m1:gen_unext_m_ac:m_ac|mult_6701:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|lpm_mult:\gen_ded_m1:gen_unext_m_bd:m_bd|mult_6701:auto_generated|mac_out2,

@@ -1,0 +1,111 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		two_d_dct_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:17:24  DECEMBER 19, 2003"
+set_global_assignment -name LAST_QUARTUS_VERSION 8.0
+
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name FAMILY "Stratix II"
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_GATE_RETIME OFF
+set_global_assignment -name TOP_LEVEL_ENTITY two_d_dct
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP2S15F484C3
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT OFF
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name VERILOG_FILE adder.v
+set_global_assignment -name VERILOG_FILE column_dct.v
+set_global_assignment -name VERILOG_FILE dct.v
+set_global_assignment -name VERILOG_FILE four_mult_add.v
+set_global_assignment -name VERILOG_FILE four_mult_add_blk.v
+set_global_assignment -name VERILOG_FILE one_mult_blk.v
+set_global_assignment -name VERILOG_FILE ram_tpmtx.v
+set_global_assignment -name VERILOG_FILE row_dct.v
+set_global_assignment -name VERILOG_FILE subtractor.v
+set_global_assignment -name VERILOG_FILE transpose_matrix.v
+set_global_assignment -name VERILOG_FILE two_d_dct.v
+set_global_assignment -name VERILOG_FILE two_mult_add.v
+set_global_assignment -name VERILOG_FILE two_mult_add_blk.v
+set_global_assignment -name ENABLE_ADVANCED_IO_TIMING OFF
+set_global_assignment -name RTLV_SIMPLIFIED_LOGIC ON
+set_global_assignment -name RTLV_GROUP_RELATED_NODES ON
+set_location_assignment PIN_D14 -to dct_out[12]
+set_location_assignment PIN_H22 -to serial_data[2]
+set_location_assignment PIN_G13 -to dct_out[7]
+set_location_assignment PIN_F16 -to dct_out[19]
+set_location_assignment PIN_F14 -to dct_out[2]
+set_location_assignment PIN_A17 -to dct_out[14]
+set_location_assignment PIN_N22 -to clk
+set_location_assignment PIN_E15 -to serial_data[4]
+set_location_assignment PIN_F13 -to dct_out[9]
+set_location_assignment PIN_J15 -to dct_out[21]
+set_location_assignment PIN_C17 -to dct_out[4]
+set_location_assignment PIN_C15 -to dct_out[10]
+set_location_assignment PIN_H16 -to dct_out[16]
+set_location_assignment PIN_D15 -to clken
+set_location_assignment PIN_K20 -to serial_data[0]
+set_location_assignment PIN_J19 -to data_valid
+set_location_assignment PIN_J16 -to serial_data[6]
+set_location_assignment PIN_C18 -to dct_out[5]
+set_location_assignment PIN_A18 -to dct_out[11]
+set_location_assignment PIN_E14 -to dct_out[17]
+set_location_assignment PIN_E13 -to ~DATA0~
+set_location_assignment PIN_J18 -to serial_data[1]
+set_location_assignment PIN_B16 -to dct_out[0]
+set_location_assignment PIN_J17 -to serial_data[7]
+set_location_assignment PIN_B18 -to dct_out[6]
+set_location_assignment PIN_G15 -to dct_out[18]
+set_location_assignment PIN_F15 -to dct_out[1]
+set_location_assignment PIN_B17 -to dct_out[13]
+set_location_assignment PIN_V22 -to aclr
+set_location_assignment PIN_G22 -to serial_data[3]
+set_location_assignment PIN_A16 -to dct_out[8]
+set_location_assignment PIN_G14 -to dct_out[20]
+set_location_assignment PIN_C14 -to dct_out[3]
+set_location_assignment PIN_H14 -to dct_out[15]
+set_location_assignment PIN_H21 -to serial_data[5]
+set_global_assignment -name USE_TIMEQUEST_TIMING_ANALYZER ON
+set_global_assignment -name SDC_FILE two_d_dct.sdc
+set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"

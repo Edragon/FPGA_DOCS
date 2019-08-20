@@ -1,0 +1,7 @@
+@P:  Part : EP1S10FC780-5
+@P:  Worst Slack : NA
+@P: alu Part : ep1s10fc780-5
+@P: alu I/O ATOMs : 28
+@P: alu Total LUTs: : 34 of 10570 ( 0%)
+@P: alu Logic resources : 34 ATOMs of 10570 ( 0%)
+@P: alu DSP Blocks : 0 (0 nine bit DSP elements)

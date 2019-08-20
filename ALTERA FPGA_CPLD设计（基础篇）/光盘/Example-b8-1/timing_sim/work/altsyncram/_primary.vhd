@@ -1,0 +1,67 @@
+library verilog;
+use verilog.vl_types.all;
+entity altsyncram is
+    generic(
+        width_a         : integer := 1;
+        widthad_a       : integer := 1;
+        numwords_a      : integer := 0;
+        outdata_reg_a   : string  := "UNREGISTERED";
+        address_aclr_a  : string  := "NONE";
+        outdata_aclr_a  : string  := "NONE";
+        indata_aclr_a   : string  := "NONE";
+        wrcontrol_aclr_a: string  := "NONE";
+        byteena_aclr_a  : string  := "NONE";
+        width_byteena_a : integer := 1;
+        width_b         : integer := 1;
+        widthad_b       : integer := 1;
+        numwords_b      : integer := 0;
+        rdcontrol_reg_b : string  := "CLOCK1";
+        address_reg_b   : string  := "CLOCK1";
+        outdata_reg_b   : string  := "UNREGISTERED";
+        outdata_aclr_b  : string  := "NONE";
+        rdcontrol_aclr_b: string  := "NONE";
+        indata_reg_b    : string  := "CLOCK1";
+        wrcontrol_wraddress_reg_b: string  := "CLOCK1";
+        byteena_reg_b   : string  := "CLOCK1";
+        indata_aclr_b   : string  := "NONE";
+        wrcontrol_aclr_b: string  := "NONE";
+        address_aclr_b  : string  := "NONE";
+        byteena_aclr_b  : string  := "NONE";
+        width_byteena_b : integer := 1;
+        clock_enable_input_a: string  := "NORMAL";
+        clock_enable_output_a: string  := "NORMAL";
+        clock_enable_input_b: string  := "NORMAL";
+        clock_enable_output_b: string  := "NORMAL";
+        operation_mode  : string  := "BIDIR_DUAL_PORT";
+        byte_size       : integer := 8;
+        read_during_write_mode_mixed_ports: string  := "DONT_CARE";
+        ram_block_type  : string  := "AUTO";
+        init_file       : string  := "UNUSED";
+        init_file_layout: string  := "UNUSED";
+        maximum_depth   : integer := 0;
+        intended_device_family: string  := "Stratix";
+        lpm_hint        : string  := "UNUSED";
+        lpm_type        : string  := "altsyncram"
+    );
+    port(
+        wren_a          : in     vl_logic;
+        wren_b          : in     vl_logic;
+        rden_b          : in     vl_logic;
+        data_a          : in     vl_logic_vector;
+        data_b          : in     vl_logic_vector;
+        address_a       : in     vl_logic_vector;
+        address_b       : in     vl_logic_vector;
+        clock0          : in     vl_logic;
+        clock1          : in     vl_logic;
+        clocken0        : in     vl_logic;
+        clocken1        : in     vl_logic;
+        aclr0           : in     vl_logic;
+        aclr1           : in     vl_logic;
+        byteena_a       : in     vl_logic_vector;
+        byteena_b       : in     vl_logic_vector;
+        addressstall_a  : in     vl_logic;
+        addressstall_b  : in     vl_logic;
+        q_a             : out    vl_logic_vector;
+        q_b             : out    vl_logic_vector
+    );
+end altsyncram;

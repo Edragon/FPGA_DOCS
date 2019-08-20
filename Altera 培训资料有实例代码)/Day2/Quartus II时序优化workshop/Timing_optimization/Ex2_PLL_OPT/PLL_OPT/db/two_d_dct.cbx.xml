@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="two_d_dct">
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|four_mult_add_blk:four_mult_add_blk_inst0|four_mult_add:four_mult_add_inst|altmult_add:ALTMULT_ADD_component" CBX_FILE_NAME="mult_add_tc05.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|two_mult_add_blk:two_mult_add_blk_inst0|two_mult_add:two_mult_add_inst|altmult_add:ALTMULT_ADD_component" CBX_FILE_NAME="mult_add_8ja3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s2_2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s3_1|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|two_mult_add_blk:two_mult_add_blk_inst1|two_mult_add:two_mult_add_inst|altmult_add:ALTMULT_ADD_component" CBX_FILE_NAME="mult_add_8ja3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s1_4|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s2_3|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|altshift_taps:stage4_0_0p_rtl_1" CBX_FILE_NAME="shift_taps_a2n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s1_5|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s1_0|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s1_6|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s1_1|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s2_0|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|one_mult_blk:one_mult_blk_inst0|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_lar.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|subtractor:subtractor_s1_7|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_o3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|column_dct:col_dct_inst|ram_tpmtx:ram3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s1_2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s2_1|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s3_0|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|transpose_matrix:tp_mtx_inst|ram_tpmtx:ram4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_47n1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|adder:adder_s1_3|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_n2j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|two_d_dct|row_dct:row_dct_inst|dct:u1|altshift_taps:stage6_3_0p_rtl_0" CBX_FILE_NAME="shift_taps_c2n.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Wed Apr 01 11:02:52 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : top_qic
+Top-level Entity Name : top_qic
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 0
+    Dedicated logic registers : 0
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+DSP block 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+Total DLLs : N/A until Partition Merge

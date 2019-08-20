@@ -1,0 +1,12 @@
+@P:  Part : EP1S10FC780-5
+@P:  Worst Slack : 5.258
+@P:  top|clk - Estimated Frequency : 709.8 MHz
+@P:  top|clk - Requested Frequency : 150.0 MHz
+@P:  top|clk - Estimated Period : 1.409
+@P:  top|clk - Requested Period : 6.667
+@P:  top|clk - Slack : 5.258
+@P: top Part : ep1s10fc780-5
+@P: top I/O ATOMs : 28
+@P: top Total LUTs: : 16 of 10570 ( 0%)
+@P: top Logic resources : 16 ATOMs of 10570 ( 0%)
+@P: top DSP Blocks : 0 (0 nine bit DSP elements)

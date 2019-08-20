@@ -1,0 +1,556 @@
+Version 8.0 Build 215 05/29/2008 SJ Full Version
+7
+488
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+des
+# storage
+db|des.(0).cnf
+db|des.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+des.v
+3718b899ea2af2fbd5402a4f70faedd5
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+key_sel
+# storage
+db|des.(1).cnf
+db|des.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+key_sel.v
+ae2021883edbd57ebef7ffc75455e1
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+key_sel:uk
+}
+# macro_sequence
+
+# end
+# entity
+crp
+# storage
+db|des.(2).cnf
+db|des.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+crp.v
+67c4399b0c5adfda0f44ff53f7d92c7
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0
+crp:u1
+crp:u2
+crp:u3
+crp:u4
+crp:u5
+crp:u6
+crp:u7
+crp:u8
+crp:u9
+crp:u10
+crp:u11
+crp:u12
+crp:u13
+crp:u14
+crp:u15
+}
+# macro_sequence
+
+# end
+# entity
+sbox1
+# storage
+db|des.(3).cnf
+db|des.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox1.v
+e790fcad7f7d186865977212735d58cc
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox1:u0
+crp:u1|sbox1:u0
+crp:u2|sbox1:u0
+crp:u3|sbox1:u0
+crp:u4|sbox1:u0
+crp:u5|sbox1:u0
+crp:u6|sbox1:u0
+crp:u7|sbox1:u0
+crp:u8|sbox1:u0
+crp:u9|sbox1:u0
+crp:u10|sbox1:u0
+crp:u11|sbox1:u0
+crp:u12|sbox1:u0
+crp:u13|sbox1:u0
+crp:u14|sbox1:u0
+crp:u15|sbox1:u0
+}
+# macro_sequence
+
+# end
+# entity
+sbox2
+# storage
+db|des.(4).cnf
+db|des.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox2.v
+5ca45ffc3c44a93dfc867d8a207b18
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox2:u1
+crp:u1|sbox2:u1
+crp:u2|sbox2:u1
+crp:u3|sbox2:u1
+crp:u4|sbox2:u1
+crp:u5|sbox2:u1
+crp:u6|sbox2:u1
+crp:u7|sbox2:u1
+crp:u8|sbox2:u1
+crp:u9|sbox2:u1
+crp:u10|sbox2:u1
+crp:u11|sbox2:u1
+crp:u12|sbox2:u1
+crp:u13|sbox2:u1
+crp:u14|sbox2:u1
+crp:u15|sbox2:u1
+}
+# macro_sequence
+
+# end
+# entity
+sbox3
+# storage
+db|des.(5).cnf
+db|des.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox3.v
+1c533e5cbe2583ad66b8fbb5f472a34
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox3:u2
+crp:u1|sbox3:u2
+crp:u2|sbox3:u2
+crp:u3|sbox3:u2
+crp:u4|sbox3:u2
+crp:u5|sbox3:u2
+crp:u6|sbox3:u2
+crp:u7|sbox3:u2
+crp:u8|sbox3:u2
+crp:u9|sbox3:u2
+crp:u10|sbox3:u2
+crp:u11|sbox3:u2
+crp:u12|sbox3:u2
+crp:u13|sbox3:u2
+crp:u14|sbox3:u2
+crp:u15|sbox3:u2
+}
+# macro_sequence
+
+# end
+# entity
+sbox4
+# storage
+db|des.(6).cnf
+db|des.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox4.v
+674283ae48bb9c14fd5f3d1ad643efa
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox4:u3
+crp:u1|sbox4:u3
+crp:u2|sbox4:u3
+crp:u3|sbox4:u3
+crp:u4|sbox4:u3
+crp:u5|sbox4:u3
+crp:u6|sbox4:u3
+crp:u7|sbox4:u3
+crp:u8|sbox4:u3
+crp:u9|sbox4:u3
+crp:u10|sbox4:u3
+crp:u11|sbox4:u3
+crp:u12|sbox4:u3
+crp:u13|sbox4:u3
+crp:u14|sbox4:u3
+crp:u15|sbox4:u3
+}
+# macro_sequence
+
+# end
+# entity
+sbox5
+# storage
+db|des.(7).cnf
+db|des.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox5.v
+8aba3c672d1be0c6dcd3dfe689b0445e
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox5:u4
+crp:u1|sbox5:u4
+crp:u2|sbox5:u4
+crp:u3|sbox5:u4
+crp:u4|sbox5:u4
+crp:u5|sbox5:u4
+crp:u6|sbox5:u4
+crp:u7|sbox5:u4
+crp:u8|sbox5:u4
+crp:u9|sbox5:u4
+crp:u10|sbox5:u4
+crp:u11|sbox5:u4
+crp:u12|sbox5:u4
+crp:u13|sbox5:u4
+crp:u14|sbox5:u4
+crp:u15|sbox5:u4
+}
+# macro_sequence
+
+# end
+# entity
+sbox6
+# storage
+db|des.(8).cnf
+db|des.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox6.v
+70cfa478d31f19752b62dc399b174b68
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox6:u5
+crp:u1|sbox6:u5
+crp:u2|sbox6:u5
+crp:u3|sbox6:u5
+crp:u4|sbox6:u5
+crp:u5|sbox6:u5
+crp:u6|sbox6:u5
+crp:u7|sbox6:u5
+crp:u8|sbox6:u5
+crp:u9|sbox6:u5
+crp:u10|sbox6:u5
+crp:u11|sbox6:u5
+crp:u12|sbox6:u5
+crp:u13|sbox6:u5
+crp:u14|sbox6:u5
+crp:u15|sbox6:u5
+}
+# macro_sequence
+
+# end
+# entity
+sbox7
+# storage
+db|des.(9).cnf
+db|des.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox7.v
+e6be8a5be94e4be891cde1d1dd12e815
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox7:u6
+crp:u1|sbox7:u6
+crp:u2|sbox7:u6
+crp:u3|sbox7:u6
+crp:u4|sbox7:u6
+crp:u5|sbox7:u6
+crp:u6|sbox7:u6
+crp:u7|sbox7:u6
+crp:u8|sbox7:u6
+crp:u9|sbox7:u6
+crp:u10|sbox7:u6
+crp:u11|sbox7:u6
+crp:u12|sbox7:u6
+crp:u13|sbox7:u6
+crp:u14|sbox7:u6
+crp:u15|sbox7:u6
+}
+# macro_sequence
+
+# end
+# entity
+sbox8
+# storage
+db|des.(10).cnf
+db|des.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+sbox8.v
+e8f3399365add8c243fdf836277a21d
+7
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+crp:u0|sbox8:u7
+crp:u1|sbox8:u7
+crp:u2|sbox8:u7
+crp:u3|sbox8:u7
+crp:u4|sbox8:u7
+crp:u5|sbox8:u7
+crp:u6|sbox8:u7
+crp:u7|sbox8:u7
+crp:u8|sbox8:u7
+crp:u9|sbox8:u7
+crp:u10|sbox8:u7
+crp:u11|sbox8:u7
+crp:u12|sbox8:u7
+crp:u13|sbox8:u7
+crp:u14|sbox8:u7
+crp:u15|sbox8:u7
+}
+# macro_sequence
+
+# end
+# complete
+

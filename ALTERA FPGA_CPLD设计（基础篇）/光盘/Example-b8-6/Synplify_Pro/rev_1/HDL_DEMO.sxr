@@ -1,0 +1,138 @@
+
+BeginView hdl_demo NoName
+Inst: state[9]   state_9_ stratix_lcell_ff 
+Inst: state[8]   state_8_ stratix_lcell_ff 
+Inst: state[7]   state_7_ stratix_lcell_ff 
+Inst: state[6]   state_6_ stratix_lcell_ff 
+Inst: state[5]   state_5_ stratix_lcell_ff 
+Inst: state[4]   state_4_ stratix_lcell_ff 
+Inst: state[3]   state_3_ stratix_lcell_ff 
+Inst: state[2]   state_2_ stratix_lcell_ff 
+Inst: state[1]   state_1_ stratix_lcell_ff 
+Inst: state_i[0]   state_i_0_ stratix_lcell_ff 
+Inst: op_code[2]   op_code_2_ stratix_lcell_ff 
+Inst: op_code[1]   op_code_1_ stratix_lcell_ff 
+Inst: op_code[0]   op_code_0_ stratix_lcell_ff 
+Inst: start   start_Z stratix_lcell_ff 
+Inst: start9   start9_Z stratix_lcell 
+Inst: start9_29   start9_29_Z stratix_lcell 
+Inst: start9_26   start9_26_Z stratix_lcell 
+Inst: start9_26_a   start9_26_a_Z stratix_lcell 
+Inst: state_ns_i_0_a[3]   state_ns_i_0_a_3_ stratix_lcell 
+Inst: state_ns_0_0_a[4]   state_ns_0_0_a_4_ stratix_lcell 
+Inst: state_ns_0_0_a[2]   state_ns_0_0_a_2_ stratix_lcell 
+Inst: start9_23   start9_23_Z stratix_lcell 
+Inst: start9_22   start9_22_Z stratix_lcell 
+Inst: start9_21   start9_21_Z stratix_lcell 
+Inst: start9_20   start9_20_Z stratix_lcell 
+Inst: start9_18   start9_18_Z stratix_lcell 
+Inst: start9_17   start9_17_Z stratix_lcell 
+Inst: start9_16   start9_16_Z stratix_lcell 
+Inst: accum_b_in[7]   accum_b_in_7_ stratix_io 
+Inst: accum_b_in[6]   accum_b_in_6_ stratix_io 
+Inst: accum_b_in[5]   accum_b_in_5_ stratix_io 
+Inst: accum_b_in[4]   accum_b_in_4_ stratix_io 
+Inst: accum_b_in[3]   accum_b_in_3_ stratix_io 
+Inst: accum_b_in[2]   accum_b_in_2_ stratix_io 
+Inst: accum_b_in[1]   accum_b_in_1_ stratix_io 
+Inst: accum_b_in[0]   accum_b_in_0_ stratix_io 
+Inst: accum_a_in[7]   accum_a_in_7_ stratix_io 
+Inst: accum_a_in[6]   accum_a_in_6_ stratix_io 
+Inst: accum_a_in[5]   accum_a_in_5_ stratix_io 
+Inst: accum_a_in[4]   accum_a_in_4_ stratix_io 
+Inst: accum_a_in[3]   accum_a_in_3_ stratix_io 
+Inst: accum_a_in[2]   accum_a_in_2_ stratix_io 
+Inst: accum_a_in[1]   accum_a_in_1_ stratix_io 
+Inst: accum_a_in[0]   accum_a_in_0_ stratix_io 
+Inst: start_value_in[31]   start_value_in_31_ stratix_io 
+Inst: start_value_in[30]   start_value_in_30_ stratix_io 
+Inst: start_value_in[29]   start_value_in_29_ stratix_io 
+Inst: start_value_in[28]   start_value_in_28_ stratix_io 
+Inst: start_value_in[27]   start_value_in_27_ stratix_io 
+Inst: start_value_in[26]   start_value_in_26_ stratix_io 
+Inst: start_value_in[25]   start_value_in_25_ stratix_io 
+Inst: start_value_in[24]   start_value_in_24_ stratix_io 
+Inst: start_value_in[23]   start_value_in_23_ stratix_io 
+Inst: start_value_in[22]   start_value_in_22_ stratix_io 
+Inst: start_value_in[21]   start_value_in_21_ stratix_io 
+Inst: start_value_in[20]   start_value_in_20_ stratix_io 
+Inst: start_value_in[19]   start_value_in_19_ stratix_io 
+Inst: start_value_in[18]   start_value_in_18_ stratix_io 
+Inst: start_value_in[17]   start_value_in_17_ stratix_io 
+Inst: start_value_in[16]   start_value_in_16_ stratix_io 
+Inst: start_value_in[15]   start_value_in_15_ stratix_io 
+Inst: start_value_in[14]   start_value_in_14_ stratix_io 
+Inst: start_value_in[13]   start_value_in_13_ stratix_io 
+Inst: start_value_in[12]   start_value_in_12_ stratix_io 
+Inst: start_value_in[11]   start_value_in_11_ stratix_io 
+Inst: start_value_in[10]   start_value_in_10_ stratix_io 
+Inst: start_value_in[9]   start_value_in_9_ stratix_io 
+Inst: start_value_in[8]   start_value_in_8_ stratix_io 
+Inst: start_value_in[7]   start_value_in_7_ stratix_io 
+Inst: start_value_in[6]   start_value_in_6_ stratix_io 
+Inst: start_value_in[5]   start_value_in_5_ stratix_io 
+Inst: start_value_in[4]   start_value_in_4_ stratix_io 
+Inst: start_value_in[3]   start_value_in_3_ stratix_io 
+Inst: start_value_in[2]   start_value_in_2_ stratix_io 
+Inst: start_value_in[1]   start_value_in_1_ stratix_io 
+Inst: start_value_in[0]   start_value_in_0_ stratix_io 
+Inst: result_out[7]   result_out_7_ stratix_io 
+Inst: result_out[6]   result_out_6_ stratix_io 
+Inst: result_out[5]   result_out_5_ stratix_io 
+Inst: result_out[4]   result_out_4_ stratix_io 
+Inst: result_out[3]   result_out_3_ stratix_io 
+Inst: result_out[2]   result_out_2_ stratix_io 
+Inst: result_out[1]   result_out_1_ stratix_io 
+Inst: result_out[0]   result_out_0_ stratix_io 
+Net:  alu1.outp[7]   alu1_outp[7] 
+Net:  alu1.outp[6]   alu1_outp[6] 
+Net:  alu1.outp[5]   alu1_outp[5] 
+Net:  alu1.outp[4]   alu1_outp[4] 
+Net:  alu1.outp[3]   alu1_outp[3] 
+Net:  alu1.outp[2]   alu1_outp[2] 
+Net:  alu1.outp[1]   alu1_outp[1] 
+Net:  alu1.outp[0]   alu1_outp[0] 
+EndView hdl_demo NoName
+
+BeginView alu NoName
+Inst: outp[7]   outp_7_ stratix_lcell_ff 
+Inst: outp[6]   outp_6_ stratix_lcell_ff 
+Inst: outp[5]   outp_5_ stratix_lcell_ff 
+Inst: outp[4]   outp_4_ stratix_lcell_ff 
+Inst: outp[3]   outp_3_ stratix_lcell_ff 
+Inst: outp[2]   outp_2_ stratix_lcell_ff 
+Inst: outp[1]   outp_1_ stratix_lcell_ff 
+Inst: outp[0]   outp_0_ stratix_lcell_ff 
+Inst: outp_8_3[7]   outp_8_3_7_ stratix_lcell 
+Inst: outp_8_3_a[7]   outp_8_3_a_7_ stratix_lcell 
+Inst: outp_8_3[6]   outp_8_3_6_ stratix_lcell 
+Inst: outp_8_3_a[6]   outp_8_3_a_6_ stratix_lcell 
+Inst: outp_8_3[5]   outp_8_3_5_ stratix_lcell 
+Inst: outp_8_3_a[5]   outp_8_3_a_5_ stratix_lcell 
+Inst: outp_8_3[4]   outp_8_3_4_ stratix_lcell 
+Inst: outp_8_3_a[4]   outp_8_3_a_4_ stratix_lcell 
+Inst: outp_8_3[3]   outp_8_3_3_ stratix_lcell 
+Inst: outp_8_3_a[3]   outp_8_3_a_3_ stratix_lcell 
+Inst: outp_8_3[2]   outp_8_3_2_ stratix_lcell 
+Inst: outp_8_3_a[2]   outp_8_3_a_2_ stratix_lcell 
+Inst: outp_8_3[1]   outp_8_3_1_ stratix_lcell 
+Inst: outp_8_3_a[1]   outp_8_3_a_1_ stratix_lcell 
+Inst: outp_8_3[0]   outp_8_3_0_ stratix_lcell 
+Inst: outp_8_3_a[0]   outp_8_3_a_0_ stratix_lcell 
+Inst: un4_outp_add7   un4_outp_add7_Z stratix_lcell 
+Inst: un4_outp_add6   un4_outp_add6_Z stratix_lcell 
+Inst: un4_outp_add5   un4_outp_add5_Z stratix_lcell 
+Inst: un4_outp_add4   un4_outp_add4_Z stratix_lcell 
+Inst: un4_outp_add3   un4_outp_add3_Z stratix_lcell 
+Inst: un4_outp_add2   un4_outp_add2_Z stratix_lcell 
+Inst: un4_outp_add1   un4_outp_add1_Z stratix_lcell 
+Inst: un4_outp_add0   un4_outp_add0_Z stratix_lcell 
+Inst: outp_1_add7   outp_1_add7_Z stratix_lcell 
+Inst: outp_1_add6   outp_1_add6_Z stratix_lcell 
+Inst: outp_1_add5   outp_1_add5_Z stratix_lcell 
+Inst: outp_1_add4   outp_1_add4_Z stratix_lcell 
+Inst: outp_1_add3   outp_1_add3_Z stratix_lcell 
+Inst: outp_1_add2   outp_1_add2_Z stratix_lcell 
+Inst: outp_1_add1   outp_1_add1_Z stratix_lcell 
+Inst: outp_1_add0   outp_1_add0_Z stratix_lcell 
+EndView alu NoName

@@ -1,0 +1,8 @@
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x0" differs only in case from object "X0" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x1" differs only in case from object "X1" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x2" differs only in case from object "X2" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x3" differs only in case from object "X3" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x4" differs only in case from object "X4" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x5" differs only in case from object "X5" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x6" differs only in case from object "X6" in the same scope
+Info (10281): Verilog HDL Declaration information at dct.v(8): object "x7" differs only in case from object "X7" in the same scope

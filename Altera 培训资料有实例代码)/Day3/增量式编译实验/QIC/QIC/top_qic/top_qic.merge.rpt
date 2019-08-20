@@ -1,0 +1,167 @@
+Partition Merge report for top_qic
+Wed Apr 01 11:03:02 2009
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Partition Statistics
+  5. Partition Merge Partition Assignments
+  6. Partition Merge Resource Usage Summary
+  7. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Partition Merge Summary                                                  ;
++-------------------------------+------------------------------------------+
+; Partition Merge Status        ; Successful - Wed Apr 01 11:03:02 2009    ;
+; Quartus II Version            ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name                 ; top_qic                                  ;
+; Top-level Entity Name         ; top_qic                                  ;
+; Family                        ; Stratix II                               ;
+; Logic utilization             ; N/A                                      ;
+;     Combinational ALUTs       ; 0                                        ;
+;     Dedicated logic registers ; 0                                        ;
+; Total registers               ; 0                                        ;
+; Total pins                    ; 240                                      ;
+; Total virtual pins            ; 368                                      ;
+; Total block memory bits       ; 0                                        ;
+; DSP block 9-bit elements      ; 0                                        ;
+; Total PLLs                    ; 0                                        ;
+; Total DLLs                    ; 0                                        ;
++-------------------------------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                       ;
++-------------------+------------------------+------------------------+--------------------+
+; Partition Name    ; Netlist Type Used      ; Netlist Type Requested ; Partition Contents ;
++-------------------+------------------------+------------------------+--------------------+
+; Top               ; Post-Synthesis Netlist ; Post-Synthesis Netlist ; |                  ;
+; des:inst2         ; Empty Netlist          ; Empty Netlist          ; des:inst2          ;
+; fir_top:inst      ; Empty Netlist          ; Empty Netlist          ; fir_top:inst       ;
+; placeholder:inst3 ; Empty Netlist          ; Empty Netlist          ; placeholder:inst3  ;
++-------------------+------------------------+------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                ;
++--------------------------------------+-----------+--------------+-------------------+
+; Statistic                            ; des:inst2 ; fir_top:inst ; placeholder:inst3 ;
++--------------------------------------+-----------+--------------+-------------------+
+; Resources                            ;           ;              ;                   ;
+;     -- Pre-placed nodes              ; 308       ; 108          ; 192               ;
+;     -- Virtual pin                   ; 186       ; 54           ; 128               ;
+;                                      ;           ;              ;                   ;
+; Connections                          ;           ;              ;                   ;
+;     -- Input Connections             ; 64        ; 0            ; 0                 ;
+;     -- Registered Input Connections  ; 0         ; 0            ; 0                 ;
+;     -- Output Connections            ; 0         ; 0            ; 64                ;
+;     -- Registered Output Connections ; 0         ; 0            ; 0                 ;
+;                                      ;           ;              ;                   ;
+; Internal Congestion                  ;           ;              ;                   ;
+;     -- Total Connections             ; 186       ; 54           ; 128               ;
+;     -- Registered Connections        ; 0         ; 0            ; 0                 ;
+;                                      ;           ;              ;                   ;
+; Inter-partition connections          ;           ;              ;                   ;
+;     -- des:inst2                     ; 0         ; 0            ; 64                ;
+;     -- fir_top:inst                  ; 0         ; 0            ; 0                 ;
+;     -- placeholder:inst3             ; 64        ; 0            ; 0                 ;
++--------------------------------------+-----------+--------------+-------------------+
+
+
++--------------------------------------------+
+; Partition Merge Partition Assignments      ;
++-----------+------------+-------+------+----+
+; Partition ; Assignment ; Value ; From ; To ;
++-----------+------------+-------+------+----+
+
+
++------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                 ;
++----------------------------------------------+-------------------------+
+; Resource                                     ; Usage                   ;
++----------------------------------------------+-------------------------+
+; Estimated ALUTs Used                         ; 0                       ;
+; Dedicated logic registers                    ; 0                       ;
+;                                              ;                         ;
+; Estimated ALUTs Unavailable                  ; 0                       ;
+;                                              ;                         ;
+; Total combinational functions                ; 0                       ;
+; Combinational ALUT usage by number of inputs ;                         ;
+;     -- 7 input functions                     ; 0                       ;
+;     -- 6 input functions                     ; 0                       ;
+;     -- 5 input functions                     ; 0                       ;
+;     -- 4 input functions                     ; 0                       ;
+;     -- <=3 input functions                   ; 0                       ;
+;                                              ;                         ;
+; Combinational ALUTs by mode                  ;                         ;
+;     -- normal mode                           ; 0                       ;
+;     -- extended LUT mode                     ; 0                       ;
+;     -- arithmetic mode                       ; 0                       ;
+;     -- shared arithmetic mode                ; 0                       ;
+;                                              ;                         ;
+; Estimated ALUT/register pairs used           ; 0                       ;
+;                                              ;                         ;
+; Total registers                              ; 0                       ;
+;     -- Dedicated logic registers             ; 0                       ;
+;     -- I/O registers                         ; 0                       ;
+;                                              ;                         ;
+;                                              ;                         ;
+; Virtual pins                                 ; 368                     ;
+; I/O pins                                     ; 240                     ;
+; Maximum fan-out node                         ; fir_top:inst|done~EMPTY ;
+; Maximum fan-out                              ; 1                       ;
+; Total fan-out                                ; 304                     ;
+; Average fan-out                              ; 0.50                    ;
++----------------------------------------------+-------------------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Partition Merge
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Wed Apr 01 11:03:00 2009
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off top_qic -c top_qic --merge=on
+Info: Using synthesis netlist for partition "Top"
+Info: Using empty netlist for partition "fir_top:inst"
+Info: Using empty netlist for partition "des:inst2"
+Info: Using empty netlist for partition "placeholder:inst3"
+Info: Resolved and merged 4 partition(s)
+Info: Implemented 608 device resources after synthesis - the final resource count might be different
+    Info: Implemented 140 input pins
+    Info: Implemented 100 output pins
+    Info: Implemented 368 logic cells
+Info: Quartus II Partition Merge was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Wed Apr 01 11:03:02 2009
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

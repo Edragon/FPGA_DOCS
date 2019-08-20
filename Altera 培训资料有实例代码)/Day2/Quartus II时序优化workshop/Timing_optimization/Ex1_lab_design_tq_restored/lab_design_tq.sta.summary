@@ -1,0 +1,133 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'SCLK'
+Slack : -1.518
+TNS   : -16.850
+
+Type  : Slow Model Setup 'SPI3_TX_TFCLK'
+Slack : 0.214
+TNS   : 0.000
+
+Type  : Slow Model Setup 'FCLK'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Slow Model Setup 'SPI3_RX_RFCLK'
+Slack : 0.520
+TNS   : 0.000
+
+Type  : Slow Model Hold 'SCLK'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'SPI3_RX_RFCLK'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'SPI3_TX_TFCLK'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'FCLK'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'SCLK'
+Slack : 1.543
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'FCLK'
+Slack : 4.048
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'SPI3_RX_RFCLK'
+Slack : 4.813
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'SPI3_TX_TFCLK'
+Slack : 5.607
+TNS   : 0.000
+
+Type  : Slow Model Removal 'SPI3_TX_TFCLK'
+Slack : 1.466
+TNS   : 0.000
+
+Type  : Slow Model Removal 'SPI3_RX_RFCLK'
+Slack : 1.980
+TNS   : 0.000
+
+Type  : Slow Model Removal 'FCLK'
+Slack : 2.818
+TNS   : 0.000
+
+Type  : Slow Model Removal 'SCLK'
+Slack : 2.842
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SCLK'
+Slack : 1.957
+TNS   : 0.000
+
+Type  : Fast Model Setup 'FCLK'
+Slack : 2.197
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SPI3_TX_TFCLK'
+Slack : 3.130
+TNS   : 0.000
+
+Type  : Fast Model Setup 'SPI3_RX_RFCLK'
+Slack : 3.187
+TNS   : 0.000
+
+Type  : Fast Model Hold 'FCLK'
+Slack : 0.198
+TNS   : 0.000
+
+Type  : Fast Model Hold 'SCLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'SPI3_RX_RFCLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'SPI3_TX_TFCLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'SCLK'
+Slack : 3.074
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'FCLK'
+Slack : 5.411
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'SPI3_RX_RFCLK'
+Slack : 7.785
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'SPI3_TX_TFCLK'
+Slack : 8.066
+TNS   : 0.000
+
+Type  : Fast Model Removal 'SPI3_TX_TFCLK'
+Slack : 0.720
+TNS   : 0.000
+
+Type  : Fast Model Removal 'SPI3_RX_RFCLK'
+Slack : 0.914
+TNS   : 0.000
+
+Type  : Fast Model Removal 'FCLK'
+Slack : 1.706
+TNS   : 0.000
+
+Type  : Fast Model Removal 'SCLK'
+Slack : 1.739
+TNS   : 0.000
+
+------------------------------------------------------------

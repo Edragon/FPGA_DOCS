@@ -1,0 +1,24 @@
+
+fsm_encoding {1380381} onehot
+
+fsm_state_encoding {1380381} 0000 {0000000001}
+
+fsm_state_encoding {1380381} 0001 {0000000010}
+
+fsm_state_encoding {1380381} 0010 {0000000100}
+
+fsm_state_encoding {1380381} 0011 {0000001000}
+
+fsm_state_encoding {1380381} 0100 {0000010000}
+
+fsm_state_encoding {1380381} 1000 {0000100000}
+
+fsm_state_encoding {1380381} 1001 {0001000000}
+
+fsm_state_encoding {1380381} 1010 {0010000000}
+
+fsm_state_encoding {1380381} 1011 {0100000000}
+
+fsm_state_encoding {1380381} 1100 {1000000000}
+
+fsm_registers {1380381} {state[9]}  {state[8]}  {state[7]}  {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 

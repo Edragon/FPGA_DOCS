@@ -1,0 +1,101 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		top_qic_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Stratix II"
+set_global_assignment -name DEVICE EP2S15F672C3
+set_global_assignment -name TOP_LEVEL_ENTITY top_qic
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:04:38  JANUARY 06, 2007"
+set_global_assignment -name LAST_QUARTUS_VERSION 8.0
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_SYNTH -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
+set_global_assignment -name INCREMENTAL_COMPILATION FULL_INCREMENTAL_COMPILATION
+set_global_assignment -name VERILOG_FILE placeholder.v
+set_global_assignment -name VERILOG_FILE des_bb.v
+set_global_assignment -name VERILOG_FILE fir_top_bb.v
+set_global_assignment -name LL_ORIGIN LAB_X1_Y1 -section_id "placeholder:inst3"
+set_global_assignment -name LL_HEIGHT 13 -section_id "placeholder:inst3"
+set_global_assignment -name LL_WIDTH 39 -section_id "placeholder:inst3"
+set_global_assignment -name LL_STATE LOCKED -section_id "placeholder:inst3"
+set_global_assignment -name LL_AUTO_SIZE OFF -section_id "placeholder:inst3"
+set_global_assignment -name LL_RESERVED OFF -section_id "placeholder:inst3"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "placeholder:inst3"
+set_global_assignment -name LL_SOFT OFF -section_id "placeholder:inst3"
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
+set_global_assignment -name OPTIMIZE_POWER_DURING_SYNTHESIS NORMAL_COMPILATION
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_TIMING_ANALYSIS_TOOL "<None>"
+set_global_assignment -name EDA_BOARD_DESIGN_TOOL "<None>"
+set_global_assignment -name EDA_FORMAL_VERIFICATION_TOOL "<None>"
+set_global_assignment -name EDA_RESYNTHESIS_TOOL "<None>"
+set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "<None>"
+set_global_assignment -name DSP_BLOCK_BALANCING "LOGIC ELEMENTS"
+set_global_assignment -name AUTO_SHIFT_REGISTER_RECOGNITION OFF
+
+set_instance_assignment -name PARTITION_HIERARCHY inst_531cccc3a255189093e59a88deafd21 -to "fir_top:inst" -section_id "fir_top:inst"
+set_global_assignment -name PARTITION_NETLIST_TYPE EMPTY -section_id "fir_top:inst"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id "fir_top:inst"
+set_instance_assignment -name PARTITION_HIERARCHY inst2_bfa50e9a2595998c13978fe5c8dcfa71 -to "des:inst2" -section_id "des:inst2"
+set_global_assignment -name PARTITION_NETLIST_TYPE EMPTY -section_id "des:inst2"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id "des:inst2"
+set_instance_assignment -name PARTITION_HIERARCHY inst3_d21e21776ee69bc27ca670f8807769c71 -to "placeholder:inst3" -section_id "placeholder:inst3"
+set_global_assignment -name PARTITION_NETLIST_TYPE EMPTY -section_id "placeholder:inst3"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id "placeholder:inst3"
+set_global_assignment -name LL_ORIGIN LAB_X18_Y14 -section_id "fir_top:inst"
+set_global_assignment -name LL_HEIGHT 13 -section_id "fir_top:inst"
+set_global_assignment -name LL_WIDTH 22 -section_id "fir_top:inst"
+set_global_assignment -name LL_STATE LOCKED -section_id "fir_top:inst"
+set_global_assignment -name LL_AUTO_SIZE OFF -section_id "fir_top:inst"
+set_global_assignment -name LL_RESERVED OFF -section_id "fir_top:inst"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "fir_top:inst"
+set_global_assignment -name LL_SOFT OFF -section_id "fir_top:inst"
+set_instance_assignment -name LL_MEMBER_OF "fir_top:inst" -to "fir_top:inst" -section_id "fir_top:inst"
+set_global_assignment -name LL_ORIGIN LAB_X1_Y14 -section_id "des:inst2"
+set_global_assignment -name LL_HEIGHT 13 -section_id "des:inst2"
+set_global_assignment -name LL_WIDTH 17 -section_id "des:inst2"
+set_global_assignment -name LL_STATE LOCKED -section_id "des:inst2"
+set_global_assignment -name LL_AUTO_SIZE OFF -section_id "des:inst2"
+set_global_assignment -name LL_RESERVED OFF -section_id "des:inst2"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "des:inst2"
+set_global_assignment -name LL_SOFT OFF -section_id "des:inst2"
+set_instance_assignment -name LL_MEMBER_OF "des:inst2" -to "des:inst2" -section_id "des:inst2"
+set_instance_assignment -name LL_MEMBER_OF "placeholder:inst3" -to "placeholder:inst3" -section_id "placeholder:inst3"
+set_instance_assignment -name CLOCK_SETTINGS des_clk -to des_clk
+set_global_assignment -name FMAX_REQUIREMENT "300 MHz" -section_id des_clk
+set_global_assignment -name USER_LIBRARIES "fir_lab\\fir_compiler-v3.3.0\\lib"
+set_global_assignment -name PARTITION_COLOR 14622752 -section_id Top
+set_global_assignment -name PARTITION_COLOR 2105567 -section_id "des:inst2"
+set_global_assignment -name PARTITION_COLOR 2154272 -section_id "fir_top:inst"
+set_global_assignment -name PARTITION_COLOR 16037301 -section_id "placeholder:inst3"
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name LL_ENABLED ON -section_id "des:inst2"
+set_global_assignment -name LL_RESERVED_IS_LIMITED OFF -section_id "des:inst2"
+set_global_assignment -name LL_ENABLED ON -section_id "fir_top:inst"
+set_global_assignment -name LL_RESERVED_IS_LIMITED OFF -section_id "fir_top:inst"
+set_global_assignment -name LL_ENABLED ON -section_id "placeholder:inst3"
+set_global_assignment -name LL_RESERVED_IS_LIMITED OFF -section_id "placeholder:inst3"

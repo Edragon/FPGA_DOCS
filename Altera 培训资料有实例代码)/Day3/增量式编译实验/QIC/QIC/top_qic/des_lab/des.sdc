@@ -1,0 +1,1 @@
+create_clock -period 3.75 [get_ports des_clk]

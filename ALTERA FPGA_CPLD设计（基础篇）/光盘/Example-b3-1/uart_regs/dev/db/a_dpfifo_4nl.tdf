@@ -1,0 +1,94 @@
+--a_dpfifo ADD_RAM_OUTPUT_REGISTER=OFF ALLOW_RWCYCLE_WHEN_FULL=OFF DEVICE_FAMILY=Stratix LPM_NUMWORDS=16 LPM_SHOWAHEAD=OFF lpm_width=10 OVERFLOW_CHECKING=ON UNDERFLOW_CHECKING=ON aclr clock data empty full q rreq sclr usedw wreq
+--VERSION_BEGIN 4.0 cbx_altdpram 2003:08:18:15:59:18:SJ cbx_altsyncram 2003:12:02:15:28:30:SJ cbx_fifo_common 2003:08:19:18:07:00:SJ cbx_lpm_compare 2003:09:10:10:27:44:SJ cbx_lpm_counter 2003:12:16:17:25:44:SJ cbx_lpm_decode 2003:03:25:17:43:04:SJ cbx_lpm_mux 2003:10:21:14:09:22:SJ cbx_mgl 2004:01:13:14:00:54:SJ cbx_scfifo 2003:11:25:13:14:44:SJ cbx_stratix 2003:12:15:10:23:28:SJ cbx_stratixii 2003:11:06:16:12:54:SJ cbx_util 2003:12:05:10:31:30:SJ  VERSION_END
+
+
+--  Copyright (C) 1988-2004 Altera Corporation
+--  Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+--  support information,  device programming or simulation file,  and any other
+--  associated  documentation or information  provided by  Altera  or a partner
+--  under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+--  to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+--  other  use  of such  megafunction  design,  netlist,  support  information,
+--  device programming or simulation file,  or any other  related documentation
+--  or information  is prohibited  for  any  other purpose,  including, but not
+--  limited to  modification,  reverse engineering,  de-compiling, or use  with
+--  any other  silicon devices,  unless such use is  explicitly  licensed under
+--  a separate agreement with  Altera  or a megafunction partner.  Title to the
+--  intellectual property,  including patents,  copyrights,  trademarks,  trade
+--  secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+--  support  information,  device programming or simulation file,  or any other
+--  related documentation or information provided by  Altera  or a megafunction
+--  partner, remains with Altera, the megafunction partner, or their respective
+--  licensors. No other licenses, including any licenses needed under any third
+--  party's intellectual property, are provided herein.
+
+
+FUNCTION a_fefifo_qve (aclr, clock, rreq, sclr, wreq)
+RETURNS ( empty, full, usedw_out[3..0]);
+FUNCTION dpram_h2k (data[9..0], inclock, outclock, outclocken, rdaddress[3..0], wraddress[3..0], wren)
+RETURNS ( q[9..0]);
+FUNCTION lpm_counter (aclr, aload, aset, cin, clk_en, clock, cnt_en, data[LPM_WIDTH-1..0], sclr, sload, sset, updown)
+WITH ( 	lpm_avalue,	lpm_direction,	lpm_modulus,	lpm_svalue,	lpm_width) 
+RETURNS ( cout, eq[15..0], q[LPM_WIDTH-1..0]);
+
+--synthesis_resources = lpm_counter 2 ram_bits (auto) 160 
+SUBDESIGN a_dpfifo_4nl
+( 
+	aclr	:	input;
+	clock	:	input;
+	data[9..0]	:	input;
+	empty	:	output;
+	full	:	output;
+	q[9..0]	:	output;
+	rreq	:	input;
+	sclr	:	input;
+	usedw[3..0]	:	output;
+	wreq	:	input;
+) 
+VARIABLE 
+	fifo_state : a_fefifo_qve;
+	FIFOram : dpram_h2k;
+	rd_ptr_count : lpm_counter
+		WITH (
+			lpm_direction = "UP",
+			lpm_width = 4
+		);
+	wr_ptr : lpm_counter
+		WITH (
+			lpm_direction = "UP",
+			lpm_width = 4
+		);
+	rd_ptr[3..0]	: WIRE;
+	valid_rreq	: WIRE;
+	valid_wreq	: WIRE;
+
+BEGIN 
+	fifo_state.aclr = aclr;
+	fifo_state.clock = clock;
+	fifo_state.rreq = rreq;
+	fifo_state.sclr = sclr;
+	fifo_state.wreq = wreq;
+	FIFOram.data[] = data[];
+	FIFOram.inclock = clock;
+	FIFOram.outclock = clock;
+	FIFOram.outclocken = (valid_rreq # sclr);
+	FIFOram.rdaddress[] = ((! sclr) & rd_ptr[]);
+	FIFOram.wraddress[] = wr_ptr.q[];
+	FIFOram.wren = valid_wreq;
+	rd_ptr_count.aclr = aclr;
+	rd_ptr_count.clock = clock;
+	rd_ptr_count.cnt_en = valid_rreq;
+	rd_ptr_count.sclr = sclr;
+	wr_ptr.aclr = aclr;
+	wr_ptr.clock = clock;
+	wr_ptr.cnt_en = valid_wreq;
+	wr_ptr.sclr = sclr;
+	empty = fifo_state.empty;
+	full = fifo_state.full;
+	q[] = FIFOram.q[];
+	rd_ptr[] = rd_ptr_count.q[];
+	usedw[] = fifo_state.usedw_out[];
+	valid_rreq = (rreq & (! fifo_state.empty));
+	valid_wreq = (wreq & (! fifo_state.full));
+END;
+--VALID FILE

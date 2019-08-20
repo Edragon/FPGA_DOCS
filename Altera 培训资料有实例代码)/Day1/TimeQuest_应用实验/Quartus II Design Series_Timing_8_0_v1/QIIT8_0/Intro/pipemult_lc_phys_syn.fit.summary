@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Mar 30 17:18:29 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : pipemult_lc_phys_syn
+Top-level Entity Name : pipemult
+Family : Cyclone II
+Device : EP2C5F256C6
+Timing Models : Final
+Total logic elements : 103 / 4,608 ( 2 % )
+    Total combinational functions : 101 / 4,608 ( 2 % )
+    Dedicated logic registers : 54 / 4,608 ( 1 % )
+Total registers : 70
+Total pins : 44 / 158 ( 28 % )
+Total virtual pins : 0
+Total memory bits : 512 / 119,808 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

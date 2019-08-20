@@ -1,0 +1,339 @@
+C:/eda/quartus/eda/sim_lib/sgate.v {1 {vlog -work work C:/eda/quartus/eda/sim_lib/sgate.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling module oper_add
+-- Compiling module oper_addsub
+-- Compiling module mux21
+-- Compiling module io_buf_tri
+-- Compiling module io_buf_opdrn
+-- Compiling module oper_mult
+-- Compiling module tri_bus
+-- Compiling module oper_div
+-- Compiling module oper_mod
+-- Compiling module oper_left_shift
+-- Compiling module oper_right_shift
+-- Compiling module oper_rotate_left
+-- Compiling module oper_rotate_right
+-- Compiling module oper_less_than
+-- Compiling module oper_mux
+-- Compiling module oper_selector
+-- Compiling module oper_decoder
+-- Compiling module oper_bus_mux
+
+Top level modules:
+	oper_add
+	oper_addsub
+	mux21
+	io_buf_tri
+	io_buf_opdrn
+	oper_mult
+	tri_bus
+	oper_div
+	oper_mod
+	oper_left_shift
+	oper_right_shift
+	oper_rotate_left
+	oper_rotate_right
+	oper_less_than
+	oper_mux
+	oper_selector
+	oper_decoder
+	oper_bus_mux
+
+} {} {}} D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo {1 {vlog -work work D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling module pll_ram
+
+Top level modules:
+	pll_ram
+
+} {} {}} D:/prj_D/modelsim_demo/Altera_lib_files/220model.v {1 {vlog -work work D:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling module LPM_DEVICE_FAMILIES
+-- Compiling module LPM_HINT_EVALUATION
+-- Compiling module lpm_constant
+-- Compiling module lpm_inv
+-- Compiling module lpm_and
+-- Compiling module lpm_or
+-- Compiling module lpm_xor
+-- Compiling module lpm_bustri
+-- Compiling module lpm_mux
+-- Compiling module lpm_decode
+-- Compiling module lpm_clshift
+-- Compiling module lpm_add_sub
+-- Compiling module lpm_compare
+-- Compiling module lpm_mult
+-- Compiling module lpm_divide
+-- Compiling module lpm_abs
+-- Compiling module lpm_counter
+-- Compiling module lpm_latch
+-- Compiling module lpm_ff
+-- Compiling module lpm_shiftreg
+-- Compiling module lpm_ram_dq
+-- Compiling module lpm_ram_dp
+-- Compiling module lpm_ram_io
+-- Compiling module lpm_rom
+-- Compiling module lpm_fifo
+-- Compiling module lpm_fifo_dc_dffpipe
+-- Compiling module lpm_fifo_dc_fefifo
+-- Compiling module lpm_fifo_dc_async
+-- Compiling module lpm_fifo_dc
+-- Compiling module lpm_inpad
+-- Compiling module lpm_outpad
+-- Compiling module lpm_bipad
+
+Top level modules:
+	lpm_constant
+	lpm_inv
+	lpm_and
+	lpm_or
+	lpm_xor
+	lpm_bustri
+	lpm_mux
+	lpm_decode
+	lpm_clshift
+	lpm_add_sub
+	lpm_compare
+	lpm_mult
+	lpm_divide
+	lpm_abs
+	lpm_counter
+	lpm_latch
+	lpm_ff
+	lpm_shiftreg
+	lpm_ram_dq
+	lpm_ram_dp
+	lpm_ram_io
+	lpm_rom
+	lpm_fifo
+	lpm_fifo_dc
+	lpm_inpad
+	lpm_outpad
+	lpm_bipad
+
+} {} {}} C:/eda/quartus/eda/sim_lib/hcstratix_atoms.v {1 {vlog -work work C:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling UDP PRIM_DFFE
+-- Compiling module dffe
+-- Compiling module latch
+-- Compiling module mux21
+-- Compiling module mux41
+-- Compiling module and1
+-- Compiling module and16
+-- Compiling module bmux21
+-- Compiling module b17mux21
+-- Compiling module nmux21
+-- Compiling module b5mux21
+-- Compiling module hcstratix_asynch_lcell
+-- Compiling module hcstratix_lcell_register
+-- Compiling module hcstratix_lcell
+-- Compiling module hcstratix_asynch_io
+-- Compiling module hcstratix_io_register
+-- Compiling module hcstratix_io
+-- Compiling module hcstratix_mac_register
+-- Compiling module hcstratix_mac_mult_internal
+-- Compiling module hcstratix_mac_mult
+-- Compiling module hcstratix_mac_out_internal
+-- Compiling module hcstratix_mac_out
+-- Compiling module hcstratix_ram_register
+-- Compiling module hcstratix_ram_clear
+-- Compiling module hcstratix_ram_internal
+-- Compiling module hcstratix_ram_block
+-- Compiling module hcstratix_lvds_tx_parallel_register
+-- Compiling module hcstratix_lvds_tx_out_block
+-- Compiling module hcstratix_lvds_transmitter
+-- Compiling module hcstratix_lvds_rx_parallel_register
+-- Compiling module hcstratix_lvds_receiver
+-- Compiling module m_cntr
+-- Compiling module n_cntr
+-- Compiling module scale_cntr
+-- Compiling module pll_reg
+-- Compiling module hcstratix_pll
+-- Compiling module hcstratix_dll
+-- Compiling module hcstratix_jtag
+-- Compiling module hcstratix_crcblock
+-- Compiling module hcstratix_rublock
+
+Top level modules:
+	latch
+	mux41
+	and16
+	bmux21
+	b17mux21
+	nmux21
+	b5mux21
+	hcstratix_lcell
+	hcstratix_io
+	hcstratix_mac_mult
+	hcstratix_mac_out
+	hcstratix_ram_block
+	hcstratix_lvds_transmitter
+	hcstratix_lvds_receiver
+	hcstratix_pll
+	hcstratix_dll
+	hcstratix_jtag
+	hcstratix_crcblock
+	hcstratix_rublock
+
+} {} {}} D:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v {1 {vlog -work work D:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling UDP PRIM_DFFE
+-- Compiling module dffe
+-- Compiling module latch
+-- Compiling module mux21
+-- Compiling module mux41
+-- Compiling module and1
+-- Compiling module and16
+-- Compiling module bmux21
+-- Compiling module b17mux21
+-- Compiling module nmux21
+-- Compiling module b5mux21
+-- Compiling module stratix_asynch_lcell
+-- Compiling module stratix_lcell_register
+-- Compiling module stratix_lcell
+-- Compiling module stratix_asynch_io
+-- Compiling module stratix_io_register
+-- Compiling module stratix_io
+-- Compiling module stratix_mac_register
+-- Compiling module stratix_mac_mult_internal
+-- Compiling module stratix_mac_mult
+-- Compiling module stratix_mac_out_internal
+-- Compiling module stratix_mac_out
+-- Compiling module stratix_ram_register
+-- Compiling module stratix_ram_clear
+-- Compiling module stratix_ram_internal
+-- Compiling module stratix_ram_block
+-- Compiling module stratix_lvds_tx_parallel_register
+-- Compiling module stratix_lvds_tx_out_block
+-- Compiling module stratix_lvds_transmitter
+-- Compiling module stratix_lvds_rx_parallel_register
+-- Compiling module stratix_lvds_receiver
+-- Compiling module m_cntr
+-- Compiling module n_cntr
+-- Compiling module scale_cntr
+-- Compiling module pll_reg
+-- Compiling module stratix_pll
+-- Compiling module stratix_dll
+-- Compiling module stratix_jtag
+-- Compiling module stratix_crcblock
+-- Compiling module stratix_rublock
+
+Top level modules:
+	latch
+	mux41
+	and16
+	bmux21
+	b17mux21
+	nmux21
+	b5mux21
+	stratix_lcell
+	stratix_io
+	stratix_mac_mult
+	stratix_mac_out
+	stratix_ram_block
+	stratix_lvds_transmitter
+	stratix_lvds_receiver
+	stratix_pll
+	stratix_dll
+	stratix_jtag
+	stratix_crcblock
+	stratix_rublock
+
+} {} {}} C:/eda/quartus/eda/sim_lib/nopli.v {1 {vlog -work work C:/eda/quartus/eda/sim_lib/nopli.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+
+} {} {}} D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v {1 {vlog -work work D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling module pll_ram_tb
+
+Top level modules:
+	pll_ram_tb
+
+} {} {}} D:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v {1 {vlog -work work D:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+-- Compiling module lcell
+-- Compiling module global
+-- Compiling module carry
+-- Compiling module cascade
+-- Compiling module carry_sum
+-- Compiling module exp
+-- Compiling module ALTERA_DEVICE_FAMILIES
+-- Compiling module altaccumulate
+-- Compiling module altmult_accum
+-- Compiling module altmult_add
+-- Compiling module altfp_mult
+-- Compiling module altsqrt
+-- Compiling module altclklock
+-- Compiling module altddio_in
+-- Compiling module altddio_out
+-- Compiling module altddio_bidir
+-- Compiling module dffp
+-- Compiling module stx_m_cntr
+-- Compiling module stx_n_cntr
+-- Compiling module stx_scale_cntr
+-- Compiling module arm_m_cntr
+-- Compiling module arm_n_cntr
+-- Compiling module arm_scale_cntr
+-- Compiling module MF_pll_reg
+-- Compiling module MF_stratix_pll
+-- Compiling module MF_stratixii_pll
+-- Compiling module altpll
+-- Compiling module hssi_pll
+-- Compiling module MF_ram7x20_syn
+-- Compiling module hssi_fifo
+-- Compiling module hssi_rx
+-- Compiling module hssi_tx
+-- Compiling module altcdr_rx
+-- Compiling module altcdr_tx
+-- Compiling module altlvds_rx
+-- Compiling module stratix_lvds_rx
+-- Compiling module stratixgx_dpa_lvds_rx
+-- Compiling module stratixii_lvds_rx
+-- Compiling module altlvds_tx
+-- Compiling module stratixii_tx_outclk
+-- Compiling module altcam
+-- Compiling module altdpram
+-- Compiling module altsyncram
+-- Compiling module alt3pram
+-- Compiling module altqpram
+-- Compiling module parallel_add
+-- Compiling module scfifo
+-- Compiling module dcfifo_dffpipe
+-- Compiling module dcfifo_fefifo
+-- Compiling module dcfifo_async
+-- Compiling module dcfifo_sync
+-- Compiling module dcfifo
+-- Compiling module altshift_taps
+-- Compiling module a_graycounter
+-- Compiling module alt_exc_dpram
+-- Compiling module alt_exc_upcore
+
+Top level modules:
+	lcell
+	global
+	carry
+	cascade
+	carry_sum
+	exp
+	altaccumulate
+	altmult_accum
+	altmult_add
+	altfp_mult
+	altsqrt
+	altddio_bidir
+	altcdr_rx
+	altcdr_tx
+	altlvds_rx
+	altlvds_tx
+	altcam
+	altdpram
+	alt3pram
+	altqpram
+	parallel_add
+	scfifo
+	dcfifo
+	altshift_taps
+	a_graycounter
+	alt_exc_dpram
+	alt_exc_upcore
+
+} {} {}}

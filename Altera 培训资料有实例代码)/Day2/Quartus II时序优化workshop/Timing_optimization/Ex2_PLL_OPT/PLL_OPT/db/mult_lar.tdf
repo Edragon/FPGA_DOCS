@@ -1,0 +1,84 @@
+--lpm_mult CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Stratix II" DSP_BLOCK_BALANCING="Auto" LPM_PIPELINE=5 LPM_REPRESENTATION="SIGNED" LPM_WIDTHA=18 LPM_WIDTHB=18 LPM_WIDTHP=36 LPM_WIDTHS=36 MAXIMIZE_SPEED=1 aclr clken clock dataa datab result CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 8.0 cbx_cycloneii 2008:02:23:252825 cbx_lpm_add_sub 2008:03:09:257947 cbx_lpm_mult 2008:04:29:280107 cbx_mgl 2008:04:11:273944 cbx_padd 2008:02:23:252825 cbx_stratix 2008:02:23:252825 cbx_stratixii 2008:02:23:252825 cbx_util_mgl 2008:04:15:275689  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION stratixii_mac_mult (aclr[3..0], clk[3..0], dataa[dataa_width-1..0], datab[datab_width-1..0], ena[3..0], mode, round, saturate, scanina[dataa_width-1..0], scaninb[datab_width-1..0], signa, signb, sourcea, sourceb, zeroacc)
+WITH ( bypass_multiplier, dataa_clear, dataa_clock, dataa_width, datab_clear, datab_clock, datab_width, dynamic_mode, mode_clear, mode_clock, output_clear, output_clock, round_clear, round_clock, saturate_clear, saturate_clock, signa_clear, signa_clock, signa_internally_grounded, signb_clear, signb_clock, signb_internally_grounded, zeroacc_clear, zeroacc_clock)
+RETURNS ( dataout[dataa_width+datab_width-1..0], scanouta[dataa_width-1..0], scanoutb[datab_width-1..0]);
+FUNCTION stratixii_mac_out (aclr[3..0], addnsub0, addnsub1, clk[3..0], dataa[dataa_width-1..0], datab[datab_width-1..0], datac[datac_width-1..0], datad[datad_width-1..0], ena[3..0], mode0, mode1, multabsaturate, multcdsaturate, round0, round1, saturate, saturate1, signa, signb, zeroacc, zeroacc1)
+WITH ( addnsub0_clear, addnsub0_clock, addnsub0_pipeline_clear, addnsub0_pipeline_clock, addnsub1_clear, addnsub1_clock, addnsub1_pipeline_clear, addnsub1_pipeline_clock, dataa_forced_to_zero, dataa_width = 1, datab_width = 1, datac_forced_to_zero, datac_width = 1, datad_width = 1, dataout_width = 144, mode0_clear, mode0_clock, mode0_pipeline_clear, mode0_pipeline_clock, mode1_clear, mode1_clock, mode1_pipeline_clear, mode1_pipeline_clock, multabsaturate_clear, multabsaturate_clock, multabsaturate_pipeline_clear, multabsaturate_pipeline_clock, multcdsaturate_clear, multcdsaturate_clock, multcdsaturate_pipeline_clear, multcdsaturate_pipeline_clock, operation_mode, output1_clear, output1_clock, output2_clear, output2_clock, output3_clear, output3_clock, output4_clear, output4_clock, output5_clear, output5_clock, output6_clear, output6_clock, output7_clear, output7_clock, output_clear, output_clock, round0_clear, round0_clock, round0_pipeline_clear, round0_pipeline_clock, round1_clear, round1_clock, round1_pipeline_clear, round1_pipeline_clock, saturate1_clear, saturate1_clock, saturate1_pipeline_clear, saturate1_pipeline_clock, saturate_clear, saturate_clock, saturate_pipeline_clear, saturate_pipeline_clock, signa_clear, signa_clock, signa_pipeline_clear, signa_pipeline_clock, signb_clear, signb_clock, signb_pipeline_clear, signb_pipeline_clock, zeroacc1_clear, zeroacc1_clock, zeroacc1_pipeline_clear, zeroacc1_pipeline_clock, zeroacc_clear, zeroacc_clock, zeroacc_pipeline_clear, zeroacc_pipeline_clock)
+RETURNS ( accoverflow, dataout[dataout_width-1..0]);
+
+--synthesis_resources = dsp_9bit 2 reg 72 
+SUBDESIGN mult_lar
+( 
+	aclr	:	input;
+	clken	:	input;
+	clock	:	input;
+	dataa[17..0]	:	input;
+	datab[17..0]	:	input;
+	result[35..0]	:	output;
+) 
+VARIABLE 
+	dffe3a[35..0] : dffe;
+	dffe4a[35..0] : dffe;
+	mac_mult2 : stratixii_mac_mult
+		WITH (
+			dataa_clear = "0",
+			dataa_clock = "0",
+			dataa_width = 18,
+			datab_clear = "0",
+			datab_clock = "0",
+			datab_width = 18,
+			output_clear = "0",
+			output_clock = "0"
+		);
+	mac_out1 : stratixii_mac_out
+		WITH (
+			dataa_width = 36,
+			dataout_width = 144,
+			operation_mode = "output_only",
+			output_clear = "0",
+			output_clock = "0"
+		);
+
+BEGIN 
+	dffe3a[].clk = clock;
+	dffe3a[].clrn = (! aclr);
+	dffe3a[].d = mac_out1.dataout[35..0];
+	dffe3a[].ena = clken;
+	dffe4a[].clk = clock;
+	dffe4a[].clrn = (! aclr);
+	dffe4a[].d = dffe3a[].q;
+	dffe4a[].ena = clken;
+	mac_mult2.aclr[] = aclr;
+	mac_mult2.clk[] = clock;
+	mac_mult2.dataa[] = ( dataa[]);
+	mac_mult2.datab[] = ( datab[]);
+	mac_mult2.ena[] = clken;
+	mac_mult2.signa = B"1";
+	mac_mult2.signb = B"1";
+	mac_out1.aclr[] = aclr;
+	mac_out1.clk[] = clock;
+	mac_out1.dataa[] = ( mac_mult2.dataout[35..0]);
+	mac_out1.ena[] = clken;
+	mac_out1.signa = B"1";
+	mac_out1.signb = B"1";
+	result[] = dffe4a[].q;
+END;
+--VALID FILE

@@ -1,0 +1,137 @@
+Simulator report for uart_regs
+Fri Jan 14 21:32:38 2005
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |uart_regs|uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ALTSYNCRAM
+  6. |uart_regs|uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ALTSYNCRAM
+  7. Simulator INI Usage
+  8. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++---------------------------------------------
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 20.0 us      ;
+; Simulation Netlist Size     ; 1740 nodes   ;
+; Simulation Coverage         ;      46.27 % ;
+; Total Number of Transitions ; 371862       ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------------------------------------
+; Option                                                ; Setting                                                         ;
++-------------------------------------------------------+-----------------------------------------------------------------+
+; Simulation mode                                       ; Functional                                                      ;
+; Start time                                            ; 0ns                                                             ;
+; Vector input source                                   ; F:/Quartus/Example-b3-1/uart_regs/sim/funcsim/uart_regs_pre.vwf ;
+; Add pins automatically to simulation output waveforms ; On                                                              ;
+; Check outputs                                         ; Off                                                             ;
+; Report simulation coverage                            ; On                                                              ;
+; Detect setup and hold time violations                 ; Off                                                             ;
+; Detect glitches                                       ; Off                                                             ;
+; Estimate power consumption                            ; Off                                                             ;
+; USE_COMPILER_SETTINGS                                 ; uart_regs                                                       ;
+; Automatically save/load simulation netlist            ; Off                                                             ;
++-------------------------------------------------------+-----------------------------------------------------------------+
+
+
++-----------------------+
+; Simulation Waveforms  ;
++-----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |uart_regs|uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ALTSYNCRAM  ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |uart_regs|uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ALTSYNCRAM  ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++---------------------+
+; Simulator INI Usage ;
++----------------------
+; Option ; Usage      ;
++--------+------------+
+
+
++---------------------+
+; Simulator Messages  ;
++---------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Jan 14 21:32:26 2005
+Info: Command: quartus_sim --import_settings_files=on --export_settings_files=off uart_regs -c uart_regs
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a0 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a1 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a2 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a3 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a4 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a5 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a6 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a7 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a8 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a9 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a0 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a1 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a2 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a3 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a4 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a5 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a6 assumed to occur on falling edge of input clock
+Warning: Write to auto-size memory block uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a7 assumed to occur on falling edge of input clock
+Info: Simulation coverage is      46.27 %
+Info: Number of transitions in simulation is 371862
+Info: Quartus II Simulator was successful. 0 errors, 18 warnings
+    Info: Processing ended: Fri Jan 14 21:32:38 2005
+    Info: Elapsed time: 00:00:12
+
+

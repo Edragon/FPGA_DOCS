@@ -1,0 +1,66 @@
+--lpm_add_sub CARRY_CHAIN=MANUAL CARRY_CHAIN_LENGTH=70 DEVICE_FAMILY=Stratix LPM_DIRECTION=ADD LPM_REPRESENTATION=UNSIGNED LPM_WIDTH=9 ONE_INPUT_IS_CONSTANT=YES cin dataa datab result
+--VERSION_BEGIN 4.0 cbx_lpm_add_sub 2003:11:17:16:32:08:SJ cbx_mgl 2004:01:13:14:00:54:SJ cbx_stratix 2003:12:15:10:23:28:SJ  VERSION_END
+
+
+--  Copyright (C) 1988-2004 Altera Corporation
+--  Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+--  support information,  device programming or simulation file,  and any other
+--  associated  documentation or information  provided by  Altera  or a partner
+--  under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+--  to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+--  other  use  of such  megafunction  design,  netlist,  support  information,
+--  device programming or simulation file,  or any other  related documentation
+--  or information  is prohibited  for  any  other purpose,  including, but not
+--  limited to  modification,  reverse engineering,  de-compiling, or use  with
+--  any other  silicon devices,  unless such use is  explicitly  licensed under
+--  a separate agreement with  Altera  or a megafunction partner.  Title to the
+--  intellectual property,  including patents,  copyrights,  trademarks,  trade
+--  secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+--  support  information,  device programming or simulation file,  or any other
+--  related documentation or information provided by  Altera  or a megafunction
+--  partner, remains with Altera, the megafunction partner, or their respective
+--  licensors. No other licenses, including any licenses needed under any third
+--  party's intellectual property, are provided herein.
+
+
+FUNCTION carry_sum (cin, sin)
+RETURNS ( cout, sout);
+
+--synthesis_resources = lut 10 
+SUBDESIGN add_sub_ihh
+( 
+	cin	:	input;
+	dataa[8..0]	:	input;
+	datab[8..0]	:	input;
+	result[8..0]	:	output;
+) 
+VARIABLE 
+	add_sub_cella[8..0] : carry_sum;
+	external_cin_cell : carry_sum;
+	main_cin_wire	: WIRE;
+
+BEGIN 
+	add_sub_cella[0].cin = ((datab[0..0] & main_cin_wire) # (dataa[0..0] & (datab[0..0] $ main_cin_wire)));
+	add_sub_cella[1].cin = ((datab[1..1] & add_sub_cella[0].cout) # (dataa[1..1] & (datab[1..1] $ add_sub_cella[0].cout)));
+	add_sub_cella[2].cin = ((datab[2..2] & add_sub_cella[1].cout) # (dataa[2..2] & (datab[2..2] $ add_sub_cella[1].cout)));
+	add_sub_cella[3].cin = ((datab[3..3] & add_sub_cella[2].cout) # (dataa[3..3] & (datab[3..3] $ add_sub_cella[2].cout)));
+	add_sub_cella[4].cin = ((datab[4..4] & add_sub_cella[3].cout) # (dataa[4..4] & (datab[4..4] $ add_sub_cella[3].cout)));
+	add_sub_cella[5].cin = ((datab[5..5] & add_sub_cella[4].cout) # (dataa[5..5] & (datab[5..5] $ add_sub_cella[4].cout)));
+	add_sub_cella[6].cin = ((datab[6..6] & add_sub_cella[5].cout) # (dataa[6..6] & (datab[6..6] $ add_sub_cella[5].cout)));
+	add_sub_cella[7].cin = ((datab[7..7] & add_sub_cella[6].cout) # (dataa[7..7] & (datab[7..7] $ add_sub_cella[6].cout)));
+	add_sub_cella[8].cin = ((datab[8..8] & add_sub_cella[7].cout) # (dataa[8..8] & (datab[8..8] $ add_sub_cella[7].cout)));
+	add_sub_cella[0].sin = (dataa[0..0] $ (datab[0..0] $ main_cin_wire));
+	add_sub_cella[1].sin = (dataa[1..1] $ (datab[1..1] $ add_sub_cella[0].cout));
+	add_sub_cella[2].sin = (dataa[2..2] $ (datab[2..2] $ add_sub_cella[1].cout));
+	add_sub_cella[3].sin = (dataa[3..3] $ (datab[3..3] $ add_sub_cella[2].cout));
+	add_sub_cella[4].sin = (dataa[4..4] $ (datab[4..4] $ add_sub_cella[3].cout));
+	add_sub_cella[5].sin = (dataa[5..5] $ (datab[5..5] $ add_sub_cella[4].cout));
+	add_sub_cella[6].sin = (dataa[6..6] $ (datab[6..6] $ add_sub_cella[5].cout));
+	add_sub_cella[7].sin = (dataa[7..7] $ (datab[7..7] $ add_sub_cella[6].cout));
+	add_sub_cella[8].sin = (dataa[8..8] $ (datab[8..8] $ add_sub_cella[7].cout));
+	external_cin_cell.cin = cin;
+	external_cin_cell.sin = B"0";
+	main_cin_wire = external_cin_cell.cout;
+	result[] = add_sub_cella[].sout;
+END;
+--VALID FILE

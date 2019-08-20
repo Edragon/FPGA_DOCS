@@ -1,0 +1,1419 @@
+TimeQuest Timing Analyzer report for lab_design_tq
+Tue Mar 31 14:16:24 2009
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. SDC File List
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Fast Model Setup Summary
+ 16. Fast Model Hold Summary
+ 17. Fast Model Recovery Summary
+ 18. Fast Model Removal Summary
+ 19. Fast Model Minimum Pulse Width
+ 20. Setup Times
+ 21. Hold Times
+ 22. Clock to Output Times
+ 23. Minimum Clock to Output Times
+ 24. Multicorner Timing Analysis Summary
+ 25. Setup Transfers
+ 26. Hold Transfers
+ 27. Recovery Transfers
+ 28. Removal Transfers
+ 29. Report TCCS
+ 30. Report RSKM
+ 31. Unconstrained Paths
+ 32. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name      ; lab_design_tq                                    ;
+; Device Family      ; Cyclone II                                       ;
+; Device Name        ; EP2C15AF484C7                                    ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
++-------------------------------------------------------+
+; SDC File List                                         ;
++-------------------+--------+--------------------------+
+; SDC File Path     ; Status ; Read at                  ;
++-------------------+--------+--------------------------+
+; lab_design_tq.sdc ; OK     ; Tue Mar 31 14:16:20 2009 ;
++-------------------+--------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                       ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+; Clock Name    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets           ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+; FCLK          ; Base ; 7.500  ; 133.33 MHz ; 0.000 ; 3.750 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FCLK }          ;
+; SCLK          ; Base ; 5.128  ; 195.01 MHz ; 0.000 ; 2.564 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SCLK }          ;
+; SPI3_RX_RFCLK ; Base ; 10.000 ; 100.0 MHz  ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SPI3_RX_RFCLK } ;
+; SPI3_TX_TFCLK ; Base ; 10.000 ; 100.0 MHz  ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SPI3_TX_TFCLK } ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+
+
++-----------------------------------------------------+
+; Slow Model Fmax Summary                             ;
++------------+-----------------+---------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name    ; Note ;
++------------+-----------------+---------------+------+
+; 102.19 MHz ; 102.19 MHz      ; SPI3_TX_TFCLK ;      ;
+; 105.49 MHz ; 105.49 MHz      ; SPI3_RX_RFCLK ;      ;
+; 141.96 MHz ; 141.96 MHz      ; FCLK          ;      ;
+; 150.47 MHz ; 150.47 MHz      ; SCLK          ;      ;
++------------+-----------------+---------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------+
+; Slow Model Setup Summary               ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; SCLK          ; -1.518 ; -16.850       ;
+; SPI3_TX_TFCLK ; 0.214  ; 0.000         ;
+; FCLK          ; 0.456  ; 0.000         ;
+; SPI3_RX_RFCLK ; 0.520  ; 0.000         ;
++---------------+--------+---------------+
+
+
++---------------------------------------+
+; Slow Model Hold Summary               ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; SCLK          ; 0.445 ; 0.000         ;
+; SPI3_RX_RFCLK ; 0.445 ; 0.000         ;
+; SPI3_TX_TFCLK ; 0.445 ; 0.000         ;
+; FCLK          ; 0.613 ; 0.000         ;
++---------------+-------+---------------+
+
+
++---------------------------------------+
+; Slow Model Recovery Summary           ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; SCLK          ; 1.543 ; 0.000         ;
+; FCLK          ; 4.048 ; 0.000         ;
+; SPI3_RX_RFCLK ; 4.813 ; 0.000         ;
+; SPI3_TX_TFCLK ; 5.607 ; 0.000         ;
++---------------+-------+---------------+
+
+
++---------------------------------------+
+; Slow Model Removal Summary            ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; SPI3_TX_TFCLK ; 1.466 ; 0.000         ;
+; SPI3_RX_RFCLK ; 1.980 ; 0.000         ;
+; FCLK          ; 2.818 ; 0.000         ;
+; SCLK          ; 2.842 ; 0.000         ;
++---------------+-------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width                                                                                                                                                                                                                                          ;
++-------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                                                                                                  ;
++-------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[0]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[0]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[10]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[10]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[11]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[11]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[12]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[12]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[13]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[13]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[14]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[14]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[15]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[15]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[16]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[16]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[17]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[17]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[18]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[18]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[19]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[19]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[1]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[1]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[20]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[20]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[21]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[21]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[22]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[22]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[23]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[23]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[24]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[24]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[25]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[25]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[26]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[26]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[27]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[27]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[28]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[28]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[29]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[29]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[2]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[2]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[30]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[30]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[31]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[31]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[32]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[32]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[33]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[33]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[34]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[34]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[35]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[35]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[36]                          ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[36]                          ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[3]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[3]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[4]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[4]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[5]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[5]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[6]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[6]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[7]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[7]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[8]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[8]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[9]                           ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|q_a[9]                           ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg0  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg0  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg1  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg1  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg2  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg2  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg3  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg3  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg4  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg4  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg5  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg5  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg6  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg6  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg7  ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a0~porta_address_reg7  ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg0 ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg0 ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg1 ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg1 ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg2 ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg2 ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg3 ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg3 ;
+; 0.000 ; 2.564        ; 2.564          ; High Pulse Width ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg4 ;
+; 0.000 ; 2.564        ; 2.564          ; Low Pulse Width  ; SCLK  ; Rise       ; ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component|dcfifo_idl1:auto_generated|altsyncram_7j01:fifo_ram|altsyncram_i7e1:altsyncram5|ram_block6a18~porta_address_reg4 ;
++-------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; FIFOA_AF_N        ; FCLK          ; 1.333  ; 1.333  ; Rise       ; FCLK            ;
+; FIFOA_FF_N        ; FCLK          ; 1.351  ; 1.351  ; Rise       ; FCLK            ;
+; FIFOB_AE_N        ; FCLK          ; 2.039  ; 2.039  ; Rise       ; FCLK            ;
+; FIFOB_DATA[*]     ; FCLK          ; 2.059  ; 2.059  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[0]    ; FCLK          ; 2.047  ; 2.047  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[1]    ; FCLK          ; 2.028  ; 2.028  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[2]    ; FCLK          ; 2.016  ; 2.016  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[3]    ; FCLK          ; 2.027  ; 2.027  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[4]    ; FCLK          ; 2.035  ; 2.035  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[5]    ; FCLK          ; 2.018  ; 2.018  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[6]    ; FCLK          ; 2.047  ; 2.047  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[7]    ; FCLK          ; 2.038  ; 2.038  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[8]    ; FCLK          ; 2.047  ; 2.047  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[9]    ; FCLK          ; 2.052  ; 2.052  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[10]   ; FCLK          ; 2.035  ; 2.035  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[11]   ; FCLK          ; 2.030  ; 2.030  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[12]   ; FCLK          ; 2.045  ; 2.045  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[13]   ; FCLK          ; 2.020  ; 2.020  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[14]   ; FCLK          ; 2.043  ; 2.043  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[15]   ; FCLK          ; 2.035  ; 2.035  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[16]   ; FCLK          ; 2.027  ; 2.027  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[17]   ; FCLK          ; 2.050  ; 2.050  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[18]   ; FCLK          ; 2.057  ; 2.057  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[19]   ; FCLK          ; 2.043  ; 2.043  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[20]   ; FCLK          ; 1.996  ; 1.996  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[21]   ; FCLK          ; 2.025  ; 2.025  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[22]   ; FCLK          ; 2.025  ; 2.025  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[23]   ; FCLK          ; 2.045  ; 2.045  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[24]   ; FCLK          ; 2.024  ; 2.024  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[25]   ; FCLK          ; 2.043  ; 2.043  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[26]   ; FCLK          ; 2.006  ; 2.006  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[27]   ; FCLK          ; 2.017  ; 2.017  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[28]   ; FCLK          ; 2.059  ; 2.059  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[29]   ; FCLK          ; 2.035  ; 2.035  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[30]   ; FCLK          ; 2.043  ; 2.043  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[31]   ; FCLK          ; 2.035  ; 2.035  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[32]   ; FCLK          ; 2.015  ; 2.015  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[33]   ; FCLK          ; 2.014  ; 2.014  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[34]   ; FCLK          ; 2.024  ; 2.024  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[35]   ; FCLK          ; 2.047  ; 2.047  ; Rise       ; FCLK            ;
+; FIFOB_EF_N        ; FCLK          ; 2.049  ; 2.049  ; Rise       ; FCLK            ;
+; SPI3_RX_RDAT[*]   ; SPI3_RX_RFCLK ; 1.918  ; 1.918  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[0]  ; SPI3_RX_RFCLK ; 1.604  ; 1.604  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[1]  ; SPI3_RX_RFCLK ; 1.415  ; 1.415  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[2]  ; SPI3_RX_RFCLK ; 1.760  ; 1.760  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[3]  ; SPI3_RX_RFCLK ; 1.635  ; 1.635  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[4]  ; SPI3_RX_RFCLK ; 1.612  ; 1.612  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[5]  ; SPI3_RX_RFCLK ; 1.918  ; 1.918  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[6]  ; SPI3_RX_RFCLK ; 1.225  ; 1.225  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[7]  ; SPI3_RX_RFCLK ; 1.689  ; 1.689  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[8]  ; SPI3_RX_RFCLK ; 1.337  ; 1.337  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[9]  ; SPI3_RX_RFCLK ; 1.310  ; 1.310  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[10] ; SPI3_RX_RFCLK ; 1.150  ; 1.150  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[11] ; SPI3_RX_RFCLK ; 1.748  ; 1.748  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[12] ; SPI3_RX_RFCLK ; 1.138  ; 1.138  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[13] ; SPI3_RX_RFCLK ; 1.394  ; 1.394  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[14] ; SPI3_RX_RFCLK ; 1.759  ; 1.759  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[15] ; SPI3_RX_RFCLK ; 1.885  ; 1.885  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[16] ; SPI3_RX_RFCLK ; 1.363  ; 1.363  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[17] ; SPI3_RX_RFCLK ; 1.082  ; 1.082  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[18] ; SPI3_RX_RFCLK ; 1.335  ; 1.335  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[19] ; SPI3_RX_RFCLK ; 1.670  ; 1.670  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[20] ; SPI3_RX_RFCLK ; 1.747  ; 1.747  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[21] ; SPI3_RX_RFCLK ; 1.510  ; 1.510  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[22] ; SPI3_RX_RFCLK ; 1.434  ; 1.434  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[23] ; SPI3_RX_RFCLK ; 1.686  ; 1.686  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[24] ; SPI3_RX_RFCLK ; 1.306  ; 1.306  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[25] ; SPI3_RX_RFCLK ; 1.722  ; 1.722  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[26] ; SPI3_RX_RFCLK ; 1.859  ; 1.859  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[27] ; SPI3_RX_RFCLK ; 1.409  ; 1.409  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[28] ; SPI3_RX_RFCLK ; 1.192  ; 1.192  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[29] ; SPI3_RX_RFCLK ; 1.838  ; 1.838  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[30] ; SPI3_RX_RFCLK ; 1.707  ; 1.707  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[31] ; SPI3_RX_RFCLK ; 1.363  ; 1.363  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_REOP      ; SPI3_RX_RFCLK ; 1.163  ; 1.163  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RERR      ; SPI3_RX_RFCLK ; 1.323  ; 1.323  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RMOD[*]   ; SPI3_RX_RFCLK ; 1.689  ; 1.689  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[0]  ; SPI3_RX_RFCLK ; 1.601  ; 1.601  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[1]  ; SPI3_RX_RFCLK ; 1.689  ; 1.689  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RSOP      ; SPI3_RX_RFCLK ; 1.131  ; 1.131  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RVAL      ; SPI3_RX_RFCLK ; -0.242 ; -0.242 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_DTPA      ; SPI3_TX_TFCLK ; 1.719  ; 1.719  ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; FIFOA_AF_N        ; FCLK          ; -1.129 ; -1.129 ; Rise       ; FCLK            ;
+; FIFOA_FF_N        ; FCLK          ; -1.147 ; -1.147 ; Rise       ; FCLK            ;
+; FIFOB_AE_N        ; FCLK          ; -1.835 ; -1.835 ; Rise       ; FCLK            ;
+; FIFOB_DATA[*]     ; FCLK          ; -1.792 ; -1.792 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[0]    ; FCLK          ; -1.843 ; -1.843 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[1]    ; FCLK          ; -1.824 ; -1.824 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[2]    ; FCLK          ; -1.812 ; -1.812 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[3]    ; FCLK          ; -1.823 ; -1.823 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[4]    ; FCLK          ; -1.831 ; -1.831 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[5]    ; FCLK          ; -1.814 ; -1.814 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[6]    ; FCLK          ; -1.843 ; -1.843 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[7]    ; FCLK          ; -1.834 ; -1.834 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[8]    ; FCLK          ; -1.843 ; -1.843 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[9]    ; FCLK          ; -1.848 ; -1.848 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[10]   ; FCLK          ; -1.831 ; -1.831 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[11]   ; FCLK          ; -1.826 ; -1.826 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[12]   ; FCLK          ; -1.841 ; -1.841 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[13]   ; FCLK          ; -1.816 ; -1.816 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[14]   ; FCLK          ; -1.839 ; -1.839 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[15]   ; FCLK          ; -1.831 ; -1.831 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[16]   ; FCLK          ; -1.823 ; -1.823 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[17]   ; FCLK          ; -1.846 ; -1.846 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[18]   ; FCLK          ; -1.853 ; -1.853 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[19]   ; FCLK          ; -1.839 ; -1.839 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[20]   ; FCLK          ; -1.792 ; -1.792 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[21]   ; FCLK          ; -1.821 ; -1.821 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[22]   ; FCLK          ; -1.821 ; -1.821 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[23]   ; FCLK          ; -1.841 ; -1.841 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[24]   ; FCLK          ; -1.820 ; -1.820 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[25]   ; FCLK          ; -1.839 ; -1.839 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[26]   ; FCLK          ; -1.802 ; -1.802 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[27]   ; FCLK          ; -1.813 ; -1.813 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[28]   ; FCLK          ; -1.855 ; -1.855 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[29]   ; FCLK          ; -1.831 ; -1.831 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[30]   ; FCLK          ; -1.839 ; -1.839 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[31]   ; FCLK          ; -1.831 ; -1.831 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[32]   ; FCLK          ; -1.811 ; -1.811 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[33]   ; FCLK          ; -1.810 ; -1.810 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[34]   ; FCLK          ; -1.820 ; -1.820 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[35]   ; FCLK          ; -1.843 ; -1.843 ; Rise       ; FCLK            ;
+; FIFOB_EF_N        ; FCLK          ; -1.845 ; -1.845 ; Rise       ; FCLK            ;
+; SPI3_RX_RDAT[*]   ; SPI3_RX_RFCLK ; -0.834 ; -0.834 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[0]  ; SPI3_RX_RFCLK ; -1.356 ; -1.356 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[1]  ; SPI3_RX_RFCLK ; -1.167 ; -1.167 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[2]  ; SPI3_RX_RFCLK ; -1.512 ; -1.512 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[3]  ; SPI3_RX_RFCLK ; -1.387 ; -1.387 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[4]  ; SPI3_RX_RFCLK ; -1.364 ; -1.364 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[5]  ; SPI3_RX_RFCLK ; -1.670 ; -1.670 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[6]  ; SPI3_RX_RFCLK ; -0.977 ; -0.977 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[7]  ; SPI3_RX_RFCLK ; -1.441 ; -1.441 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[8]  ; SPI3_RX_RFCLK ; -1.089 ; -1.089 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[9]  ; SPI3_RX_RFCLK ; -1.062 ; -1.062 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[10] ; SPI3_RX_RFCLK ; -0.902 ; -0.902 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[11] ; SPI3_RX_RFCLK ; -1.500 ; -1.500 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[12] ; SPI3_RX_RFCLK ; -0.890 ; -0.890 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[13] ; SPI3_RX_RFCLK ; -1.146 ; -1.146 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[14] ; SPI3_RX_RFCLK ; -1.511 ; -1.511 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[15] ; SPI3_RX_RFCLK ; -1.637 ; -1.637 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[16] ; SPI3_RX_RFCLK ; -1.115 ; -1.115 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[17] ; SPI3_RX_RFCLK ; -0.834 ; -0.834 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[18] ; SPI3_RX_RFCLK ; -1.087 ; -1.087 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[19] ; SPI3_RX_RFCLK ; -1.422 ; -1.422 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[20] ; SPI3_RX_RFCLK ; -1.499 ; -1.499 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[21] ; SPI3_RX_RFCLK ; -1.262 ; -1.262 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[22] ; SPI3_RX_RFCLK ; -1.186 ; -1.186 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[23] ; SPI3_RX_RFCLK ; -1.438 ; -1.438 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[24] ; SPI3_RX_RFCLK ; -1.058 ; -1.058 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[25] ; SPI3_RX_RFCLK ; -1.474 ; -1.474 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[26] ; SPI3_RX_RFCLK ; -1.611 ; -1.611 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[27] ; SPI3_RX_RFCLK ; -1.161 ; -1.161 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[28] ; SPI3_RX_RFCLK ; -0.944 ; -0.944 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[29] ; SPI3_RX_RFCLK ; -1.590 ; -1.590 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[30] ; SPI3_RX_RFCLK ; -1.459 ; -1.459 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[31] ; SPI3_RX_RFCLK ; -1.115 ; -1.115 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_REOP      ; SPI3_RX_RFCLK ; -0.915 ; -0.915 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RERR      ; SPI3_RX_RFCLK ; -1.075 ; -1.075 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RMOD[*]   ; SPI3_RX_RFCLK ; -1.353 ; -1.353 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[0]  ; SPI3_RX_RFCLK ; -1.353 ; -1.353 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[1]  ; SPI3_RX_RFCLK ; -1.441 ; -1.441 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RSOP      ; SPI3_RX_RFCLK ; -0.883 ; -0.883 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RVAL      ; SPI3_RX_RFCLK ; 0.490  ; 0.490  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_DTPA      ; SPI3_TX_TFCLK ; -1.471 ; -1.471 ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; FIFOA_CS_N        ; FCLK          ; 5.693 ; 5.693 ; Rise       ; FCLK            ;
+; FIFOA_DATA[*]     ; FCLK          ; 5.696 ; 5.696 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[0]    ; FCLK          ; 5.690 ; 5.690 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[1]    ; FCLK          ; 5.685 ; 5.685 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[2]    ; FCLK          ; 5.664 ; 5.664 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[3]    ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[4]    ; FCLK          ; 5.666 ; 5.666 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[5]    ; FCLK          ; 5.666 ; 5.666 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[6]    ; FCLK          ; 5.695 ; 5.695 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[7]    ; FCLK          ; 5.689 ; 5.689 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[8]    ; FCLK          ; 5.677 ; 5.677 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[9]    ; FCLK          ; 5.679 ; 5.679 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[10]   ; FCLK          ; 5.681 ; 5.681 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[11]   ; FCLK          ; 5.683 ; 5.683 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[12]   ; FCLK          ; 5.686 ; 5.686 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[13]   ; FCLK          ; 5.690 ; 5.690 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[14]   ; FCLK          ; 5.657 ; 5.657 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[15]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[16]   ; FCLK          ; 5.684 ; 5.684 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[17]   ; FCLK          ; 5.655 ; 5.655 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[18]   ; FCLK          ; 5.663 ; 5.663 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[19]   ; FCLK          ; 5.696 ; 5.696 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[20]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[21]   ; FCLK          ; 5.675 ; 5.675 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[22]   ; FCLK          ; 5.681 ; 5.681 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[23]   ; FCLK          ; 5.676 ; 5.676 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[24]   ; FCLK          ; 5.659 ; 5.659 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[25]   ; FCLK          ; 5.663 ; 5.663 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[26]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[27]   ; FCLK          ; 5.655 ; 5.655 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[28]   ; FCLK          ; 5.695 ; 5.695 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[29]   ; FCLK          ; 5.676 ; 5.676 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[30]   ; FCLK          ; 5.669 ; 5.669 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[31]   ; FCLK          ; 5.654 ; 5.654 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[32]   ; FCLK          ; 5.685 ; 5.685 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[33]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[34]   ; FCLK          ; 5.686 ; 5.686 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[35]   ; FCLK          ; 5.661 ; 5.661 ; Rise       ; FCLK            ;
+; FIFOA_EN          ; FCLK          ; 5.661 ; 5.661 ; Rise       ; FCLK            ;
+; FIFOA_RST_N       ; FCLK          ; 5.685 ; 5.685 ; Rise       ; FCLK            ;
+; FIFOA_WR          ; FCLK          ; 5.704 ; 5.704 ; Rise       ; FCLK            ;
+; FIFOB_CS_N        ; FCLK          ; 5.683 ; 5.683 ; Rise       ; FCLK            ;
+; FIFOB_EN          ; FCLK          ; 5.672 ; 5.672 ; Rise       ; FCLK            ;
+; FIFOB_RD_N        ; FCLK          ; 5.704 ; 5.704 ; Rise       ; FCLK            ;
+; FIFOB_RST_N       ; FCLK          ; 6.321 ; 6.321 ; Rise       ; FCLK            ;
+; SPI3_RX_RENB      ; SPI3_RX_RFCLK ; 7.310 ; 7.310 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_TDAT[*]   ; SPI3_TX_TFCLK ; 7.616 ; 7.616 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[0]  ; SPI3_TX_TFCLK ; 7.348 ; 7.348 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[1]  ; SPI3_TX_TFCLK ; 7.496 ; 7.496 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[2]  ; SPI3_TX_TFCLK ; 7.328 ; 7.328 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[3]  ; SPI3_TX_TFCLK ; 7.309 ; 7.309 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[4]  ; SPI3_TX_TFCLK ; 7.447 ; 7.447 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[5]  ; SPI3_TX_TFCLK ; 7.313 ; 7.313 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[6]  ; SPI3_TX_TFCLK ; 7.296 ; 7.296 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[7]  ; SPI3_TX_TFCLK ; 7.311 ; 7.311 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[8]  ; SPI3_TX_TFCLK ; 7.275 ; 7.275 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[9]  ; SPI3_TX_TFCLK ; 7.279 ; 7.279 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[10] ; SPI3_TX_TFCLK ; 7.294 ; 7.294 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[11] ; SPI3_TX_TFCLK ; 7.288 ; 7.288 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[12] ; SPI3_TX_TFCLK ; 7.277 ; 7.277 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[13] ; SPI3_TX_TFCLK ; 7.308 ; 7.308 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[14] ; SPI3_TX_TFCLK ; 7.292 ; 7.292 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[15] ; SPI3_TX_TFCLK ; 7.338 ; 7.338 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[16] ; SPI3_TX_TFCLK ; 7.296 ; 7.296 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[17] ; SPI3_TX_TFCLK ; 7.249 ; 7.249 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[18] ; SPI3_TX_TFCLK ; 7.329 ; 7.329 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[19] ; SPI3_TX_TFCLK ; 7.318 ; 7.318 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[20] ; SPI3_TX_TFCLK ; 7.353 ; 7.353 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[21] ; SPI3_TX_TFCLK ; 7.254 ; 7.254 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[22] ; SPI3_TX_TFCLK ; 7.282 ; 7.282 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[23] ; SPI3_TX_TFCLK ; 7.282 ; 7.282 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[24] ; SPI3_TX_TFCLK ; 7.249 ; 7.249 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[25] ; SPI3_TX_TFCLK ; 7.328 ; 7.328 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[26] ; SPI3_TX_TFCLK ; 7.342 ; 7.342 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[27] ; SPI3_TX_TFCLK ; 7.362 ; 7.362 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[28] ; SPI3_TX_TFCLK ; 7.616 ; 7.616 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[29] ; SPI3_TX_TFCLK ; 7.294 ; 7.294 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[30] ; SPI3_TX_TFCLK ; 7.333 ; 7.333 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[31] ; SPI3_TX_TFCLK ; 7.321 ; 7.321 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TENB      ; SPI3_TX_TFCLK ; 7.330 ; 7.330 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TEOP      ; SPI3_TX_TFCLK ; 7.034 ; 7.034 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TERR      ; SPI3_TX_TFCLK ; 6.982 ; 6.982 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TMOD[*]   ; SPI3_TX_TFCLK ; 5.384 ; 5.384 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[0]  ; SPI3_TX_TFCLK ; 5.349 ; 5.349 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[1]  ; SPI3_TX_TFCLK ; 5.384 ; 5.384 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TSOP      ; SPI3_TX_TFCLK ; 6.955 ; 6.955 ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; FIFOA_CS_N        ; FCLK          ; 5.693 ; 5.693 ; Rise       ; FCLK            ;
+; FIFOA_DATA[*]     ; FCLK          ; 5.654 ; 5.654 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[0]    ; FCLK          ; 5.690 ; 5.690 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[1]    ; FCLK          ; 5.685 ; 5.685 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[2]    ; FCLK          ; 5.664 ; 5.664 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[3]    ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[4]    ; FCLK          ; 5.666 ; 5.666 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[5]    ; FCLK          ; 5.666 ; 5.666 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[6]    ; FCLK          ; 5.695 ; 5.695 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[7]    ; FCLK          ; 5.689 ; 5.689 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[8]    ; FCLK          ; 5.677 ; 5.677 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[9]    ; FCLK          ; 5.679 ; 5.679 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[10]   ; FCLK          ; 5.681 ; 5.681 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[11]   ; FCLK          ; 5.683 ; 5.683 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[12]   ; FCLK          ; 5.686 ; 5.686 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[13]   ; FCLK          ; 5.690 ; 5.690 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[14]   ; FCLK          ; 5.657 ; 5.657 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[15]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[16]   ; FCLK          ; 5.684 ; 5.684 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[17]   ; FCLK          ; 5.655 ; 5.655 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[18]   ; FCLK          ; 5.663 ; 5.663 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[19]   ; FCLK          ; 5.696 ; 5.696 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[20]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[21]   ; FCLK          ; 5.675 ; 5.675 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[22]   ; FCLK          ; 5.681 ; 5.681 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[23]   ; FCLK          ; 5.676 ; 5.676 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[24]   ; FCLK          ; 5.659 ; 5.659 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[25]   ; FCLK          ; 5.663 ; 5.663 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[26]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[27]   ; FCLK          ; 5.655 ; 5.655 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[28]   ; FCLK          ; 5.695 ; 5.695 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[29]   ; FCLK          ; 5.676 ; 5.676 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[30]   ; FCLK          ; 5.669 ; 5.669 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[31]   ; FCLK          ; 5.654 ; 5.654 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[32]   ; FCLK          ; 5.685 ; 5.685 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[33]   ; FCLK          ; 5.667 ; 5.667 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[34]   ; FCLK          ; 5.686 ; 5.686 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[35]   ; FCLK          ; 5.661 ; 5.661 ; Rise       ; FCLK            ;
+; FIFOA_EN          ; FCLK          ; 5.661 ; 5.661 ; Rise       ; FCLK            ;
+; FIFOA_RST_N       ; FCLK          ; 5.685 ; 5.685 ; Rise       ; FCLK            ;
+; FIFOA_WR          ; FCLK          ; 5.704 ; 5.704 ; Rise       ; FCLK            ;
+; FIFOB_CS_N        ; FCLK          ; 5.683 ; 5.683 ; Rise       ; FCLK            ;
+; FIFOB_EN          ; FCLK          ; 5.672 ; 5.672 ; Rise       ; FCLK            ;
+; FIFOB_RD_N        ; FCLK          ; 5.704 ; 5.704 ; Rise       ; FCLK            ;
+; FIFOB_RST_N       ; FCLK          ; 6.321 ; 6.321 ; Rise       ; FCLK            ;
+; SPI3_RX_RENB      ; SPI3_RX_RFCLK ; 7.310 ; 7.310 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_TDAT[*]   ; SPI3_TX_TFCLK ; 7.249 ; 7.249 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[0]  ; SPI3_TX_TFCLK ; 7.348 ; 7.348 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[1]  ; SPI3_TX_TFCLK ; 7.496 ; 7.496 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[2]  ; SPI3_TX_TFCLK ; 7.328 ; 7.328 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[3]  ; SPI3_TX_TFCLK ; 7.309 ; 7.309 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[4]  ; SPI3_TX_TFCLK ; 7.447 ; 7.447 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[5]  ; SPI3_TX_TFCLK ; 7.313 ; 7.313 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[6]  ; SPI3_TX_TFCLK ; 7.296 ; 7.296 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[7]  ; SPI3_TX_TFCLK ; 7.311 ; 7.311 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[8]  ; SPI3_TX_TFCLK ; 7.275 ; 7.275 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[9]  ; SPI3_TX_TFCLK ; 7.279 ; 7.279 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[10] ; SPI3_TX_TFCLK ; 7.294 ; 7.294 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[11] ; SPI3_TX_TFCLK ; 7.288 ; 7.288 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[12] ; SPI3_TX_TFCLK ; 7.277 ; 7.277 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[13] ; SPI3_TX_TFCLK ; 7.308 ; 7.308 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[14] ; SPI3_TX_TFCLK ; 7.292 ; 7.292 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[15] ; SPI3_TX_TFCLK ; 7.338 ; 7.338 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[16] ; SPI3_TX_TFCLK ; 7.296 ; 7.296 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[17] ; SPI3_TX_TFCLK ; 7.249 ; 7.249 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[18] ; SPI3_TX_TFCLK ; 7.329 ; 7.329 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[19] ; SPI3_TX_TFCLK ; 7.318 ; 7.318 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[20] ; SPI3_TX_TFCLK ; 7.353 ; 7.353 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[21] ; SPI3_TX_TFCLK ; 7.254 ; 7.254 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[22] ; SPI3_TX_TFCLK ; 7.282 ; 7.282 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[23] ; SPI3_TX_TFCLK ; 7.282 ; 7.282 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[24] ; SPI3_TX_TFCLK ; 7.249 ; 7.249 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[25] ; SPI3_TX_TFCLK ; 7.328 ; 7.328 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[26] ; SPI3_TX_TFCLK ; 7.342 ; 7.342 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[27] ; SPI3_TX_TFCLK ; 7.362 ; 7.362 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[28] ; SPI3_TX_TFCLK ; 7.616 ; 7.616 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[29] ; SPI3_TX_TFCLK ; 7.294 ; 7.294 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[30] ; SPI3_TX_TFCLK ; 7.333 ; 7.333 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[31] ; SPI3_TX_TFCLK ; 7.321 ; 7.321 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TENB      ; SPI3_TX_TFCLK ; 7.330 ; 7.330 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TEOP      ; SPI3_TX_TFCLK ; 7.034 ; 7.034 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TERR      ; SPI3_TX_TFCLK ; 6.982 ; 6.982 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TMOD[*]   ; SPI3_TX_TFCLK ; 5.349 ; 5.349 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[0]  ; SPI3_TX_TFCLK ; 5.349 ; 5.349 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[1]  ; SPI3_TX_TFCLK ; 5.384 ; 5.384 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TSOP      ; SPI3_TX_TFCLK ; 6.955 ; 6.955 ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------+
+; Fast Model Setup Summary              ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; SCLK          ; 1.957 ; 0.000         ;
+; FCLK          ; 2.197 ; 0.000         ;
+; SPI3_TX_TFCLK ; 3.130 ; 0.000         ;
+; SPI3_RX_RFCLK ; 3.187 ; 0.000         ;
++---------------+-------+---------------+
+
+
++---------------------------------------+
+; Fast Model Hold Summary               ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; FCLK          ; 0.198 ; 0.000         ;
+; SCLK          ; 0.215 ; 0.000         ;
+; SPI3_RX_RFCLK ; 0.215 ; 0.000         ;
+; SPI3_TX_TFCLK ; 0.215 ; 0.000         ;
++---------------+-------+---------------+
+
+
++---------------------------------------+
+; Fast Model Recovery Summary           ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; SCLK          ; 3.074 ; 0.000         ;
+; FCLK          ; 5.411 ; 0.000         ;
+; SPI3_RX_RFCLK ; 7.785 ; 0.000         ;
+; SPI3_TX_TFCLK ; 8.066 ; 0.000         ;
++---------------+-------+---------------+
+
+
++---------------------------------------+
+; Fast Model Removal Summary            ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; SPI3_TX_TFCLK ; 0.720 ; 0.000         ;
+; SPI3_RX_RFCLK ; 0.914 ; 0.000         ;
+; FCLK          ; 1.706 ; 0.000         ;
+; SCLK          ; 1.739 ; 0.000         ;
++---------------+-------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width                                                                                                                                                                                                                                                                                      ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                                                                                                                                                              ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[0]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[0]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[10]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[10]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[11]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[11]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[12]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[12]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[13]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[13]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[14]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[14]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[15]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[15]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[1]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[1]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[2]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[2]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[3]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[3]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[4]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[4]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[5]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[5]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[6]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[6]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[7]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[7]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[8]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[8]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[9]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_a[9]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[0]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[0]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[10]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[10]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[11]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[11]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[12]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[12]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[13]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[13]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[14]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[14]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[15]                         ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[15]                         ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[1]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[1]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[2]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[2]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[3]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[3]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[4]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[4]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[5]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[5]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[6]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[6]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[7]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[7]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[8]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[8]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[9]                          ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|q_b[9]                          ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg0 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg1 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg2 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg3 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg4 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg5 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg6 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_address_reg7 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; 0.064 ; 2.564        ; 2.500          ; High Pulse Width ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; 0.064 ; 2.564        ; 2.500          ; Low Pulse Width  ; SCLK  ; Rise       ; fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component|altsyncram_7g62:auto_generated|ram_block1a0~porta_datain_reg3  ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; FIFOA_AF_N        ; FCLK          ; 0.594  ; 0.594  ; Rise       ; FCLK            ;
+; FIFOA_FF_N        ; FCLK          ; 0.613  ; 0.613  ; Rise       ; FCLK            ;
+; FIFOB_AE_N        ; FCLK          ; 1.014  ; 1.014  ; Rise       ; FCLK            ;
+; FIFOB_DATA[*]     ; FCLK          ; 1.032  ; 1.032  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[0]    ; FCLK          ; 1.021  ; 1.021  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[1]    ; FCLK          ; 1.003  ; 1.003  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[2]    ; FCLK          ; 0.992  ; 0.992  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[3]    ; FCLK          ; 1.001  ; 1.001  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[4]    ; FCLK          ; 1.011  ; 1.011  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[5]    ; FCLK          ; 0.993  ; 0.993  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[6]    ; FCLK          ; 1.020  ; 1.020  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[7]    ; FCLK          ; 1.013  ; 1.013  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[8]    ; FCLK          ; 1.020  ; 1.020  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[9]    ; FCLK          ; 1.026  ; 1.026  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[10]   ; FCLK          ; 1.010  ; 1.010  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[11]   ; FCLK          ; 1.003  ; 1.003  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[12]   ; FCLK          ; 1.020  ; 1.020  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[13]   ; FCLK          ; 0.993  ; 0.993  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[14]   ; FCLK          ; 1.016  ; 1.016  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[15]   ; FCLK          ; 1.011  ; 1.011  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[16]   ; FCLK          ; 1.001  ; 1.001  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[17]   ; FCLK          ; 1.023  ; 1.023  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[18]   ; FCLK          ; 1.031  ; 1.031  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[19]   ; FCLK          ; 1.016  ; 1.016  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[20]   ; FCLK          ; 0.972  ; 0.972  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[21]   ; FCLK          ; 0.998  ; 0.998  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[22]   ; FCLK          ; 0.998  ; 0.998  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[23]   ; FCLK          ; 1.020  ; 1.020  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[24]   ; FCLK          ; 0.999  ; 0.999  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[25]   ; FCLK          ; 1.016  ; 1.016  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[26]   ; FCLK          ; 0.982  ; 0.982  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[27]   ; FCLK          ; 0.990  ; 0.990  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[28]   ; FCLK          ; 1.032  ; 1.032  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[29]   ; FCLK          ; 1.011  ; 1.011  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[30]   ; FCLK          ; 1.016  ; 1.016  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[31]   ; FCLK          ; 1.011  ; 1.011  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[32]   ; FCLK          ; 0.988  ; 0.988  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[33]   ; FCLK          ; 0.989  ; 0.989  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[34]   ; FCLK          ; 0.999  ; 0.999  ; Rise       ; FCLK            ;
+;  FIFOB_DATA[35]   ; FCLK          ; 1.020  ; 1.020  ; Rise       ; FCLK            ;
+; FIFOB_EF_N        ; FCLK          ; 1.024  ; 1.024  ; Rise       ; FCLK            ;
+; SPI3_RX_RDAT[*]   ; SPI3_RX_RFCLK ; 0.378  ; 0.378  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[0]  ; SPI3_RX_RFCLK ; 0.224  ; 0.224  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[1]  ; SPI3_RX_RFCLK ; 0.114  ; 0.114  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[2]  ; SPI3_RX_RFCLK ; 0.351  ; 0.351  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[3]  ; SPI3_RX_RFCLK ; 0.249  ; 0.249  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[4]  ; SPI3_RX_RFCLK ; 0.247  ; 0.247  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[5]  ; SPI3_RX_RFCLK ; 0.364  ; 0.364  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[6]  ; SPI3_RX_RFCLK ; 0.082  ; 0.082  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[7]  ; SPI3_RX_RFCLK ; 0.362  ; 0.362  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[8]  ; SPI3_RX_RFCLK ; -0.046 ; -0.046 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[9]  ; SPI3_RX_RFCLK ; 0.076  ; 0.076  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[10] ; SPI3_RX_RFCLK ; -0.033 ; -0.033 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[11] ; SPI3_RX_RFCLK ; 0.263  ; 0.263  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[12] ; SPI3_RX_RFCLK ; -0.021 ; -0.021 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[13] ; SPI3_RX_RFCLK ; 0.246  ; 0.246  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[14] ; SPI3_RX_RFCLK ; 0.378  ; 0.378  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[15] ; SPI3_RX_RFCLK ; 0.345  ; 0.345  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[16] ; SPI3_RX_RFCLK ; 0.110  ; 0.110  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[17] ; SPI3_RX_RFCLK ; -0.069 ; -0.069 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[18] ; SPI3_RX_RFCLK ; 0.116  ; 0.116  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[19] ; SPI3_RX_RFCLK ; 0.342  ; 0.342  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[20] ; SPI3_RX_RFCLK ; 0.374  ; 0.374  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[21] ; SPI3_RX_RFCLK ; 0.162  ; 0.162  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[22] ; SPI3_RX_RFCLK ; 0.257  ; 0.257  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[23] ; SPI3_RX_RFCLK ; 0.343  ; 0.343  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[24] ; SPI3_RX_RFCLK ; 0.122  ; 0.122  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[25] ; SPI3_RX_RFCLK ; 0.292  ; 0.292  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[26] ; SPI3_RX_RFCLK ; 0.366  ; 0.366  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[27] ; SPI3_RX_RFCLK ; 0.113  ; 0.113  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[28] ; SPI3_RX_RFCLK ; 0.184  ; 0.184  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[29] ; SPI3_RX_RFCLK ; 0.319  ; 0.319  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[30] ; SPI3_RX_RFCLK ; 0.303  ; 0.303  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[31] ; SPI3_RX_RFCLK ; 0.012  ; 0.012  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_REOP      ; SPI3_RX_RFCLK ; 0.166  ; 0.166  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RERR      ; SPI3_RX_RFCLK ; 0.251  ; 0.251  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RMOD[*]   ; SPI3_RX_RFCLK ; 0.503  ; 0.503  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[0]  ; SPI3_RX_RFCLK ; 0.503  ; 0.503  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[1]  ; SPI3_RX_RFCLK ; 0.402  ; 0.402  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RSOP      ; SPI3_RX_RFCLK ; -0.061 ; -0.061 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RVAL      ; SPI3_RX_RFCLK ; -0.596 ; -0.596 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_DTPA      ; SPI3_TX_TFCLK ; 0.560  ; 0.560  ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------------+---------------+--------+--------+------------+-----------------+
+; FIFOA_AF_N        ; FCLK          ; -0.493 ; -0.493 ; Rise       ; FCLK            ;
+; FIFOA_FF_N        ; FCLK          ; -0.512 ; -0.512 ; Rise       ; FCLK            ;
+; FIFOB_AE_N        ; FCLK          ; -0.913 ; -0.913 ; Rise       ; FCLK            ;
+; FIFOB_DATA[*]     ; FCLK          ; -0.871 ; -0.871 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[0]    ; FCLK          ; -0.920 ; -0.920 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[1]    ; FCLK          ; -0.902 ; -0.902 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[2]    ; FCLK          ; -0.891 ; -0.891 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[3]    ; FCLK          ; -0.900 ; -0.900 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[4]    ; FCLK          ; -0.910 ; -0.910 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[5]    ; FCLK          ; -0.892 ; -0.892 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[6]    ; FCLK          ; -0.919 ; -0.919 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[7]    ; FCLK          ; -0.912 ; -0.912 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[8]    ; FCLK          ; -0.919 ; -0.919 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[9]    ; FCLK          ; -0.925 ; -0.925 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[10]   ; FCLK          ; -0.909 ; -0.909 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[11]   ; FCLK          ; -0.902 ; -0.902 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[12]   ; FCLK          ; -0.919 ; -0.919 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[13]   ; FCLK          ; -0.892 ; -0.892 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[14]   ; FCLK          ; -0.915 ; -0.915 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[15]   ; FCLK          ; -0.910 ; -0.910 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[16]   ; FCLK          ; -0.900 ; -0.900 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[17]   ; FCLK          ; -0.922 ; -0.922 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[18]   ; FCLK          ; -0.930 ; -0.930 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[19]   ; FCLK          ; -0.915 ; -0.915 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[20]   ; FCLK          ; -0.871 ; -0.871 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[21]   ; FCLK          ; -0.897 ; -0.897 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[22]   ; FCLK          ; -0.897 ; -0.897 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[23]   ; FCLK          ; -0.919 ; -0.919 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[24]   ; FCLK          ; -0.898 ; -0.898 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[25]   ; FCLK          ; -0.915 ; -0.915 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[26]   ; FCLK          ; -0.881 ; -0.881 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[27]   ; FCLK          ; -0.889 ; -0.889 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[28]   ; FCLK          ; -0.931 ; -0.931 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[29]   ; FCLK          ; -0.910 ; -0.910 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[30]   ; FCLK          ; -0.915 ; -0.915 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[31]   ; FCLK          ; -0.910 ; -0.910 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[32]   ; FCLK          ; -0.887 ; -0.887 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[33]   ; FCLK          ; -0.888 ; -0.888 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[34]   ; FCLK          ; -0.898 ; -0.898 ; Rise       ; FCLK            ;
+;  FIFOB_DATA[35]   ; FCLK          ; -0.919 ; -0.919 ; Rise       ; FCLK            ;
+; FIFOB_EF_N        ; FCLK          ; -0.923 ; -0.923 ; Rise       ; FCLK            ;
+; SPI3_RX_RDAT[*]   ; SPI3_RX_RFCLK ; 0.189  ; 0.189  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[0]  ; SPI3_RX_RFCLK ; -0.104 ; -0.104 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[1]  ; SPI3_RX_RFCLK ; 0.006  ; 0.006  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[2]  ; SPI3_RX_RFCLK ; -0.231 ; -0.231 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[3]  ; SPI3_RX_RFCLK ; -0.129 ; -0.129 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[4]  ; SPI3_RX_RFCLK ; -0.127 ; -0.127 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[5]  ; SPI3_RX_RFCLK ; -0.244 ; -0.244 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[6]  ; SPI3_RX_RFCLK ; 0.038  ; 0.038  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[7]  ; SPI3_RX_RFCLK ; -0.242 ; -0.242 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[8]  ; SPI3_RX_RFCLK ; 0.166  ; 0.166  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[9]  ; SPI3_RX_RFCLK ; 0.044  ; 0.044  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[10] ; SPI3_RX_RFCLK ; 0.153  ; 0.153  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[11] ; SPI3_RX_RFCLK ; -0.143 ; -0.143 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[12] ; SPI3_RX_RFCLK ; 0.141  ; 0.141  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[13] ; SPI3_RX_RFCLK ; -0.126 ; -0.126 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[14] ; SPI3_RX_RFCLK ; -0.258 ; -0.258 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[15] ; SPI3_RX_RFCLK ; -0.225 ; -0.225 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[16] ; SPI3_RX_RFCLK ; 0.010  ; 0.010  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[17] ; SPI3_RX_RFCLK ; 0.189  ; 0.189  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[18] ; SPI3_RX_RFCLK ; 0.004  ; 0.004  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[19] ; SPI3_RX_RFCLK ; -0.222 ; -0.222 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[20] ; SPI3_RX_RFCLK ; -0.254 ; -0.254 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[21] ; SPI3_RX_RFCLK ; -0.042 ; -0.042 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[22] ; SPI3_RX_RFCLK ; -0.137 ; -0.137 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[23] ; SPI3_RX_RFCLK ; -0.223 ; -0.223 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[24] ; SPI3_RX_RFCLK ; -0.002 ; -0.002 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[25] ; SPI3_RX_RFCLK ; -0.172 ; -0.172 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[26] ; SPI3_RX_RFCLK ; -0.246 ; -0.246 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[27] ; SPI3_RX_RFCLK ; 0.007  ; 0.007  ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[28] ; SPI3_RX_RFCLK ; -0.064 ; -0.064 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[29] ; SPI3_RX_RFCLK ; -0.199 ; -0.199 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[30] ; SPI3_RX_RFCLK ; -0.183 ; -0.183 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RDAT[31] ; SPI3_RX_RFCLK ; 0.108  ; 0.108  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_REOP      ; SPI3_RX_RFCLK ; -0.046 ; -0.046 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RERR      ; SPI3_RX_RFCLK ; -0.131 ; -0.131 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RMOD[*]   ; SPI3_RX_RFCLK ; -0.282 ; -0.282 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[0]  ; SPI3_RX_RFCLK ; -0.383 ; -0.383 ; Rise       ; SPI3_RX_RFCLK   ;
+;  SPI3_RX_RMOD[1]  ; SPI3_RX_RFCLK ; -0.282 ; -0.282 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RSOP      ; SPI3_RX_RFCLK ; 0.181  ; 0.181  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_RX_RVAL      ; SPI3_RX_RFCLK ; 0.716  ; 0.716  ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_DTPA      ; SPI3_TX_TFCLK ; -0.440 ; -0.440 ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; FIFOA_CS_N        ; FCLK          ; 3.191 ; 3.191 ; Rise       ; FCLK            ;
+; FIFOA_DATA[*]     ; FCLK          ; 3.193 ; 3.193 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[0]    ; FCLK          ; 3.188 ; 3.188 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[1]    ; FCLK          ; 3.180 ; 3.180 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[2]    ; FCLK          ; 3.161 ; 3.161 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[3]    ; FCLK          ; 3.163 ; 3.163 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[4]    ; FCLK          ; 3.161 ; 3.161 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[5]    ; FCLK          ; 3.161 ; 3.161 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[6]    ; FCLK          ; 3.190 ; 3.190 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[7]    ; FCLK          ; 3.187 ; 3.187 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[8]    ; FCLK          ; 3.175 ; 3.175 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[9]    ; FCLK          ; 3.176 ; 3.176 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[10]   ; FCLK          ; 3.179 ; 3.179 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[11]   ; FCLK          ; 3.179 ; 3.179 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[12]   ; FCLK          ; 3.182 ; 3.182 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[13]   ; FCLK          ; 3.188 ; 3.188 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[14]   ; FCLK          ; 3.155 ; 3.155 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[15]   ; FCLK          ; 3.163 ; 3.163 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[16]   ; FCLK          ; 3.181 ; 3.181 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[17]   ; FCLK          ; 3.150 ; 3.150 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[18]   ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[19]   ; FCLK          ; 3.191 ; 3.191 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[20]   ; FCLK          ; 3.165 ; 3.165 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[21]   ; FCLK          ; 3.170 ; 3.170 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[22]   ; FCLK          ; 3.179 ; 3.179 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[23]   ; FCLK          ; 3.172 ; 3.172 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[24]   ; FCLK          ; 3.157 ; 3.157 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[25]   ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[26]   ; FCLK          ; 3.163 ; 3.163 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[27]   ; FCLK          ; 3.153 ; 3.153 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[28]   ; FCLK          ; 3.193 ; 3.193 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[29]   ; FCLK          ; 3.171 ; 3.171 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[30]   ; FCLK          ; 3.166 ; 3.166 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[31]   ; FCLK          ; 3.151 ; 3.151 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[32]   ; FCLK          ; 3.183 ; 3.183 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[33]   ; FCLK          ; 3.165 ; 3.165 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[34]   ; FCLK          ; 3.182 ; 3.182 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[35]   ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+; FIFOA_EN          ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+; FIFOA_RST_N       ; FCLK          ; 3.181 ; 3.181 ; Rise       ; FCLK            ;
+; FIFOA_WR          ; FCLK          ; 3.201 ; 3.201 ; Rise       ; FCLK            ;
+; FIFOB_CS_N        ; FCLK          ; 3.181 ; 3.181 ; Rise       ; FCLK            ;
+; FIFOB_EN          ; FCLK          ; 3.170 ; 3.170 ; Rise       ; FCLK            ;
+; FIFOB_RD_N        ; FCLK          ; 3.200 ; 3.200 ; Rise       ; FCLK            ;
+; FIFOB_RST_N       ; FCLK          ; 3.518 ; 3.518 ; Rise       ; FCLK            ;
+; SPI3_RX_RENB      ; SPI3_RX_RFCLK ; 3.895 ; 3.895 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_TDAT[*]   ; SPI3_TX_TFCLK ; 4.032 ; 4.032 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[0]  ; SPI3_TX_TFCLK ; 3.930 ; 3.930 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[1]  ; SPI3_TX_TFCLK ; 4.032 ; 4.032 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[2]  ; SPI3_TX_TFCLK ; 3.910 ; 3.910 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[3]  ; SPI3_TX_TFCLK ; 3.894 ; 3.894 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[4]  ; SPI3_TX_TFCLK ; 4.001 ; 4.001 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[5]  ; SPI3_TX_TFCLK ; 3.898 ; 3.898 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[6]  ; SPI3_TX_TFCLK ; 3.879 ; 3.879 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[7]  ; SPI3_TX_TFCLK ; 3.891 ; 3.891 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[8]  ; SPI3_TX_TFCLK ; 3.877 ; 3.877 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[9]  ; SPI3_TX_TFCLK ; 3.877 ; 3.877 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[10] ; SPI3_TX_TFCLK ; 3.894 ; 3.894 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[11] ; SPI3_TX_TFCLK ; 3.888 ; 3.888 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[12] ; SPI3_TX_TFCLK ; 3.879 ; 3.879 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[13] ; SPI3_TX_TFCLK ; 3.893 ; 3.893 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[14] ; SPI3_TX_TFCLK ; 3.880 ; 3.880 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[15] ; SPI3_TX_TFCLK ; 3.918 ; 3.918 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[16] ; SPI3_TX_TFCLK ; 3.880 ; 3.880 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[17] ; SPI3_TX_TFCLK ; 3.850 ; 3.850 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[18] ; SPI3_TX_TFCLK ; 3.914 ; 3.914 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[19] ; SPI3_TX_TFCLK ; 3.915 ; 3.915 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[20] ; SPI3_TX_TFCLK ; 3.934 ; 3.934 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[21] ; SPI3_TX_TFCLK ; 3.854 ; 3.854 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[22] ; SPI3_TX_TFCLK ; 3.884 ; 3.884 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[23] ; SPI3_TX_TFCLK ; 3.870 ; 3.870 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[24] ; SPI3_TX_TFCLK ; 3.850 ; 3.850 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[25] ; SPI3_TX_TFCLK ; 3.911 ; 3.911 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[26] ; SPI3_TX_TFCLK ; 3.923 ; 3.923 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[27] ; SPI3_TX_TFCLK ; 3.941 ; 3.941 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[28] ; SPI3_TX_TFCLK ; 4.005 ; 4.005 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[29] ; SPI3_TX_TFCLK ; 3.877 ; 3.877 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[30] ; SPI3_TX_TFCLK ; 3.915 ; 3.915 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[31] ; SPI3_TX_TFCLK ; 3.906 ; 3.906 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TENB      ; SPI3_TX_TFCLK ; 3.914 ; 3.914 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TEOP      ; SPI3_TX_TFCLK ; 3.774 ; 3.774 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TERR      ; SPI3_TX_TFCLK ; 3.740 ; 3.740 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TMOD[*]   ; SPI3_TX_TFCLK ; 3.020 ; 3.020 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[0]  ; SPI3_TX_TFCLK ; 2.986 ; 2.986 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[1]  ; SPI3_TX_TFCLK ; 3.020 ; 3.020 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TSOP      ; SPI3_TX_TFCLK ; 3.711 ; 3.711 ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; Data Port         ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------------+---------------+-------+-------+------------+-----------------+
+; FIFOA_CS_N        ; FCLK          ; 3.191 ; 3.191 ; Rise       ; FCLK            ;
+; FIFOA_DATA[*]     ; FCLK          ; 3.150 ; 3.150 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[0]    ; FCLK          ; 3.188 ; 3.188 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[1]    ; FCLK          ; 3.180 ; 3.180 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[2]    ; FCLK          ; 3.161 ; 3.161 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[3]    ; FCLK          ; 3.163 ; 3.163 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[4]    ; FCLK          ; 3.161 ; 3.161 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[5]    ; FCLK          ; 3.161 ; 3.161 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[6]    ; FCLK          ; 3.190 ; 3.190 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[7]    ; FCLK          ; 3.187 ; 3.187 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[8]    ; FCLK          ; 3.175 ; 3.175 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[9]    ; FCLK          ; 3.176 ; 3.176 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[10]   ; FCLK          ; 3.179 ; 3.179 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[11]   ; FCLK          ; 3.179 ; 3.179 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[12]   ; FCLK          ; 3.182 ; 3.182 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[13]   ; FCLK          ; 3.188 ; 3.188 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[14]   ; FCLK          ; 3.155 ; 3.155 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[15]   ; FCLK          ; 3.163 ; 3.163 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[16]   ; FCLK          ; 3.181 ; 3.181 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[17]   ; FCLK          ; 3.150 ; 3.150 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[18]   ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[19]   ; FCLK          ; 3.191 ; 3.191 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[20]   ; FCLK          ; 3.165 ; 3.165 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[21]   ; FCLK          ; 3.170 ; 3.170 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[22]   ; FCLK          ; 3.179 ; 3.179 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[23]   ; FCLK          ; 3.172 ; 3.172 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[24]   ; FCLK          ; 3.157 ; 3.157 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[25]   ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[26]   ; FCLK          ; 3.163 ; 3.163 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[27]   ; FCLK          ; 3.153 ; 3.153 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[28]   ; FCLK          ; 3.193 ; 3.193 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[29]   ; FCLK          ; 3.171 ; 3.171 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[30]   ; FCLK          ; 3.166 ; 3.166 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[31]   ; FCLK          ; 3.151 ; 3.151 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[32]   ; FCLK          ; 3.183 ; 3.183 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[33]   ; FCLK          ; 3.165 ; 3.165 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[34]   ; FCLK          ; 3.182 ; 3.182 ; Rise       ; FCLK            ;
+;  FIFOA_DATA[35]   ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+; FIFOA_EN          ; FCLK          ; 3.159 ; 3.159 ; Rise       ; FCLK            ;
+; FIFOA_RST_N       ; FCLK          ; 3.181 ; 3.181 ; Rise       ; FCLK            ;
+; FIFOA_WR          ; FCLK          ; 3.201 ; 3.201 ; Rise       ; FCLK            ;
+; FIFOB_CS_N        ; FCLK          ; 3.181 ; 3.181 ; Rise       ; FCLK            ;
+; FIFOB_EN          ; FCLK          ; 3.170 ; 3.170 ; Rise       ; FCLK            ;
+; FIFOB_RD_N        ; FCLK          ; 3.200 ; 3.200 ; Rise       ; FCLK            ;
+; FIFOB_RST_N       ; FCLK          ; 3.518 ; 3.518 ; Rise       ; FCLK            ;
+; SPI3_RX_RENB      ; SPI3_RX_RFCLK ; 3.895 ; 3.895 ; Rise       ; SPI3_RX_RFCLK   ;
+; SPI3_TX_TDAT[*]   ; SPI3_TX_TFCLK ; 3.850 ; 3.850 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[0]  ; SPI3_TX_TFCLK ; 3.930 ; 3.930 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[1]  ; SPI3_TX_TFCLK ; 4.032 ; 4.032 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[2]  ; SPI3_TX_TFCLK ; 3.910 ; 3.910 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[3]  ; SPI3_TX_TFCLK ; 3.894 ; 3.894 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[4]  ; SPI3_TX_TFCLK ; 4.001 ; 4.001 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[5]  ; SPI3_TX_TFCLK ; 3.898 ; 3.898 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[6]  ; SPI3_TX_TFCLK ; 3.879 ; 3.879 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[7]  ; SPI3_TX_TFCLK ; 3.891 ; 3.891 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[8]  ; SPI3_TX_TFCLK ; 3.877 ; 3.877 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[9]  ; SPI3_TX_TFCLK ; 3.877 ; 3.877 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[10] ; SPI3_TX_TFCLK ; 3.894 ; 3.894 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[11] ; SPI3_TX_TFCLK ; 3.888 ; 3.888 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[12] ; SPI3_TX_TFCLK ; 3.879 ; 3.879 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[13] ; SPI3_TX_TFCLK ; 3.893 ; 3.893 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[14] ; SPI3_TX_TFCLK ; 3.880 ; 3.880 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[15] ; SPI3_TX_TFCLK ; 3.918 ; 3.918 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[16] ; SPI3_TX_TFCLK ; 3.880 ; 3.880 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[17] ; SPI3_TX_TFCLK ; 3.850 ; 3.850 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[18] ; SPI3_TX_TFCLK ; 3.914 ; 3.914 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[19] ; SPI3_TX_TFCLK ; 3.915 ; 3.915 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[20] ; SPI3_TX_TFCLK ; 3.934 ; 3.934 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[21] ; SPI3_TX_TFCLK ; 3.854 ; 3.854 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[22] ; SPI3_TX_TFCLK ; 3.884 ; 3.884 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[23] ; SPI3_TX_TFCLK ; 3.870 ; 3.870 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[24] ; SPI3_TX_TFCLK ; 3.850 ; 3.850 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[25] ; SPI3_TX_TFCLK ; 3.911 ; 3.911 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[26] ; SPI3_TX_TFCLK ; 3.923 ; 3.923 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[27] ; SPI3_TX_TFCLK ; 3.941 ; 3.941 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[28] ; SPI3_TX_TFCLK ; 4.005 ; 4.005 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[29] ; SPI3_TX_TFCLK ; 3.877 ; 3.877 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[30] ; SPI3_TX_TFCLK ; 3.915 ; 3.915 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TDAT[31] ; SPI3_TX_TFCLK ; 3.906 ; 3.906 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TENB      ; SPI3_TX_TFCLK ; 3.914 ; 3.914 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TEOP      ; SPI3_TX_TFCLK ; 3.774 ; 3.774 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TERR      ; SPI3_TX_TFCLK ; 3.740 ; 3.740 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TMOD[*]   ; SPI3_TX_TFCLK ; 2.986 ; 2.986 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[0]  ; SPI3_TX_TFCLK ; 2.986 ; 2.986 ; Rise       ; SPI3_TX_TFCLK   ;
+;  SPI3_TX_TMOD[1]  ; SPI3_TX_TFCLK ; 3.020 ; 3.020 ; Rise       ; SPI3_TX_TFCLK   ;
+; SPI3_TX_TSOP      ; SPI3_TX_TFCLK ; 3.711 ; 3.711 ; Rise       ; SPI3_TX_TFCLK   ;
++-------------------+---------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.518  ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  FCLK            ; 0.456   ; 0.198 ; 4.048    ; 1.706   ; N/A                 ;
+;  SCLK            ; -1.518  ; 0.215 ; 1.543    ; 1.739   ; 0.000               ;
+;  SPI3_RX_RFCLK   ; 0.520   ; 0.215 ; 4.813    ; 0.914   ; N/A                 ;
+;  SPI3_TX_TFCLK   ; 0.214   ; 0.215 ; 5.607    ; 0.720   ; N/A                 ;
+; Design-wide TNS  ; -16.85  ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
+;  FCLK            ; 0.000   ; 0.000 ; 0.000    ; 0.000   ; N/A                 ;
+;  SCLK            ; -16.850 ; 0.000 ; 0.000    ; 0.000   ; N/A                 ;
+;  SPI3_RX_RFCLK   ; 0.000   ; 0.000 ; 0.000    ; 0.000   ; N/A                 ;
+;  SPI3_TX_TFCLK   ; 0.000   ; 0.000 ; 0.000    ; 0.000   ; N/A                 ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Transfers                                                             ;
++---------------+---------------+------------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+------------+----------+----------+----------+
+; FCLK          ; FCLK          ; 3999       ; 0        ; 0        ; 0        ;
+; SCLK          ; FCLK          ; false path ; 0        ; 0        ; 0        ;
+; FCLK          ; SCLK          ; false path ; 0        ; 0        ; 0        ;
+; SCLK          ; SCLK          ; 22682      ; 0        ; 0        ; 0        ;
+; SPI3_RX_RFCLK ; SCLK          ; false path ; 0        ; 0        ; 0        ;
+; SPI3_TX_TFCLK ; SCLK          ; false path ; 0        ; 0        ; 0        ;
+; SCLK          ; SPI3_RX_RFCLK ; false path ; 0        ; 0        ; 0        ;
+; SPI3_RX_RFCLK ; SPI3_RX_RFCLK ; 1295       ; 0        ; 0        ; 0        ;
+; SCLK          ; SPI3_TX_TFCLK ; false path ; 0        ; 0        ; 0        ;
+; SPI3_TX_TFCLK ; SPI3_TX_TFCLK ; 2308       ; 0        ; 0        ; 0        ;
++---------------+---------------+------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Hold Transfers                                                              ;
++---------------+---------------+------------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+------------+----------+----------+----------+
+; FCLK          ; FCLK          ; 3999       ; 0        ; 0        ; 0        ;
+; SCLK          ; FCLK          ; false path ; 0        ; 0        ; 0        ;
+; FCLK          ; SCLK          ; false path ; 0        ; 0        ; 0        ;
+; SCLK          ; SCLK          ; 22682      ; 0        ; 0        ; 0        ;
+; SPI3_RX_RFCLK ; SCLK          ; false path ; 0        ; 0        ; 0        ;
+; SPI3_TX_TFCLK ; SCLK          ; false path ; 0        ; 0        ; 0        ;
+; SCLK          ; SPI3_RX_RFCLK ; false path ; 0        ; 0        ; 0        ;
+; SPI3_RX_RFCLK ; SPI3_RX_RFCLK ; 1295       ; 0        ; 0        ; 0        ;
+; SCLK          ; SPI3_TX_TFCLK ; false path ; 0        ; 0        ; 0        ;
+; SPI3_TX_TFCLK ; SPI3_TX_TFCLK ; 2308       ; 0        ; 0        ; 0        ;
++---------------+---------------+------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------+
+; Recovery Transfers                                                        ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; FCLK          ; FCLK          ; 163      ; 11       ; 0        ; 0        ;
+; SCLK          ; SCLK          ; 524      ; 11       ; 0        ; 0        ;
+; SPI3_RX_RFCLK ; SPI3_RX_RFCLK ; 201      ; 0        ; 0        ; 0        ;
+; SPI3_TX_TFCLK ; SPI3_TX_TFCLK ; 193      ; 0        ; 0        ; 0        ;
++---------------+---------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------+
+; Removal Transfers                                                         ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; FCLK          ; FCLK          ; 163      ; 11       ; 0        ; 0        ;
+; SCLK          ; SCLK          ; 524      ; 11       ; 0        ; 0        ;
+; SPI3_RX_RFCLK ; SPI3_RX_RFCLK ; 201      ; 0        ; 0        ; 0        ;
+; SPI3_TX_TFCLK ; SPI3_TX_TFCLK ; 193      ; 0        ; 0        ; 0        ;
++---------------+---------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design.
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design.
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 9     ; 9    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Tue Mar 31 14:16:18 2009
+Info: Command: quartus_sta lab_design -c lab_design_tq
+Info: qsta_default_script.tcl version: #3
+Info: Reading SDC File: 'lab_design_tq.sdc'
+Info: Evaluating HDL-embedded SDC commands
+    Info: Entity dcfifo_idl1
+        Info: set_false_path -from *rdptr_g* -to *ws_dgrp|dffpipe_3v8:dffpipe11|dffe12a* 
+        Info: set_false_path -from *delayed_wrptr_g* -to *rs_dgwp|dffpipe_2v8:dffpipe8|dffe9a* 
+Warning: Found combinational loop of 26 nodes
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:12:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|LJMV0916_0|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|LJMV0916_0|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:1:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:1:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:2:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:2:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:3:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:3:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:4:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:4:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:5:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:5:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:6:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:6:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:7:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:7:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:8:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:8:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:9:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:9:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:10:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:10:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:11:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:11:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:12:LJMV0916_1|datad"
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|CJQJ5354:AJQA6937|CLIA8751[18] was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_7 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_6 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_5 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_4 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_3 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_2 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_1 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_0 was determined to be a clock but was found without an associated clock assignment.
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.518
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.518       -16.850 SCLK 
+    Info:     0.214         0.000 SPI3_TX_TFCLK 
+    Info:     0.456         0.000 FCLK 
+    Info:     0.520         0.000 SPI3_RX_RFCLK 
+Info: Worst-case hold slack is 0.445
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.445         0.000 SCLK 
+    Info:     0.445         0.000 SPI3_RX_RFCLK 
+    Info:     0.445         0.000 SPI3_TX_TFCLK 
+    Info:     0.613         0.000 FCLK 
+Info: Worst-case recovery slack is 1.543
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.543         0.000 SCLK 
+    Info:     4.048         0.000 FCLK 
+    Info:     4.813         0.000 SPI3_RX_RFCLK 
+    Info:     5.607         0.000 SPI3_TX_TFCLK 
+Info: Worst-case removal slack is 1.466
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.466         0.000 SPI3_TX_TFCLK 
+    Info:     1.980         0.000 SPI3_RX_RFCLK 
+    Info:     2.818         0.000 FCLK 
+    Info:     2.842         0.000 SCLK 
+Info: Analyzing Fast Model
+Warning: Found combinational loop of 26 nodes
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:12:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|LJMV0916_0|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|LJMV0916_0|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:1:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:1:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:2:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:2:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:3:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:3:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:4:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:4:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:5:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:5:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:6:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:6:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:7:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:7:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:8:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:8:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:9:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:9:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:10:LJMV0916_1|datad"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:10:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:11:LJMV0916_1|datac"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:11:LJMV0916_1|combout"
+    Warning: Node "nabboc|pzdyqx_impl_inst|\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|\IAZL1155:12:LJMV0916_1|datad"
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|CJQJ5354:AJQA6937|CLIA8751[18] was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_7 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_6 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_5 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_4 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_3 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_2 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_1 was determined to be a clock but was found without an associated clock assignment.
+Warning: Node: pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|MDCK2395:\cycloneii_WCRO7487_gen_0:cycloneii_WCRO7487_gen_1|EPEO2888_0 was determined to be a clock but was found without an associated clock assignment.
+Info: Worst-case setup slack is 1.957
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.957         0.000 SCLK 
+    Info:     2.197         0.000 FCLK 
+    Info:     3.130         0.000 SPI3_TX_TFCLK 
+    Info:     3.187         0.000 SPI3_RX_RFCLK 
+Info: Worst-case hold slack is 0.198
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.198         0.000 FCLK 
+    Info:     0.215         0.000 SCLK 
+    Info:     0.215         0.000 SPI3_RX_RFCLK 
+    Info:     0.215         0.000 SPI3_TX_TFCLK 
+Info: Worst-case recovery slack is 3.074
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     3.074         0.000 SCLK 
+    Info:     5.411         0.000 FCLK 
+    Info:     7.785         0.000 SPI3_RX_RFCLK 
+    Info:     8.066         0.000 SPI3_TX_TFCLK 
+Info: Worst-case removal slack is 0.720
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.720         0.000 SPI3_TX_TFCLK 
+    Info:     0.914         0.000 SPI3_RX_RFCLK 
+    Info:     1.706         0.000 FCLK 
+    Info:     1.739         0.000 SCLK 
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Tue Mar 31 14:16:24 2009
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+

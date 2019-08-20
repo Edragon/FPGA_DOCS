@@ -1,0 +1,135 @@
+Assembler report for pll_ram
+Sun Dec 05 05:43:05 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Generated Files
+  5. Assembler Device Options: d:/prj_d/modelsim_demo/pll_ram/pll_ram.sof
+  6. Assembler Device Options: d:/prj_d/modelsim_demo/pll_ram/pll_ram.pof
+  7. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Sun Dec 05 05:43:05 2004 ;
+; Revision Name         ; pll_ram                               ;
+; Top-level Entity Name ; pll_ram                               ;
+; Family                ; Stratix                               ;
+; Device                ; EP1S10B672C6                          ;
++-----------------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Assembler Settings                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------
+; Option                                                                                ; Setting  ; Default Value ;
++---------------------------------------------------------------------------------------+----------+---------------+
+; Generate Hexadecimal (Intel-format) Output File (.hexout) For Configuration Device    ; Off      ; Off           ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) For Configuration Device    ; On       ; On            ;
+; Generate an uncompressed Jam STAPL Byte Code 2.0 File (.jbc) For Configuration Device ; Off      ; Off           ;
+; Generate a JEDEC STAPL Format File (.jam) For Configuration Device                    ; Off      ; Off           ;
+; Generate In System Configuration File (.isc) For Configuration Device                 ; Off      ; Off           ;
+; Generate Serial Vector Format File (.svf) For Configuration Device                    ; Off      ; Off           ;
+; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device           ; On       ; On            ;
+; Generate an uncompressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device        ; Off      ; Off           ;
+; Generate a JEDEC STAPL Format File (.jam) for Target Device                           ; Off      ; Off           ;
+; Generate In System Configuration File (.isc) for Target Device                        ; Off      ; Off           ;
+; Generate Serial Vector Format File (.svf) for Target Device                           ; Off      ; Off           ;
+; Hexadecimal Output File count direction                                               ; Up       ; Up            ;
+; Hexadecimal Output File start address                                                 ; 0        ; 0             ;
+; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device           ; Off      ; Off           ;
+; Generate Raw Binary File (.rbf) For Target Device                                     ; Off      ; Off           ;
+; Generate Tabular Text File (.ttf) For Target Device                                   ; Off      ; Off           ;
+; Disable CONF_DONE and nSTATUS pull-ups on configuration device                        ; Off      ; Off           ;
+; Auto-increment JTAG user code for multiple configuration devices                      ; On       ; On            ;
+; Configuration device auto user code                                                   ; off      ; off           ;
+; JTAG user code for configuration device                                               ; Ffffffff ; Ffffffff      ;
+; Configuration device                                                                  ; Auto     ; Auto          ;
+; Use configuration device                                                              ; On       ; On            ;
+; Auto user code                                                                        ; off      ; off           ;
+; JTAG user code for target device                                                      ; Ffffffff ; Ffffffff      ;
+; Divide clock frequency by                                                             ; 1        ; 1             ;
+; Clock frequency of the configuration device                                           ; 10 MHz   ; 10 MHz        ;
+; Clock source for configuration device                                                 ; Internal ; Internal      ;
+; Compression mode                                                                      ; Off      ; Off           ;
++---------------------------------------------------------------------------------------+----------+---------------+
+
+
++--------------------------------------------+
+; Assembler Generated Files                  ;
++---------------------------------------------
+; File Name                                  ;
++--------------------------------------------+
+; d:/prj_d/modelsim_demo/pll_ram/pll_ram.sof ;
+; d:/prj_d/modelsim_demo/pll_ram/pll_ram.pof ;
++--------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Assembler Device Options: d:/prj_d/modelsim_demo/pll_ram/pll_ram.sof ;
++-----------------------------------------------------------------------
+; Option         ; Setting                                             ;
++----------------+-----------------------------------------------------+
+; Device         ; EP1S10B672C6                                        ;
+; JTAG usercode  ; 0xFFFFFFFF                                          ;
+; Checksum       ; 0x0012CDF2                                          ;
++----------------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Assembler Device Options: d:/prj_d/modelsim_demo/pll_ram/pll_ram.pof ;
++-----------------------------------------------------------------------
+; Option         ; Setting                                             ;
++----------------+-----------------------------------------------------+
+; Device         ; EPC4                                                ;
+; JTAG usercode  ; 0xFFFFFFFF                                          ;
+; Checksum       ; 0x0632220E                                          ;
++----------------+-----------------------------------------------------+
+
+
++---------------------+
+; Assembler Messages  ;
++---------------------+
+Info: *******************************************************************
+Info: Running Quartus II Assembler
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Sun Dec 05 05:42:59 2004
+Info: Command: quartus_asm --import_settings_files=off --export_settings_files=off pll_ram -c pll_ram
+Info: Quartus II Assembler was successful. 0 errors, 0 warnings
+    Info: Processing ended: Sun Dec 05 05:43:05 2004
+    Info: Elapsed time: 00:00:05
+
+

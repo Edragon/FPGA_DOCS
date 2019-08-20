@@ -1,0 +1,888 @@
+# Compile of pll_ram.vo was successful.
+# Compile of pll_ram_tb.v was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb
+# vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(160): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(197): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(237): Instantiation of 'stratix_pll' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(385): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(431): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(469): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(509): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(549): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(587): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(625): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(661): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(690): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(727): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(764): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(801): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(838): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(875): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(912): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(956): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(985): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1022): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1059): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1096): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1133): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1170): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1207): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1246): Instantiation of 'stratix_ram_block' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1304): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1341): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1378): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1415): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1452): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1489): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1526): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1563): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1600): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1637): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1674): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             work
+# Error loading design
+vlog -reportprogress 300 +optwork.pll_ram_tb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+# Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+# 
+# Top level modules:
+# 	pll_ram_tb
+# 
+# Analyzing design...
+# -- Loading module work.pll_ram_tb
+# -- Loading module work.pll_ram
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(160): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(197): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(237): Module 'stratix_pll' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(385): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(431): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(469): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(509): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(549): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(587): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(625): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(661): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(690): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(727): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(764): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(801): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(838): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(875): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(912): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(956): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(985): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1022): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1059): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1096): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1133): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1170): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1207): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1246): Module 'stratix_ram_block' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1304): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1341): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1378): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1415): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1452): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1489): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1526): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1563): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1600): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1637): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1674): Module 'stratix_io' is not defined.
+# Optimization failed
+vlog -reportprogress 300 +optwork.pll_ram_tb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+# Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+# 
+# Top level modules:
+# 	pll_ram_tb
+# 
+# Analyzing design...
+# -- Loading module work.pll_ram_tb
+# -- Loading module work.pll_ram
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(160): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(197): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(237): Module 'stratix_pll' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(385): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(431): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(469): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(509): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(549): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(587): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(625): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(661): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(690): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(727): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(764): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(801): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(838): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(875): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(912): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(956): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(985): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1022): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1059): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1096): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1133): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1170): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1207): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1246): Module 'stratix_ram_block' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1304): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1341): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1378): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1415): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1452): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1489): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1526): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1563): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1600): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1637): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1674): Module 'stratix_io' is not defined.
+# Optimization failed
+vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb
+# vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(160): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(197): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(237): Instantiation of 'stratix_pll' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(385): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(431): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(469): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(509): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(549): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(587): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(625): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(661): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(690): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(727): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(764): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(801): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(838): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(875): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(912): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(956): Instantiation of 'stratix_lcell' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(985): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1022): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1059): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1096): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1133): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1170): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1207): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1246): Instantiation of 'stratix_ram_block' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1304): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1341): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1378): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1415): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1452): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1489): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1526): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1563): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1600): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1637): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# ** Error: (vsim-3033) D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1674): Instantiation of 'stratix_io' failed. The design unit was not found.
+#         Region: /pll_ram_tb/pll_ram_u1
+#         Searched libraries:
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix
+#             C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb
+#             work
+# Error loading design
+vlog -reportprogress 300 +optwork.pll_ram_tb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model
+# Model Technology ModelSim SE vlog 5.8b Compiler 2004.01 Jan 26 2004
+# 
+# Top level modules:
+# 	pll_ram_tb
+# 
+# Analyzing design...
+# -- Loading module work.pll_ram_tb
+# -- Loading module work.pll_ram
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(160): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(197): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(237): Module 'stratix_pll' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(385): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(431): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(469): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(509): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(549): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(587): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(625): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(661): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(690): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(727): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(764): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(801): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(838): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(875): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(912): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(956): Module 'stratix_lcell' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(985): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1022): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1059): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1096): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1133): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1170): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1207): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1246): Module 'stratix_ram_block' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1304): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1341): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1378): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1415): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1452): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1489): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1526): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1563): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1600): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1637): Module 'stratix_io' is not defined.
+# ** Error: D:/prj_D/modelsim_demo/timing_sim/pll_ram.vo(1674): Module 'stratix_io' is not defined.
+# Optimization failed
+vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb
+# vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altgxb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io_register
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.and1
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.and1
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.mux21
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.mux21
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_io
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_io
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_pll
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_pll
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.m_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.m_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.n_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.n_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.scale_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.scale_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.pll_reg
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.pll_reg
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.dffe
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.dffe
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_lcell
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_lcell
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell_register
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_block
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_block
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_clear
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_clear
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_register
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_internal
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_internal
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'wr_en'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.PRIM_DFFE
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/hcstratix.PRIM_DFFE
+# Loading D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(41): Failed to find INSTANCE '/pll_ram_tb/rst~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(50): Failed to find INSTANCE '/pll_ram_tb/clk_in~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(59): Failed to find INSTANCE '/pll_ram_tb/pllx2_u1|altpll_component|pll'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(69): Failed to find INSTANCE '/pll_ram_tb/wr_en~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(78): Failed to find INSTANCE '/pll_ram_tb/wr_addr_rtl_0|wysi_counter|counter_cell[0]/lecomb'.
+# ** Warning: (vsim-SDF-3432) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Failed to find any of the 48 instances from this file.
+# ** Warning: (vsim-SDF-3442) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Try instance '/pll_ram_tb/pll_ram_u1'. It contains all instance paths from this file.
+# ** Error: (vsim-SDF-3445) Failed to parse SDF file "D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo".
+#    Time: 0 ps  Iteration: 0  Region: /pll_ram_tb  File: D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+# Error loading design
+vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/alt_vtl -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb
+# vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/alt_vtl -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io_register
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.and1
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.and1
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.mux21
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.mux21
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_io
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_pll
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.m_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.m_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.n_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.n_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.scale_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.scale_cntr
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.pll_reg
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.pll_reg
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.dffe
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.dffe
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_lcell
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_block
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_clear
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_internal
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'wr_en'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Refreshing C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.PRIM_DFFE
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.PRIM_DFFE
+# Loading D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(41): Failed to find INSTANCE '/pll_ram_tb/rst~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(50): Failed to find INSTANCE '/pll_ram_tb/clk_in~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(59): Failed to find INSTANCE '/pll_ram_tb/pllx2_u1|altpll_component|pll'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(69): Failed to find INSTANCE '/pll_ram_tb/wr_en~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(78): Failed to find INSTANCE '/pll_ram_tb/wr_addr_rtl_0|wysi_counter|counter_cell[0]/lecomb'.
+# ** Warning: (vsim-SDF-3432) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Failed to find any of the 48 instances from this file.
+# ** Warning: (vsim-SDF-3442) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Try instance '/pll_ram_tb/pll_ram_u1'. It contains all instance paths from this file.
+# ** Error: (vsim-SDF-3445) Failed to parse SDF file "D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo".
+#    Time: 0 ps  Iteration: 0  Region: /pll_ram_tb  File: D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+# Error loading design
+vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/alt_vtl -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratixgx_gxb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/sgate -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb
+# vsim -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/altera_mf -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/220model -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/alt_vtl -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratixgx_gxb -L C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/sgate -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_io_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.and1
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.mux21
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_io
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_pll
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.m_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.n_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.scale_cntr
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.pll_reg
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.dffe
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_asynch_lcell
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_lcell_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_block
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_clear
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_register
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.stratix_ram_internal
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'wr_en'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Loading C:/Downloads/modelsim_oem_57e_q40_sp1_pc_models/altera/verilog/stratix.PRIM_DFFE
+# Loading D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(41): Failed to find INSTANCE '/pll_ram_tb/rst~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(50): Failed to find INSTANCE '/pll_ram_tb/clk_in~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(59): Failed to find INSTANCE '/pll_ram_tb/pllx2_u1|altpll_component|pll'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(69): Failed to find INSTANCE '/pll_ram_tb/wr_en~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(78): Failed to find INSTANCE '/pll_ram_tb/wr_addr_rtl_0|wysi_counter|counter_cell[0]/lecomb'.
+# ** Warning: (vsim-SDF-3432) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Failed to find any of the 48 instances from this file.
+# ** Warning: (vsim-SDF-3442) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Try instance '/pll_ram_tb/pll_ram_u1'. It contains all instance paths from this file.
+# ** Error: (vsim-SDF-3445) Failed to parse SDF file "D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo".
+#    Time: 0 ps  Iteration: 0  Region: /pll_ram_tb  File: D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+# Error loading design
+# Compile of stratix_atoms.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# 3 compiles, 0 failed with no errors. 
+vsim -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb
+# vsim -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo work.pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# Loading work.stratix_io
+# Loading work.stratix_io_register
+# Loading work.and1
+# Loading work.mux21
+# Loading work.stratix_asynch_io
+# Loading work.stratix_pll
+# Loading work.m_cntr
+# Loading work.n_cntr
+# Loading work.scale_cntr
+# Loading work.pll_reg
+# Loading work.dffe
+# Loading work.stratix_lcell
+# Loading work.stratix_asynch_lcell
+# Loading work.stratix_lcell_register
+# Loading work.stratix_ram_block
+# Loading work.stratix_ram_clear
+# Loading work.stratix_ram_register
+# Loading work.stratix_ram_internal
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'wr_en'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Loading work.PRIM_DFFE
+# Loading D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(41): Failed to find INSTANCE '/pll_ram_tb/rst~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(50): Failed to find INSTANCE '/pll_ram_tb/clk_in~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(59): Failed to find INSTANCE '/pll_ram_tb/pllx2_u1|altpll_component|pll'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(69): Failed to find INSTANCE '/pll_ram_tb/wr_en~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(78): Failed to find INSTANCE '/pll_ram_tb/wr_addr_rtl_0|wysi_counter|counter_cell[0]/lecomb'.
+# ** Warning: (vsim-SDF-3432) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Failed to find any of the 48 instances from this file.
+# ** Warning: (vsim-SDF-3442) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Try instance '/pll_ram_tb/pll_ram_u1'. It contains all instance paths from this file.
+# ** Error: (vsim-SDF-3445) Failed to parse SDF file "D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo".
+#    Time: 0 ps  Iteration: 0  Region: /pll_ram_tb  File: D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+# Error loading design
+# Compile of sgate.v was successful.
+# Compile of nopli.v was successful.
+# Compile of hcstratix_atoms.v was successful.
+# 3 compiles, 0 failed with no errors. 
+vsim -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo pll_ram_tb
+# vsim -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# Loading work.stratix_io
+# Loading work.stratix_io_register
+# Loading work.and1
+# Loading work.mux21
+# Loading work.stratix_asynch_io
+# Loading work.stratix_pll
+# Loading work.m_cntr
+# Loading work.n_cntr
+# Loading work.scale_cntr
+# Loading work.pll_reg
+# Loading work.dffe
+# Loading work.stratix_lcell
+# Loading work.stratix_asynch_lcell
+# Loading work.stratix_lcell_register
+# Loading work.stratix_ram_block
+# Loading work.stratix_ram_clear
+# Loading work.stratix_ram_register
+# Loading work.stratix_ram_internal
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'wr_en'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Loading work.PRIM_DFFE
+# Loading D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(41): Failed to find INSTANCE '/pll_ram_tb/rst~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(50): Failed to find INSTANCE '/pll_ram_tb/clk_in~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(59): Failed to find INSTANCE '/pll_ram_tb/pllx2_u1|altpll_component|pll'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(69): Failed to find INSTANCE '/pll_ram_tb/wr_en~I/inst1'.
+# ** Error: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(78): Failed to find INSTANCE '/pll_ram_tb/wr_addr_rtl_0|wysi_counter|counter_cell[0]/lecomb'.
+# ** Warning: (vsim-SDF-3432) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Failed to find any of the 48 instances from this file.
+# ** Warning: (vsim-SDF-3442) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Try instance '/pll_ram_tb/pll_ram_u1'. It contains all instance paths from this file.
+# ** Error: (vsim-SDF-3445) Failed to parse SDF file "D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo".
+#    Time: 0 ps  Iteration: 0  Region: /pll_ram_tb  File: D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+# Error loading design
+vsim -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo -sdfnoerror pll_ram_tb
+# vsim -sdftyp /=D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo -sdfnoerror pll_ram_tb 
+# Loading work.pll_ram_tb
+# Loading work.pll_ram
+# Loading work.stratix_io
+# Loading work.stratix_io_register
+# Loading work.and1
+# Loading work.mux21
+# Loading work.stratix_asynch_io
+# Loading work.stratix_pll
+# Loading work.m_cntr
+# Loading work.n_cntr
+# Loading work.scale_cntr
+# Loading work.pll_reg
+# Loading work.dffe
+# Loading work.stratix_lcell
+# Loading work.stratix_asynch_lcell
+# Loading work.stratix_lcell_register
+# Loading work.stratix_ram_block
+# Loading work.stratix_ram_clear
+# Loading work.stratix_ram_register
+# Loading work.stratix_ram_internal
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'wr_en'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# ** Warning: (vsim-3015) D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v(92): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'data_in'.
+#         Region: /pll_ram_tb/pll_ram_u1
+# Loading work.PRIM_DFFE
+# Loading D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo
+# ** Warning: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(41): Failed to find INSTANCE '/pll_ram_tb/rst~I/inst1'.
+# ** Warning: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(50): Failed to find INSTANCE '/pll_ram_tb/clk_in~I/inst1'.
+# ** Warning: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(59): Failed to find INSTANCE '/pll_ram_tb/pllx2_u1|altpll_component|pll'.
+# ** Warning: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(69): Failed to find INSTANCE '/pll_ram_tb/wr_en~I/inst1'.
+# ** Warning: (vsim-SDF-3250) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo(78): Failed to find INSTANCE '/pll_ram_tb/wr_addr_rtl_0|wysi_counter|counter_cell[0]/lecomb'.
+# ** Warning: (vsim-SDF-3432) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Failed to find any of the 48 instances from this file.
+# ** Warning: (vsim-SDF-3442) D:/prj_D/modelsim_demo/timing_sim/pll_ram_v.sdo: Try instance '/pll_ram_tb/pll_ram_u1'. It contains all instance paths from this file.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /pll_ram_tb  File: D:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+# Load canceled

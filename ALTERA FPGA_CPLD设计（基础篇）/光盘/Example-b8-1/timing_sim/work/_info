@@ -1,0 +1,1903 @@
+m255
+cModel Technology
+dD:\prj_D\modelsim_demo\func_sim
+va_graycounter
+Ib`VXN_T`jFf3eXW`DZS2j1
+V[Zm=ERVi?91fb_h71FEbF0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 27485
+OE;L;5.8b;17
+r1
+31
+o-work work
+valt3pram
+I@_?5`BUMi1Rm[MCdmgT]^2
+VeL6NCfK]YAX6<b<z[ZkkX1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 24005
+OE;L;5.8b;17
+r1
+31
+o-work work
+valt_exc_dpram
+IfWHNOZ<bG1nL^WN<@f2>k3
+VEJWFTNa>K:3_IG7J3EU6k0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 27562
+OE;L;5.8b;17
+r1
+31
+o-work work
+valt_exc_upcore
+I`C]?=CZ^PI2k6:SC<:TDJ2
+VJ_nPeA0^dmRYGBfeenO0Y2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 27863
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtaccumulate
+IZTNKYJ5F6]lDZh>7TAWAE1
+V9Ul5<MUi1M<Q[bF:E9QnI3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 299
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtcam
+Ink6OB@P[oMFMPf?[eONCl0
+V9a;2KjAi:fL36i^IZ@2M33
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 19826
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtcdr_rx
+I4[@Jn:7gFJkJ0?n7XfoM53
+VQeIBJ>mYn1[Pl801]X<WZ3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 16157
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtcdr_tx
+IcK_7Cf@=>LLi[5oXdGo?X3
+V<81<F>`hAUO_k>9Q<^RA_1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 16778
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtclklock
+InXAhSG;QAJ^89M1`LkJ];1
+Vhi<95<b[A2CPY2C<fY7K51
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 6066
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtddio_bidir
+IXF9Qz@z`Z9LXzTB40QHW`0
+VoZG2X2QQm:dClVLFZ]Y6W0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7350
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtddio_in
+IgnOF@S4lV5HaS2nz1eJHb2
+Vfb5OHh3<f[j3`AHgI2a3K0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 6976
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtddio_out
+I?0aj35F?M5OO25?`dH8:I0
+Vg>bDj4BFa[<E>DCUSLQ^V1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7138
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtdpram
+I5lBaZ2HInWbVWXHoeThzd0
+VojO@WMUVc]]mlVT3;QG_Y0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 22401
+OE;L;5.8b;17
+r1
+31
+o-work work
+vALTERA_DEVICE_FAMILIES
+IkMM9Mh?DX4SooGgV@E_?W2
+V[^:UUVIIDLgZ0F0NDd9D12
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 91
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@a@l@t@e@r@a_@d@e@v@i@c@e_@f@a@m@i@l@i@e@s
+valtfp_mult
+Io>CARciRT?RfLcNhCA]WG1
+V:jm5Ubj8A3cFgJZb43na>1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 5176
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtlvds_rx
+I0fd[a4iK<E=n8?kfCGoJo3
+V[>E70YLAB61i13l69dhWQ2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 17325
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtlvds_tx
+Ie7GUVGM@DB>H5>_2baELQ3
+VGM_Ze5PP6djgYYEZj@;Z22
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 18925
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtmult_accum
+INKjgiFh7EkORnL^E44Oc02
+V>_oVU8zGA]7;U0FUP]TP@2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 548
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtmult_add
+I^1nFJH_doCEn0BN6Na6Y43
+VYe9EC^KOecHlB]GZzQSBo0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 2355
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtpll
+I7L1[6]mUnTAJTX0hVBDdQ2
+VN:fmRnm8A3D:ZiX:=[^NC3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 14068
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtqpram
+IPiElI@ec7Y>ODki_IHgLo0
+Vn2X^JLc_lzd9<nK?>RSl01
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 24665
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtshift_taps
+I?L@54IATm^U0=_E7m:g_@1
+V5;Gz9?MS>FPGR4`elbXQ52
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 27384
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtsqrt
+IoNS9LU]EQj4mSTX[d30k43
+VBV3>bZnYUS9WHCPheVOgW2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 5854
+OE;L;5.8b;17
+r1
+31
+o-work work
+valtsyncram
+IBAD8km>2YQ3a<Ca0R1NJD0
+VlkD1IA3Om0>GF04z290zG0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 22731
+OE;L;5.8b;17
+r1
+31
+o-work work
+vand1
+IX09K0lfgFmPbh5GS`l[6m0
+VZSSZDDj<@SOhS^Zn<5ETC3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 256
+OE;L;5.8b;17
+r1
+31
+o-work work
+vand16
+IFkmmW[?d8<AAC=PWU0z6a2
+VRNFVodbX2zfV?MH_b@5ZQ2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 269
+OE;L;5.8b;17
+r1
+31
+o-work work
+varm_m_cntr
+I8P?U;OoYQcfAjRkziKdgb1
+VnZ7bTfk5X@6QmGaNoIOHO1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7778
+OE;L;5.8b;17
+r1
+31
+o-work work
+varm_n_cntr
+IoUcaC<HjWOgnMo<UOPFUz2
+V@_zlT2DBKV43W5lIQ08O:0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7856
+OE;L;5.8b;17
+r1
+31
+o-work work
+varm_scale_cntr
+IA[13ZXFZa5J6]ZAeLKR0:2
+VXREJKCNbUEi[38_3KRk5Y1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7928
+OE;L;5.8b;17
+r1
+31
+o-work work
+vb17mux21
+IjUec;?dW<=j2EO=87HHj20
+Vj19WggD6aChTIGNA88c601
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 309
+OE;L;5.8b;17
+r1
+31
+o-work work
+vb5mux21
+Iz_F=IhTz_3ldY`]@DUiAB1
+VEO1B0b@F<G`7GB@m8OHH:1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 330
+OE;L;5.8b;17
+r1
+31
+o-work work
+vbmux21
+IYGV^glDaBYWY8e2;bARYR2
+VOI6DBcPmJIeIX<@5AgS581
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 298
+OE;L;5.8b;17
+r1
+31
+o-work work
+vcarry
+I4fkUaZ7ZjBmm=C8Y92CUe1
+VI2hZ[c0BXLj;RMfz_`dDM3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 53
+OE;L;5.8b;17
+r1
+31
+o-work work
+vcarry_sum
+I<`kk1oB]Y6JWEhOXVSN]E2
+V@[n7HThh1Q[jOYY4]]nYG0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 69
+OE;L;5.8b;17
+r1
+31
+o-work work
+vcascade
+IH0Jo=9CCHYz1maMh`]>dC0
+V;Vo8489M4<PS0zcA7gh@31
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 61
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdcfifo
+IS489X8BjAB632@`>8PK3J3
+V5TH_L?i:RSD8GL@DFOBLc3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 27240
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdcfifo_async
+ICU^NT]V6>;0LD<Tkaj9f]1
+V^DY3YJTnMU3=^_gac;AI=1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 26557
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdcfifo_dffpipe
+IY:>U0T=0joEHb;aHbLIF>2
+V5oD^gL3I[RhLlE`]D9m4^2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 26327
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdcfifo_fefifo
+I[V?DliBdgRk=BHNzVNEH92
+V`z7m6ThEgzU5BllSDblSG3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 26413
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdcfifo_sync
+IKT?g0hc0B35Fg9ZIfzWXk0
+V[dVnCn7`FK;`DOzPIgIl01
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 26932
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdffe
+IIz9EZNYCkh_h8?`UnYhV91
+VJ5oXmgYJm>1D;m8@Q@NBH1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 103
+OE;L;5.8b;17
+r1
+31
+o-work work
+vdffp
+I6zJDH9JQNcDzE:XJ=NeZK3
+VheeUl3zRZ0fNAP7CaC4WR1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7466
+OE;L;5.8b;17
+r1
+31
+o-work work
+vexp
+IKXQc>l[X>MiBW1>dfg>@m0
+V=OIK>_914M0Zli;G9>31j2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 80
+OE;L;5.8b;17
+r1
+31
+o-work work
+vglobal
+IR>:UJ:V=;YYi]>m[dNVEk1
+VACN1f3dSQ@C3130<K:]gI1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 45
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_asynch_io
+I[R7@_WNJ<RU?Ydo>I1Ok43
+VU^NH>o;>7DgzKjAdWPgd82
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 1079
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_asynch_lcell
+I5<9e>Wc9B@k4a:jG>li<@2
+VZMMZdL8DU>X^OGVeMKde02
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 356
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_crcblock
+InBTemgGkLPWVQO=5@ih<B0
+V;=<oIL^JDh>WMClI@:aRG0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 9743
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_dll
+INU3<BTBHGDhI@KkLL>83z3
+VcL]VWDOhnN68je;nG0eRB0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 9387
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_io
+Io2K1mNkK_Tocd?]TdAk=@2
+Vja7[B]01GO0i@8GF45HTU2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 1419
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_io_register
+IW5hX6E:IKTGZTJ39T=DJX3
+VAWaBbcYkkNmZbRZXOj81n3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 1300
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_jtag
+IhfUEICOE0l`L1:ejYD5`52
+VzaQl[b;]3e<?mCSPaXRo:3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 9717
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lcell
+Izl0JUHVIL5NEY0131`0173
+V4ASA3h<[<VBSVPRE0lJzM1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 960
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lcell_register
+IKg6z6C`B>o^<Q1X[b8T>E1
+VK?9i9oiVnkAGbEV?3GioM1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 779
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lvds_receiver
+ISzeo2:6>[Hl8dz`0?]cPX1
+V3a]W2I1?3<XNoaVE`h8<B1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5590
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lvds_rx_parallel_register
+Ind4XH;R`4Un4Fd`XD^CT:1
+VS4Nlo=ihz22Jm7YVXa6Pc2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5499
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lvds_transmitter
+IMX:ik6biS>2Tdlm]?[ojd3
+VC8deKS7bi<L^EnF:hhbA_0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5342
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lvds_tx_out_block
+I?CmQT6D8jM?B2e?JF^][30
+V]WzT^h?8YgWP>oYG:FdJ<1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5264
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_lvds_tx_parallel_register
+IeXOg35kXGgaPCN0GgcKg>2
+V>FYMB^Od83P1QYWTKUa;R0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5159
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_mac_mult
+I]JIzC9PG<M[O2>FUP`K?O1
+Vh`;aMLN>3JNWjEJ^7Bi[N2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 2094
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_mac_mult_internal
+I>nNB^A`jFlIZBMzfV`DcX0
+Vi:hXKNg4fGY05eE;gU[BN3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 1923
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_mac_out
+ILTzKjz3Pk0UkkJ`MUAY7;1
+VT:RRbgB[n4D6BMj=6gd4R2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 2572
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_mac_out_internal
+IA8zGTi;4i:QGQQ]0eNjKf1
+VFEMeUZKJ`Rz9hh:4]^c@43
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 2261
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_mac_register
+IKca[]>kNSEWTkFEV3OHBS3
+V0HWJf5PG8VRZ^SSH]alnX0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 1670
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_pll
+I:6DbglPoci49MJV7fN>U03
+V6]@[BaeOM;IJElg6]NfJk2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 6079
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_ram_block
+IzHAI:P7:N7Fd>TEFhS1`o1
+VR3[K;9^1joBFZ`X2L:CV81
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 4504
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_ram_clear
+I`4;bS>R;]?3PBh=DnKa6]1
+VcOd>PH2Vb5T[5I=OI<1n80
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 3351
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_ram_internal
+I;4OAne]?^dN]>Zi1Y`kC^0
+VleKz?lFYUF;I0`kRA6lzi0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 3407
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_ram_register
+IQ`GjM<6<IL]7c^Za_4Ohh1
+VOH?9GgEUe3R1i[HGTmf923
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 2874
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhcstratix_rublock
+IQS[FhRT[MGQ`d_6J>mB123
+VYiQT7B2ciHjK>IONIgIIU2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 9770
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhssi_fifo
+I:j8Khd9XMfG?h:TE;:[531
+VKoi46Beo<iNXni^[a=Nl>1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 15605
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhssi_pll
+I]CkBDJ`DA9hFQP6oIBTEP1
+VHn2idKnMV[WIMbT1SSEn42
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 14973
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhssi_rx
+IE0>2<Wkjhl^3@0PIaHHeB3
+V<@<bkeHZeT^WBbP9c>;hH2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 15833
+OE;L;5.8b;17
+r1
+31
+o-work work
+vhssi_tx
+IgNdOQ[o2N<cMYC@NOg>790
+V06h>hE6P?n6HMVij3Dec52
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 16031
+OE;L;5.8b;17
+r1
+31
+o-work work
+vio_buf_opdrn
+IV9ESE:lPERbjY9jM5g?B90
+V]SIJ;5S`0Wkj=inABn;b=0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 226
+OE;L;5.8b;17
+r1
+31
+o-work work
+vio_buf_tri
+IE0Xdcz[fUEFbVeY;AF:jX1
+VQbHA4XEQ[@CDQRV@PkHGM3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 198
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlatch
+I<I8E<TQ?@WFCBIGUA=Kgj3
+V_PLhJG4Na=z_D:hAd09eO2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 146
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlcell
+I@_E<V632U]J;]I@6]IAY32
+VJ?L2VaGMcgJV7T`@^5DkR1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 37
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_abs
+InJV^7YA]UMV3Ld:cXg[E51
+VT]]O`JaEW5JYL29_ja4M21
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 2084
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_add_sub
+I9``R3`>A<4[Z3DKOT:^MG2
+V;dogHKenPVn1m]9=QOiO52
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 1336
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_and
+I8N6Q@8Q;JU23PfYS^aX>g0
+VI^L[mVInkd[@g]:0fA]XL1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 518
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_bipad
+IMd7QkX`KPP=Q?Rn3[A:[`2
+V>`N:`MzdCd4hKU`fmVJ8f1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 5119
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_bustri
+I?cCe7ng6UZ6R_E1^J>n0>2
+VH]4=dIbe@^f=<73VXJ]Lj0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 794
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_clshift
+IDm8HiHI8P@^L:4SB<?l:C0
+VC;F>6Aa82iiOAGRnQKSRf1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 1125
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_compare
+ID]`@02Kb^X]7iho]nnj=32
+V6R5dhQ=dngFWfH<6`Yk221
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 1530
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_constant
+IUnV1oLaTm@fAgKCQbmTC`0
+Vd:NHS=BP2:MjRhZV<Qc1a1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 420
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_counter
+IW0^6XY2QH139z=8`7n6K63
+V8jF2bgehc;6:ek_2hlJZ=1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 2152
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_decode
+I:UY67Cd0Zime1=n?fLOdb1
+VoKI49M<[B8=OZYRIFE3Dg2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 1011
+OE;L;5.8b;17
+r1
+31
+o-work work
+vLPM_DEVICE_FAMILIES
+I@4cFFX:<ikHQ7c1VlVh4A3
+V]:Y_U?7IckWHI]^kPV?o12
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 49
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@l@p@m_@d@e@v@i@c@e_@f@a@m@i@l@i@e@s
+vlpm_divide
+IA2B`^8G1N0IUfTAHOWE2?0
+VgYLgoBh7M]j9VPjn8P`Th2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 1883
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_ff
+I7Ybl?oV=QT0_7OZCoA0_J1
+VYCoXdeIJ4A7I`lm8VL0fD2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 2490
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_fifo
+I=ab_W^9]nf0ZkE;6eK1]W2
+V36HXld`aJ0f7HTD<F=Man3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 3854
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_fifo_dc
+I@TFQQ;cz33;02OD^MBYFD1
+Vo<ck2eSa9Tf?k]aT5D2Sl1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 4898
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_fifo_dc_async
+I9_cD:z7EcEciFI2S>_R1f1
+V[5WOQYIFf@GWUa^`aHK_X1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 4459
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_fifo_dc_dffpipe
+I<FglkmAFz><enliM:55[G3
+VWQ2G?0oPb:BaHk4]WSkmN2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 4196
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_fifo_dc_fefifo
+I:H8N;2N2Y8j]MW4?n=nP]2
+VnD55flG@]61VgDB2:Pdbn0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 4282
+OE;L;5.8b;17
+r1
+31
+o-work work
+vLPM_HINT_EVALUATION
+Ige1D>cD60:FegK=jANVK<0
+VYK4GDcG[lkgeIKc`?9P=12
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 296
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@l@p@m_@h@i@n@t_@e@v@a@l@u@a@t@i@o@n
+vlpm_inpad
+I`d9<EB;24;^cdO]h96F:l0
+V<_`Gj?zR7dFXJGGI:kSFN2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 5009
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_inv
+IU7;YgaR3mKU2AdaOgNWVQ0
+VK:an;XXzD7<Vj38chAX4b2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 466
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_latch
+I@BgU7^mMjVQBK4gmQcbiL0
+VKdgk7E[F1>4F=bnUR@LY[2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 2383
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_mult
+ILZ0fSIGaEJz`Dg5fXgQI90
+VEl7`R4H>HzE?]mkRlhkOj1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 1687
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_mux
+Iaa?<`N7F7GnS6K=l7?:2o1
+VI_DaPOV6H:;[ccecS[Rc[1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 886
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_or
+IDSee06ea1m_G3llMYB<R23
+VT47`hH3_8kLPgTiS_PVhN0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 594
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_outpad
+IO6gi4^dTZ:=Ido3;hLad[0
+VYh19Um_8nS2<3d_Q6ie6o3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 5064
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_ram_dp
+IFok?BgaUELVTEm1Y9fR:?0
+VCiz;HNV2Cf5iYi^06B=9O1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 3085
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_ram_dq
+IUaEH9dm`^nicihA8;fOG01
+V^feiXjzEI=Pe5EGn`D]z71
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 2841
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_ram_io
+Ij6XR;eCgb386NYba6NjZ`2
+V7IG617`D^EAh[Q`==B[P^1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 3388
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_rom
+I4Cm6E65IG1S4jNe:RRZ?=0
+V9e^>;U@5R]mLE6mUMcb>N3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 3639
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_shiftreg
+IYLkAR4GiT9jFiBJ1aj=:23
+Vn^9dD>PH3B5iSVoJgijdP2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 2662
+OE;L;5.8b;17
+r1
+31
+o-work work
+vlpm_xor
+IHLNBlg^<3ccdj6X=WjS4V3
+VbIIg_N[4GG:h]WP@AD8dF1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266940
+FD:/prj_D/modelsim_demo/Altera_lib_files/220model.v
+L0 670
+OE;L;5.8b;17
+r1
+31
+o-work work
+vm_cntr
+I<A7Lb982^ahN6cVTPAPih1
+V`C:Yzni1I>kcmUa5?SHTg3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5745
+OE;L;5.8b;17
+r1
+31
+o-work work
+vMF_pll_reg
+I_7HIg_9K3P2bn5OeD>QOU1
+VN_dR[I_A`hIJXhzB=2;NA3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 8041
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@m@f_pll_reg
+vMF_ram7x20_syn
+Ih5Kch0AE6Ib?azAMNEVbK0
+VzKi>7iPJXfBQbm3S4QXhT3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 15460
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@m@f_ram7x20_syn
+vMF_stratix_pll
+I@70IGzcK6:_N6cjARCUmV2
+VeBF>mkYQCC_e1kNl;Y6H13
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 8102
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@m@f_stratix_pll
+vMF_stratixii_pll
+IX`6]PMDFF64`DaX<PIkdP2
+V@FP>P:^e6b?ckRUD2L9P<3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 11499
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@m@f_stratixii_pll
+vmux21
+IBdHQ18[WTBL3I=_k1W3;]0
+Vm6?W>?E@Ln8Zhf4d^]>l60
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 199
+OE;L;5.8b;17
+r1
+31
+o-work work
+vmux41
+IkD92SUg<V7UOPFg=0TLRB2
+VhlmT4_ZRU4N1ZkmOnnWPG2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 222
+OE;L;5.8b;17
+r1
+31
+o-work work
+vn_cntr
+IUK8dW[?INheS@Xj3zIlkI1
+Ve@8WkBhY_dNzi=nWN>kNe1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5821
+OE;L;5.8b;17
+r1
+31
+o-work work
+vnmux21
+Ifz@5MQ:ALS]^=4>>1VGC61
+V9Zl_H[9M<8Roea>mBOJUj2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 320
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_add
+I;Cnn_nlcl]ADa;H3QnFzj2
+VYl:E82[jFg7[EIi5YWVdS2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 27
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_addsub
+IR25`04^g_RM00^lI=;lgI1
+V1E_HYmL4P:3fHzNaAE2ND3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 80
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_bus_mux
+Ih_oUI]gm_Rn;<ElF?56YT3
+Vn^j>[5jjkNEgh:S6Z_h^52
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 875
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_decoder
+INbIHaT:FJeNS<;eG[U<ZS0
+Vak[3ke8W:=a3PT09gWkGE1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 844
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_div
+I=Zi;0e;]hL:7Q2k318NlU1
+VFIHLBo0KbgUbD4CY`FKTc2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 342
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_left_shift
+I74A64Xm9G:QH1<iI1kP9K3
+VdDD51g38c=X4M<UoU[@H11
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 460
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_less_than
+IeC>Ce;2f754b4IQ^XLee`0
+VD;;]jG3njBMKfa^NzP7DQ3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 684
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_mod
+IV0EZh9^S>72K5VANNQ[E81
+V7zjaWPAeM=5@Hk0]UGbeh3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 401
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_mult
+IHzf0RRn=ggLh832W78nGO0
+VQ[DSOnLm?>DJVn[nE0=?B0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 252
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_mux
+I_IBaWCIb=KaGZ773LefG`2
+V7a8YXDjjC^`5=j7n>Fmj=0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 765
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_right_shift
+IHkX5XgPDBYY5?XEX`:5lO2
+VC`9=jDT0oSEeGeTcg:NMf3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 526
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_rotate_left
+Ikk@;Z1_=dJLl:=2bLZABb0
+VR3m]?Ej?i5`zjkTSJnJ4@0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 598
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_rotate_right
+IC11anm8dSckibn_9OB[aJ3
+Vjaa>5Y:4BOo`FD`a7?5Y[3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 641
+OE;L;5.8b;17
+r1
+31
+o-work work
+voper_selector
+IV9^YZlKSL4[<l;XFRd[^D0
+V6A@Y;nj[?z^aPjB1SG4Z`0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 805
+OE;L;5.8b;17
+r1
+31
+o-work work
+vparallel_add
+In=^7[A<icnF:fFLUoMm4_3
+V6CPA0HOgmQD6>N6Wz]c461
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 25768
+OE;L;5.8b;17
+r1
+31
+o-work work
+vpll_ram
+IEfSF7PFElRoT:B4CCDbP>3
+V[NGnd9`oXJI3cnAXI7f^<3
+dD:\prj_D\modelsim_demo\timing_sim
+w1102196590
+FD:/prj_D/modelsim_demo/timing_sim/pll_ram.vo
+L0 37
+OE;L;5.8b;17
+r1
+31
+o-work work
+vpll_ram_tb
+ILeJh]U?V<lVYIFXaNX?NW3
+VAj7VK2no563kdd<lL`?dz2
+dD:\prj_D\modelsim_demo\timing_sim
+w1102184769
+FD:/prj_D/modelsim_demo/timing_sim/pll_ram_tb.v
+L0 7
+OE;L;5.8b;17
+r1
+31
+o-work work
+vpll_reg
+IgWTHHJ4IUUQA6mMUjO_]80
+Va:[10h]9z?A8P9kz4lAC:0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 6018
+OE;L;5.8b;17
+r1
+31
+o-work work
+UPRIM_DFFE
+I[;K>MJZb38FkF?XVnXLbR3
+V6lKJT;LajPIA_TlXU=@YX1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 31
+OE;L;5.8b;17
+r1
+31
+o-work work
+n@p@r@i@m_@d@f@f@e
+vscale_cntr
+IS_k`SZPb4iH@U]NKhHQQV3
+VTo9o]5hcKlk?;=<;<D51W3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FC:/eda/quartus/eda/sim_lib/hcstratix_atoms.v
+L0 5896
+OE;L;5.8b;17
+r1
+31
+o-work work
+vscfifo
+IIf_mJAgfE`L1NK=1311gQ2
+VomUTG6_M30GdhH9R6Rn0F1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 25940
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_asynch_io
+I;1OD3_5S[29m<T9l28RGP1
+VoY`XJ_4`z[i;_J1jL7_2U2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 1079
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_asynch_lcell
+IIaj^fP<ondQAG6=nG??Jk0
+VQ@N1z?;C9H@I^5;jdJ8Ye0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 356
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_crcblock
+IWbAh<z=ORl414kdU5d3]M0
+V7nHA>DPPPV5X]W?UjD1A;2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 9749
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_dll
+IOUKzLXL]8AZC@=?Dbh?cA2
+ViVmifAKD_G@4jZFX_=HoS0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 9393
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_io
+Ie_6h:A>2ON9c]oez8hG`h1
+VW10bO_c;ab2KnDzl2mXXc0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 1419
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_io_register
+I0Bgh4Q`7^=n5zSiEJ7Sgh0
+VH;c@K[8D^m;kQ]W>lHok83
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 1300
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_jtag
+IWC4J0hM7iELRzF]YXEhU=3
+Vn`bmCO>CP>ESb@<FKon381
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 9723
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lcell
+I64TH3SOJ:gOCcI?VNLDaZ0
+Vc8WSK4BNY`^k2cT2joDea0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 960
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lcell_register
+I0h`PG;2`KFhWWQT8[RbhQ3
+VITHH:n[c5oK_ZAi<XCCYa0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 779
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lvds_receiver
+IPABa12G]SV?XK:H[AVn0B0
+VX]HBO3nNRPm7CzN5=60QQ1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 5596
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lvds_rx
+I3?eMMjMa@oX_J`n<?<dnn3
+VX2Hz;l`7[k2TmMZ0CN9?V3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 18064
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lvds_rx_parallel_register
+InD6O<o8G4ba<=]KLnEhK23
+VW`bVa9gT?2zIoKiikV@NX3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 5505
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lvds_transmitter
+Ifd4jN6Bkm;lief8^zY1Nd3
+VhCFle:?>I3=ZjVhaXMY4g3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 5348
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lvds_tx_out_block
+IlVACNYDT5dB831fn^V8@f0
+V2`F9BHCOGF52AFbMIb2S01
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 5270
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_lvds_tx_parallel_register
+IkKj:2_KJlBlo=HQUDSiUT2
+Vn@E]Gk47jAgj8;1W3C>l<0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 5165
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_mac_mult
+IM:_UX3XNQim_N@KXzfQ@L2
+V?VPRLBNC=RlYjWj70_Cz[0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 2094
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_mac_mult_internal
+IbUPN]O8QM[gWP]dU=3l4R0
+V;5lIT`lQ]l>QB;ZmR2K780
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 1923
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_mac_out
+IFQME83D?^[za6ME]2oazR3
+V2Q845CdNFTdKCH3[ffHi52
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 2572
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_mac_out_internal
+II1kVj57gjh4>18N`AP6W>0
+V<2od2NH=;_fENn_e6T^h<1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 2261
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_mac_register
+I<_1`oW@kJ_an9^AEnOmzH3
+VEQ;KAX^f;0EVBMK>P:S7`2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 1670
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_pll
+I2M66DR2mCiSnDcMKJBA<o2
+VnXZ=8NT6hZeFGFJi9L7GA0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 6085
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_ram_block
+IT6z]mGFW;E]G?n5P;BS;B3
+V]D2<k;g`6ER8lNGW9Hl:b1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 4510
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_ram_clear
+ICIjCcY<mY@??P^`ZPG8ZX1
+V@Q07Xlm<hI5Z@CWL<VW_L1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 3351
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_ram_internal
+IK<KXW9fU@7=YZTG?no;910
+VJ;f>;=4W2Yha0:O^]E[1a3
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 3407
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_ram_register
+IPk47N2:7jZT6M3WKoBEC]2
+VB[DU?ehPcH?X1@QI5cKlz2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 2874
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratix_rublock
+IgFTT_Vn=8z_9?54V942nb0
+VT^f3<7Ua_SokNmh0TXdbG2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266846
+FD:/prj_D/modelsim_demo/Altera_lib_files/stratix_atoms.v
+L0 9776
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratixgx_dpa_lvds_rx
+IRiWJo_Q0FW89oklfTQ[2=3
+VMD9^4YD2:0U708FMDY3Wl2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 18214
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratixii_lvds_rx
+I32Ki<zkS`aK0K?jAOb1<f2
+VZn1`b`N<o]dU8z^E0_BYz0
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 18576
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstratixii_tx_outclk
+I[djnFND9:1kba:9boaCC=2
+VS6BTZJ^6o@QHSbSXNaRD@2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 19719
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstx_m_cntr
+IFmcze=nfEa8ToflmbcFU51
+V:[2:D[_10ghn[bgc=CD302
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7494
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstx_n_cntr
+IVVNSjDETC?1T3SgY<MfbR2
+V4CiQB5Uz?;=OULO:MD>Eo1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7576
+OE;L;5.8b;17
+r1
+31
+o-work work
+vstx_scale_cntr
+IHObaf<;hNSCz@Nk>:knI82
+VG8KIUm2mDHoX1DjR8TDdJ1
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266896
+FD:/prj_D/modelsim_demo/Altera_lib_files/altera_mf.v
+L0 7657
+OE;L;5.8b;17
+r1
+31
+o-work work
+vtri_bus
+I5Al[[z=EJ:V4=:nzSUmIJ0
+VCAm8z;CGDC_7zEe=_BYJA2
+dD:\prj_D\modelsim_demo\timing_sim
+w1075266852
+FC:/eda/quartus/eda/sim_lib/sgate.v
+L0 301
+OE;L;5.8b;17
+r1
+31
+o-work work

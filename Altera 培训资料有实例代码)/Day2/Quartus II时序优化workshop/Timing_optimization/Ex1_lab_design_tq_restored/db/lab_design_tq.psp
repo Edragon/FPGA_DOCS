@@ -1,0 +1,8 @@
+spi3_rx:iSPI3_RX|auk_pac_mrx_mw:auk_pac_mrx_mw_inst
+spi3_rx:iSPI3_RX|auk_pac_mrx_mw:auk_pac_mrx_mw_inst|auk_pac_mrx:mrx|auk_pac_p3mrx:\IOA_P3MRX:p3mrx
+fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst
+spi3_tx:iSPI3_TX|auk_pac_mtx_mw:auk_pac_mtx_mw_inst
+spi3_tx:iSPI3_TX|auk_pac_mtx_mw:auk_pac_mtx_mw_inst|auk_pac_mtx:mtx|auk_pac_p3mtx:\IOA_P3MTX:p3mtx
+|
+pzdyqx:nabboc
+sld_hub:sld_hub_inst

@@ -1,0 +1,111 @@
+$ Start of Compile
+#Wed Mar 23 01:24:19 2005
+
+Synplicity Verilog Compiler, version Compilers 2.6.0, Build 102R, built Jan 27 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+
+@I::"D:\prj_D\Synplify_Pro\source\verilog\ALU.V"
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module alu
+Synthesizing module alu
+@END
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################[
+Synplicity Altera Technology Mapper, version 7.3.5, Build 250R, built Mar 18 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+
+
+@N: MT204 |Autoconstrain Mode is ON
+
+Writing Analyst data base D:\prj_D\Synplify_Pro\rev_1\ALU.srm
+Writing Verilog Netlist and constraint files
+Writing .vqm output for Quartus
+Writing Cross reference file for Quartus to D:\prj_D\Synplify_Pro\rev_1\ALU.xrf
+Found clock alu|clk with period 1000.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Mar 23 01:24:21 2005
+#
+
+
+Top view:               alu
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT195 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT197 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: NA
+
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------
+========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+##### END OF TIMING REPORT #####]
+
+
+##### START OF AREA REPORT #####[
+Design view:work.alu(verilog)
+Selecting part EP1S10F780C5
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage..
+
+I/O ATOMs:       28
+
+Total LUTs:  34 of 10570 ( 0%)
+Logic resources:  34 ATOMs of 10570 ( 0%)
+ATOM count by mode:
+  normal:       26
+  arithmetic:   8
+
+DSP Blocks:     0  (0 nine-bit DSP elements).
+DSP Utilization: 0.00% of available 6 blocks (48 nine-bit).
+ShiftTap:       0  (0 registers)
+MRAM:           0  (0% of 1)
+M4Ks:           0  (0% of 60)
+M512s:          0  (0% of 94)
+Total ESB:      0 bits 
+
+ATOMs using regout pin: 8
+  also using enable pin: 0
+  also using combout pin: 0
+ATOMs using combout pin: 25
+Number of Inputs on ATOMs: 123
+Number of Nets:   92
+
+##### END OF AREA REPORT #####]
+
+Mapper successful!
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################]

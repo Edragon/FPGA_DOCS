@@ -1,0 +1,13 @@
+#-- Synplicity, Inc.
+#-- Version 7.5.1     
+#-- Project file D:\prj_D\Synplify_Pro\ALU_Syn_demo.prd
+#-- Written on Wed Mar 23 02:15:01 2005
+
+#
+### Watch Implementation type ###
+#
+watch_impl -active
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear {  Part } {  hdl_demo|clk - Estimated Frequency } {  hdl_demo|clk - Requested Frequency } {  hdl_demo|clk - Slack } { hdl_demo Part } { hdl_demo I/O ATOMs } { hdl_demo Logic resources } { hdl_demo Total LUTs} { hdl_demo DSP Blocks }

@@ -1,0 +1,547 @@
+ -- Copyright (C) 1991-2006 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ --					Bank 5:		3.3V
+ --					Bank 6:		3.3V
+ --					Bank 7:		3.3V
+ --					Bank 8:		3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   This pin can either be left unconnected or
+ --           	    connected to GND.  Connecting this pin to GND will improve the
+ --           	    device's immunity to noise.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
+CHIP  "lab_design_tq"  ASSIGNED TO AN: EP2C15AF484C7
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+VCCIO3                       : A2        : power  :                   : 3.3V    : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 3         :                
+FIFOA_DATA[16]               : A7        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[22]               : A8        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[34]               : A9        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[6]                : A10       : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[19]               : A11       : output : 3.3-V LVTTL       :         : 3         : Y              
+FCLK                         : A12       : input  : 3.3-V LVTTL       :         : 4         : Y              
+FIFOA_DATA[0]                : A13       : output : 3.3-V LVTTL       :         : 4         : Y              
+FIFOA_DATA[7]                : A14       : output : 3.3-V LVTTL       :         : 4         : Y              
+FIFOA_DATA[32]               : A15       : output : 3.3-V LVTTL       :         : 4         : Y              
+FIFOA_DATA[28]               : A16       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 4         :                
+VCCIO4                       : A21       : power  :                   : 3.3V    : 4         :                
+GND                          : A22       : gnd    :                   :         :           :                
+VCCIO1                       : AA1       : power  :                   : 3.3V    : 1         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+FIFOB_RST_N                  : AA3       : output : 3.3-V LVTTL       :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA4       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA5       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 8         :                
+FIFOB_DATA[0]                : AA7       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[12]               : AA8       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[1]                : AA9       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[29]               : AA10      : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[4]                : AA11      : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[19]               : AA12      : input  : 3.3-V LVTTL       :         : 7         : Y              
+FIFOB_DATA[14]               : AA13      : input  : 3.3-V LVTTL       :         : 7         : Y              
+FIFOB_DATA[8]                : AA14      : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 7         :                
+FIFOB_DATA[28]               : AA16      : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA17      :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 7         :                
+RESET                        : AA20      : input  : 3.3-V LVTTL       :         : 7         : Y              
+GND                          : AA21      : gnd    :                   :         :           :                
+VCCIO6                       : AA22      : power  :                   : 3.3V    : 6         :                
+GND                          : AB1       : gnd    :                   :         :           :                
+VCCIO8                       : AB2       : power  :                   : 3.3V    : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 8         :                
+FIFOB_RD_N                   : AB4       : output : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_EF_N                   : AB5       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[9]                : AB6       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[18]               : AB7       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[23]               : AB8       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[7]                : AB9       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[31]               : AB10      : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[15]               : AB11      : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[30]               : AB12      : input  : 3.3-V LVTTL       :         : 7         : Y              
+FIFOB_DATA[25]               : AB13      : input  : 3.3-V LVTTL       :         : 7         : Y              
+FIFOB_DATA[35]               : AB14      : input  : 3.3-V LVTTL       :         : 7         : Y              
+FIFOB_DATA[6]                : AB15      : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB16      :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB19      :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 7         :                
+VCCIO7                       : AB21      : power  :                   : 3.3V    : 7         :                
+GND                          : AB22      : gnd    :                   :         :           :                
+VCCIO2                       : B1        : power  :                   : 3.3V    : 2         :                
+GND                          : B2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 3         :                
+FIFOA_DATA[31]               : B7        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[10]               : B8        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[12]               : B9        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[17]               : B10       : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[4]                : B11       : output : 3.3-V LVTTL       :         : 3         : Y              
+GND+                         : B12       :        :                   :         : 4         :                
+FIFOA_DATA[13]               : B13       : output : 3.3-V LVTTL       :         : 4         : Y              
+FIFOA_DATA[24]               : B14       : output : 3.3-V LVTTL       :         : 4         : Y              
+FIFOA_DATA[27]               : B15       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B18       :        :                   :         : 4         :                
+FIFOA_WR                     : B19       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 4         :                
+GND                          : B21       : gnd    :                   :         :           :                
+VCCIO5                       : B22       : power  :                   : 3.3V    : 5         :                
+SPI3_RX_RDAT[12]             : C1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[31]             : C2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 3.3-V LVTTL       :         : 2         : N              
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C4        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : C5        : gnd    :                   :         :           :                
+VCCIO3                       : C6        : power  :                   : 3.3V    : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 3         :                
+GND                          : C8        : gnd    :                   :         :           :                
+FIFOA_DATA[15]               : C9        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[11]               : C10       : output : 3.3-V LVTTL       :         : 3         : Y              
+VCCIO3                       : C11       : power  :                   : 3.3V    : 3         :                
+VCCIO4                       : C12       : power  :                   : 3.3V    : 4         :                
+FIFOA_DATA[8]                : C13       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 4         :                
+GND                          : C15       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 4         :                
+FIFOA_RST_N                  : C18       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C22       :        :                   :         : 5         :                
+SPI3_RX_RDAT[10]             : D1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RMOD[0]              : D2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 2         :                
+FIFOA_DATA[26]               : D7        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[3]                : D8        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[35]               : D9        : output : 3.3-V LVTTL       :         : 3         : Y              
+GND                          : D10       : gnd    :                   :         :           :                
+FIFOA_DATA[29]               : D11       : output : 3.3-V LVTTL       :         : 3         : Y              
+GND+                         : D12       :        :                   :         : 3         :                
+GND                          : D13       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 4         :                
+VCCIO4                       : D17       : power  :                   : 3.3V    : 4         :                
+GND                          : D18       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 5         :                
+SPI3_RX_RDAT[2]              : E1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[29]             : E2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 2         :                
+SPI3_RX_RSOP                 : E4        : input  : 3.3-V LVTTL       :         : 2         : Y              
+VCCD_PLL3                    : E5        : power  :                   : 1.2V    :           :                
+VCCA_PLL3                    : E6        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 3         :                
+FIFOA_DATA[2]                : E8        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_EN                     : E9        : output : 3.3-V LVTTL       :         : 3         : Y              
+VCCIO3                       : E10       : power  :                   : 3.3V    : 3         :                
+FIFOA_DATA[5]                : E11       : output : 3.3-V LVTTL       :         : 3         : Y              
+GND+                         : E12       :        :                   :         : 3         :                
+VCCIO4                       : E13       : power  :                   : 3.3V    : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 4         :                
+GNDA_PLL2                    : E16       : gnd    :                   :         :           :                
+GND_PLL2                     : E17       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E18       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E19       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 5         :                
+SPI3_RX_RDAT[17]             : F1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[15]             : F2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[5]              : F3        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RERR                 : F4        : input  : 3.3-V LVTTL       :         : 2         : Y              
+GND_PLL3                     : F5        : gnd    :                   :         :           :                
+GND_PLL3                     : F6        : gnd    :                   :         :           :                
+GNDA_PLL3                    : F7        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 3         :                
+FIFOA_AF_N                   : F9        : input  : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[18]               : F10       : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[25]               : F11       : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[33]               : F12       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 4         :                
+VCCA_PLL2                    : F16       : power  :                   : 1.2V    :           :                
+VCCD_PLL2                    : F17       : power  :                   : 1.2V    :           :                
+GND_PLL2                     : F18       : gnd    :                   :         :           :                
+GND                          : F19       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 5         :                
+NC                           : G1        :        :                   :         :           :                
+NC                           : G2        :        :                   :         :           :                
+SPI3_RX_RDAT[3]              : G3        : input  : 3.3-V LVTTL       :         : 2         : Y              
+GND                          : G4        : gnd    :                   :         :           :                
+SPI3_RX_RDAT[8]              : G5        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[4]              : G6        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 3         :                
+FIFOA_DATA[9]                : G8        : output : 3.3-V LVTTL       :         : 3         : Y              
+VCCIO3                       : G9        : power  :                   : 3.3V    : 3         :                
+GND                          : G10       : gnd    :                   :         :           :                
+FIFOA_DATA[1]                : G11       : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[14]               : G12       : output : 3.3-V LVTTL       :         : 4         : Y              
+GND                          : G13       : gnd    :                   :         :           :                
+VCCIO4                       : G14       : power  :                   : 3.3V    : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 5         :                
+VCCIO5                       : G19       : power  :                   : 3.3V    : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G20       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 5         :                
+SPI3_RX_REOP                 : H1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RMOD[1]              : H2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RENB                 : H3        : output : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[26]             : H4        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[0]              : H5        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[13]             : H6        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H7        :        :                   :         : 3         :                
+FIFOA_DATA[30]               : H8        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[23]               : H9        : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_FF_N                   : H10       : input  : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[21]               : H11       : output : 3.3-V LVTTL       :         : 3         : Y              
+FIFOA_DATA[20]               : H12       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 4         :                
+FIFOA_CS_N                   : H15       : output : 3.3-V LVTTL       :         : 4         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 5         :                
+SPI3_TX_TDAT[3]              : H19       : output : 3.3-V LVTTL       :         : 5         : Y              
+GND                          : H20       : gnd    :                   :         :           :                
+NC                           : H21       :        :                   :         :           :                
+NC                           : H22       :        :                   :         :           :                
+SPI3_RX_RDAT[25]             : J1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+SPI3_RX_RDAT[21]             : J2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+NC                           : J3        :        :                   :         :           :                
+SPI3_RX_RDAT[30]             : J4        : input  : 3.3-V LVTTL       :         : 2         : Y              
+NC                           : J5        :        :                   :         :           :                
+NC                           : J6        :        :                   :         :           :                
+VCCIO2                       : J7        : power  :                   : 3.3V    : 2         :                
+NC                           : J8        :        :                   :         :           :                
+NC                           : J9        :        :                   :         :           :                
+VCCINT                       : J10       : power  :                   : 1.2V    :           :                
+VCCINT                       : J11       : power  :                   : 1.2V    :           :                
+VCCINT                       : J12       : power  :                   : 1.2V    :           :                
+VCCINT                       : J13       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 5         :                
+VCCIO5                       : J16       : power  :                   : 3.3V    : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J19       :        :                   :         : 5         :                
+SPI3_TX_DTPA                 : J20       : input  : 3.3-V LVTTL       :         : 5         : Y              
+SPI3_TX_TDAT[8]              : J21       : output : 3.3-V LVTTL       :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J22       :        :                   :         : 5         :                
+nCE                          : K1        :        :                   :         : 2         :                
+TCK                          : K2        : input  :                   :         : 2         :                
+GND                          : K3        : gnd    :                   :         :           :                
+DATA0                        : K4        : input  :                   :         : 2         :                
+TDI                          : K5        : input  :                   :         : 2         :                
+TMS                          : K6        : input  :                   :         : 2         :                
+GND                          : K7        : gnd    :                   :         :           :                
+NC                           : K8        :        :                   :         :           :                
+VCCINT                       : K9        : power  :                   : 1.2V    :           :                
+GND                          : K10       : gnd    :                   :         :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+GND                          : K13       : gnd    :                   :         :           :                
+VCCINT                       : K14       : power  :                   : 1.2V    :           :                
+NC                           : K15       :        :                   :         :           :                
+GND                          : K16       : gnd    :                   :         :           :                
+NC                           : K17       :        :                   :         :           :                
+NC                           : K18       :        :                   :         :           :                
+GND                          : K19       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 5         :                
+SPI3_TX_TDAT[12]             : K21       : output : 3.3-V LVTTL       :         : 5         : Y              
+PACKET_ERROR                 : K22       : output : 3.3-V LVTTL       :         : 5         : Y              
+GND+                         : L1        :        :                   :         : 2         :                
+GND+                         : L2        :        :                   :         : 2         :                
+VCCIO2                       : L3        : power  :                   : 3.3V    : 2         :                
+nCONFIG                      : L4        :        :                   :         : 2         :                
+TDO                          : L5        : output :                   :         : 2         :                
+DCLK                         : L6        :        :                   :         : 2         :                
+NC                           : L7        :        :                   :         :           :                
+SPI3_RX_RDAT[28]             : L8        : input  : 3.3-V LVTTL       :         : 2         : Y              
+VCCINT                       : L9        : power  :                   : 1.2V    :           :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+GND                          : L12       : gnd    :                   :         :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCCINT                       : L14       : power  :                   : 1.2V    :           :                
+NC                           : L15       :        :                   :         :           :                
+NC                           : L16       :        :                   :         :           :                
+NC                           : L17       :        :                   :         :           :                
+SPI3_TX_TDAT[6]              : L18       : output : 3.3-V LVTTL       :         : 5         : Y              
+SPI3_TX_TDAT[16]             : L19       : output : 3.3-V LVTTL       :         : 5         : Y              
+VCCIO5                       : L20       : power  :                   : 3.3V    : 5         :                
+GND+                         : L21       :        :                   :         : 5         :                
+SPI3_TX_TFCLK                : L22       : input  : 3.3-V LVTTL       :         : 5         : Y              
+SPI3_RX_RFCLK                : M1        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RVAL                 : M2        : input  : 3.3-V LVTTL       :         : 1         : Y              
+VCCIO1                       : M3        : power  :                   : 3.3V    : 1         :                
+GND                          : M4        : gnd    :                   :         :           :                
+SPI3_RX_RDAT[23]             : M5        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[19]             : M6        : input  : 3.3-V LVTTL       :         : 1         : Y              
+NC                           : M7        :        :                   :         :           :                
+NC                           : M8        :        :                   :         :           :                
+VCCINT                       : M9        : power  :                   : 1.2V    :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+GND                          : M11       : gnd    :                   :         :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+GND                          : M13       : gnd    :                   :         :           :                
+VCCINT                       : M14       : power  :                   : 1.2V    :           :                
+NC                           : M15       :        :                   :         :           :                
+NC                           : M16       :        :                   :         :           :                
+MSEL0                        : M17       :        :                   :         : 6         :                
+SPI3_TX_TSOP                 : M18       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[29]             : M19       : output : 3.3-V LVTTL       :         : 6         : Y              
+VCCIO6                       : M20       : power  :                   : 3.3V    : 6         :                
+GND+                         : M21       :        :                   :         : 6         :                
+GND+                         : M22       :        :                   :         : 6         :                
+SPI3_RX_RDAT[7]              : N1        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[6]              : N2        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[20]             : N3        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[1]              : N4        : input  : 3.3-V LVTTL       :         : 1         : Y              
+NC                           : N5        :        :                   :         :           :                
+SPI3_RX_RDAT[22]             : N6        : input  : 3.3-V LVTTL       :         : 1         : Y              
+GND                          : N7        : gnd    :                   :         :           :                
+NC                           : N8        :        :                   :         :           :                
+VCCINT                       : N9        : power  :                   : 1.2V    :           :                
+GND                          : N10       : gnd    :                   :         :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+GND                          : N12       : gnd    :                   :         :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCCINT                       : N14       : power  :                   : 1.2V    :           :                
+SPI3_TX_TDAT[13]             : N15       : output : 3.3-V LVTTL       :         : 6         : Y              
+GND                          : N16       : gnd    :                   :         :           :                
+MSEL1                        : N17       :        :                   :         : 6         :                
+CONF_DONE                    : N18       :        :                   :         : 6         :                
+GND                          : N19       : gnd    :                   :         :           :                
+nSTATUS                      : N20       :        :                   :         : 6         :                
+SPI3_TX_TDAT[31]             : N21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TERR                 : N22       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_RX_RDAT[27]             : P1        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[14]             : P2        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[18]             : P3        : input  : 3.3-V LVTTL       :         : 1         : Y              
+NC                           : P4        :        :                   :         :           :                
+SPI3_RX_RDAT[16]             : P5        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[24]             : P6        : input  : 3.3-V LVTTL       :         : 1         : Y              
+VCCIO1                       : P7        : power  :                   : 3.3V    : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 8         :                
+VCCINT                       : P10       : power  :                   : 1.2V    :           :                
+VCCINT                       : P11       : power  :                   : 1.2V    :           :                
+VCCINT                       : P12       : power  :                   : 1.2V    :           :                
+VCCINT                       : P13       : power  :                   : 1.2V    :           :                
+NC                           : P14       :        :                   :         :           :                
+SPI3_TX_TDAT[28]             : P15       : output : 3.3-V LVTTL       :         : 6         : Y              
+VCCIO6                       : P16       : power  :                   : 3.3V    : 6         :                
+SPI3_TX_TDAT[17]             : P17       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[24]             : P18       : output : 3.3-V LVTTL       :         : 6         : Y              
+NC                           : P19       :        :                   :         :           :                
+NC                           : P20       :        :                   :         :           :                
+NC                           : P21       :        :                   :         :           :                
+NC                           : P22       :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 1         :                
+GND                          : R3        : gnd    :                   :         :           :                
+NC                           : R4        :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 1         :                
+SPI3_RX_RDAT[11]             : R7        : input  : 3.3-V LVTTL       :         : 1         : Y              
+SPI3_RX_RDAT[9]              : R8        : input  : 3.3-V LVTTL       :         : 1         : Y              
+FIFOB_EN                     : R9        : output : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[17]               : R10       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[20]               : R11       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[27]               : R12       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 7         :                
+SPI3_TX_TDAT[21]             : R17       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[23]             : R18       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[14]             : R19       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[5]              : R20       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[9]              : R21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TMOD[0]              : R22       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 1         :                
+VCCIO1                       : T4        : power  :                   : 3.3V    : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :         : 8         :                
+VCCIO8                       : T9        : power  :                   : 3.3V    : 8         :                
+GND                          : T10       : gnd    :                   :         :           :                
+FIFOB_DATA[5]                : T11       : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[32]               : T12       : input  : 3.3-V LVTTL       :         : 7         : Y              
+GND                          : T13       : gnd    :                   :         :           :                
+VCCIO7                       : T14       : power  :                   : 3.3V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 7         :                
+FIFOB_CS_N                   : T16       : output : 3.3-V LVTTL       :         : 7         : Y              
+GND_PLL4                     : T17       : gnd    :                   :         :           :                
+SPI3_TX_TDAT[4]              : T18       : output : 3.3-V LVTTL       :         : 6         : Y              
+VCCIO6                       : T19       : power  :                   : 3.3V    : 6         :                
+GND                          : T20       : gnd    :                   :         :           :                
+SPI3_TX_TDAT[2]              : T21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[25]             : T22       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 1         :                
+GND_PLL1                     : U5        : gnd    :                   :         :           :                
+VCCD_PLL1                    : U6        : power  :                   : 1.2V    :           :                
+VCCA_PLL1                    : U7        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 8         :                
+FIFOB_DATA[13]               : U9        : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[11]               : U10       : input  : 3.3-V LVTTL       :         : 8         : Y              
+GND+                         : U11       :        :                   :         : 8         :                
+GND+                         : U12       :        :                   :         : 8         :                
+FIFOB_DATA[21]               : U13       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 7         :                
+VCCA_PLL4                    : U16       : power  :                   : 1.2V    :           :                
+VCCD_PLL4                    : U17       : power  :                   : 1.2V    :           :                
+SPI3_TX_TDAT[1]              : U18       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TENB                 : U19       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[30]             : U20       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TEOP                 : U21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[22]             : U22       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V2        :        :                   :         : 1         :                
+GND                          : V3        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 1         :                
+GND_PLL1                     : V5        : gnd    :                   :         :           :                
+GND                          : V6        : gnd    :                   :         :           :                
+GNDA_PLL1                    : V7        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V8        :        :                   :         : 8         :                
+FIFOB_DATA[33]               : V9        : input  : 3.3-V LVTTL       :         : 8         : Y              
+VCCIO8                       : V10       : power  :                   : 3.3V    : 8         :                
+FIFOB_DATA[26]               : V11       : input  : 3.3-V LVTTL       :         : 8         : Y              
+GND+                         : V12       :        :                   :         : 7         :                
+VCCIO7                       : V13       : power  :                   : 3.3V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 7         :                
+GNDA_PLL4                    : V16       : gnd    :                   :         :           :                
+GND                          : V17       : gnd    :                   :         :           :                
+GND_PLL4                     : V18       : gnd    :                   :         :           :                
+SPI3_TX_TDAT[10]             : V19       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[11]             : V20       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[15]             : V21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[18]             : V22       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 1         :                
+VCCIO8                       : W6        : power  :                   : 3.3V    : 8         :                
+FIFOB_DATA[34]               : W7        : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[24]               : W8        : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[3]                : W9        : input  : 3.3-V LVTTL       :         : 8         : Y              
+GND                          : W10       : gnd    :                   :         :           :                
+FIFOB_DATA[2]                : W11       : input  : 3.3-V LVTTL       :         : 8         : Y              
+SCLK                         : W12       : input  : 3.3-V LVTTL       :         : 7         : Y              
+GND                          : W13       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 7         :                
+VCCIO7                       : W17       : power  :                   : 3.3V    : 7         :                
+NC                           : W18       :        :                   :         :           :                
+GND                          : W19       : gnd    :                   :         :           :                
+~LVDS91p/nCEO~               : W20       : output : 3.3-V LVTTL       :         : 6         : N              
+SPI3_TX_TMOD[1]              : W21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[20]             : W22       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y2        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 1         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 8         :                
+FIFOB_AE_N                   : Y6        : input  : 3.3-V LVTTL       :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 8         :                
+GND                          : Y8        : gnd    :                   :         :           :                
+FIFOB_DATA[16]               : Y9        : input  : 3.3-V LVTTL       :         : 8         : Y              
+FIFOB_DATA[10]               : Y10       : input  : 3.3-V LVTTL       :         : 8         : Y              
+VCCIO8                       : Y11       : power  :                   : 3.3V    : 8         :                
+VCCIO7                       : Y12       : power  :                   : 3.3V    : 7         :                
+FIFOB_DATA[22]               : Y13       : input  : 3.3-V LVTTL       :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y14       :        :                   :         : 7         :                
+GND                          : Y15       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 7         :                
+SPI3_TX_TDAT[26]             : Y18       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[0]              : Y19       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[7]              : Y20       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[19]             : Y21       : output : 3.3-V LVTTL       :         : 6         : Y              
+SPI3_TX_TDAT[27]             : Y22       : output : 3.3-V LVTTL       :         : 6         : Y              

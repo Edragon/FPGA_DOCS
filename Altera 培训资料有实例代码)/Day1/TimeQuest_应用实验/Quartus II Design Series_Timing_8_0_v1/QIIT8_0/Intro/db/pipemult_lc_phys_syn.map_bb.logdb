@@ -1,0 +1,2 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,LOGIC_ELEMENTS,mult:mult_inst|lpm_mult:lpm_mult_component|mult_uar:auto_generated|mac_out2,

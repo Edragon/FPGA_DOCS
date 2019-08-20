@@ -1,0 +1,17 @@
+@P:  Part : EP1S10FC780-5
+@P:  Worst Slack : -5.041
+@P:  clk - Estimated Frequency : NA
+@P:  clk - Requested Frequency : 150.0 MHz
+@P:  clk - Estimated Period : NA
+@P:  clk - Requested Period : 6.667
+@P:  clk - Slack : NA
+@P:  hdl_demo|clk - Estimated Frequency : 85.4 MHz
+@P:  hdl_demo|clk - Requested Frequency : 150.0 MHz
+@P:  hdl_demo|clk - Estimated Period : 11.708
+@P:  hdl_demo|clk - Requested Period : 6.667
+@P:  hdl_demo|clk - Slack : -5.041
+@P: hdl_demo Part : ep1s10fc780-5
+@P: hdl_demo I/O ATOMs : 61
+@P: hdl_demo Total LUTs: : 68 of 10570 ( 0%)
+@P: hdl_demo Logic resources : 68 ATOMs of 10570 ( 0%)
+@P: hdl_demo DSP Blocks : 0 (0 nine bit DSP elements)

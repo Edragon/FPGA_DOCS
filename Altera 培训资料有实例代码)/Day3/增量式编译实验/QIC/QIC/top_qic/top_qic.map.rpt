@@ -1,0 +1,384 @@
+Analysis & Synthesis report for top_qic
+Wed Apr 01 11:02:52 2009
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Partition Status Summary
+  6. Partition Dependent Files
+  7. Partition for Top-Level Resource Utilization by Entity
+  8. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                             ;
++-------------------------------+------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Wed Apr 01 11:02:52 2009    ;
+; Quartus II Version            ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name                 ; top_qic                                  ;
+; Top-level Entity Name         ; top_qic                                  ;
+; Family                        ; Stratix II                               ;
+; Logic utilization             ; N/A                                      ;
+;     Combinational ALUTs       ; 0                                        ;
+;     Dedicated logic registers ; 0                                        ;
+; Total registers               ; N/A until Partition Merge                ;
+; Total pins                    ; N/A until Partition Merge                ;
+; Total virtual pins            ; N/A until Partition Merge                ;
+; Total block memory bits       ; N/A until Partition Merge                ;
+; DSP block 9-bit elements      ; N/A until Partition Merge                ;
+; Total PLLs                    ; N/A until Partition Merge                ;
+; Total DLLs                    ; N/A until Partition Merge                ;
++-------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2S15F672C3       ;                    ;
+; Top-level entity name                                        ; top_qic            ; top_qic            ;
+; Family name                                                  ; Stratix II         ; Stratix            ;
+; DSP Block Balancing                                          ; Logic Elements     ; Auto               ;
+; Auto Shift Register Replacement                              ; Off                ; Auto               ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Perform gate-level register retiming                         ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto DSP Block Replacement                                   ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal Compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+
+; placeholder.v                    ; yes             ; User Verilog HDL File  ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/placeholder.v ;
+; des_bb.v                         ; yes             ; User Verilog HDL File  ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/des_bb.v      ;
+; fir_top_bb.v                     ; yes             ; User Verilog HDL File  ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/fir_top_bb.v  ;
+; top_qic.bdf                      ; yes             ; Other                  ; E:/PLD课程电子版/For students/Day3/增量式编译实验/QIC/QIC/top_qic/top_qic.bdf   ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Partition Status Summary                                         ;
++-------------------+-------------+--------------------------------+
+; Partition Name    ; Synthesized ; Reason                         ;
++-------------------+-------------+--------------------------------+
+; Top               ; yes         ; No netlist in project database ;
+; fir_top:inst      ; no          ; Empty                          ;
+; des:inst2         ; no          ; Empty                          ;
+; placeholder:inst3 ; no          ; Empty                          ;
++-------------------+-------------+--------------------------------+
+
+
++---------------------------+
+; Partition Dependent Files ;
++---------------------------+
+; Dependent Files:          ;
++---------------------------+
+; top_qic.bdf               ;
++---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                        ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |top_qic                   ; 0 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |top_qic            ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Wed Apr 01 11:02:49 2009
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_qic -c top_qic
+Info: Found 1 design units, including 1 entities, in source file placeholder.v
+    Info: Found entity 1: placeholder
+Info: Found 1 design units, including 1 entities, in source file des_bb.v
+    Info: Found entity 1: des
+Info: Found 1 design units, including 1 entities, in source file fir_top_bb.v
+    Info: Found entity 1: fir_top
+Warning: Using design file top_qic.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: top_qic
+Info: Elaborating entity "top_qic" for the top level hierarchy
+Info: Elaborating entity "fir_top" for hierarchy "fir_top:inst"
+Warning (10034): Output port "input_ch_id[1]" at fir_top_bb.v(38) has no driver
+Warning (10034): Output port "input_ch_id[0]" at fir_top_bb.v(38) has no driver
+Warning (10034): Output port "output_ch_id[1]" at fir_top_bb.v(39) has no driver
+Warning (10034): Output port "output_ch_id[0]" at fir_top_bb.v(39) has no driver
+Warning (10034): Output port "fir_result[29]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[28]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[27]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[26]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[25]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[24]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[23]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[22]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[21]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[20]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[19]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[18]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[17]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[16]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[15]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[14]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[13]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[12]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[11]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[10]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[9]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[8]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[7]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[6]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[5]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[4]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[3]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[2]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[1]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "fir_result[0]" at fir_top_bb.v(40) has no driver
+Warning (10034): Output port "done" at fir_top_bb.v(41) has no driver
+Warning (10034): Output port "rdy_to_ld" at fir_top_bb.v(42) has no driver
+Warning: Entity "fir_top" contains only dangling pins
+Info: Elaborating entity "des" for hierarchy "des:inst2"
+Warning (10034): Output port "desOut[63]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[62]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[61]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[60]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[59]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[58]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[57]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[56]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[55]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[54]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[53]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[52]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[51]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[50]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[49]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[48]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[47]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[46]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[45]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[44]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[43]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[42]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[41]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[40]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[39]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[38]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[37]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[36]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[35]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[34]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[33]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[32]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[31]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[30]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[29]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[28]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[27]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[26]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[25]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[24]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[23]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[22]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[21]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[20]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[19]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[18]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[17]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[16]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[15]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[14]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[13]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[12]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[11]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[10]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[9]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[8]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[7]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[6]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[5]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[4]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[3]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[2]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[1]" at des_bb.v(36) has no driver
+Warning (10034): Output port "desOut[0]" at des_bb.v(36) has no driver
+Warning: Entity "des" contains only dangling pins
+Info: Elaborating entity "placeholder" for hierarchy "placeholder:inst3"
+Warning (10034): Output port "out[63]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[62]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[61]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[60]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[59]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[58]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[57]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[56]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[55]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[54]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[53]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[52]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[51]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[50]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[49]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[48]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[47]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[46]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[45]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[44]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[43]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[42]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[41]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[40]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[39]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[38]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[37]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[36]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[35]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[34]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[33]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[32]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[31]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[30]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[29]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[28]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[27]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[26]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[25]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[24]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[23]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[22]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[21]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[20]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[19]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[18]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[17]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[16]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[15]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[14]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[13]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[12]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[11]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[10]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[9]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[8]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[7]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[6]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[5]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[4]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[3]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[2]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[1]" at placeholder.v(6) has no driver
+Warning (10034): Output port "out[0]" at placeholder.v(6) has no driver
+Warning: Entity "placeholder" contains only dangling pins
+Info: 1 design partition requires synthesis
+    Info: Partition "Top" requires synthesis because the project database does not contain a post-synthesis netlist for this partition
+Info: 3 design partitions do not require synthesis
+    Info: Partition "fir_top:inst" does not require synthesis because its netlist type is Empty
+    Info: Partition "des:inst2" does not require synthesis because its netlist type is Empty
+    Info: Partition "placeholder:inst3" does not require synthesis because its netlist type is Empty
+Info: Starting High-Level Optimization for Top Partition
+Info: Starting High-Level Optimization for Top Partition
+Info: Starting Logic Optimization and Technology Mapping for Top Partition
+Info: Implemented 243 device resources after synthesis - the final resource count might be different
+    Info: Implemented 140 input pins
+    Info: Implemented 100 output pins
+    Info: Implemented 3 partitions
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 168 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Wed Apr 01 11:02:55 2009
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
+
+

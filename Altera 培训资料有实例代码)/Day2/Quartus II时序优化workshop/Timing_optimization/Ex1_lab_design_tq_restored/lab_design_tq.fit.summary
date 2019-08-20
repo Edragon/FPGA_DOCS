@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Mar 31 14:16:09 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : lab_design_tq
+Top-level Entity Name : LAB_DESIGN
+Family : Cyclone II
+Device : EP2C15AF484C7
+Timing Models : Final
+Total logic elements : 3,431 / 14,448 ( 24 % )
+    Total combinational functions : 2,486 / 14,448 ( 17 % )
+    Dedicated logic registers : 2,501 / 14,448 ( 17 % )
+Total registers : 2587
+Total pins : 172 / 315 ( 55 % )
+Total virtual pins : 0
+Total memory bits : 65,024 / 239,616 ( 27 % )
+Embedded Multiplier 9-bit elements : 6 / 52 ( 12 % )
+Total PLLs : 0 / 4 ( 0 % )

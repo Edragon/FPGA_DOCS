@@ -1,0 +1,879 @@
+Fitter report for uart_regs
+Fri Jan 14 21:03:29 2005
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analyze I/O Assignments Summary
+  3. Floorplan View
+  4. Pin-Out File
+  5. Input Pins
+  6. Output Pins
+  7. I/O Bank Usage
+  8. All Package Pins
+  9. Output Pin Load For Reported TCO
+ 10. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++------------------------------------------------------------------------+
+; Analyze I/O Assignments Summary                                        ;
++--------------------------------+---------------------------------------+
+; Analyze I/O Assignments Status ; Successful - Fri Jan 14 21:03:29 2005 ;
+; Revision Name                  ; uart_regs                             ;
+; Top-level Entity Name          ; uart_regs                             ;
+; Family                         ; Stratix                               ;
+; Device                         ; EP1S10B672C6                          ;
+; Total pins                     ; 27 / 346 ( 7 % )                      ;
+; Total PLLs                     ; 0 / 6 ( 0 % )                         ;
+; Total DLLs                     ; 0 / 2 ( 0 % )                         ;
++--------------------------------+---------------------------------------+
+
+
++-----------------+
+; Floorplan View  ;
++-----------------+
+Floorplan report data cannot be output to ASCII.
+Please use Quartus II to view the floorplan report data.
+
+
++---------------+
+; Pin-Out File  ;
++---------------+
+The pin-out file can be found in F:/Quartus/Example-b3-1/uart_regs/dev/uart_regs.pin.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                         ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; clk          ; A15   ; 4        ; 29           ; 31           ; 1           ; 175                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; mc_cs3       ; A6    ; 3        ; 7            ; 31           ; 3           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; srx_pad_i    ; A17   ; 4        ; 36           ; 31           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_addr_i[0] ; A20   ; 4        ; 46           ; 31           ; 2           ; 24                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_addr_i[1] ; A21   ; 4        ; 48           ; 31           ; 3           ; 23                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_addr_i[2] ; A24   ; 4        ; 50           ; 31           ; 5           ; 23                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[0]  ; AA1   ; 1        ; 0            ; 3            ; 3           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[1]  ; AA2   ; 1        ; 0            ; 3            ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[2]  ; AA3   ; 1        ; 0            ; 3            ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[3]  ; AA26  ; 6        ; 53           ; 3            ; 3           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[4]  ; AA5   ; 1        ; 0            ; 4            ; 1           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[5]  ; AA4   ; 1        ; 0            ; 3            ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[6]  ; AA6   ; 1        ; 0            ; 4            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_dat_i[7]  ; AA8   ; 8        ; 9            ; 0            ; 2           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_re_i      ; AE15  ; 7        ; 29           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_rst_i     ; N6    ; 2        ; 0            ; 21           ; 2           ; 172                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
+; wb_we_i      ; N3    ; 2        ; 0            ; 19           ; 3           ; 43                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; LVTTL        ; Off         ; User                 ;
++--------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; Turbo Bit ; I/O Standard ; Current Strength ; Termination ; Location assigned by ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+----------+--------------+-----------+--------------+------------------+-------------+----------------------+
+; int_o       ; A5    ; 3        ; 5            ; 31           ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; stx_pad_o   ; A19   ; 4        ; 44           ; 31           ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[0] ; AB16  ; 7        ; 33           ; 0            ; 5           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[1] ; AB17  ; 7        ; 41           ; 0            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[2] ; AB19  ; 7        ; 44           ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[3] ; AB14  ; 11       ; 25           ; 0            ; 3           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[4] ; AB20  ; 7        ; 46           ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[5] ; AB21  ; 7        ; 52           ; 0            ; 4           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[6] ; AB23  ; 6        ; 53           ; 2            ; 0           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
+; wb_dat_o[7] ; AB24  ; 6        ; 53           ; 2            ; 1           ; no              ; no                     ; no            ; no             ; no              ; no         ; no       ; Off          ; no        ; LVTTL        ; Default          ; Off         ; User                 ;
++-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+----------------+-----------------+------------+----------+--------------+-----------+--------------+------------------+-------------+----------------------+
+
+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++------------------------------------------------------------
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1        ; 6 / 39 ( 15 % ) ; 3.3V          ; --           ;
+; 2        ; 2 / 39 ( 5 % )  ; 3.3V          ; --           ;
+; 3        ; 2 / 43 ( 4 % )  ; 3.3V          ; --           ;
+; 4        ; 7 / 45 ( 15 % ) ; 3.3V          ; --           ;
+; 5        ; 0 / 39 ( 0 % )  ; 3.3V          ; --           ;
+; 6        ; 3 / 39 ( 7 % )  ; 3.3V          ; --           ;
+; 7        ; 6 / 45 ( 13 % ) ; 3.3V          ; --           ;
+; 8        ; 1 / 44 ( 2 % )  ; 3.3V          ; --           ;
+; 9        ; 0 / 6 ( 0 % )   ; 3.3V          ; --           ;
+; 11       ; 1 / 6 ( 16 % )  ; 3.3V          ; --           ;
++----------+-----------------+---------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                 ;
++-------------------------------------------------------------------------------------------------------------------
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage            ; I/O Standard ; Voltage ; I/O Type   ; Termination ;
++----------+------------+----------+---------------------------+--------------+---------+------------+-------------+
+; A2       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; A3       ; 451        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A4       ;            ; 3        ; VCCIO3                    ;              ; 3.3V    ; --         ; --          ;
+; A5       ; 444        ; 3        ; int_o                     ; LVTTL        ;         ; Column I/O ; Off         ;
+; A6       ; 438        ; 3        ; mc_cs3                    ; LVTTL        ;         ; Column I/O ; Off         ;
+; A7       ; 430        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A8       ; 429        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A9       ; 427        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A10      ; 416        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A11      ;            ; 3        ; VCCIO3                    ;              ; 3.3V    ; --         ; --          ;
+; A12      ; 407        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; A14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; A15      ; 391        ; 4        ; clk                       ; LVTTL        ;         ; Column I/O ; Off         ;
+; A16      ;            ; 4        ; VCCIO4                    ;              ; 3.3V    ; --         ; --          ;
+; A17      ; 371        ; 4        ; srx_pad_i                 ; LVTTL        ;         ; Column I/O ; Off         ;
+; A18      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; A19      ; 355        ; 4        ; stx_pad_o                 ; LVTTL        ;         ; Column I/O ; Off         ;
+; A20      ; 351        ; 4        ; wb_addr_i[0]              ; LVTTL        ;         ; Column I/O ; Off         ;
+; A21      ; 346        ; 4        ; wb_addr_i[1]              ; LVTTL        ;         ; Column I/O ; Off         ;
+; A22      ; 338        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; A23      ;            ; 4        ; VCCIO4                    ;              ; 3.3V    ; --         ; --          ;
+; A24      ; 337        ; 4        ; wb_addr_i[2]              ; LVTTL        ;         ; Column I/O ; Off         ;
+; A25      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AA1      ; 89         ; 1        ; wb_dat_i[0]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AA2      ; 88         ; 1        ; wb_dat_i[1]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AA3      ; 91         ; 1        ; wb_dat_i[2]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AA4      ; 90         ; 1        ; wb_dat_i[5]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AA5      ; 86         ; 1        ; wb_dat_i[4]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AA6      ; 85         ; 1        ; wb_dat_i[6]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AA7      ; 116        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA8      ; 128        ; 8        ; wb_dat_i[7]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AA9      ; 134        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA10     ; 139        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA11     ; 148        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA12     ; 163        ; 11       ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA13     ; 167        ; 11       ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA14     ; 165        ; 11       ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA15     ; 177        ; 7        ; ^nIO_PULLUP               ;              ;         ; --         ; --          ;
+; AA16     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AA17     ; 191        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA18     ; 196        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA19     ; 203        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA20     ; 208        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA21     ; 213        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AA22     ; 243        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AA23     ; 239        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AA24     ; 238        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AA25     ; 241        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AA26     ; 240        ; 6        ; wb_dat_i[3]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AB1      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AB2      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AB3      ; 95         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AB4      ; 94         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AB5      ; 108        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB6      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AB7      ; 113        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB8      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AB9      ; 136        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB10     ; 141        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB11     ; 143        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB12     ; 162        ; 11       ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB13     ; 166        ; 11       ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB14     ; 164        ; 11       ; wb_dat_o[3]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AB15     ; 186        ; 7        ; GND                       ;              ;         ; --         ; --          ;
+; AB16     ; 184        ; 7        ; wb_dat_o[0]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AB17     ; 195        ; 7        ; wb_dat_o[1]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AB18     ; 217        ; 7        ; GND                       ;              ;         ; --         ; --          ;
+; AB19     ; 204        ; 7        ; wb_dat_o[2]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AB20     ; 210        ; 7        ; wb_dat_o[4]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AB21     ; 229        ; 7        ; wb_dat_o[5]               ; LVTTL        ;         ; Column I/O ; Off         ;
+; AB22     ; 224        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AB23     ; 235        ; 6        ; wb_dat_o[6]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AB24     ; 234        ; 6        ; wb_dat_o[7]               ; LVTTL        ;         ; Row I/O    ; Off         ;
+; AB25     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AB26     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AC1      ;            ; 1        ; VCCIO1                    ;              ; 3.3V    ; --         ; --          ;
+; AC2      ; 96         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AC3      ; 99         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AC4      ; 98         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AC5      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AC6      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AC7      ; 107        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC8      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AC9      ; 130        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC10     ; 137        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC11     ; 146        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC12     ; 151        ; 8        ; GND+                      ;              ;         ; Column I/O ; --          ;
+; AC13     ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AC14     ;            ; 1        ; GNDA_PLL6                 ;              ;         ; --         ; --          ;
+; AC15     ; 180        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC16     ; 183        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC17     ; 197        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC18     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AC19     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AC20     ; 212        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC21     ; 216        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC22     ; 227        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC23     ; 226        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AC24     ; 231        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AC25     ; 233        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AC26     ;            ; 6        ; VCCIO6                    ;              ; 3.3V    ; --         ; --          ;
+; AD1      ; 97         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AD2      ; 101        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD3      ; 103        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD4      ; 105        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD5      ; 100        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD6      ; 109        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD7      ; 114        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD8      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD9      ; 135        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD10     ; 132        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD11     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD12     ; 150        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD13     ;            ; 1        ; VCCG_PLL6                 ;              ; 1.5V    ; --         ; --          ;
+; AD14     ;            ; 1        ; VCCA_PLL6                 ;              ; 1.5V    ; --         ; --          ;
+; AD15     ; 182        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD16     ; 185        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD17     ; 198        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD18     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD19     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD20     ; 215        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AD21     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD22     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD23     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD24     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AD25     ; 230        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AD26     ; 232        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; AE1      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AE2      ; 102        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE3      ; 106        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE4      ; 104        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE5      ; 112        ; 8        ; GND                       ;              ;         ; --         ; --          ;
+; AE6      ; 115        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE7      ; 111        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE8      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AE9      ; 149        ; 8        ; GND                       ;              ;         ; --         ; --          ;
+; AE10     ; 133        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE11     ; 144        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE12     ; 153        ; 8        ; GND+                      ;              ;         ; Column I/O ; --          ;
+; AE13     ;            ; 11       ; VCC_PLL6_OUTA             ;              ; 3.3V    ; --         ; --          ;
+; AE14     ;            ; 1        ; GNDG_PLL6                 ;              ;         ; --         ; --          ;
+; AE15     ; 168        ; 7        ; wb_re_i                   ; LVTTL        ;         ; Column I/O ; Off         ;
+; AE16     ; 188        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE17     ; 193        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE18     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AE19     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AE20     ; 206        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE21     ; 214        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE22     ; 223        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE23     ; 225        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE24     ; 228        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE25     ; 220        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AE26     ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AF2      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AF3      ; 110        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF4      ;            ; 8        ; VCCIO8                    ;              ; 3.3V    ; --         ; --          ;
+; AF5      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AF6      ; 118        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF7      ; 117        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF8      ; 124        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF9      ; 131        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF10     ; 142        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF11     ;            ; 8        ; VCCIO8                    ;              ; 3.3V    ; --         ; --          ;
+; AF12     ; 152        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF13     ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AF14     ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; AF15     ; 170        ; 7        ; GND+                      ;              ;         ; Column I/O ; --          ;
+; AF16     ;            ; 7        ; VCCIO7                    ;              ; 3.3V    ; --         ; --          ;
+; AF17     ; 190        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF18     ; 199        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF19     ; 201        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF20     ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; AF21     ; 211        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF22     ; 221        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF23     ;            ; 7        ; VCCIO7                    ;              ; 3.3V    ; --         ; --          ;
+; AF24     ; 222        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; AF25     ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; B1       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; B2       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; B3       ; 455        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B4       ; 453        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B5       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B6       ; 436        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B8       ; 431        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B9       ; 424        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B10      ; 426        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B11      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B12      ; 406        ; 3        ; GND+                      ;              ;         ; Column I/O ; --          ;
+; B13      ;            ; 1        ; GNDG_PLL5                 ;              ;         ; --         ; --          ;
+; B14      ;            ; 1        ; GNDA_PLL5                 ;              ;         ; --         ; --          ;
+; B15      ; 389        ; 4        ; GND+                      ;              ;         ; Column I/O ; --          ;
+; B16      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B17      ; 366        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B18      ; 357        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B20      ; 348        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B21      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B22      ; 336        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B23      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B24      ; 331        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; B25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; B26      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; C1       ; 0          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; C2       ; 454        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C3       ; 450        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C4       ; 457        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C5       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; C6       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; C7       ; 446        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; C9       ; 428        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C10      ; 425        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C11      ; 414        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C12      ; 409        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; C14      ;            ; 1        ; VCCG_PLL5                 ;              ; 1.5V    ; --         ; --          ;
+; C15      ; 378        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C16      ; 375        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C17      ; 364        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C18      ; 356        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; C20      ; 343        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C21      ; 347        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C22      ; 339        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C23      ; 330        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C24      ; 334        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; C25      ; 327        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; C26      ; 329        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; D1       ;            ; 2        ; VCCIO2                    ;              ; 3.3V    ; --         ; --          ;
+; D2       ; 1          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; D3       ; 458        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D4       ; 456        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D5       ; 452        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D6       ; 442        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; D8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; D9       ; 447        ; 3        ; GND                       ;              ;         ; --         ; --          ;
+; D10      ; 422        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D11      ; 415        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D12      ; 408        ; 3        ; GND+                      ;              ;         ; Column I/O ; --          ;
+; D13      ;            ; 9        ; VCC_PLL5_OUTA             ;              ; 3.3V    ; --         ; --          ;
+; D14      ;            ; 1        ; VCCA_PLL5                 ;              ; 1.5V    ; --         ; --          ;
+; D15      ; 381        ; 4        ; #TRST                     ;              ;         ; --         ; --          ;
+; D16      ; 374        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D17      ; 369        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D18      ; 358        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; D20      ; 345        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D21      ; 344        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D22      ; 333        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D23      ; 332        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; D24      ; 326        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; D25      ; 328        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; D26      ;            ; 5        ; VCCIO5                    ;              ; 3.3V    ; --         ; --          ;
+; E1       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E2       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E3       ; 2          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; E4       ; 3          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; E5       ; 445        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E6       ; 443        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E9       ; 423        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E10      ; 417        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E11      ; 411        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E12      ; 397        ; 9        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E13      ; 393        ; 9        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E14      ; 395        ; 9        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E15      ; 380        ; 4        ; #TMS                      ;              ;         ; --         ; --          ;
+; E16      ; 376        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E17      ; 367        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E18      ; 362        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E20      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E21      ; 349        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E22      ; 335        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; E23      ; 322        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; E24      ; 323        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; E25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; E26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; F1       ; 8          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F2       ; 9          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F3       ; 6          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F4       ; 7          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F5       ; 441        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F6       ; 440        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; F8       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; F9       ; 421        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F10      ; 419        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F11      ; 410        ; 3        ; GND                       ;              ;         ; --         ; --          ;
+; F12      ; 396        ; 9        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F13      ; 392        ; 9        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F14      ; 394        ; 9        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F15      ; 383        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F16      ; 377        ; 4        ; +~DATA0~ / RESERVED_INPUT ; LVTTL        ;         ; Column I/O ; Off         ;
+; F17      ; 368        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F18      ; 373        ; 4        ; GND                       ;              ;         ; --         ; --          ;
+; F19      ; 363        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F20      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; F21      ; 353        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; F22      ; 342        ; 4        ; GND                       ;              ;         ; --         ; --          ;
+; F23      ; 318        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F24      ; 319        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F25      ; 320        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; F26      ; 321        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G1       ; 13         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G2       ; 14         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G3       ; 15         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G4       ; 16         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G5       ; 10         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G6       ; 11         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; G8       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; G9       ; 420        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G10      ; 418        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G11      ; 412        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G12      ; 404        ; 3        ; ^DCLK                     ;              ;         ; --         ; --          ;
+; G13      ;            ; 1        ; DIODEL                    ;              ;         ; --         ; --          ;
+; G14      ; 387        ; 4        ; #TDO                      ;              ;         ; --         ; --          ;
+; G15      ; 382        ; 4        ; #TCK                      ;              ;         ; --         ; --          ;
+; G16      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; G17      ; 370        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G18      ; 365        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G19      ; 361        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G20      ; 360        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; G21      ; 309        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G22      ; 310        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G23      ; 313        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G24      ; 314        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G25      ; 315        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; G26      ; 316        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; H1       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H2       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H3       ; 19         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; H4       ; 20         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; H5       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H6       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H8       ; 12         ; 2        ; GND                       ;              ;         ; --         ; --          ;
+; H9       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; H10      ; 413        ; 3        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; H11      ; 405        ; 3        ; ^CONF_DONE                ;              ;         ; --         ; --          ;
+; H12      ; 403        ; 3        ; ^nCONFIG                  ;              ;         ; --         ; --          ;
+; H13      ; 402        ; 3        ; ^nSTATUS                  ;              ;         ; --         ; --          ;
+; H14      ;            ; 1        ; DIODEH                    ;              ;         ; --         ; --          ;
+; H15      ; 386        ; 4        ; #TDI                      ;              ;         ; --         ; --          ;
+; H16      ; 379        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; H17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; H18      ; 372        ; 4        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; H19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H20      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H21      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H22      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H23      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H24      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; H26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J1       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J2       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J3       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J4       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J5       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J6       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J9       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; J10      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; J11      ;            ; 3        ; VCCIO3                    ;              ; 3.3V    ; --         ; --          ;
+; J12      ;            ; 3        ; VCCIO3                    ;              ; 3.3V    ; --         ; --          ;
+; J13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; J14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; J15      ;            ; 4        ; VCCIO4                    ;              ; 3.3V    ; --         ; --          ;
+; J16      ;            ; 4        ; VCCIO4                    ;              ; 3.3V    ; --         ; --          ;
+; J17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; J18      ; 317        ; 5        ; GND                       ;              ;         ; --         ; --          ;
+; J19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J20      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J21      ; 325        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; J22      ; 324        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; J23      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J24      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; J26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K1       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K2       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K3       ; 5          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K4       ; 4          ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K5       ; 18         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K6       ; 17         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K9       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K10      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; K11      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; K12      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; K13      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; K14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; K15      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; K16      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; K17      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; K18      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; K19      ; 306        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K20      ; 305        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K21      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K22      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K23      ; 312        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K24      ; 311        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; K25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; K26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; L1       ;            ; 2        ; VCCIO2                    ;              ; 3.3V    ; --         ; --          ;
+; L2       ; 22         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L3       ; 21         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L4       ; 24         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L5       ; 23         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L6       ; 28         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L7       ; 27         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L8       ; 37         ; 2        ; GND                       ;              ;         ; --         ; --          ;
+; L9       ;            ; 2        ; VCCIO2                    ;              ; 3.3V    ; --         ; --          ;
+; L10      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; L11      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; L12      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; L13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; L14      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; L15      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; L16      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; L17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; L18      ;            ; 5        ; VCCIO5                    ;              ; 3.3V    ; --         ; --          ;
+; L19      ; 292        ; 5        ; GND                       ;              ;         ; --         ; --          ;
+; L20      ; 302        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L21      ; 301        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L22      ; 299        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L23      ; 300        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L24      ; 308        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L25      ; 307        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; L26      ;            ; 5        ; VCCIO5                    ;              ; 3.3V    ; --         ; --          ;
+; M1       ; 49         ; 2        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; M2       ;            ; 1        ; VCCG_PLL1                 ;              ; 1.5V    ; --         ; --          ;
+; M3       ;            ; 1        ; VCCA_PLL1                 ;              ; 1.5V    ; --         ; --          ;
+; M4       ; 33         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M5       ; 34         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M6       ; 29         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M7       ; 30         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M8       ; 40         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M9       ; 41         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M10      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; M11      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; M12      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; M13      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; M14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; M15      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; M16      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; M17      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; M18      ; 288        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M19      ; 289        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M20      ; 290        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M21      ; 291        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M22      ; 295        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M23      ; 296        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; M24      ; 282        ; 5        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; M25      ; 283        ; 5        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; M26      ; 280        ; 5        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; N1       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N2       ; 46         ; 2        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; N3       ; 47         ; 2        ; wb_we_i                   ; LVTTL        ;         ; Row I/O    ; Off         ;
+; N4       ;            ; 1        ; GNDG_PLL1                 ;              ;         ; --         ; --          ;
+; N5       ;            ; 1        ; GNDA_PLL1                 ;              ;         ; --         ; --          ;
+; N6       ; 38         ; 2        ; wb_rst_i                  ; LVTTL        ;         ; Row I/O    ; Off         ;
+; N7       ; 39         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; N8       ; 45         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; N9       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N10      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; N11      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N12      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; N13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N14      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; N15      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N16      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; N17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N18      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; N19      ; 273        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; N20      ; 284        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; N21      ; 285        ; 5        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; N22      ;            ; 1        ; GNDG_PLL4                 ;              ;         ; --         ; --          ;
+; N23      ;            ; 1        ; GNDA_PLL4                 ;              ;         ; --         ; --          ;
+; N24      ;            ; 1        ; VCCG_PLL4                 ;              ; 1.5V    ; --         ; --          ;
+; N25      ;            ; 1        ; VCCA_PLL4                 ;              ; 1.5V    ; --         ; --          ;
+; N26      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P1       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P2       ;            ; 1        ; GNDG_PLL2                 ;              ;         ; --         ; --          ;
+; P3       ;            ; 1        ; GNDA_PLL2                 ;              ;         ; --         ; --          ;
+; P4       ;            ; 1        ; VCCG_PLL2                 ;              ; 1.5V    ; --         ; --          ;
+; P5       ;            ; 1        ; VCCA_PLL2                 ;              ; 1.5V    ; --         ; --          ;
+; P6       ; 56         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; P7       ; 57         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; P8       ; 44         ; 2        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; P9       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P10      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P11      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; P12      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P13      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; P14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P15      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; P16      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P17      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; P18      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; P19      ; 272        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; P20      ; 268        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; P21      ; 269        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; P22      ;            ; 1        ; VCCA_PLL3                 ;              ; 1.5V    ; --         ; --          ;
+; P23      ;            ; 1        ; VCCG_PLL3                 ;              ; 1.5V    ; --         ; --          ;
+; P24      ; 277        ; 6        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; P25      ; 278        ; 6        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; P26      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; R1       ; 50         ; 1        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; R2       ; 51         ; 1        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; R3       ; 52         ; 1        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; R4       ; 63         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R5       ; 64         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R6       ; 58         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R7       ; 59         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R8       ; 60         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R9       ; 61         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R10      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; R11      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; R12      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; R13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; R14      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; R15      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; R16      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; R17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; R18      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; R19      ; 256        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R20      ; 270        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R21      ; 271        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R22      ; 265        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R23      ; 266        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; R24      ;            ; 1        ; GNDA_PLL3                 ;              ;         ; --         ; --          ;
+; R25      ;            ; 1        ; GNDG_PLL3                 ;              ;         ; --         ; --          ;
+; R26      ; 279        ; 6        ; GND+                      ;              ;         ; Row I/O    ; --          ;
+; T1       ;            ; 1        ; VCCIO1                    ;              ; 3.3V    ; --         ; --          ;
+; T2       ; 68         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T3       ; 67         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T4       ; 76         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T5       ; 75         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T6       ; 74         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T7       ; 73         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T8       ; 62         ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; T9       ;            ; 1        ; VCCIO1                    ;              ; 3.3V    ; --         ; --          ;
+; T10      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; T11      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; T12      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; T13      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; T14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; T15      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; T16      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; T17      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; T18      ;            ; 6        ; VCCIO6                    ;              ; 3.3V    ; --         ; --          ;
+; T19      ; 255        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T20      ; 252        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T21      ; 251        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T22      ; 262        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T23      ; 261        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T24      ; 254        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T25      ; 253        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; T26      ;            ; 6        ; VCCIO6                    ;              ; 3.3V    ; --         ; --          ;
+; U1       ; 80         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U2       ; 79         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U3       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U4       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U5       ; 78         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U6       ; 77         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U9       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U10      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; U11      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; U12      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; U13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; U14      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; U15      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; U16      ;            ;          ; VCCINT                    ;              ; 1.5V    ; --         ; --          ;
+; U17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; U18      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U20      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U21      ; 250        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U22      ; 249        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U23      ; 237        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U24      ; 236        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; U25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; U26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V1       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V2       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V3       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V4       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V5       ; 93         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; V6       ; 92         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; V7       ; 87         ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V9       ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V10      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V11      ;            ; 8        ; VCCIO8                    ;              ; 3.3V    ; --         ; --          ;
+; V12      ;            ; 8        ; VCCIO8                    ;              ; 3.3V    ; --         ; --          ;
+; V13      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V14      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V15      ;            ; 7        ; VCCIO7                    ;              ; 3.3V    ; --         ; --          ;
+; V16      ;            ; 7        ; VCCIO7                    ;              ; 3.3V    ; --         ; --          ;
+; V17      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V18      ;            ; 1        ; GND                       ;              ;         ; --         ; --          ;
+; V19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V20      ; 267        ; 6        ; GND                       ;              ;         ; --         ; --          ;
+; V21      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V22      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V23      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V24      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; V26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W1       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W2       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W3       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W4       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W5       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W6       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W8       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W9       ; 127        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; W10      ; 140        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; W11      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W12      ; 154        ; 8        ; PLL_ENA                   ;              ;         ; --         ; --          ;
+; W13      ; 157        ; 8        ; ^MSEL2                    ;              ;         ; --         ; --          ;
+; W14      ; 173        ; 7        ; ^nCEO                     ;              ;         ; --         ; --          ;
+; W15      ; 176        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; W16      ; 179        ; 7        ; ^PORSEL                   ;              ;         ; --         ; --          ;
+; W17      ; 187        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; W18      ; 194        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; W19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W20      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W21      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W22      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W23      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W24      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W25      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; W26      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; Y1       ; 84         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y2       ; 83         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y3       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; Y4       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; Y5       ; 82         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y6       ; 81         ; 1        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y7       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; Y8       ; 126        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y9       ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; Y10      ; 138        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y11      ; 147        ; 8        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y12      ; 155        ; 8        ; ^MSEL0                    ;              ;         ; --         ; --          ;
+; Y13      ; 156        ; 8        ; ^MSEL1                    ;              ;         ; --         ; --          ;
+; Y14      ; 172        ; 7        ; ^nCE                      ;              ;         ; --         ; --          ;
+; Y15      ; 178        ; 7        ; ^VCCSEL                   ;              ;         ; --         ; --          ;
+; Y16      ; 181        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y17      ; 189        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y18      ; 192        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y19      ;            ; 1        ; NC                        ;              ;         ; --         ; --          ;
+; Y20      ; 202        ; 7        ; RESERVED_INPUT            ;              ;         ; Column I/O ; --          ;
+; Y21      ; 242        ; 6        ; GND                       ;              ;         ; --         ; --          ;
+; Y22      ; 244        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y23      ; 248        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y24      ; 247        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y25      ; 246        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
+; Y26      ; 245        ; 6        ; RESERVED_INPUT            ;              ;         ; Row I/O    ; --          ;
++----------+------------+----------+---------------------------+--------------+---------+------------+-------------+
+
+
++------------------------------------------------------------------------------------------+
+; Output Pin Load For Reported TCO                                                         ;
++-------------------------------------------------------------------------------------------
+; I/O Standard                                ; Load  ; Termination Resistance             ;
++---------------------------------------------+-------+------------------------------------+
+; LVTTL                                       ; 10 pF ; Not Available                      ;
+; LVCMOS                                      ; 10 pF ; Not Available                      ;
+; 2.5 V                                       ; 10 pF ; Not Available                      ;
+; 1.8 V                                       ; 10 pF ; Not Available                      ;
+; 1.5 V                                       ; 10 pF ; Not Available                      ;
+; GTL                                         ; 30 pF ; 25 Ohm                             ;
+; GTL+                                        ; 30 pF ; 25 Ohm                             ;
+; 3.3-V PCI                                   ; 10 pF ; 25 Ohm                             ;
+; 3.3-V PCI-X                                 ; 8 pF  ; 25 Ohm                             ;
+; Compact PCI                                 ; 10 pF ; 25 Ohm                             ;
+; AGP 1X                                      ; 10 pF ; Not Available                      ;
+; AGP 2X                                      ; 10 pF ; Not Available                      ;
+; CTT                                         ; 30 pF ; 50 Ohm                             ;
+; SSTL-3 Class I                              ; 30 pF ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-3 Class II                             ; 30 pF ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-2 Class I                              ; 30 pF ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-2 Class II                             ; 30 pF ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-18 Class I                             ; 30 pF ; 50 Ohm (Parallel), 25 Ohm (Serial) ;
+; SSTL-18 Class II                            ; 30 pF ; 25 Ohm (Parallel), 25 Ohm (Serial) ;
+; 1.5-V HSTL Class I                          ; 20 pF ; 50 Ohm                             ;
+; 1.5-V HSTL Class II                         ; 20 pF ; 25 Ohm                             ;
+; 1.8-V HSTL Class I                          ; 20 pF ; 50 Ohm                             ;
+; 1.8-V HSTL Class II                         ; 20 pF ; 25 Ohm                             ;
+; LVDS                                        ; 4 pF  ; 100 Ohm                            ;
+; Differential LVPECL                         ; 4 pF  ; 100 Ohm                            ;
+; 3.3-V PCML                                  ; 4 pF  ; 50 Ohm                             ;
+; HyperTransport                              ; 4 pF  ; 100 Ohm                            ;
+; Differential SSTL-2 (PLL CLK_OUT pins only) ; 30 pF ; (See SSTL-2)                       ;
++---------------------------------------------+-------+------------------------------------+
+
+
++------------------+
+; Fitter Messages  ;
++------------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Jan 14 21:03:19 2005
+Info: Command: quartus_fit --import_settings_files=on --export_settings_files=off uart_regs -c uart_regs --check_ios
+Info: Selected device EP1S10B672C6 for design uart_regs
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices. 
+    Info: Device EP1S20B672C6 is compatible
+    Info: Device EP1S25B672C6 is compatible
+Info: Completed User Assigned Global Signals Promotion Operation
+Info: Automatically promoted signal clk to use Global clock in Pin A15
+Info: Automatically promoted some destinations of signal wb_we_i to use Global clock in Pin N3
+    Info: Destination i77~23 may be non-global or may not use global clock
+    Info: Destination i352~10 may be non-global or may not use global clock
+Info: Automatically promoted some destinations of signal wb_rst_i to use Global clock
+    Info: Destination uart_transmitter:transmitter|i12 may be non-global or may not use global clock
+    Info: Destination uart_receiver:receiver|i7~13 may be non-global or may not use global clock
+Info: Pin wb_rst_i drives global clock, but is not placed in a dedicated clock pin position
+Info: Automatically promoted signal uart_receiver:receiver|i7~13 to use Global clock
+Info: Automatically promoted signal uart_transmitter:transmitter|i12 to use Global clock
+Info: Completed Auto Global Promotion Operation
+Info: Quartus II Fitter was successful. 0 errors, 0 warnings
+    Info: Processing ended: Fri Jan 14 21:03:29 2005
+    Info: Elapsed time: 00:00:09
+
+

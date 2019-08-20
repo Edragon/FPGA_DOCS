@@ -1,0 +1,435 @@
+$ Start of Compile
+#Wed Mar 23 02:14:11 2005
+
+Synplicity Verilog Compiler, version Compilers 2.6.0, Build 102R, built Jan 27 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+
+@I::"D:\prj_D\Synplify_Pro\source\verilog\ALU.V"
+@I::"D:\prj_D\Synplify_Pro\source\verilog\HDL_DEMO.V"
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module hdl_demo
+Synthesizing module alu
+Synthesizing module hdl_demo
+@N: CL201 :"D:\prj_D\Synplify_Pro\source\verilog\HDL_DEMO.V":38:0:38:5|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 10 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   1000
+   1001
+   1010
+   1011
+   1100
+@END
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################[
+Synplicity Altera Technology Mapper, version 7.3.5, Build 250R, built Mar 18 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+Reading constraint file: D:\prj_D\Synplify_Pro\ALU_Syn_demo.sdc
+Adding property syn_false_path1000, value "# from p:rst through  to p:result[7:0]" to view:work.hdl_demo(verilog)
+Adding property syn_maxdelay_path2000, value "10.000 delay # from i:op_code[2:0] through  to p:result[7:0]" to view:work.hdl_demo(verilog)
+Adding property syn_reg_output_delay_route, value 5, to instance alu1.outp[7:0]
+Adding property syn_reg_output_delay_route, value 5, to port alu1.outp[7:0]
+
+
+Encoding state machine work.hdl_demo(verilog)-state[9:0]
+original code -> new code
+   0000 -> 0000000001
+   0001 -> 0000000010
+   0010 -> 0000000100
+   0011 -> 0000001000
+   0100 -> 0000010000
+   1000 -> 0000100000
+   1001 -> 0001000000
+   1010 -> 0010000000
+   1011 -> 0100000000
+   1100 -> 1000000000
+@N: MF197 |Retiming summary : 0 registers retimed to 0 
+
+		#####  BEGIN RETIMING REPORT  #####
+
+Retiming summary : 0 registers retimed to 0
+
+Original and Pipelined registers replaced by retiming :
+		None
+
+New registers created by retiming :
+		None
+
+
+		#####   END RETIMING REPORT  #####
+
+
+Writing Analyst data base D:\prj_D\Synplify_Pro\rev_1\HDL_DEMO.srm
+Writing Verilog Netlist and constraint files
+Writing .vqm output for Quartus
+Writing Cross reference file for Quartus to D:\prj_D\Synplify_Pro\rev_1\HDL_DEMO.xrf
+Found clock hdl_demo|clk with period 6.67ns 
+All Input Ports in the design have input constraint of 2.00ns 
+All Output Ports in the design have output constraint of 2.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Mar 23 02:14:13 2005
+#
+
+
+Top view:               hdl_demo
+Requested Frequency:    150.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    D:\prj_D\Synplify_Pro\ALU_Syn_demo.sdc
+                       
+@N: MT195 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT196 |Clock constraints cover all FF-to-FF, FF-to-output, input-to-FF and input-to-output paths associated with a particular clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: -5.041
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+clk                150.0 MHz     NA            6.667         NA            NA         virtual      default_clkgroup_0 
+hdl_demo|clk       150.0 MHz     85.4 MHz      6.667         11.708        -5.041     inferred     Inferred_clkgroup_0
+======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------
+Starting      Ending        |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------
+hdl_demo|clk  hdl_demo|clk  |  6.667       -5.041  |  No paths    -      |  No paths    -      |  No paths    -    
+===================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+
+
+Input Ports: 
+
+Port                Starting                  User           Arrival     Required           
+Name                Reference                 Constraint     Time        Time         Slack 
+                    Clock                                                                   
+--------------------------------------------------------------------------------------------
+accum_a[0]          hdl_demo|clk (rising)     2.000          2.000       1.531        -0.469
+accum_a[1]          hdl_demo|clk (rising)     2.000          2.000       1.565        -0.435
+accum_a[2]          hdl_demo|clk (rising)     2.000          2.000       1.599        -0.401
+accum_a[3]          hdl_demo|clk (rising)     2.000          2.000       1.633        -0.367
+accum_a[4]          hdl_demo|clk (rising)     2.000          2.000       1.667        -0.333
+accum_a[5]          hdl_demo|clk (rising)     2.000          2.000       1.701        -0.299
+accum_a[6]          hdl_demo|clk (rising)     2.000          2.000       1.735        -0.265
+accum_a[7]          hdl_demo|clk (rising)     2.000          2.000       2.577        0.577 
+accum_b[0]          hdl_demo|clk (rising)     2.000          2.000       1.550        -0.450
+accum_b[1]          hdl_demo|clk (rising)     2.000          2.000       1.584        -0.416
+accum_b[2]          hdl_demo|clk (rising)     2.000          2.000       1.618        -0.382
+accum_b[3]          hdl_demo|clk (rising)     2.000          2.000       1.652        -0.348
+accum_b[4]          hdl_demo|clk (rising)     2.000          2.000       1.686        -0.314
+accum_b[5]          hdl_demo|clk (rising)     2.000          2.000       1.720        -0.280
+accum_b[6]          hdl_demo|clk (rising)     2.000          2.000       1.754        -0.246
+accum_b[7]          hdl_demo|clk (rising)     2.000          2.000       2.682        0.682 
+clk                 NA                        NA             NA          NA           NA    
+in_a                hdl_demo|clk (rising)     2.000          2.000       3.397        1.397 
+in_b                hdl_demo|clk (rising)     2.000          2.000       3.341        1.341 
+in_c                hdl_demo|clk (rising)     2.000          2.000       3.930        1.930 
+rst                 System                    2.000          NA          NA           NA    
+start_value[0]      hdl_demo|clk (rising)     2.000          2.000       2.236        0.236 
+start_value[1]      hdl_demo|clk (rising)     2.000          2.000       2.322        0.322 
+start_value[2]      hdl_demo|clk (rising)     2.000          2.000       2.419        0.419 
+start_value[3]      hdl_demo|clk (rising)     2.000          2.000       1.752        -0.248
+start_value[4]      hdl_demo|clk (rising)     2.000          2.000       1.849        -0.151
+start_value[5]      hdl_demo|clk (rising)     2.000          2.000       1.957        -0.043
+start_value[6]      hdl_demo|clk (rising)     2.000          2.000       2.527        0.527 
+start_value[7]      hdl_demo|clk (rising)     2.000          2.000       1.957        -0.043
+start_value[8]      hdl_demo|clk (rising)     2.000          2.000       2.043        0.043 
+start_value[9]      hdl_demo|clk (rising)     2.000          2.000       2.150        0.150 
+start_value[10]     hdl_demo|clk (rising)     2.000          2.000       2.236        0.236 
+start_value[11]     hdl_demo|clk (rising)     2.000          2.000       2.333        0.333 
+start_value[12]     hdl_demo|clk (rising)     2.000          2.000       2.441        0.441 
+start_value[13]     hdl_demo|clk (rising)     2.000          2.000       2.419        0.419 
+start_value[14]     hdl_demo|clk (rising)     2.000          2.000       2.333        0.333 
+start_value[15]     hdl_demo|clk (rising)     2.000          2.000       1.924        -0.076
+start_value[16]     hdl_demo|clk (rising)     2.000          2.000       2.032        0.032 
+start_value[17]     hdl_demo|clk (rising)     2.000          2.000       2.140        0.140 
+start_value[18]     hdl_demo|clk (rising)     2.000          2.000       1.849        -0.151
+start_value[19]     hdl_demo|clk (rising)     2.000          2.000       2.248        0.248 
+start_value[20]     hdl_demo|clk (rising)     2.000          2.000       1.935        -0.065
+start_value[21]     hdl_demo|clk (rising)     2.000          2.000       1.849        -0.151
+start_value[22]     hdl_demo|clk (rising)     2.000          2.000       1.935        -0.065
+start_value[23]     hdl_demo|clk (rising)     2.000          2.000       2.032        0.032 
+start_value[24]     hdl_demo|clk (rising)     2.000          2.000       2.140        0.140 
+start_value[25]     hdl_demo|clk (rising)     2.000          2.000       1.752        -0.248
+start_value[26]     hdl_demo|clk (rising)     2.000          2.000       1.838        -0.162
+start_value[27]     hdl_demo|clk (rising)     2.000          2.000       1.935        -0.065
+start_value[28]     hdl_demo|clk (rising)     2.000          2.000       2.032        0.032 
+start_value[29]     hdl_demo|clk (rising)     2.000          2.000       2.043        0.043 
+start_value[30]     hdl_demo|clk (rising)     2.000          2.000       2.140        0.140 
+start_value[31]     hdl_demo|clk (rising)     2.000          2.000       1.666        -0.334
+============================================================================================
+
+
+Output Ports: 
+
+Port          Starting                  User           Arrival     Required           
+Name          Reference                 Constraint     Time        Time         Slack 
+              Clock                                                                   
+--------------------------------------------------------------------------------------
+result[0]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[1]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[2]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[3]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[4]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[5]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[6]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+result[7]     hdl_demo|clk (rising)     2.000          9.708       4.667        -5.041
+======================================================================================
+
+
+
+====================================
+Detailed Report for Clock: hdl_demo|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                 Starting                                                            Arrival           
+Instance         Reference        Type                 Pin            Net            Time        Slack 
+                 Clock                                                                                 
+-------------------------------------------------------------------------------------------------------
+alu1.outp[0]     hdl_demo|clk     stratix_lcell_ff     regout         outp_0         5.156       -5.041
+alu1.outp[1]     hdl_demo|clk     stratix_lcell_ff     regout         outp_1         5.156       -5.041
+alu1.outp[2]     hdl_demo|clk     stratix_lcell_ff     regout         outp_2         5.156       -5.041
+alu1.outp[3]     hdl_demo|clk     stratix_lcell_ff     regout         outp_3         5.156       -5.041
+alu1.outp[4]     hdl_demo|clk     stratix_lcell_ff     regout         outp_4         5.156       -5.041
+alu1.outp[5]     hdl_demo|clk     stratix_lcell_ff     regout         outp_5         5.156       -5.041
+alu1.outp[6]     hdl_demo|clk     stratix_lcell_ff     regout         outp_6         5.156       -5.041
+alu1.outp[7]     hdl_demo|clk     stratix_lcell_ff     regout         outp_7         5.156       -5.041
+accum_a[7:0]     hdl_demo|clk     Port                 accum_a[0]     accum_a[0]     2.000       -0.469
+accum_b[7:0]     hdl_demo|clk     Port                 accum_b[0]     accum_b[0]     2.000       -0.450
+=======================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                 Starting                                                            Required           
+Instance         Reference        Type                 Pin           Net             Time         Slack 
+                 Clock                                                                                  
+--------------------------------------------------------------------------------------------------------
+result[7:0]      hdl_demo|clk     Port                 result[0]     result[0]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[1]     result[1]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[2]     result[2]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[3]     result[3]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[4]     result[4]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[5]     result[5]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[6]     result[6]       4.667        -5.041
+result[7:0]      hdl_demo|clk     Port                 result[7]     result[7]       4.667        -5.041
+alu1.outp[7]     hdl_demo|clk     stratix_lcell_ff     datad         outp_8_3[7]     6.423        -0.469
+alu1.outp[6]     hdl_demo|clk     stratix_lcell_ff     datad         outp_8_3[6]     6.423        -0.435
+========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        6.667
+    - User constraint on ending point:       2.000
+    = Required time:                         4.667
+
+    - Propagation time:                      9.708
+    = Slack (critical) :                     -5.041
+
+    Number of logic level(s):                1
+    Starting point:                          alu1.outp[0] / regout
+    Ending point:                            result[7:0] / result[0]
+    The start point is clocked by            hdl_demo|clk [rising] on pin clk
+    The end   point is clocked by            hdl_demo|clk [rising]
+
+Instance / Net                          Pin           Pin               Arrival     No. of    
+Name               Type                 Name          Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+alu1.outp[0]       stratix_lcell_ff     regout        Out     5.156     5.156       -         
+outp_0             Net                  -             -       1.608     -           1         
+result_out[0]      stratix_io           datain        In      -         6.764       -         
+result_out[0]      stratix_io           padio         Out     2.944     9.708       -         
+result[0]          Net                  -             -       0.000     -           0         
+result[7:0]        Port                 result[0]     Out     -         9.708       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 9.708 is 8.100(83.4%) logic and 1.608(16.6%) route.
+
+
+Path information for path number 2: 
+    Requested Period:                        6.667
+    - User constraint on ending point:       2.000
+    = Required time:                         4.667
+
+    - Propagation time:                      9.708
+    = Slack (critical) :                     -5.041
+
+    Number of logic level(s):                1
+    Starting point:                          alu1.outp[1] / regout
+    Ending point:                            result[7:0] / result[1]
+    The start point is clocked by            hdl_demo|clk [rising] on pin clk
+    The end   point is clocked by            hdl_demo|clk [rising]
+
+Instance / Net                          Pin           Pin               Arrival     No. of    
+Name               Type                 Name          Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+alu1.outp[1]       stratix_lcell_ff     regout        Out     5.156     5.156       -         
+outp_1             Net                  -             -       1.608     -           1         
+result_out[1]      stratix_io           datain        In      -         6.764       -         
+result_out[1]      stratix_io           padio         Out     2.944     9.708       -         
+result[1]          Net                  -             -       0.000     -           0         
+result[7:0]        Port                 result[1]     Out     -         9.708       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 9.708 is 8.100(83.4%) logic and 1.608(16.6%) route.
+
+
+Path information for path number 3: 
+    Requested Period:                        6.667
+    - User constraint on ending point:       2.000
+    = Required time:                         4.667
+
+    - Propagation time:                      9.708
+    = Slack (critical) :                     -5.041
+
+    Number of logic level(s):                1
+    Starting point:                          alu1.outp[2] / regout
+    Ending point:                            result[7:0] / result[2]
+    The start point is clocked by            hdl_demo|clk [rising] on pin clk
+    The end   point is clocked by            hdl_demo|clk [rising]
+
+Instance / Net                          Pin           Pin               Arrival     No. of    
+Name               Type                 Name          Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+alu1.outp[2]       stratix_lcell_ff     regout        Out     5.156     5.156       -         
+outp_2             Net                  -             -       1.608     -           1         
+result_out[2]      stratix_io           datain        In      -         6.764       -         
+result_out[2]      stratix_io           padio         Out     2.944     9.708       -         
+result[2]          Net                  -             -       0.000     -           0         
+result[7:0]        Port                 result[2]     Out     -         9.708       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 9.708 is 8.100(83.4%) logic and 1.608(16.6%) route.
+
+
+Path information for path number 4: 
+    Requested Period:                        6.667
+    - User constraint on ending point:       2.000
+    = Required time:                         4.667
+
+    - Propagation time:                      9.708
+    = Slack (critical) :                     -5.041
+
+    Number of logic level(s):                1
+    Starting point:                          alu1.outp[3] / regout
+    Ending point:                            result[7:0] / result[3]
+    The start point is clocked by            hdl_demo|clk [rising] on pin clk
+    The end   point is clocked by            hdl_demo|clk [rising]
+
+Instance / Net                          Pin           Pin               Arrival     No. of    
+Name               Type                 Name          Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+alu1.outp[3]       stratix_lcell_ff     regout        Out     5.156     5.156       -         
+outp_3             Net                  -             -       1.608     -           1         
+result_out[3]      stratix_io           datain        In      -         6.764       -         
+result_out[3]      stratix_io           padio         Out     2.944     9.708       -         
+result[3]          Net                  -             -       0.000     -           0         
+result[7:0]        Port                 result[3]     Out     -         9.708       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 9.708 is 8.100(83.4%) logic and 1.608(16.6%) route.
+
+
+Path information for path number 5: 
+    Requested Period:                        6.667
+    - User constraint on ending point:       2.000
+    = Required time:                         4.667
+
+    - Propagation time:                      9.708
+    = Slack (critical) :                     -5.041
+
+    Number of logic level(s):                1
+    Starting point:                          alu1.outp[4] / regout
+    Ending point:                            result[7:0] / result[4]
+    The start point is clocked by            hdl_demo|clk [rising] on pin clk
+    The end   point is clocked by            hdl_demo|clk [rising]
+
+Instance / Net                          Pin           Pin               Arrival     No. of    
+Name               Type                 Name          Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+alu1.outp[4]       stratix_lcell_ff     regout        Out     5.156     5.156       -         
+outp_4             Net                  -             -       1.608     -           1         
+result_out[4]      stratix_io           datain        In      -         6.764       -         
+result_out[4]      stratix_io           padio         Out     2.944     9.708       -         
+result[4]          Net                  -             -       0.000     -           0         
+result[7:0]        Port                 result[4]     Out     -         9.708       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 9.708 is 8.100(83.4%) logic and 1.608(16.6%) route.
+
+
+
+##### END OF TIMING REPORT #####]
+
+
+Timing constraint (from p:rst to p:result[7:0]) (false path) never applies in design
+Timing constraint (from i:op_code[2:0] to p:result[7:0]) (max delay 10.000000) never applies in design
+##### START OF AREA REPORT #####[
+Design view:work.hdl_demo(verilog)
+Selecting part EP1S10F780C5
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage..
+
+I/O ATOMs:       61
+
+Total LUTs:  68 of 10570 ( 0%)
+Logic resources:  68 ATOMs of 10570 ( 0%)
+ATOM count by mode:
+  normal:       54
+  arithmetic:   14
+
+DSP Blocks:     0  (0 nine-bit DSP elements).
+DSP Utilization: 0.00% of available 6 blocks (48 nine-bit).
+ShiftTap:       0  (0 registers)
+MRAM:           0  (0% of 1)
+M4Ks:           0  (0% of 60)
+M512s:          0  (0% of 94)
+Total ESB:      0 bits 
+
+ATOMs using regout pin: 22
+  also using enable pin: 14
+  also using combout pin: 0
+ATOMs using combout pin: 46
+Number of Inputs on ATOMs: 265
+Number of Nets:   228
+
+##### END OF AREA REPORT #####]
+
+Mapper successful!
+Process took 0h:0m:1s realtime, 0h:0m:1s cputime
+###########################################################]

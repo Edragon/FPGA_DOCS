@@ -1,0 +1,17 @@
+Fitter Status : Successful - Tue Mar 31 14:48:47 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : two_d_dct
+Top-level Entity Name : two_d_dct
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+Logic utilization : 9 %
+    Combinational ALUTs : 659 / 12,480 ( 5 % )
+    Dedicated logic registers : 932 / 12,480 ( 7 % )
+Total registers : 955
+Total pins : 34 / 343 ( 10 % )
+Total virtual pins : 0
+Total block memory bits : 3,014 / 419,328 ( < 1 % )
+DSP block 9-bit elements : 18 / 96 ( 19 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

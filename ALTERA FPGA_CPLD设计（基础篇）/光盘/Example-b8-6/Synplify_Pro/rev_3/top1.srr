@@ -1,0 +1,438 @@
+Synplicity HDL Compiler, version Compilers 2.6.0, Build 102R, built Jan 27 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+
+VHDL syntax check successful!
+@I::"D:\prj_D\Synplify_Pro\source\mixed\vhdl\rotate.v"
+@I::"D:\prj_D\Synplify_Pro\source\mixed\vhdl\reg8.v"
+@I::"D:\prj_D\Synplify_Pro\source\mixed\vhdl\mux.v"
+Verilog syntax check successful!
+VHDL syntax check successful!
+Synthesizing work.top.structural
+Synthesizing work.reg8.syn_black_box
+Post processing for work.reg8.syn_black_box
+Synthesizing work.rotate.syn_black_box
+Post processing for work.rotate.syn_black_box
+Synthesizing work.mux.syn_black_box
+Post processing for work.mux.syn_black_box
+Post processing for work.top.structural
+@I::"D:\prj_D\Synplify_Pro\source\mixed\vhdl\rotate.v"
+@I::"D:\prj_D\Synplify_Pro\source\mixed\vhdl\reg8.v"
+@I::"D:\prj_D\Synplify_Pro\source\mixed\vhdl\mux.v"
+Verilog syntax check successful!
+Synthesizing module rotate
+Synthesizing module reg8
+Synthesizing module mux21
+Synthesizing module mux
+VHDL syntax check successful!
+Synthesizing work.mux21.rtl
+Post processing for work.mux21.rtl
+Synplicity Netlist Filter, version Compilers 2.6.0, Build 102R, built Jan 27 2004
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+@END
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################[
+Synplicity Altera Technology Mapper, version 7.3.5, Build 250R, built Mar 18 2004
+Copyright (C) 1994-2004, Synplicity Inc.  All Rights Reserved
+@W: FA109 :"d:\prj_d\synplify_pro\source\mixed\vhdl\mux.v":1:7:1:9|Changing sub-design name mux to mux_synplcty to avoid name collision with Altera primitive, LPM name or Verilog reserved word. 
+
+
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u0(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u1(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u2(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u3(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u4(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u5(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u6(mux21)
+Automatic dissolve at startup in view:work.mux_synplcty(verilog) of u7(mux21)
+Automatic dissolve at startup in view:work.top(structural) of inst1(mux_synplcty)
+Automatic dissolve at startup in view:work.top(structural) of inst2(rotate)
+Automatic dissolve at startup in view:work.top(structural) of inst3(reg8)
+
+Writing Analyst data base D:\prj_D\Synplify_Pro\rev_3\top1.srm
+Writing Verilog Netlist and constraint files
+Writing .vqm output for Quartus
+Writing Cross reference file for Quartus to D:\prj_D\Synplify_Pro\rev_3\top1.xrf
+Found clock top|clk with period 6.67ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Mar 23 01:56:40 2005
+#
+
+
+Top view:               top
+Requested Frequency:    150.0 MHz
+Wire load mode:         top
+Paths requested:        10
+Constraint File(s):    
+@N: MT195 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT197 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 5.258
+
+                   Requested     Estimated     Requested     Estimated               Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group              
+---------------------------------------------------------------------------------------------------------------------
+top|clk            150.0 MHz     709.8 MHz     6.667         1.409         5.258     inferred     Inferred_clkgroup_0
+=====================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------
+top|clk   top|clk  |  6.667       5.258  |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: top|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+               Starting                                              Arrival          
+Instance       Reference     Type                 Pin        Net     Time        Slack
+               Clock                                                                  
+--------------------------------------------------------------------------------------
+inst2.q[0]     top|clk       stratix_lcell_ff     regout     q_0     0.156       5.258
+inst2.q[1]     top|clk       stratix_lcell_ff     regout     q_1     0.156       5.258
+inst2.q[2]     top|clk       stratix_lcell_ff     regout     q_2     0.156       5.258
+inst2.q[3]     top|clk       stratix_lcell_ff     regout     q_3     0.156       5.258
+inst2.q[4]     top|clk       stratix_lcell_ff     regout     q_4     0.156       5.258
+inst2.q[5]     top|clk       stratix_lcell_ff     regout     q_5     0.156       5.258
+inst2.q[6]     top|clk       stratix_lcell_ff     regout     q_6     0.156       5.258
+inst2.q[7]     top|clk       stratix_lcell_ff     regout     q_7     0.156       5.258
+inst3.q[0]     top|clk       stratix_lcell_ff     regout     q_0     0.156       5.355
+inst3.q[1]     top|clk       stratix_lcell_ff     regout     q_1     0.156       5.355
+======================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+               Starting                                               Required          
+Instance       Reference     Type                 Pin       Net       Time         Slack
+               Clock                                                                    
+----------------------------------------------------------------------------------------
+inst2.q[0]     top|clk       stratix_lcell_ff     datab     q_7       6.218        5.258
+inst2.q[1]     top|clk       stratix_lcell_ff     datab     q_0       6.218        5.258
+inst2.q[2]     top|clk       stratix_lcell_ff     datab     q_1       6.218        5.258
+inst2.q[3]     top|clk       stratix_lcell_ff     datab     q_2       6.218        5.258
+inst2.q[4]     top|clk       stratix_lcell_ff     datab     q_3       6.218        5.258
+inst2.q[5]     top|clk       stratix_lcell_ff     datab     q_4       6.218        5.258
+inst2.q[6]     top|clk       stratix_lcell_ff     datab     q_5       6.218        5.258
+inst2.q[7]     top|clk       stratix_lcell_ff     datab     q_6       6.218        5.258
+inst2.q[0]     top|clk       stratix_lcell_ff     datac     q_0_0     6.315        5.355
+inst2.q[1]     top|clk       stratix_lcell_ff     datac     q_0_1     6.315        5.355
+========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[0] / regout
+    Ending point:                            inst2.q[1] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[0]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_0                Net                  -          -       0.804     -           2         
+inst2.q[1]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 2: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[1] / regout
+    Ending point:                            inst2.q[2] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[1]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_1                Net                  -          -       0.804     -           2         
+inst2.q[2]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 3: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[2] / regout
+    Ending point:                            inst2.q[3] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[2]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_2                Net                  -          -       0.804     -           2         
+inst2.q[3]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 4: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[3] / regout
+    Ending point:                            inst2.q[4] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[3]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_3                Net                  -          -       0.804     -           2         
+inst2.q[4]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 5: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[4] / regout
+    Ending point:                            inst2.q[5] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[4]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_4                Net                  -          -       0.804     -           2         
+inst2.q[5]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 6: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[5] / regout
+    Ending point:                            inst2.q[6] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[5]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_5                Net                  -          -       0.804     -           2         
+inst2.q[6]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 7: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[6] / regout
+    Ending point:                            inst2.q[7] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[6]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_6                Net                  -          -       0.804     -           2         
+inst2.q[7]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 8: 
+    Requested Period:                        6.667
+    - Setup time:                            0.449
+    = Required time:                         6.218
+
+    - Propagation time:                      0.960
+    = Slack (critical) :                     5.258
+
+    Number of logic level(s):                0
+    Starting point:                          inst2.q[7] / regout
+    Ending point:                            inst2.q[0] / datab
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst2.q[7]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_7                Net                  -          -       0.804     -           2         
+inst2.q[0]         stratix_lcell_ff     datab      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.409 is 0.605(42.9%) logic and 0.804(57.1%) route.
+
+
+Path information for path number 9: 
+    Requested Period:                        6.667
+    - Setup time:                            0.352
+    = Required time:                         6.315
+
+    - Propagation time:                      0.960
+    = Slack (non-critical) :                 5.355
+
+    Number of logic level(s):                0
+    Starting point:                          inst3.q[0] / regout
+    Ending point:                            inst2.q[0] / datac
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst3.q[0]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_0                Net                  -          -       0.804     -           1         
+inst2.q[0]         stratix_lcell_ff     datac      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.312 is 0.508(38.7%) logic and 0.804(61.3%) route.
+
+
+Path information for path number 10: 
+    Requested Period:                        6.667
+    - Setup time:                            0.352
+    = Required time:                         6.315
+
+    - Propagation time:                      0.960
+    = Slack (non-critical) :                 5.355
+
+    Number of logic level(s):                0
+    Starting point:                          inst3.q[1] / regout
+    Ending point:                            inst2.q[1] / datac
+    The start point is clocked by            top|clk [rising] on pin clk
+    The end   point is clocked by            top|clk [rising] on pin clk
+
+Instance / Net                          Pin        Pin               Arrival     No. of    
+Name               Type                 Name       Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+inst3.q[1]         stratix_lcell_ff     regout     Out     0.156     0.156       -         
+q_1                Net                  -          -       0.804     -           1         
+inst2.q[1]         stratix_lcell_ff     datac      In      -         0.960       -         
+===========================================================================================
+Total path delay (propagation time + setup) of 1.312 is 0.508(38.7%) logic and 0.804(61.3%) route.
+
+
+
+##### END OF TIMING REPORT #####]
+
+
+##### START OF AREA REPORT #####[
+Design view:work.top(structural)
+Selecting part EP1S10F780C5
+@N: FA174 |The following device usage report estimates place and route data. Please look at the place and route report for final resource usage..
+
+I/O ATOMs:       28
+
+Total LUTs:  16 of 10570 ( 0%)
+Logic resources:  16 ATOMs of 10570 ( 0%)
+ATOM count by mode:
+  normal:       16
+  arithmetic:   0
+
+DSP Blocks:     0  (0 nine-bit DSP elements).
+DSP Utilization: 0.00% of available 6 blocks (48 nine-bit).
+ShiftTap:       0  (0 registers)
+MRAM:           0  (0% of 1)
+M4Ks:           0  (0% of 60)
+M512s:          0  (0% of 94)
+Total ESB:      0 bits 
+
+ATOMs using regout pin: 16
+  also using enable pin: 0
+  also using combout pin: 0
+ATOMs using combout pin: 0
+Number of Inputs on ATOMs: 80
+Number of Nets:   116
+
+##### END OF AREA REPORT #####]
+
+Mapper successful!
+Process took 0h:0m:0s realtime, 0h:0m:0s cputime
+###########################################################]

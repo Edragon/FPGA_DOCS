@@ -1,0 +1,40 @@
+--lpm_add_sub CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="Cyclone II" LPM_PIPELINE=1 LPM_REPRESENTATION="SIGNED" LPM_WIDTH=33 ONE_INPUT_IS_CONSTANT="NO" add_sub(vcc) cin clock dataa datab result
+--VERSION_BEGIN 8.1 cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_lpm_add_sub 2008:05:19:10:49:01:SJ cbx_mgl 2008:08:08:15:16:18:SJ cbx_stratix 2008:08:05:17:10:23:SJ cbx_stratixii 2008:08:07:13:54:47:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = lut 33 
+SUBDESIGN add_sub_l1j
+( 
+	add_sub	:	input;
+	cin	:	input;
+	clock	:	input;
+	dataa[32..0]	:	input;
+	datab[32..0]	:	input;
+	result[32..0]	:	output;
+) 
+VARIABLE
+	pipeline_dffe[32..0]	:	DFFE;
+	result_int[33..0]	:	WIRE;
+BEGIN 
+	result_int[] = (dataa[], cin) + (datab[], cin);
+	pipeline_dffe[].clk = clock;
+	result[] = pipeline_dffe[32..0].q;
+	pipeline_dffe[32..0].d = result_int[33..1];
+END;
+--VALID FILE

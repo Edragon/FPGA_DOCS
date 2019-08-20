@@ -1,0 +1,55 @@
+#-- Synplicity, Inc.
+#-- Version 7.5.1     
+#-- Project file D:\prj_D\Synplify_Pro\ALU_Syn_demo.prj
+#-- Written on Wed Mar 23 02:15:01 2005
+
+
+#implementation attributes
+set_option -reporting_filter {-from {i:op_code[2] i:op_code[1] i:op_code[0] p:clk} -to {p:result[7:0]} }
+set_option -reporting_number_paths 5
+
+#add_file options
+add_file -verilog "source/verilog/ALU.V"
+add_file -verilog "source/verilog/HDL_DEMO.V"
+add_file -constraint "ALU_Syn_demo.sdc"
+
+
+#implementation: "rev_1"
+impl -add rev_1
+
+#device options
+set_option -technology STRATIX
+set_option -part EP1S10
+set_option -package FC780
+set_option -speed_grade -5
+
+#compilation/mapping options
+set_option -default_enum_encoding onehot
+set_option -symbolic_fsm_compiler 1
+set_option -resource_sharing 0
+set_option -use_fsm_explorer 0
+
+#map options
+set_option -frequency 150.000
+set_option -fanout_limit 500
+set_option -domap 1
+set_option -disable_io_insertion 0
+set_option -cliquing 1
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 1
+set_option -fixgatedclocks 0
+
+#simulation options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "rev_1/HDL_DEMO.vqm"
+
+#implementation attributes
+set_option -vlog_std v2001
+impl -active "rev_1"

@@ -1,0 +1,127 @@
+Flow report for lab_design_tq
+Wed Mar 11 15:50:59 2009
+Quartus II 64-Bit Version 8.1 Build 163 10/28/2008 Service Pack 0.07,0.26,0.32 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                    ;
++------------------------------------+------------------------------------------------------------+
+; Flow Status                        ; Successful - Wed Mar 11 15:50:59 2009                      ;
+; Quartus II 64-Bit Version          ; 8.1 Build 163 10/28/2008 SP 0.07,0.26,0.32 SJ Full Version ;
+; Revision Name                      ; lab_design_tq                                              ;
+; Top-level Entity Name              ; LAB_DESIGN                                                 ;
+; Family                             ; Cyclone II                                                 ;
+; Device                             ; EP2C15AF484C7                                              ;
+; Timing Models                      ; Final                                                      ;
+; Met timing requirements            ; N/A                                                        ;
+; Total logic elements               ; 2,425                                                      ;
+;     Total combinational functions  ; 1,839                                                      ;
+;     Dedicated logic registers      ; 2,425                                                      ;
+; Total registers                    ; 2425                                                       ;
+; Total pins                         ; 168                                                        ;
+; Total virtual pins                 ; 0                                                          ;
+; Total memory bits                  ; 65,024                                                     ;
+; Embedded Multiplier 9-bit elements ; 6                                                          ;
+; Total PLLs                         ; 0                                                          ;
++------------------------------------+------------------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/11/2009 15:49:43 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab_design_tq       ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                ;
++----------------------------------+-----------------------------------+---------------+-------------+------------+
+; Assignment Name                  ; Value                             ; Default Value ; Entity Name ; Section Id ;
++----------------------------------+-----------------------------------+---------------+-------------+------------+
+; ALLOW_POWER_UP_DONT_CARE         ; Off                               ; On            ; --          ; --         ;
+; AUTO_RAM_RECOGNITION             ; Off                               ; On            ; --          ; --         ;
+; AUTO_SHIFT_REGISTER_RECOGNITION  ; Off                               ; Auto          ; --          ; --         ;
+; COMPILER_SIGNATURE_ID            ; 110481911045.123675778311265      ; --            ; --          ; --         ;
+; DO_COMBINED_ANALYSIS             ; On                                ; Off           ; --          ; --         ;
+; ENABLE_CLOCK_LATENCY             ; On                                ; Off           ; --          ; --         ;
+; ENABLE_RECOVERY_REMOVAL_ANALYSIS ; On                                ; Off           ; --          ; --         ;
+; FLOW_DISABLE_ASSEMBLER           ; On                                ; Off           ; --          ; --         ;
+; MESSAGE_SUPPRESSION_RULE_FILE    ; lab_design_tq.srf                 ; --            ; --          ; --         ;
+; OPTIMIZE_MULTI_CORNER_TIMING     ; On                                ; Off           ; --          ; --         ;
+; PARTITION_COLOR                  ; 16764057                          ; --            ; LAB_DESIGN  ; Top        ;
+; PARTITION_NETLIST_TYPE           ; SOURCE                            ; --            ; LAB_DESIGN  ; Top        ;
+; SEARCH_PATH                      ; src                               ; --            ; --          ; --         ;
+; SEARCH_PATH                      ; ip/spi3_tx                        ; --            ; --          ; --         ;
+; SEARCH_PATH                      ; ip/spi3_rx                        ; --            ; --          ; --         ;
+; SEARCH_PATH                      ; ip/fft-v2.2.1/lib                 ; --            ; --          ; --         ;
+; SEARCH_PATH                      ; ip/fft                            ; --            ; --          ; --         ;
+; SEARCH_PATH                      ; ip/dc_fifo                        ; --            ; --          ; --         ;
+; SEARCH_PATH                      ; /opt/altera80/ip/posphy_l2_l3/lib ; --            ; --          ; --         ;
+; SMART_RECOMPILE                  ; On                                ; Off           ; --          ; --         ;
+; TOP_LEVEL_ENTITY                 ; LAB_DESIGN                        ; lab_design_tq ; --          ; --         ;
+; USE_TIMEQUEST_TIMING_ANALYZER    ; On                                ; Off           ; --          ; --         ;
++----------------------------------+-----------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:02:00     ; 1.0                     ; --                  ; 00:00:33                           ;
+; Total                ; 00:02:00     ; --                      ; --                  ; 00:00:33                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Flow OS Summary                                                                 ;
++----------------------+------------------+---------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name ; OS Version ; Processor type ;
++----------------------+------------------+---------+------------+----------------+
+; Analysis & Synthesis ; wuhan.altera.com ; Red Hat ; 4          ; x86_64         ;
++----------------------+------------------+---------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab_design -c lab_design_tq
+
+
+

@@ -1,0 +1,13 @@
+#-- Synplicity, Inc.
+#-- Version 7.5.1     
+#-- Project file D:\prj_D\Synplify_Pro\MyWorkspace.prj
+#-- Written on Wed Mar 23 01:26:58 2005
+
+project_data -type workspace
+
+#add_file options
+
+# sub-projects
+project -insert "ALU_Syn_demo.prj"
+project -insert "ALU_Syn_2.prj"
+project_data -active "ALU_Syn_demo"

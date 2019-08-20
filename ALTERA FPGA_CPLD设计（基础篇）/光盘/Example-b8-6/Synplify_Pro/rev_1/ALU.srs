@@ -1,0 +1,55 @@
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version Compilers 2.6.0, Build 102R from Synplicity, Inc.
+# Copyright 1994-1999 Synplicity, Inc. , All rights reserved.
+# Synthesis Netlist written on Wed Mar 23 01:23:23 2005
+#
+#
+#OPTIONS:"|-ram|-fixsmult|-dspmac|-ID:\\prj_D\\Synplify_Pro\\|-IC:\\eda\\synplicity\\Synplify_751\\lib|-v2001|-autosm|-fid2|-sharing|on|-encrypt|-ui|-pro"
+#CUR:"C:\\eda\\synplicity\\Synplify_751\\bin\\c_ver.exe":1075278136l
+#CUR:"D:\\prj_D\\Synplify_Pro\\source\\verilog\\ALU.V":1040089586l
+#CUR:"D:\\prj_D\\Synplify_Pro\\source\\verilog\\ALU.V":1040089586l
+f "D:\prj_D\Synplify_Pro\source\verilog\ALU.V"; # file 0
+@E
+@ 
+ftell;
+@E@MR@4j::4(::IgRFRs	NRDkPHCsD;Fo
+RNP3PH#CDsHF4oR;P
+NRs3FHNohl"CRN"Dk;
+
+
+
+@HR@.j::.n::OURDO	RD
+	;
+@HR@dj:::4.d.:4R(Nr:Rj9N:r(j
+9;
+@HR@dj:::46d6:4R(Lr:Rj9L:r(j
+9;
+@HR@cj:::4.c(:4ROFbFr8C.9:jROFbFr8C.9:j;
+
+
+
+@FR@6j:::4d6n:4R0Fkb:r(jF9Rkr0b(9:j;R
+b@:@jd6:4:4d:6MRHPMRk4r_L(9:jR4kM_(Lr:Rj9L:r(j
+9;b@R@j::d4d.::R4.HRMPk_M4N:r(jk9RMN4_rj(:9rRN(9:j;R
+b@:@jc.:4:4c:(MRHPMRk4b_FOCF8rj.:9MRk4b_FOCF8rj.:9bRFOCF8rj.:9b;
+Rj@@:44::.4:Rk0sCsR0k0CRs;kC
+@bR@4j::44::V.RNCD#RDVN#VCRNCD#;R
+b@:@j44c:Uc:4:R..NPM8R0Fkbr_c(9:jR0Fkbr_c(9:jR(Nr:Rj9L:r(j
+9;b@R@j6:4:4d:6R:nNPM8R4kM_OFbF_8C4MRk4b_FOCF8_F4Rb8OFC9rjROFbFr8C4
+9;b@R@j6:4::4U4.6:.sRFPkRF06b_rj(:9kRF06b_rj(:9rRN(9:jR(Lr:;j9
+@bR@4j:.::d4n.:R8NMPFRhhCNl34kM_OFbFR8ChNFhlkC3MF4_b8OFCMRk4b_FOCF8rRj9k_M4FFbO8.Cr9b;
+Rj@@::4cdc:4:NnRMR8Pk_M4FFbO8.C_R4kM_OFbF_8C.bRFOCF8rR49k_M4FFbO8jCr9b;
+Rj@@::44c4:4:F(RshPRFlhNCM3k4b_FOCF8_h4RFlhNCM3k4b_FOCF8_h4RFlhNCM3k4b_FOCF8
+RRRROFbFr8Cj
+9;b@R@j4:4:4c:4R:(lRkGk_M4FFbO8dC_rRj9k_M4FFbO8dC_rRj90CskRDVN#hCRFlhNCM3k4b_FOCF8;R
+b@:@j4c4:::44(kRlGMRk4__L4:r(jk9RML4__(4r:Rj9k_M4L:r(jL9Rrj(:9FRhhCNl34kM_OFbF;8C
+@bR@4j:4::c4(4:R8NMPMRk4b_FOCF8_kcRMF4_b8OFCR_ck_M4FFbO84Cr9FRhhCNl34kM_OFbF_8C4b;
+Rj@@::44c4:4:N(R8k8RMN4__(4r:Rj9k_M4Nr_4(9:jR(Nr:Rj9k_M4Lr_4(9:jR4kM_OFbF_8Cd9rj;R
+b@:@j4c4:::44(lRbkFGRk_0bU:r(jF9Rk_0bU:r(jk9RMN4__(4r:,j9k_M4FFbO8cC_R0Fkbr_c(9:j,4kM_OFbF_8C.R
+RRkRF06b_rj(:9M,k4b_FOCF8_k4RMN4_rj(:9b,FOCF8r;.9
+@bR@gj::gj::86RVFVRkr0b(9:jR0Fkb:r(jF9Rk_0bU:r(jO9RD
+	;C
+;
+

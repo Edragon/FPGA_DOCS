@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Tue Mar 31 15:09:18 2009
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : top_dct
+Top-level Entity Name : top_dct
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 654
+    Dedicated logic registers : 954
+Total registers : 954
+Total pins : 34
+Total virtual pins : 0
+Total block memory bits : 3,014
+DSP block 9-bit elements : 18
+Total PLLs : 1
+Total DLLs : 0

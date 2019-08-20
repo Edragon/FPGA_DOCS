@@ -1,0 +1,212 @@
+Analysis & Synthesis report for uart_regs
+Fri Dec 31 13:39:56 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Default Parameter Settings
+  5. Analysis & Synthesis Files Read
+  6. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                        ;
++-----------------------------+---------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Dec 31 13:39:56 2004 ;
+; Revision Name               ; uart_regs                             ;
+; Top-level Entity Name       ; uart_regs                             ;
+; Family                      ; Stratix                               ;
++-----------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                          ;
++-----------------------------------------------------------------------------------------
+; Option                                                  ; Setting      ; Default Value ;
++---------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                   ; uart_regs    ;               ;
+; Auto Resource Sharing                                   ; Off          ; Off           ;
+; Auto RAM Block Balancing                                ; On           ; On            ;
+; Auto Shift Register Replacement                         ; On           ; On            ;
+; Auto DSP Block Replacement                              ; On           ; On            ;
+; Auto RAM Replacement                                    ; On           ; On            ;
+; Auto ROM Replacement                                    ; On           ; On            ;
+; Allow register retiming to trade off Tsu/Tco with Fmax  ; On           ; On            ;
+; Perform gate-level register retiming                    ; Off          ; Off           ;
+; Perform WYSIWYG Primitive Resynthesis                   ; Off          ; Off           ;
+; Remove Duplicate Logic                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                    ; On           ; On            ;
+; Auto Carry Chains                                       ; On           ; On            ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II ; 70           ; 70            ;
+; Optimization Technique -- Stratix/Stratix GX            ; Balanced     ; Balanced      ;
+; Auto Global Register Control Signals                    ; On           ; On            ;
+; Auto Global Clock                                       ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                          ; Off          ; Off           ;
+; Ignore SOFT Buffers                                     ; On           ; On            ;
+; Ignore LCELL Buffers                                    ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                               ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                   ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                  ; Off          ; Off           ;
+; Ignore CARRY Buffers                                    ; Off          ; Off           ;
+; Remove Duplicate Registers                              ; On           ; On            ;
+; Remove Redundant Logic Cells                            ; Off          ; Off           ;
+; Power-Up Don't Care                                     ; On           ; On            ;
+; NOT Gate Push-Back                                      ; On           ; On            ;
+; DSP Block Balancing                                     ; Auto         ; Auto          ;
+; State Machine Processing                                ; Auto         ; Auto          ;
+; Family name                                             ; Stratix      ; Stratix       ;
+; VHDL Version                                            ; VHDL93       ; VHDL93        ;
+; Verilog Version                                         ; Verilog_2001 ; Verilog_2001  ;
+; Preserve fewer node names                               ; On           ; On            ;
+; Disk space/compilation speed tradeoff                   ; Normal       ; Normal        ;
+; Create Debugging Nodes for IP Cores                     ; off          ; off           ;
++---------------------------------------------------------+--------------+---------------+
+
+
++-------------------------------------------------+
+; Analysis & Synthesis Default Parameter Settings ;
++--------------------------------------------------
+; Name               ; Setting                    ;
++--------------------+----------------------------+
+; CARRY_CHAIN        ; MANUAL                     ;
+; CASCADE_CHAIN      ; MANUAL                     ;
+; OPTIMIZE_FOR_SPEED ; 5                          ;
+; STYLE              ; FAST                       ;
++--------------------+----------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Files Read                                             ;
++------------------------------------------------------------------------------
+; File Name                                                            ; Read ;
++----------------------------------------------------------------------+------+
+; ../core/myfifo_8.v                                                   ; Read ;
+; ../core/myfifo_10.v                                                  ; Read ;
+; ../src/uart_receiver.v                                               ; Read ;
+; ../src/uart_regs.v                                                   ; Read ;
+; ../src/uart_transmitter.v                                            ; Read ;
+; e:/quartus/libraries/megafunctions/scfifo.tdf                        ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/scfifo_eaq.tdf      ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/a_dpfifo_rll.tdf    ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/a_fefifo_qve.tdf    ; Read ;
+; e:/quartus/libraries/megafunctions/lpm_counter.tdf                   ; Read ;
+; e:/quartus/libraries/megafunctions/alt_counter_stratix.tdf           ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/dpram_81k.tdf       ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/altsyncram_mmb1.tdf ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/scfifo_nbq.tdf      ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/a_dpfifo_4nl.tdf    ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/dpram_h2k.tdf       ; Read ;
+; f:/fan/quatus_word/example-b3-1/uart_regs/dev/db/altsyncram_apb1.tdf ; Read ;
+; e:/quartus/libraries/megafunctions/lpm_add_sub.tdf                   ; Read ;
+; e:/quartus/libraries/megafunctions/addcore.tdf                       ; Read ;
+; e:/quartus/libraries/megafunctions/a_csnbuffer.tdf                   ; Read ;
+; e:/quartus/libraries/megafunctions/altshift.tdf                      ; Read ;
++----------------------------------------------------------------------+------+
+
+
++--------------------------------+
+; Analysis & Synthesis Messages  ;
++--------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Fri Dec 31 13:39:50 2004
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off uart_regs -c uart_regs --generate_functional_sim_netlist
+Info: Found 1 design units and 1 entities in source file ../core/myfifo_8.v
+    Info: Found entity 1: myfifo_8
+Info: Found 1 design units and 1 entities in source file ../core/myfifo_10.v
+    Info: Found entity 1: myfifo_10
+Info: Found 1 design units and 1 entities in source file ../src/seriesPort.v
+    Info: Found entity 1: series_port
+Info: Found 0 design units and 0 entities in source file ../src/uart_defines.v
+Info: Found 1 design units and 1 entities in source file ../src/uart_receiver.v
+    Info: Found entity 1: uart_receiver
+Warning: Verilog HDL net warning at uart_regs.v(115): created undeclared net rf_overrun
+Info: Found 1 design units and 1 entities in source file ../src/uart_regs.v
+    Info: Found entity 1: uart_regs
+Info: Found 1 design units and 1 entities in source file ../src/uart_transmitter.v
+    Info: Found entity 1: uart_transmitter
+Warning: Verilog HDL expression warning at uart_regs.v(319): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(328): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(337): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(346): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(355): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(364): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(373): truncated operand with size 32 to match size of smaller operand (16)
+Warning: Verilog HDL expression warning at uart_regs.v(375): truncated operand with size 32 to match size of smaller operand (16)
+Warning: Verilog HDL expression warning at uart_regs.v(400): truncated operand with size 32 to match size of smaller operand (8)
+Warning: Verilog HDL expression warning at uart_regs.v(455): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(462): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(469): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(476): truncated operand with size 2 to match size of smaller operand (1)
+Warning: Verilog HDL expression warning at uart_regs.v(487): truncated operand with size 32 to match size of smaller operand (1)
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/scfifo.tdf
+    Info: Found entity 1: scfifo
+Info: Found 1 design units and 1 entities in source file db/scfifo_eaq.tdf
+    Info: Found entity 1: scfifo_eaq
+Info: Found 1 design units and 1 entities in source file db/a_dpfifo_rll.tdf
+    Info: Found entity 1: a_dpfifo_rll
+Info: Found 1 design units and 1 entities in source file db/a_fefifo_qve.tdf
+    Info: Found entity 1: a_fefifo_qve
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/lpm_counter.tdf
+    Info: Found entity 1: lpm_counter
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/alt_counter_stratix.tdf
+    Info: Found entity 1: alt_counter_stratix
+Info: Found 1 design units and 1 entities in source file db/dpram_81k.tdf
+    Info: Found entity 1: dpram_81k
+Info: Found 1 design units and 1 entities in source file db/altsyncram_mmb1.tdf
+    Info: Found entity 1: altsyncram_mmb1
+Warning: Verilog HDL expression warning at uart_receiver.v(206): truncated operand with size 32 to match size of smaller operand (8)
+Warning: Verilog HDL expression warning at uart_receiver.v(221): truncated operand with size 32 to match size of smaller operand (10)
+Info: Found 1 design units and 1 entities in source file db/scfifo_nbq.tdf
+    Info: Found entity 1: scfifo_nbq
+Info: Found 1 design units and 1 entities in source file db/a_dpfifo_4nl.tdf
+    Info: Found entity 1: a_dpfifo_4nl
+Info: Found 1 design units and 1 entities in source file db/dpram_h2k.tdf
+    Info: Found entity 1: dpram_h2k
+Info: Found 1 design units and 1 entities in source file db/altsyncram_apb1.tdf
+    Info: Found entity 1: altsyncram_apb1
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/lpm_add_sub.tdf
+    Info: Found entity 1: lpm_add_sub
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/addcore.tdf
+    Info: Found entity 1: addcore
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/a_csnbuffer.tdf
+    Info: Found entity 1: a_csnbuffer
+Info: Found 1 design units and 1 entities in source file e:/quartus/libraries/megafunctions/altshift.tdf
+    Info: Found entity 1: altshift
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Processing ended: Fri Dec 31 13:39:55 2004
+    Info: Elapsed time: 00:00:05
+
+

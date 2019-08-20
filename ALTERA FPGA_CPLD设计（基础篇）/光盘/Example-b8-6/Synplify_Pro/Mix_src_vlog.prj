@@ -1,0 +1,56 @@
+#-- Synplicity, Inc.
+#-- Version 7.5.1     
+#-- Project file D:\prj_D\Synplify_Pro\Mix_src_vlog.prj
+#-- Written on Wed Mar 23 01:52:51 2005
+
+
+#add_file options
+add_file -vhdl -lib work "source/mixed/verilog/mux.vhd"
+add_file -vhdl -lib work "source/mixed/verilog/reg8.vhd"
+add_file -vhdl -lib work "source/mixed/verilog/rotate.vhd"
+add_file -verilog "source/mixed/verilog/mux21.v"
+add_file -verilog "source/mixed/verilog/top.v"
+
+
+#implementation: "rev_2"
+impl -add rev_2
+
+#device options
+set_option -technology STRATIX
+set_option -part EP1S10
+set_option -package FC780
+set_option -speed_grade -5
+
+#compilation/mapping options
+set_option -default_enum_encoding onehot
+set_option -symbolic_fsm_compiler 1
+set_option -resource_sharing 1
+set_option -use_fsm_explorer 0
+set_option -top_module "top"
+
+#map options
+set_option -frequency auto
+set_option -fanout_limit 500
+set_option -domap 1
+set_option -disable_io_insertion 0
+set_option -cliquing 1
+set_option -pipe 0
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -fixgatedclocks 0
+
+#simulation options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "rev_2/top.vqm"
+
+#implementation attributes
+set_option -vlog_std v2001
+set_option -synthesis_onoff_pragma 0
+set_option -auto_constrain_io 0
+impl -active "rev_2"

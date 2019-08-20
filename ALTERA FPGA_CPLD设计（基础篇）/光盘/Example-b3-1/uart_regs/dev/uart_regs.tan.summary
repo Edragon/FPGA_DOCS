@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : 8.989 ns
+Required Time  : 12.000 ns
+Actual Time    : 3.011 ns
+From           : wb_addr_i[2]
+To             : scratch[2]
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.054 ns
+From           : uart_receiver:receiver|myfifo_10:myfifo_u|scfifo:scfifo_component|scfifo_nbq:auto_generated|a_dpfifo_4nl:dpfifo|dpram_h2k:FIFOram|altsyncram_apb1:altsyncram1|ram_block2a0~portb_address_reg3
+To             : wb_dat_o[0]
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.420 ns
+From           : wb_addr_i[0]
+To             : wb_dat_o[0]
+
+Type           : Worst-case th
+Slack          : 3.465 ns
+Required Time  : 3.000 ns
+Actual Time    : -0.465 ns
+From           : wb_addr_i[0]
+To             : start_dlc
+
+Type           : Worst-case minimum tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.502 ns
+From           : int_o~reg0
+To             : int_o
+
+Type           : Worst-case minimum tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.597 ns
+From           : wb_addr_i[0]
+To             : wb_dat_o[5]
+
+Type           : Clock Setup: 'clk'
+Slack          : 2.602 ns
+Required Time  : 130.01 MHz ( period = 7.692 ns )
+Actual Time    : 196.46 MHz ( period = 5.090 ns )
+From           : uart_transmitter:transmitter|myfifo_8:myfifo_u1|scfifo:scfifo_component|scfifo_eaq:auto_generated|a_dpfifo_rll:dpfifo|dpram_81k:FIFOram|altsyncram_mmb1:altsyncram1|ram_block2a0~portb_address_reg3
+To             : uart_transmitter:transmitter|parity_xor
+
+Type           : Clock Setup: 'wb_we_i'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 326.16 MHz ( period = 3.066 ns )
+From           : lcr[7]
+To             : dl[0]
+
+--------------------------------------------------------------------------------------
+

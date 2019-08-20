@@ -1,0 +1,677 @@
+//
+// Written by Synplify
+// Synplify 7.3.5, Build 250R.
+// Wed Mar 23 01:56:40 2005
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "noname"
+// file 1 "noname"
+// file 2 "\c:\eda\synplicity\synplify_751\lib\vhd\std.vhd "
+// file 3 "\d:\prj_d\synplify_pro\source\mixed\vhdl\mux21.vhd "
+// file 4 "\c:\eda\synplicity\synplify_751\lib\vhd\std1164.vhd "
+// file 5 "\d:\prj_d\synplify_pro\source\mixed\vhdl\top.vhd "
+// file 6 "\d:\prj_d\synplify_pro\source\mixed\vhdl\rotate.v "
+// file 7 "\d:\prj_d\synplify_pro\source\mixed\vhdl\reg8.v "
+// file 8 "\d:\prj_d\synplify_pro\source\mixed\vhdl\mux.v "
+
+module reg8 (
+  b_c_0,
+  b_c_1,
+  b_c_2,
+  b_c_3,
+  b_c_4,
+  b_c_5,
+  b_c_6,
+  b_c_7,
+  a_c_0,
+  a_c_1,
+  a_c_2,
+  a_c_3,
+  a_c_4,
+  a_c_5,
+  a_c_6,
+  a_c_7,
+  q_0,
+  q_1,
+  q_2,
+  q_3,
+  q_4,
+  q_5,
+  q_6,
+  q_7,
+  rst_c,
+  sel_c,
+  clk_c
+);
+input b_c_0 ;
+input b_c_1 ;
+input b_c_2 ;
+input b_c_3 ;
+input b_c_4 ;
+input b_c_5 ;
+input b_c_6 ;
+input b_c_7 ;
+input a_c_0 ;
+input a_c_1 ;
+input a_c_2 ;
+input a_c_3 ;
+input a_c_4 ;
+input a_c_5 ;
+input a_c_6 ;
+input a_c_7 ;
+output q_0 ;
+output q_1 ;
+output q_2 ;
+output q_3 ;
+output q_4 ;
+output q_5 ;
+output q_6 ;
+output q_7 ;
+input rst_c ;
+input sel_c ;
+input clk_c ;
+wire b_c_0 ;
+wire b_c_1 ;
+wire b_c_2 ;
+wire b_c_3 ;
+wire b_c_4 ;
+wire b_c_5 ;
+wire b_c_6 ;
+wire b_c_7 ;
+wire a_c_0 ;
+wire a_c_1 ;
+wire a_c_2 ;
+wire a_c_3 ;
+wire a_c_4 ;
+wire a_c_5 ;
+wire a_c_6 ;
+wire a_c_7 ;
+wire q_0 ;
+wire q_1 ;
+wire q_2 ;
+wire q_3 ;
+wire q_4 ;
+wire q_5 ;
+wire q_6 ;
+wire q_7 ;
+wire rst_c ;
+wire sel_c ;
+wire clk_c ;
+wire GND ;
+wire VCC ;
+// @7:7
+  stratix_lcell q_7_ (
+	.regout(q_7),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_7),
+	.datac(b_c_7),
+	.aclr(rst_c)
+);
+defparam q_7_.operation_mode="normal";
+defparam q_7_.output_mode="reg_only";
+defparam q_7_.lut_mask="d8d8";
+defparam q_7_.synch_mode="off";
+defparam q_7_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_6_ (
+	.regout(q_6),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_6),
+	.datac(b_c_6),
+	.aclr(rst_c)
+);
+defparam q_6_.operation_mode="normal";
+defparam q_6_.output_mode="reg_only";
+defparam q_6_.lut_mask="d8d8";
+defparam q_6_.synch_mode="off";
+defparam q_6_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_5_ (
+	.regout(q_5),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_5),
+	.datac(b_c_5),
+	.aclr(rst_c)
+);
+defparam q_5_.operation_mode="normal";
+defparam q_5_.output_mode="reg_only";
+defparam q_5_.lut_mask="d8d8";
+defparam q_5_.synch_mode="off";
+defparam q_5_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_4_ (
+	.regout(q_4),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_4),
+	.datac(b_c_4),
+	.aclr(rst_c)
+);
+defparam q_4_.operation_mode="normal";
+defparam q_4_.output_mode="reg_only";
+defparam q_4_.lut_mask="d8d8";
+defparam q_4_.synch_mode="off";
+defparam q_4_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_3_ (
+	.regout(q_3),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_3),
+	.datac(b_c_3),
+	.aclr(rst_c)
+);
+defparam q_3_.operation_mode="normal";
+defparam q_3_.output_mode="reg_only";
+defparam q_3_.lut_mask="d8d8";
+defparam q_3_.synch_mode="off";
+defparam q_3_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_2_ (
+	.regout(q_2),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_2),
+	.datac(b_c_2),
+	.aclr(rst_c)
+);
+defparam q_2_.operation_mode="normal";
+defparam q_2_.output_mode="reg_only";
+defparam q_2_.lut_mask="d8d8";
+defparam q_2_.synch_mode="off";
+defparam q_2_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_1_ (
+	.regout(q_1),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_1),
+	.datac(b_c_1),
+	.aclr(rst_c)
+);
+defparam q_1_.operation_mode="normal";
+defparam q_1_.output_mode="reg_only";
+defparam q_1_.lut_mask="d8d8";
+defparam q_1_.synch_mode="off";
+defparam q_1_.sum_lutc_input="datac";
+// @7:7
+  stratix_lcell q_0_ (
+	.regout(q_0),
+	.clk(clk_c),
+	.dataa(sel_c),
+	.datab(a_c_0),
+	.datac(b_c_0),
+	.aclr(rst_c)
+);
+defparam q_0_.operation_mode="normal";
+defparam q_0_.output_mode="reg_only";
+defparam q_0_.lut_mask="d8d8";
+defparam q_0_.synch_mode="off";
+defparam q_0_.sum_lutc_input="datac";
+  assign GND = 1'b0;
+  assign VCC = 1'b1;
+endmodule /* reg8 */
+
+module rotate (
+  q_0_0,
+  q_0_1,
+  q_0_2,
+  q_0_3,
+  q_0_4,
+  q_0_5,
+  q_0_6,
+  q_0_7,
+  q_0,
+  q_1,
+  q_2,
+  q_3,
+  q_4,
+  q_5,
+  q_6,
+  q_7,
+  r_l_c,
+  rst_c,
+  clk_c
+);
+input q_0_0 ;
+input q_0_1 ;
+input q_0_2 ;
+input q_0_3 ;
+input q_0_4 ;
+input q_0_5 ;
+input q_0_6 ;
+input q_0_7 ;
+output q_0 ;
+output q_1 ;
+output q_2 ;
+output q_3 ;
+output q_4 ;
+output q_5 ;
+output q_6 ;
+output q_7 ;
+input r_l_c ;
+input rst_c ;
+input clk_c ;
+wire q_0_0 ;
+wire q_0_1 ;
+wire q_0_2 ;
+wire q_0_3 ;
+wire q_0_4 ;
+wire q_0_5 ;
+wire q_0_6 ;
+wire q_0_7 ;
+wire q_0 ;
+wire q_1 ;
+wire q_2 ;
+wire q_3 ;
+wire q_4 ;
+wire q_5 ;
+wire q_6 ;
+wire q_7 ;
+wire r_l_c ;
+wire rst_c ;
+wire clk_c ;
+wire GND ;
+wire VCC ;
+// @6:8
+  stratix_lcell q_7_ (
+	.regout(q_7),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_6),
+	.datac(q_0_7),
+	.aclr(r_l_c)
+);
+defparam q_7_.operation_mode="normal";
+defparam q_7_.output_mode="reg_only";
+defparam q_7_.lut_mask="d8d8";
+defparam q_7_.synch_mode="off";
+defparam q_7_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_6_ (
+	.regout(q_6),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_5),
+	.datac(q_0_6),
+	.aclr(r_l_c)
+);
+defparam q_6_.operation_mode="normal";
+defparam q_6_.output_mode="reg_only";
+defparam q_6_.lut_mask="d8d8";
+defparam q_6_.synch_mode="off";
+defparam q_6_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_5_ (
+	.regout(q_5),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_4),
+	.datac(q_0_5),
+	.aclr(r_l_c)
+);
+defparam q_5_.operation_mode="normal";
+defparam q_5_.output_mode="reg_only";
+defparam q_5_.lut_mask="d8d8";
+defparam q_5_.synch_mode="off";
+defparam q_5_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_4_ (
+	.regout(q_4),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_3),
+	.datac(q_0_4),
+	.aclr(r_l_c)
+);
+defparam q_4_.operation_mode="normal";
+defparam q_4_.output_mode="reg_only";
+defparam q_4_.lut_mask="d8d8";
+defparam q_4_.synch_mode="off";
+defparam q_4_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_3_ (
+	.regout(q_3),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_2),
+	.datac(q_0_3),
+	.aclr(r_l_c)
+);
+defparam q_3_.operation_mode="normal";
+defparam q_3_.output_mode="reg_only";
+defparam q_3_.lut_mask="d8d8";
+defparam q_3_.synch_mode="off";
+defparam q_3_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_2_ (
+	.regout(q_2),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_1),
+	.datac(q_0_2),
+	.aclr(r_l_c)
+);
+defparam q_2_.operation_mode="normal";
+defparam q_2_.output_mode="reg_only";
+defparam q_2_.lut_mask="d8d8";
+defparam q_2_.synch_mode="off";
+defparam q_2_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_1_ (
+	.regout(q_1),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_0),
+	.datac(q_0_1),
+	.aclr(r_l_c)
+);
+defparam q_1_.operation_mode="normal";
+defparam q_1_.output_mode="reg_only";
+defparam q_1_.lut_mask="d8d8";
+defparam q_1_.synch_mode="off";
+defparam q_1_.sum_lutc_input="datac";
+// @6:8
+  stratix_lcell q_0_ (
+	.regout(q_0),
+	.clk(clk_c),
+	.dataa(rst_c),
+	.datab(q_7),
+	.datac(q_0_0),
+	.aclr(r_l_c)
+);
+defparam q_0_.operation_mode="normal";
+defparam q_0_.output_mode="reg_only";
+defparam q_0_.lut_mask="d8d8";
+defparam q_0_.synch_mode="off";
+defparam q_0_.sum_lutc_input="datac";
+  assign GND = 1'b0;
+  assign VCC = 1'b1;
+endmodule /* rotate */
+
+module top (
+  q,
+  a,
+  b,
+  sel,
+  r_l,
+  clk,
+  rst
+);
+output [7:0] q /* synthesis syn_tristate = 1 */;
+input [7:0] a ;
+input [7:0] b ;
+input sel ;
+input r_l ;
+input clk ;
+input rst ;
+wire sel ;
+wire r_l ;
+wire clk ;
+wire rst ;
+wire [7:0] b_c;
+wire [7:0] a_c;
+wire [7:0] inst2_q;
+wire [7:0] inst3_q;
+wire GND ;
+wire VCC ;
+wire rst_c ;
+wire clk_c ;
+wire r_l_c ;
+wire sel_c ;
+  assign GND = 1'b0;
+  assign VCC = 1'b1;
+// @5:6
+  stratix_io rst_in (
+	.padio(rst),
+	.combout(rst_c),
+	.oe(GND)
+);
+defparam rst_in.operation_mode = "input";
+// @5:6
+  stratix_io clk_in (
+	.padio(clk),
+	.combout(clk_c),
+	.oe(GND)
+);
+defparam clk_in.operation_mode = "input";
+// @5:6
+  stratix_io r_l_in (
+	.padio(r_l),
+	.combout(r_l_c),
+	.oe(GND)
+);
+defparam r_l_in.operation_mode = "input";
+// @5:6
+  stratix_io sel_in (
+	.padio(sel),
+	.combout(sel_c),
+	.oe(GND)
+);
+defparam sel_in.operation_mode = "input";
+// @5:5
+  stratix_io b_in_7_ (
+	.padio(b[7]),
+	.combout(b_c[7]),
+	.oe(GND)
+);
+defparam b_in_7_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_6_ (
+	.padio(b[6]),
+	.combout(b_c[6]),
+	.oe(GND)
+);
+defparam b_in_6_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_5_ (
+	.padio(b[5]),
+	.combout(b_c[5]),
+	.oe(GND)
+);
+defparam b_in_5_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_4_ (
+	.padio(b[4]),
+	.combout(b_c[4]),
+	.oe(GND)
+);
+defparam b_in_4_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_3_ (
+	.padio(b[3]),
+	.combout(b_c[3]),
+	.oe(GND)
+);
+defparam b_in_3_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_2_ (
+	.padio(b[2]),
+	.combout(b_c[2]),
+	.oe(GND)
+);
+defparam b_in_2_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_1_ (
+	.padio(b[1]),
+	.combout(b_c[1]),
+	.oe(GND)
+);
+defparam b_in_1_.operation_mode = "input";
+// @5:5
+  stratix_io b_in_0_ (
+	.padio(b[0]),
+	.combout(b_c[0]),
+	.oe(GND)
+);
+defparam b_in_0_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_7_ (
+	.padio(a[7]),
+	.combout(a_c[7]),
+	.oe(GND)
+);
+defparam a_in_7_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_6_ (
+	.padio(a[6]),
+	.combout(a_c[6]),
+	.oe(GND)
+);
+defparam a_in_6_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_5_ (
+	.padio(a[5]),
+	.combout(a_c[5]),
+	.oe(GND)
+);
+defparam a_in_5_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_4_ (
+	.padio(a[4]),
+	.combout(a_c[4]),
+	.oe(GND)
+);
+defparam a_in_4_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_3_ (
+	.padio(a[3]),
+	.combout(a_c[3]),
+	.oe(GND)
+);
+defparam a_in_3_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_2_ (
+	.padio(a[2]),
+	.combout(a_c[2]),
+	.oe(GND)
+);
+defparam a_in_2_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_1_ (
+	.padio(a[1]),
+	.combout(a_c[1]),
+	.oe(GND)
+);
+defparam a_in_1_.operation_mode = "input";
+// @5:5
+  stratix_io a_in_0_ (
+	.padio(a[0]),
+	.combout(a_c[0]),
+	.oe(GND)
+);
+defparam a_in_0_.operation_mode = "input";
+// @5:4
+  stratix_io q_out_7_ (
+	.padio(q[7]),
+	.datain(inst2_q[7]),
+	.oe(VCC)
+);
+defparam q_out_7_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_6_ (
+	.padio(q[6]),
+	.datain(inst2_q[6]),
+	.oe(VCC)
+);
+defparam q_out_6_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_5_ (
+	.padio(q[5]),
+	.datain(inst2_q[5]),
+	.oe(VCC)
+);
+defparam q_out_5_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_4_ (
+	.padio(q[4]),
+	.datain(inst2_q[4]),
+	.oe(VCC)
+);
+defparam q_out_4_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_3_ (
+	.padio(q[3]),
+	.datain(inst2_q[3]),
+	.oe(VCC)
+);
+defparam q_out_3_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_2_ (
+	.padio(q[2]),
+	.datain(inst2_q[2]),
+	.oe(VCC)
+);
+defparam q_out_2_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_1_ (
+	.padio(q[1]),
+	.datain(inst2_q[1]),
+	.oe(VCC)
+);
+defparam q_out_1_.operation_mode = "output";
+// @5:4
+  stratix_io q_out_0_ (
+	.padio(q[0]),
+	.datain(inst2_q[0]),
+	.oe(VCC)
+);
+defparam q_out_0_.operation_mode = "output";
+// @5:48
+  reg8 inst3 (
+	.b_c_0(b_c[0]),
+	.b_c_1(b_c[1]),
+	.b_c_2(b_c[2]),
+	.b_c_3(b_c[3]),
+	.b_c_4(b_c[4]),
+	.b_c_5(b_c[5]),
+	.b_c_6(b_c[6]),
+	.b_c_7(b_c[7]),
+	.a_c_0(a_c[0]),
+	.a_c_1(a_c[1]),
+	.a_c_2(a_c[2]),
+	.a_c_3(a_c[3]),
+	.a_c_4(a_c[4]),
+	.a_c_5(a_c[5]),
+	.a_c_6(a_c[6]),
+	.a_c_7(a_c[7]),
+	.q_0(inst3_q[0]),
+	.q_1(inst3_q[1]),
+	.q_2(inst3_q[2]),
+	.q_3(inst3_q[3]),
+	.q_4(inst3_q[4]),
+	.q_5(inst3_q[5]),
+	.q_6(inst3_q[6]),
+	.q_7(inst3_q[7]),
+	.rst_c(rst_c),
+	.sel_c(sel_c),
+	.clk_c(clk_c)
+);
+// @5:39
+  rotate inst2 (
+	.q_0_0(inst3_q[0]),
+	.q_0_1(inst3_q[1]),
+	.q_0_2(inst3_q[2]),
+	.q_0_3(inst3_q[3]),
+	.q_0_4(inst3_q[4]),
+	.q_0_5(inst3_q[5]),
+	.q_0_6(inst3_q[6]),
+	.q_0_7(inst3_q[7]),
+	.q_0(inst2_q[0]),
+	.q_1(inst2_q[1]),
+	.q_2(inst2_q[2]),
+	.q_3(inst2_q[3]),
+	.q_4(inst2_q[4]),
+	.q_5(inst2_q[5]),
+	.q_6(inst2_q[6]),
+	.q_7(inst2_q[7]),
+	.r_l_c(r_l_c),
+	.rst_c(rst_c),
+	.clk_c(clk_c)
+);
+endmodule /* top */
+

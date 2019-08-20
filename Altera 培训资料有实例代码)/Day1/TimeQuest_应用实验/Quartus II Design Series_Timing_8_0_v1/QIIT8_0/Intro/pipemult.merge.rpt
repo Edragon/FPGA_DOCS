@@ -1,0 +1,150 @@
+Partition Merge report for pipemult
+Wed Dec 20 11:11:33 2006
+Quartus II Version 6.1 Build 201 11/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Partition Statistics
+  5. Partition Merge Resource Usage Summary
+  6. Partition Merge RAM Summary
+  7. Partition Merge DSP Block Usage Summary
+  8. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Partition Merge Summary                                                       ;
++------------------------------------+------------------------------------------+
+; Partition Merge Status             ; Successful - Wed Dec 20 11:11:33 2006    ;
+; Quartus II Version                 ; 6.1 Build 201 11/27/2006 SJ Full Version ;
+; Revision Name                      ; pipemult                                 ;
+; Top-level Entity Name              ; pipemult                                 ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 16                                       ;
+;     Total combinational functions  ; 1                                        ;
+;     Dedicated logic registers      ; 16                                       ;
+; Total registers                    ; 16                                       ;
+; Total pins                         ; 44                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 512                                      ;
+; Embedded Multiplier 9-bit elements ; 1                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                    ;
++----------------+------------------------+------------------------+--------------------+
+; Partition Name ; Netlist Type Used      ; Netlist Type Requested ; Partition Contents ;
++----------------+------------------------+------------------------+--------------------+
+; Top            ; Post-Synthesis Netlist ; Post-Synthesis Netlist ;                    ;
++----------------+------------------------+------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                                                                                                                                                                                            ;
++----------------+-------------------------------+-------------+-----------------+-----------------+-------------+--------------+------------------------+-------------------------+-------------------------+--------------------------+---------------------------+------------------------+--------------------+
+; Partition Name ; Total combinational functions ; normal mode ; arithmetic mode ; Total registers ; Input Ports ; Output Ports ; Registered Input Ports ; Registered Output Ports ; Unconnected Input Ports ; Unconnected Output Ports ; Driven Ground Input Ports ; Driven VCC Input Ports ; Partition Contents ;
++----------------+-------------------------------+-------------+-----------------+-----------------+-------------+--------------+------------------------+-------------------------+-------------------------+--------------------------+---------------------------+------------------------+--------------------+
+; Top            ; 1                             ; 1           ; 0               ; 16              ; 28          ; 16           ; 0                      ; 16                      ; N/A                     ; N/A                      ; N/A                       ; N/A                    ;                    ;
++----------------+-------------------------------+-------------+-----------------+-----------------+-------------+--------------+------------------------+-------------------------+-------------------------+--------------------------+---------------------------+------------------------+--------------------+
+
+
++-----------------------------------------------------+
+; Partition Merge Resource Usage Summary              ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 16    ;
+;                                             ;       ;
+; Total combinational functions               ; 1     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 16    ;
+;     -- Dedicated logic registers            ; 16    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 44    ;
+; Total memory bits                           ; 512   ;
+; Embedded Multiplier 9-bit elements          ; 1     ;
+; Maximum fan-out node                        ; clk1  ;
+; Maximum fan-out                             ; 34    ;
+; Total fan-out                               ; 276   ;
+; Average fan-out                             ; 3.49  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                   ;
++----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------+
+; Name                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
++----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------+
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_coq1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 16           ; 32           ; 16           ; 512  ; ram.hex ;
++----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------+
+
+
++-----------------------------------------------------+
+; Partition Merge DSP Block Usage Summary             ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 1           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 1           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Partition Merge
+    Info: Version 6.1 Build 201 11/27/2006 SJ Full Version
+    Info: Processing started: Wed Dec 20 11:11:30 2006
+Info: Command: quartus_cdb --lower_priority --read_settings_files=off --write_settings_files=off pipemult -c pipemult --merge=on
+Info: Using synthesis netlist for partition "Top"
+Info: Netlist merging resolved 1 partition(s) out of the 1 partition(s) found
+Info: Quartus II Partition Merge was successful. 0 errors, 0 warnings
+    Info: Allocated 97 megabytes of memory during processing
+    Info: Processing ended: Wed Dec 20 11:11:33 2006
+    Info: Elapsed time: 00:00:03
+
+

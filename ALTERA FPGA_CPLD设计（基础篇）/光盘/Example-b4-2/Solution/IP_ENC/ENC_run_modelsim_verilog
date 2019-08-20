@@ -1,0 +1,94 @@
+#!/bin/bash
+# This is a simple bash script to automate the process of running the
+# provided demo testbench with the IP functional simulation model
+# Ensure that modelsim is installed before running.
+# This can be checked by typing "which vsim"
+
+# Check to make sure script is being run in the correct directory...
+if [ ! -f ENC_tb.v ]; then
+    if [ -f tb.v ]; then
+	cp tb.v  ENC_tb.v
+    else
+	echo "Please run from the testbench directory."
+	exit;
+    fi
+fi
+
+# Check for presence of IP functional simulation model
+if [ ! -f ENC.vo ] ; then
+    if [ -f ../../model/ENC_aot1151_enc8b10b.vo -a -f ../../model/wrapper_enc.v ] ; then
+		cat ../../model/wrapper_enc.v ../../model/ENC_aot1151_enc8b10b.vo > ENC.vo
+    else
+	echo "Can't find Verilog IP functional simulation model."
+	echo "Make sure it is created before atempting to run this script."
+	exit
+    fi
+fi
+
+# Set Quartus install path
+quartus_install_path="/opt/quartus/"
+library_path=${quartus_install_path}"eda/sim_lib/"
+
+echo Cleanup
+if [ -d work ] ; then
+    echo rm -fr work
+         rm -fr work
+fi
+
+if [ -d  lpm ] ; then
+    echo rm -fr lpm
+         rm -fr lpm
+fi
+
+if [ -d  altera_mf ] ; then
+    echo rm -fr altera_mf
+         rm -fr altera_mf
+fi
+
+if [ -d  altgxb ] ; then
+    echo rm -fr altgxb
+         rm -fr altgxb
+fi
+
+if [ -d sgate ] ; then
+    echo rm -fr sgate
+         rm -fr sgate
+fi
+
+if [ -d  altgxb ] ; then
+    echo rm -fr altgxb
+         rm -fr altgxb
+fi
+
+if [ -d  ENC ] ; then
+    echo rm -fr ENC
+         rm -fr ENC
+fi
+
+if [ -f  modelsim.ini ] ; then
+    echo rm modelsim.ini
+         rm modelsim.ini
+fi
+
+echo "Compile the libraries"
+
+vlib lpm
+vlog -hazards -work lpm ${library_path}220model.v
+
+vlib altera_mf
+vlog -hazards -work altera_mf ${library_path}altera_mf.v
+
+vlib sgate
+vlog -hazards -work sgate     ${library_path}sgate.v
+
+
+echo "Compile the IP functional simulation model"
+vlib ENC
+vlog -hazards -work ENC ENC.vo
+
+echo "Compile testbench"
+vlib work
+vlog -hazards -work work ENC_tb.v
+
+# 7. Run the simulation
+vsim +nowarnTSCALE -L lpm -L altera_mf -L sgate -L ENC -c -do "run -all; quit" tb

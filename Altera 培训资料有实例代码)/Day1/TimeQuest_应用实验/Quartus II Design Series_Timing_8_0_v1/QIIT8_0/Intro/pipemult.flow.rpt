@@ -1,0 +1,105 @@
+Flow report for pipemult
+Fri Sep 28 18:02:12 2007
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Fri Sep 28 18:01:59 2007    ;
+; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Full Version ;
+; Revision Name                      ; pipemult                                 ;
+; Top-level Entity Name              ; pipemult                                 ;
+; Family                             ; Cyclone II                               ;
+; Device                             ; EP2C5F256C6                              ;
+; Timing Models                      ; Final                                    ;
+; Met timing requirements            ; N/A                                      ;
+; Total logic elements               ; 1 / 4,608 ( < 1 % )                      ;
+;     Total combinational functions  ; 1 / 4,608 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                        ;
+; Total registers                    ; 16                                       ;
+; Total pins                         ; 44 / 158 ( 28 % )                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 512 / 119,808 ( < 1 % )                  ;
+; Embedded Multiplier 9-bit elements ; 1 / 26 ( 4 % )                           ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                            ;
++------------------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 09/28/2007 18:01:19 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; pipemult            ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                   ;
++-------------------------------+---------+---------------+-------------+------------+
+; Assignment Name               ; Value   ; Default Value ; Entity Name ; Section Id ;
++-------------------------------+---------+---------------+-------------+------------+
+; PARTITION_COLOR               ; 2147039 ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE        ; SOURCE  ; --            ; --          ; Top        ;
+; TIMEQUEST_DO_REPORT_TIMING    ; On      ; Off           ; --          ; --         ;
+; USE_TIMEQUEST_TIMING_ANALYZER ; On      ; Off           ; --          ; --         ;
++-------------------------------+---------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------+
+; Flow Elapsed Time                                                  ;
++---------------------------+--------------+-------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ;
++---------------------------+--------------+-------------------------+
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ;
+; Fitter                    ; 00:00:11     ; 1.0                     ;
+; Assembler                 ; 00:00:10     ; 1.0                     ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ;
+; Total                     ; 00:00:30     ; --                      ;
++---------------------------+--------------+-------------------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off pipemult -c pipemult
+quartus_fit --read_settings_files=off --write_settings_files=off pipemult -c pipemult
+quartus_asm --read_settings_files=off --write_settings_files=off pipemult -c pipemult
+quartus_sta pipemult -c pipemult
+
+
+

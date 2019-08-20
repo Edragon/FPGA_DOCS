@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab_design_tq">
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1dp_ram:\gen_1_ram:gen_M4K:dat_A|asj_fft_data_ram:dat_A|altsyncram:\gen_M4K:altsyncram_component" CBX_FILE_NAME="altsyncram_1al3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_pround:\gen_full_rnd:u0|LPM_ADD_SUB:\gbrnd:nev:gp:lpm_add_sub_component" CBX_FILE_NAME="add_sub_p1j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|spi3_rx:iSPI3_RX|auk_pac_mrx_mw:auk_pac_mrx_mw_inst|auk_pac_mrx:mrx|auk_pac_fifo:\FIFO:1:FIFO_FIFO:fifo|altsyncram:\LPMINST:g4:altsyncram_component" CBX_FILE_NAME="altsyncram_vpk1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|spi3_tx:iSPI3_TX|auk_pac_mtx_mw:auk_pac_mtx_mw_inst|auk_pac_mtx:mtx|auk_pac_fifo:\FIFO:1:FIFO_FIFO:fifo|altsyncram:\LPMINST:g4:altsyncram_component" CBX_FILE_NAME="altsyncram_vpk1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|LPM_MULT:\gen_ded_m1:gen_unext_m_a_b_c_d:m_a_b_c_d" CBX_FILE_NAME="mult_a701.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_pround:\gen_full_rnd:u1|LPM_ADD_SUB:\gbrnd:nev:gp:lpm_add_sub_component" CBX_FILE_NAME="add_sub_p1j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|ASYNC_FIFO:iFIFO_FCLK_TO_SCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_idl1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|ASYNC_FIFO:iFIFO_SCLK_TO_FCLK|dc_fifo:iDC_FIFO|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_idl1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|asj_fft_pround:\gen_unsc:u0|LPM_ADD_SUB:\gbrnd:nev:gp:lpm_add_sub_component" CBX_FILE_NAME="add_sub_l1j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_1tdp_rom:\gen_se:gen_new:twrom|asj_fft_twid_rom_tdp:\gen_auto:sin_1n|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7g62.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|LPM_MULT:\gen_ded_m1:gen_unext_m_ac:m_ac" CBX_FILE_NAME="mult_6701.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|LPM_MULT:\gen_ded_m1:gen_unext_m_bd:m_bd" CBX_FILE_NAME="mult_6701.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|LAB_DESIGN|fft:iFFT|asj_fft_si_sose_so_b:asj_fft_si_sose_so_b_inst|asj_fft_dft_bfp_sgl:\gen_se:bfpdft|asj_fft_cmult_can:\gen_canonic:cm1|asj_fft_pround:\gen_unsc:u1|LPM_ADD_SUB:\gbrnd:nev:gp:lpm_add_sub_component" CBX_FILE_NAME="add_sub_l1j.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

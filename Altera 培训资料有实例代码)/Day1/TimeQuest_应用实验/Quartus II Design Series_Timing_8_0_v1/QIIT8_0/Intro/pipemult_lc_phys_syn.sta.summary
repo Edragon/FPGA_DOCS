@@ -1,0 +1,21 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk1'
+Slack : 0.021
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk1'
+Slack : 0.551
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk1'
+Slack : 2.245
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk1'
+Slack : 0.254
+TNS   : 0.000
+
+------------------------------------------------------------

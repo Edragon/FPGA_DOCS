@@ -1,0 +1,275 @@
+Analysis & Synthesis report for pll_ram
+Sun Dec 05 05:42:22 2004
+Version 4.0 Build 190 1/28/2004 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Default Parameter Settings
+  5. Hierarchy
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis Equations
+  8. Analysis & Synthesis Files Read
+  9. Analysis & Synthesis Resource Usage Summary
+ 10. Analysis & Synthesis RAM Summary
+ 11. WYSIWYG Cells
+ 12. General Register Statistics
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                        ;
++-----------------------------+---------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Dec 05 05:42:22 2004 ;
+; Revision Name               ; pll_ram                               ;
+; Top-level Entity Name       ; pll_ram                               ;
+; Family                      ; Stratix                               ;
+; Total logic elements        ; 7                                     ;
+; Total pins                  ; 28                                    ;
+; Total memory bits           ; 256                                   ;
+; DSP block 9-bit elements    ; 0                                     ;
+; Total PLLs                  ; 1                                     ;
+; Total DLLs                  ; 0                                     ;
++-----------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                          ;
++-----------------------------------------------------------------------------------------
+; Option                                                  ; Setting      ; Default Value ;
++---------------------------------------------------------+--------------+---------------+
+; Use Generated Physical Constraints File                 ; On           ;               ;
+; Physical Synthesis Level for Resynthesis                ; Normal       ;               ;
+; Resynthesis Optimization Effort                         ; Normal       ;               ;
+; Type of Retiming Performed During Resynthesis           ; Full         ;               ;
+; Top-level entity name                                   ; pll_ram      ;               ;
+; Auto Resource Sharing                                   ; Off          ; Off           ;
+; Auto RAM Block Balancing                                ; On           ; On            ;
+; Auto Shift Register Replacement                         ; On           ; On            ;
+; Auto DSP Block Replacement                              ; On           ; On            ;
+; Auto RAM Replacement                                    ; On           ; On            ;
+; Auto ROM Replacement                                    ; On           ; On            ;
+; Allow register retiming to trade off Tsu/Tco with Fmax  ; On           ; On            ;
+; Perform gate-level register retiming                    ; Off          ; Off           ;
+; Perform WYSIWYG Primitive Resynthesis                   ; Off          ; Off           ;
+; Remove Duplicate Logic                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                    ; On           ; On            ;
+; Auto Carry Chains                                       ; On           ; On            ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II ; 70           ; 70            ;
+; Optimization Technique -- Stratix/Stratix GX            ; Balanced     ; Balanced      ;
+; Auto Global Register Control Signals                    ; On           ; On            ;
+; Auto Global Clock                                       ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                          ; Off          ; Off           ;
+; Ignore SOFT Buffers                                     ; On           ; On            ;
+; Ignore LCELL Buffers                                    ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                               ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                   ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                  ; Off          ; Off           ;
+; Ignore CARRY Buffers                                    ; Off          ; Off           ;
+; Remove Duplicate Registers                              ; On           ; On            ;
+; Remove Redundant Logic Cells                            ; Off          ; Off           ;
+; Power-Up Don't Care                                     ; On           ; On            ;
+; NOT Gate Push-Back                                      ; On           ; On            ;
+; DSP Block Balancing                                     ; Auto         ; Auto          ;
+; State Machine Processing                                ; Auto         ; Auto          ;
+; Family name                                             ; Stratix      ; Stratix       ;
+; VHDL Version                                            ; VHDL93       ; VHDL93        ;
+; Verilog Version                                         ; Verilog_2001 ; Verilog_2001  ;
+; Preserve fewer node names                               ; On           ; On            ;
+; Disk space/compilation speed tradeoff                   ; Normal       ; Normal        ;
+; Create Debugging Nodes for IP Cores                     ; off          ; off           ;
++---------------------------------------------------------+--------------+---------------+
+
+
++-------------------------------------------------+
+; Analysis & Synthesis Default Parameter Settings ;
++--------------------------------------------------
+; Name               ; Setting                    ;
++--------------------+----------------------------+
+; CARRY_CHAIN        ; MANUAL                     ;
+; CASCADE_CHAIN      ; MANUAL                     ;
+; OPTIMIZE_FOR_SPEED ; 5                          ;
+; STYLE              ; FAST                       ;
++--------------------+----------------------------+
+
+
++------------+
+; Hierarchy  ;
++------------+
+pll_ram
+ |-- dpram8x32:dpram8x32_u1
+      |-- altsyncram:altsyncram_component
+           |-- altsyncram_7bc1:auto_generated
+ |-- pllx2:pllx2_u1
+      |-- altpll:altpll_component
+ |-- lpm_counter:wr_addr_rtl_0
+      |-- alt_counter_stratix:wysi_counter
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Compilation Hierarchy Node                ; Logic Cells ; Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                                                            ;
++-------------------------------------------+-------------+-----------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------------------------------------------------------------------------------------------+
+; |pll_ram                                  ; 7 (2)       ; 5         ; 256         ; 0            ; 0       ; 0         ; 0         ; 28   ; 0            ; 2 (2)        ; 0 (0)             ; 5 (0)            ; 5 (0)           ; |pll_ram                                                                                       ;
+;    |dpram8x32:dpram8x32_u1|               ; 0 (0)       ; 0         ; 256         ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |pll_ram|dpram8x32:dpram8x32_u1                                                                ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0         ; 256         ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |pll_ram|dpram8x32:dpram8x32_u1|altsyncram:altsyncram_component                                ;
+;          |altsyncram_7bc1:auto_generated| ; 0 (0)       ; 0         ; 256         ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |pll_ram|dpram8x32:dpram8x32_u1|altsyncram:altsyncram_component|altsyncram_7bc1:auto_generated ;
+;    |lpm_counter:wr_addr_rtl_0|            ; 5 (0)       ; 5         ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 5 (0)           ; |pll_ram|lpm_counter:wr_addr_rtl_0                                                             ;
+;       |alt_counter_stratix:wysi_counter|  ; 5 (5)       ; 5         ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; |pll_ram|lpm_counter:wr_addr_rtl_0|alt_counter_stratix:wysi_counter                            ;
+;    |pllx2:pllx2_u1|                       ; 0 (0)       ; 0         ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |pll_ram|pllx2:pllx2_u1                                                                        ;
+;       |altpll:altpll_component|           ; 0 (0)       ; 0         ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |pll_ram|pllx2:pllx2_u1|altpll:altpll_component                                                ;
++-------------------------------------------+-------------+-----------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Synthesis Equations  ;
++---------------------------------+
+The equations can be found in d:/prj_d/modelsim_demo/pll_ram/pll_ram.map.eqn.
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Files Read                                       ;
++------------------------------------------------------------------------
+; File Name                                                      ; Read ;
++----------------------------------------------------------------+------+
+; pllx2.v                                                        ; Read ;
+; pll_ram.v                                                      ; Read ;
+; dpram8x32.v                                                    ; Read ;
+; c:/eda/quartus/libraries/megafunctions/altpll.tdf              ; Read ;
+; c:/eda/quartus/libraries/megafunctions/altsyncram.tdf          ; Read ;
+; d:/prj_d/modelsim_demo/pll_ram/db/altsyncram_7bc1.tdf          ; Read ;
+; c:/eda/quartus/libraries/megafunctions/lpm_counter.tdf         ; Read ;
+; c:/eda/quartus/libraries/megafunctions/alt_counter_stratix.tdf ; Read ;
++----------------------------------------------------------------+------+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                  ;
++-------------------------------------------------------------------------------
+; Resource                      ; Usage                                        ;
++-------------------------------+----------------------------------------------+
+; Logic cells                   ; 7                                            ;
+; Total combinational functions ; 7                                            ;
+; Total registers               ; 5                                            ;
+; I/O pins                      ; 28                                           ;
+; Total memory bits             ; 256                                          ;
+; Total PLLs                    ; 1                                            ;
+; Maximum fan-out node          ; pllx2:pllx2_u1|altpll:altpll_component|_clk0 ;
+; Maximum fan-out               ; 15                                           ;
+; Total fan-out                 ; 163                                          ;
+; Average fan-out               ; 3.70                                         ;
++-------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+; Name                                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; dpram8x32:dpram8x32_u1|altsyncram:altsyncram_component|altsyncram_7bc1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 8            ; 32           ; 8            ; 256  ; None ;
++--------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------+
+; WYSIWYG Cells                                                  ;
++-----------------------------------------------------------------
+; Statistic                                              ; Value ;
++--------------------------------------------------------+-------+
+; Number of WYSIWYG cells                                ; 5     ;
+; Number of synthesis-generated cells                    ; 2     ;
+; Number of WYSIWYG LUTs                                 ; 5     ;
+; Number of synthesis-generated LUTs                     ; 2     ;
+; Number of WYSIWYG registers                            ; 5     ;
+; Number of synthesis-generated registers                ; 0     ;
+; Number of cells with combinational logic only          ; 2     ;
+; Number of cells with registers only                    ; 0     ;
+; Number of cells with combinational logic and registers ; 5     ;
++--------------------------------------------------------+-------+
+
+
++----------------------------------------------+
+; General Register Statistics                  ;
++-----------------------------------------------
+; Statistic                            ; Value ;
++--------------------------------------+-------+
+; Number of registers using SCLR       ; 0     ;
+; Number of registers using SLOAD      ; 0     ;
+; Number of registers using ACLR       ; 5     ;
+; Number of registers using ALOAD      ; 0     ;
+; Number of registers using CLK_ENABLE ; 0     ;
+; Number of registers using OE         ; 0     ;
+; Number of registers using PRESET     ; 0     ;
++--------------------------------------+-------+
+
+
++--------------------------------+
+; Analysis & Synthesis Messages  ;
++--------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 4.0 Build 190 1/28/2004 SJ Full Version
+    Info: Processing started: Sun Dec 05 05:42:18 2004
+Info: Command: quartus_map --import_settings_files=on --export_settings_files=off pll_ram -c pll_ram
+Info: Found 1 design units and 1 entities in source file pllx2.v
+    Info: Found entity 1: pllx2
+Info: Found 1 design units and 1 entities in source file pll_ram.v
+    Info: Found entity 1: pll_ram
+Info: Found 1 design units and 1 entities in source file dpram8x32.v
+    Info: Found entity 1: dpram8x32
+Warning: Verilog HDL expression warning at pll_ram.v(41): truncated operand with size 6 to match size of smaller operand (5)
+Warning: Verilog HDL expression warning at pll_ram.v(59): truncated operand with size 2 to match size of smaller operand (1)
+Info: Found 1 design units and 1 entities in source file c:/eda/quartus/libraries/megafunctions/altpll.tdf
+    Info: Found entity 1: altpll
+Info: Found 1 design units and 1 entities in source file c:/eda/quartus/libraries/megafunctions/altsyncram.tdf
+    Info: Found entity 1: altsyncram
+Info: Found 1 design units and 1 entities in source file db/altsyncram_7bc1.tdf
+    Info: Found entity 1: altsyncram_7bc1
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=5) from the following logic: wr_addr[0]~5
+Info: Found 1 design units and 1 entities in source file c:/eda/quartus/libraries/megafunctions/lpm_counter.tdf
+    Info: Found entity 1: lpm_counter
+Info: Found 1 design units and 1 entities in source file c:/eda/quartus/libraries/megafunctions/alt_counter_stratix.tdf
+    Info: Found entity 1: alt_counter_stratix
+Warning: Output port clk0 of PLL pllx2:pllx2_u1|altpll:altpll_component|pll feeds an output pin via global clocks -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance.
+Info: Implemented 44 device resources after synthesis - the final resource count might be different
+    Info: Implemented 17 input pins
+    Info: Implemented 11 output pins
+    Info: Implemented 7 logic cells
+    Info: Implemented 8 RAM segments
+    Info: Implemented 1 ClockLock PLLs
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Processing ended: Sun Dec 05 05:42:22 2004
+    Info: Elapsed time: 00:00:03
+
+
